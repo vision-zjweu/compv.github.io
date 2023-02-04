@@ -18,19 +18,26 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: EECS 442 Computer Vision
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: "EECS 442 Computer Vision (Winter 2023)"
+
+# URL Settings
 domain: eecs442.github.io
 baseurl: "/eecs442.github.io/docs" # the subpath of your site, e.g. /blog
 url: https://eecs442.github.io # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: minima
+remote_theme: eecs485staff/primer-spec
 plugins:
-  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jemoji
+kramdown:
+  input: GFM
+readme_index:
+  remove_originals: true
+  with_frontmatter: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
