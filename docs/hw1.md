@@ -6,6 +6,8 @@ latex: true
 ---
 <link href="style.css" rel="stylesheet">
 
+# Homework 1 – Numbers and Images
+
 ## Instructions
 
 - This homework is due at **5:00 p.m. on Wednesday January 25, 2022**.
