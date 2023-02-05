@@ -22,7 +22,7 @@ title: "EECS 442 Computer Vision (Winter 2023) (In Development)"
 
 # URL Settings
 domain: eecs442.github.io
-baseurl: "/eecs442.github.io/site" # the subpath of your site, e.g. /blog
+baseurl: "/eecs442.github.io/docs" # the subpath of your site, e.g. /blog
 url: https://eecs442.github.io # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings

@@ -27,4 +27,4 @@ It will also be helpful for you to have background in the following topics. We w
 If you are rusty on linear algebra and calculus (who isn't), do not worry but do make an effort to refresh your memory of both at the start of the course.
 
 ## Homeworks
-[Homework 1: Numbers and Images]({{site.baseurl}}/hw1)
+[Homework 1: Numbers and Images]({{site.url}}/hw1)
