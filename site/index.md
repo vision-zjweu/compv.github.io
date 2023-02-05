@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: spec
 ---
 
@@ -28,3 +25,6 @@ It will also be helpful for you to have background in the following topics. We w
 - **Calculus**: You should be comfortable with the chain rule. It would be nice for you to have seen gradients and partial derivatives, but experience suggests you can catch on if you haven't seen these before.
 
 If you are rusty on linear algebra and calculus (who isn't), do not worry but do make an effort to refresh your memory of both at the start of the course.
+
+## Homeworks
+[Homework 1: Numbers and Images]({{site.baseurl}}/hw1)
