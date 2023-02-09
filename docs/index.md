@@ -5,10 +5,8 @@ layout: spec
 - **Instructor**: David Fouhey (fouhey)
 - **GSIs**: Rakesh Chowdary Machineni (mrakeshc), Shreya Phirke (sphirke), Sachin Salim (sachinks), Kshama Nitin Shah (kshama), Farzad Siraj (fsiraj), Jim Yang (yzr)
 - **IA**: Zixuan Pan (zxp)
-- **Canvas+Piazza Link**: TBD
 - **Lecture**: Monday/Wednesday 10:30 AM - 12:00 Noon, STAMPS
 - **Discussions**: Monday 12:30 - 1:30PM, 1005 EECS; Monday 3:30-4:30PM, 1005 DOW; Wendesday 3:30-4:30PM, 3150 DOW; Wednesday 4:30-5:30PM, 3150 DOW; Wednesday 5:30-6:30PM, 1206 DOW; Thursday 3:30-4:30PM, 3150 DOW.
-- **Office Hours**: TBD, a mix of in-person (mainly) and some online
 
 ## Overview
 
@@ -27,4 +25,7 @@ It will also be helpful for you to have background in the following topics. We w
 If you are rusty on linear algebra and calculus (who isn't), do not worry but do make an effort to refresh your memory of both at the start of the course.
 
 ## Homeworks
-[Homework 1: Numbers and Images]({{site.url}}/hw1)
+- [Homework 1: Numbers and Images]({{site.url}}/hw1)
+- [Homework 2: Convolution and Feature Detection]({{site.url}}/hw2)
+- [Homework 3: Fitting Models and Image Warping]({{site.url}}/hw3)
+

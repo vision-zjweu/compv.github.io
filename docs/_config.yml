@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "EECS 442 Computer Vision (Winter 2023) (In Development)"
+title: "EECS 442 Computer Vision (Winter 2023) (Alpha)"
 
 # URL Settings
 domain: eecs442.github.io
