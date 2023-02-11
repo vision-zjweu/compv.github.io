@@ -22,8 +22,8 @@ title: "EECS 442 Computer Vision (Winter 2023) (Alpha)"
 
 # URL Settings
 domain: eecs442.github.io
-baseurl: "/docs" # the subpath of your site, e.g. /blog
-url: https://eecs442.github.io # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /docs                  # the subpath of your site, e.g. /blog
+url: https://eecs442.github.io  # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 remote_theme: eecs485staff/primer-spec

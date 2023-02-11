@@ -11,8 +11,9 @@ This site uses the [Primer Spec](https://github.com/eecs485staff/primer-spec) [J
 
 
 ## Testing
-To test locally ([ref](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)):
-`bundle exec jekyll serve`
+To test locally ([ref](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)): `bundle exec jekyll serve`
+
+*URLs*: URLs break between deployment and local testing. Locally, prefix URLs with `{{ site.baseurl }}` (== `docs/`) and for deployment prefix them with `{{ site.url }}` followed by the rest of the url minus `docs`.
 
 ## Helpful Links
 - [Markdown Guide](https://www.markdownguide.org/basic-syntax/)

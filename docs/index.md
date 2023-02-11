@@ -27,5 +27,5 @@ If you are rusty on linear algebra and calculus (who isn't), do not worry but do
 ## Homeworks
 - Homework 1: Numbers and Images
 - Homework 2: Convolution and Feature Detection
-- [Homework 3: Fitting Models and Image Warping]({{site.baseurl}}/hw3)
+- [Homework 3: Fitting Models and Image Warping]({{site.url}}/hw3)
 
