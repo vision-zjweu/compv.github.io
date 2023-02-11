@@ -4,11 +4,27 @@
 }
 
 .blue {
-    color: blue;
+    color: dodgerblue;
     font-weight: bold;
 }
 
 .purple {
-    color: purple;
+    color: rgb(191, 0, 191);
     font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+figure {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+figcaption {
+    text-align: center;
 }

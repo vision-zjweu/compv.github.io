@@ -16,12 +16,15 @@ latex: true
         \newcommand{\SB}{\mathbf{S}}
         
         \newcommand{\bB}{\mathbf{b}}
+        \newcommand{\dB}{\mathbf{d}}
         \newcommand{\hB}{\mathbf{h}}
         \newcommand{\mB}{\mathbf{m}}
         \newcommand{\pB}{\mathbf{p}}
         \newcommand{\sB}{\mathbf{s}}
         \newcommand{\tB}{\mathbf{t}}
         \newcommand{\vB}{\mathbf{v}}
+        \newcommand{\xB}{\mathbf{x}}
+        \newcommand{\yB}{\mathbf{y}}
     \)
 </div>
 
@@ -121,7 +124,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
 ### Task 4: Fitting Homographies (11 points)
 
-**Files**: We have generated 9 cases of correspondences in `task4/`. These are named `points\_case\_k.npy` for $$1 \le k \le 9$$. All are the same format as the previous task and are matrices where each row contains $$[x_i,y_i,x'_i,y'_i]$$. Eight are transformed letters $$M$$. The last case (case 9) is copied from task 3. You can use these examples to verify your implementation of `fit_homography`.
+**Files**: We have generated 9 cases of correspondences in `task4/`. These are named `points_case_k.npy` for $$1 \le k \le 9$$. All are the same format as the previous task and are matrices where each row contains $$[x_i,y_i,x'_i,y'_i]$$. Eight are transformed letters $$M$$. The last case (case 9) is copied from task 3. You can use these examples to verify your implementation of `fit_homography`.
 
 1. (5 points) <span class="purple">Fill in `fit_homography`</span> in `homography.py`.
 
@@ -146,3 +149,188 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 3. (3 points) Visualize the original points $$[x_i,y_i]$$,  target points $$[x'_i,y'_i]$$ and points after applying a homography transform $$T(H,[x_i,y_i])$$ in one figure. Please do this for `points_case_5.npy` and `points_case_9.npy`. Thus there should be two plots, each of which contains 3 sets of `N` points.
 
     <span class="blue">Save the figure and put it in the report.</span>
+
+## Image Warping and Homographies
+
+<figure>
+    <div class="flex-container">
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/p1.jpg" alt="View Angle 1" height="200">
+            <figcaption>Image 1</figcaption>
+        </figure>
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/p2.jpg" alt="View Angle 2" height="200">
+            <figcaption>Image 2</figcaption>
+        </figure>
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/result_eynsham.jpg" alt="Merged" height="200">
+            <figcaption>Merged</figcaption>
+        </figure>
+    </div>
+    <figcaption>Figure 1: Stitched Results on Eynsham</figcaption>
+</figure>
+
+### Task 5: Synthetic Views -- Name that book! (13 points)
+
+We asked David what he's reading, and so he sent us a few pictures. They're a bit distorted since he wants you to get used to `cv2.warpPerspective` *before* you use it in the next task. He says "it's all the same, right, homographies can map between planes and book covers are planes, no?".
+
+**Files**: We provide data in `task5/`, with one folder per book. Each folder has:
+1. `book.jpg` -- an image of the book taken from an angle;
+2. `corners.npy` -- a numpy containing a $$4 \times 2$$ matrix where each row is $$[x_i, y_i]$$ representing the corners of the book stored in (top-left, top-right, bottom-right, bottom-left) order;
+3. `size.npy` which gives the size of the book cover in inches in a $$2D$$ array [height, width].
+
+1. (5 points) <span class="red">Fill in `make_synthetic_view(sceneImage,corners,size)`</span> in `task5.py`.
+
+    This should return the image of the cover viewed head-on (i.e., with cover parallel to the image plane) where one inch on the book corresponds to 100 pixels.
+
+    *Walkthrough*: First fit the homography between the book as seen in the image and book cover. In the new image, the top-left corner will be at $$[x,y] = [0,0]$$ and the bottom-right corner will be at $$[x,y] = [100w-1,100h-1]$$. Figure out where the other corners should go. Then read the documentation for `cv2.warpPerspective`.
+
+2. (3 points) <span class="blue">Put a copy of both book covers in your report.</span>
+
+3. One of these images doesn't have perfectly straight lines. <span class="blue">Write in your report why you think the lines might be slightly crooked despite the book cover being roughly a plane.</span> You should write about 3 sentences.
+
+4. (Suggestion/optional) Before you proceed, see if you can make another function that does the operation in the reverse: it should map the corners of `synthetic` cover to `sceneImage` assuming the same relationship between the corners of synthetic and the listed corners in the scene. In other words, if you were to doodle on the cover of one of the books, and send it back into the scene, it should look as if it's viewed from an angle. Pixels that do not have a corresponding source should be set to $$0$$. What happens if synthetic contains only ones?
+
+<figure>
+    <div class="flex-container">
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/p1_2.jpg" alt="View Angle 1" height="200">
+            <figcaption>Image 1</figcaption>
+        </figure>
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/p2_2.jpg" alt="View Angle 2" height="200">
+            <figcaption>Image 2</figcaption>
+        </figure>
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/result_lowetag.jpg" alt="Merged" height="200">
+            <figcaption>Merged</figcaption>
+        </figure>
+    </div>
+    <figcaption>Figure 2: Stitched Results on LoweTag</figcaption>
+</figure>
+
+### Task 6: Stitching Stuff Together (50 points)
+
+Recall from the introduction that a keypoint has a location $$\pB_i$$ and descriptor $$\dB_i$$. There are many types of keypoints used. Traditionally this course has used SIFT and SURF, but these are subject to patents and installed in only a few versions of `opencv`. Traditionally, this has led to homework 3 being an exercise in figuring out how to install a very special version of `opencv` (and then figuring out some undocumented features).
+
+We provide another descriptor called AKAZE (plus some other features) in `common.py`. In addition to this descriptor, you are encouraged to look at `common.py` to see if there are things you want to use while working on the homework.
+
+The calling convention is: `keypoints, descriptors = common.get_AKAZE(image)` which will give you a $$N \times 4$$ matrix `keypoints` and a $$N \times F$$ matrix `descriptors` containing descriptors for each keypoint. The first two columns of `keypoints` contain $$x,y$$; the last two are
+the angle and (roughly) the scale at which they were found in case those are of interest. The descriptor has also been post-processed into something where $$\|\dB_i - \dB_j'\|^2_2$$ is meaningful.
+
+**Files**: We provide you with a number of panoramas in `task6/` that you can choose to merge
+together. To enable you to run your code automatically on multiple panoramas without manually editing filenames (see also `os.listdir`), we provide them in a set of folders. 
+
+Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also contain images (e.g., `p3.jpg`) which may or may not work. You should be able to match all the provided panoramas; you should be able to stitch all except for `florence3` and `florence3_alt`.
+
+1. (3 points) <span class="purple">Fill in `compute_distance`</span> in `task6.py`. This should compute the pairwise **squared** L2 distance between two matrices of descriptors. You can and should use the $$\|\xB-\yB\|^2_2 = \|\xB\|^2_2 + \|\yB\|^2_2 - 2 \xB^T \yB$$ trick from HW0, numpy test 11.
+
+2. (5 points) <span class="red">Fill in `find_matches`</span> in `task6.py`. This should use `compute_distance` plus the ratio test from the foreword to return the matches. You will have to pick a threshold for the ratio test. Something between $$0.7$$ and $$1$$ is reasonable, but you should experiment with it (look output of the `draw_matches` once you complete it). 
+
+    **Beware!** The numbers for the ratio shown in the lecture slides apply to SIFT; the descriptor here is different so the ratio threshold you should use is different.
+
+    *Hint*: Look at `np.argsort` as well as `np.take_along_axis`.
+
+3. (5 points) <span class="red">Fill in `draw_matches`</span> in `task6.py`. This should put the images on top of each other and draw lines between the matches. You can use this to debug things.
+
+    *Hint*: Use `cv2.line`.
+
+4. (3 points) <span class="blue">Put a picture of the matches between two image pairs of your choice in your report.</span>
+    
+5. (10 points) <span class="purple">Fill in `RANSAC_fit_homography`</span> in `homography.py`. 
+
+    This should RANSACify `fit_homography`. You should keep track of the best set of inliers you have seen in the RANSAC loop. Once the loop is done, please re-fit the model to these inliers. In other words, if you are told to run $$N$$ iterations of RANSAC, you should fit a homography $$N$$ times on the minimum number of points needed; this should be followed by a single fitting of a homography on many more points (the inliers for the best of the $$N$$ models). You will need to set epsilon's default value: $$0.1$$ pixels is too small; $$100$$ pixels is too big. You will need to play with this to get the later parts to work.
+
+    *Hints*: When sampling correspondences, draw **without** replacement; if you do it with replacement you may pick the same point repeatedly and then try to (effectively) fit a model to three points.
+
+6. <span class="red">Fill in `make_warped`</span> in `task6.py`. This should take two images as an argument and do the whole pipeline described in the foreword. The resulting image should use `cv2.warpPerspective` to make a merged image where both images fit in. This merged image should have: (a) image 1's pixel data if only image 1 is present at that location; (b) image 2's pixel data if only image 2 is present at that location; (c) the average of image 1's data and image 2's data if both are present.
+   
+    *Walkthrough*:
+
+    1. There is an information bottleneck in estimating $$\HB$$. If $$\HB$$ is correct, then you're set; if it's wrong, there's nothing you can do. First make sure your code estimates $$\HB$$ right.
+
+    2. Pick which image you're going to merge to; without loss of generality, pick image 1. Figure out how to make a merged image that's big enough to hold both image 1 and transformed image 2. Think of this as finding the smallest enclosing rectangle of *both* images. The upper left corner of this rectangle (i.e., pixel $$[0,0]$$) may not be at the same location as in image 1. You will almost certainly need to hand-make a homography that translates image 1 to its location in the merged image. For doing this calculations, use the fact that the image content will be bounded by the image corners. Looking at the `min`, `max` of these gives you what you need to create the panorama.
+    
+    3. Warp both images to the merged image. You can figure out where the images go by warping images containing ones to the merged images instead of the image and filling the image with 0s where the image doesn't go. These masks also tell you how to create the average.
+
+    *Debugging Hints*:
+
+    1. Make a fake pair of images by taking an image, rolling it by $$(10,30)$$ and then saving it. Debugging this is *far easier* if you know what the answer should be.
+
+    2. If you want to debug the warping, you can also provide two images that are crops of the same image, (e.g., `I[100:400,100:400]` and `I[150:450,75:375]`) where you know the homography (since it is just a translation).
+
+7. (3 points) <span class="blue">Put merges from two of your favorite pairs in the report.</span> You can either choose an image we provide you or use a pair of images you take yourself.
+
+8. (3 points) <span class="purple">Put these merges as `mypanorama1.jpg` and `mypanorama2.jpg` in your zip submission.</span> 
+
+9. (Optional) If you would like to submit a panorama, <span class="purple">please put your favorite as `myfavoritepanorama.jpg`</span>. We will have a vote. The winner gets 1 point of extra credit.
+
+<figure>
+    <div class="flex-container">
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/template.png" alt="Template Angle 1" height="200">
+            <figcaption>Template</figcaption>
+        </figure>
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/scene.jpg" alt="Scene" height="200">
+            <figcaption>Scene</figcaption>
+        </figure>
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/monk.png" alt="Merged" height="200">
+            <figcaption>To Transfer</figcaption>
+        </figure>
+        <figure>
+            <img src="{{site.baseurl}}/assets/hw3/transferlacroix.jpg" alt="Merged" height="200">
+            <figcaption>Transferred</figcaption>
+        </figure>
+    </div>
+    <figcaption>Figure 3: Transferring via Template Matching</figcaption>
+</figure>
+
+## Augmented Reality on a Budget
+
+### Task 7: Augmented Reality on a Budget
+
+If you can warp images together, you can replace things in your reality. Imagine that we have a template image and this template appears in the world but viewed at an angle. You can fit a homography mapping between the template and the scene. Once you have a homography, you can transfer *anything*. This enables you to improve things.
+
+**Files**: We give a few examples of templates and scenes in `task7/scenes/`. Each folder contains:
+ `template.png`: a viewed-from-head-on / distortion-free / fronto-parallel version of the texture; and `scene.jpg`: an image where the texture appears at some location and viewed at some angle. We provide a set of seals (e.g., the UM seal) that you may want to put on things in `task7/seals/`. You can substitute whatever you like.
+
+ 1. <span class="red">Fill in the function `improve_image(scene,template,transfer)`</span> in `task7.py` that aligns `template` to `scene` using a homography, just as in task 6. Then, instead of warping `template` to the image, warp `transfer`. If you want to copy over your functions from task 6, you can either import them or just copy them.
+
+    *Hints*:
+
+    - The matches that you get are definitely not one-to-one. You'll probably get better results if
+    you match from the template to the scene (i.e., for each template keypoint, find the best match in scene). Be careful about ordering though if you transfer your code!
+
+    - The image to transfer might not be the same size as the template. You can either resize `transfer` to be the same size as `template` or automatically generate a homography.
+
+    - For using the fucntion `warp_and_combine` from task 6, you may want to change it a little bit, since you should make sure you use warped `template` to cover areas in the `scene` completely as shown in Figure 3.
+    
+2. Do something fun with this. Submit a synthetically done warp of something interesting. We'll have a contest. If you do something particularly neat to get the system to work, please write this in the report.
+
+    <span class="purple">Submit in your zip file the following files:</span>
+    - `myscene.jpg` -- the scene
+    - `mytemplate.png` OR `mytemplate.jpg` -- the template. Submit either png or jpg but not both. 
+    - `mytransfer.jpg` -- the thing you transfer 
+    - `myimproved.jpg` -- your result
+
+    *Guidelines*: If you try this on your own images, here are some suggestions:
+
+    - Above all, please be respectful.
+
+    - This sort of trick works best with something that has lots of texture across the entire template. The lacroix carton works very well. The `aep.jpg` image that you saw in dithering does not work so well since it has little texture for the little building at the bottom.
+    
+    - This trick is most impressive if you do this for something seen at a very different angle. You may be able to extend how far you can match by pre-generating synthetic warps of the template (i.e, generate $$\textrm{synth}_i = \textrm{apply}(\HB_i,T)$$ for a series of $$\HB_i$$, then see if you can find a good warping $$\hat{\HB}$$ from $$\textrm{synth}_i$$ to the scene. Then the final homography is $$\hat{\HB} \HB_i$$.
+
+## Canvas Submission Checklist
+
+In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
+- [ ] `common.py` -- do not edit though; this may be substituted
+- [ ] `homography.py`
+- [ ] `task5.py`
+- [ ] `task6.py`
+- [ ] `mypanorama1.jpg`, `mypanorama2.jpg`
+
+The following are **optional**:
+- [ ] `myfavoritepanorama.jpg`
