@@ -155,15 +155,15 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 <figure>
     <div class="flex-container">
         <figure>
-            <img src="{{site.url}}/assets/hw3/p1.jpg" alt="View Angle 1" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/p1.jpg" alt="View Angle 1" height="200">
             <figcaption>Image 1</figcaption>
         </figure>
         <figure>
-            <img src="{{site.url}}/assets/hw3/p2.jpg" alt="View Angle 2" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/p2.jpg" alt="View Angle 2" height="200">
             <figcaption>Image 2</figcaption>
         </figure>
         <figure>
-            <img src="{{site.url}}/assets/hw3/result_eynsham.jpg" alt="Merged" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/result_eynsham.jpg" alt="Merged" height="200">
             <figcaption>Merged</figcaption>
         </figure>
     </div>
@@ -194,15 +194,15 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
 <figure>
     <div class="flex-container">
         <figure>
-            <img src="{{site.url}}/assets/hw3/p1_2.jpg" alt="View Angle 1" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/p1_2.jpg" alt="View Angle 1" height="200">
             <figcaption>Image 1</figcaption>
         </figure>
         <figure>
-            <img src="{{site.url}}/assets/hw3/p2_2.jpg" alt="View Angle 2" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/p2_2.jpg" alt="View Angle 2" height="200">
             <figcaption>Image 2</figcaption>
         </figure>
         <figure>
-            <img src="{{site.url}}/assets/hw3/result_lowetag.jpg" alt="Merged" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/result_lowetag.jpg" alt="Merged" height="200">
             <figcaption>Merged</figcaption>
         </figure>
     </div>
@@ -268,19 +268,19 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
 <figure>
     <div class="flex-container">
         <figure>
-            <img src="{{site.url}}/assets/hw3/template.png" alt="Template Angle 1" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/template.png" alt="Template Angle 1" height="200">
             <figcaption>Template</figcaption>
         </figure>
         <figure>
-            <img src="{{site.url}}/assets/hw3/scene.jpg" alt="Scene" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/scene.jpg" alt="Scene" height="200">
             <figcaption>Scene</figcaption>
         </figure>
         <figure>
-            <img src="{{site.url}}/assets/hw3/monk.png" alt="Merged" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/monk.png" alt="Merged" height="200">
             <figcaption>To Transfer</figcaption>
         </figure>
         <figure>
-            <img src="{{site.url}}/assets/hw3/transferlacroix.jpg" alt="Merged" height="200">
+            <img src="{{site.baseurl}}/assets/hw3/transferlacroix.jpg" alt="Merged" height="200">
             <figcaption>Transferred</figcaption>
         </figure>
     </div>
