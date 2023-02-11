@@ -25,7 +25,7 @@ It will also be helpful for you to have background in the following topics. We w
 If you are rusty on linear algebra and calculus (who isn't), do not worry but do make an effort to refresh your memory of both at the start of the course.
 
 ## Homeworks
-- [Homework 1: Numbers and Images]({{site.url}}/hw1)
-- [Homework 2: Convolution and Feature Detection]({{site.url}}/hw2)
+- Homework 1: Numbers and Images
+- Homework 2: Convolution and Feature Detection
 - [Homework 3: Fitting Models and Image Warping]({{site.url}}/hw3)
 
