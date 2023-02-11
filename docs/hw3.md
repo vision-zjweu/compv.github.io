@@ -191,6 +191,8 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
 
 4. (Suggestion/optional) Before you proceed, see if you can make another function that does the operation in the reverse: it should map the corners of `synthetic` cover to `sceneImage` assuming the same relationship between the corners of synthetic and the listed corners in the scene. In other words, if you were to doodle on the cover of one of the books, and send it back into the scene, it should look as if it's viewed from an angle. Pixels that do not have a corresponding source should be set to $$0$$. What happens if synthetic contains only ones?
 
+### Task 6: Stitching Stuff Together
+
 <figure>
     <div class="flex-container">
         <figure>
@@ -208,8 +210,6 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
     </div>
     <figcaption>Figure 2: Stitched Results on LoweTag</figcaption>
 </figure>
-
-### Task 6: Stitching Stuff Together
 
 Recall from the introduction that a keypoint has a location $$\pB_i$$ and descriptor $$\dB_i$$. There are many types of keypoints used. Traditionally this course has used SIFT and SURF, but these are subject to patents and installed in only a few versions of `opencv`. Traditionally, this has led to homework 3 being an exercise in figuring out how to install a very special version of `opencv` (and then figuring out some undocumented features).
 
@@ -265,6 +265,8 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
 
 9. (Optional) If you would like to submit a panorama, <span class="purple">please put your favorite as `myfavoritepanorama.jpg`</span>. We will have a vote. The winner gets 1 point of extra credit.
 
+## Augmented Reality on a Budget
+
 <figure>
     <div class="flex-container">
         <figure>
@@ -286,8 +288,6 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
     </div>
     <figcaption>Figure 3: Transferring via Template Matching</figcaption>
 </figure>
-
-## Augmented Reality on a Budget
 
 ### Task 7: Augmented Reality on a Budget
 
