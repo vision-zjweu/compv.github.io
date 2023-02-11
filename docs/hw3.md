@@ -60,7 +60,7 @@ We are using Python 3.7. You can find references for the Python standard library
 
 ## RANSAC and Fitting Models
 
-### Task 1: RANSAC Theory (9 points)
+### Task 1: RANSAC Theory
 
 In this section, suppose we are fitting a 3D plane (i.e., $$ax + by + cz + d = 0$$). A 3D plane can be defined by 3 points (2 points define a line). Plane fitting happens when people analyze point clouds to reconstruct scenes from laser scans. To distinguish from other notations that you may find elsewhere, we will refer to the model that is fit within the loop of RANSAC (covered in the lecture) as the *putative* model.
 
@@ -70,7 +70,7 @@ In this section, suppose we are fitting a 3D plane (i.e., $$ax + by + cz + d = 0
 
 *Hint*: You can do this by explicit calculation or by search/trial and error with numpy.
 
-### Task 2: Fitting Linear Transformations (6 points)
+### Task 2: Fitting Linear Transformations
 
 Throughout, suppose we have a set of 2D correspondences ($$[x_i',y_i'] \leftrightarrow [x_i,y_i]$$) for $$1 \le i \le N$$.
 
@@ -88,7 +88,7 @@ Throughout, suppose we have a set of 2D correspondences ($$[x_i',y_i'] \leftrigh
 
     <span class="blue">Write the form of $$\AB$$, $$\mB$$, and $$\bB$$ in your report.</span> 
 
-### Task 3: Fitting Affine Transformations (11 points)
+### Task 3: Fitting Affine Transformations
 
 Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \leftrightarrow [x_i,y_i]$$ for $$1 \le i \le N$$.
 
@@ -122,7 +122,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
     *Hint*: What properties are preserved by each transformation?
 
-### Task 4: Fitting Homographies (11 points)
+### Task 4: Fitting Homographies
 
 **Files**: We have generated 9 cases of correspondences in `task4/`. These are named `points_case_k.npy` for $$1 \le k \le 9$$. All are the same format as the previous task and are matrices where each row contains $$[x_i,y_i,x'_i,y'_i]$$. Eight are transformed letters $$M$$. The last case (case 9) is copied from task 3. You can use these examples to verify your implementation of `fit_homography`.
 
@@ -170,7 +170,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
     <figcaption>Figure 1: Stitched Results on Eynsham</figcaption>
 </figure>
 
-### Task 5: Synthetic Views -- Name that book! (13 points)
+### Task 5: Synthetic Views -- Name that book!
 
 We asked David what he's reading, and so he sent us a few pictures. They're a bit distorted since he wants you to get used to `cv2.warpPerspective` *before* you use it in the next task. He says "it's all the same, right, homographies can map between planes and book covers are planes, no?".
 
@@ -209,7 +209,7 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
     <figcaption>Figure 2: Stitched Results on LoweTag</figcaption>
 </figure>
 
-### Task 6: Stitching Stuff Together (50 points)
+### Task 6: Stitching Stuff Together
 
 Recall from the introduction that a keypoint has a location $$\pB_i$$ and descriptor $$\dB_i$$. There are many types of keypoints used. Traditionally this course has used SIFT and SURF, but these are subject to patents and installed in only a few versions of `opencv`. Traditionally, this has led to homework 3 being an exercise in figuring out how to install a very special version of `opencv` (and then figuring out some undocumented features).
 
