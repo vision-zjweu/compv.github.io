@@ -179,6 +179,8 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
 2. `corners.npy` -- a numpy containing a $$4 \times 2$$ matrix where each row is $$[x_i, y_i]$$ representing the corners of the book stored in (top-left, top-right, bottom-right, bottom-left) order;
 3. `size.npy` which gives the size of the book cover in inches in a $$2D$$ array [height, width].
 
+[]()<br>
+
 1. (5 points) <span class="red">Fill in `make_synthetic_view(sceneImage,corners,size)`</span> in `task5.py`.
 
     This should return the image of the cover viewed head-on (i.e., with cover parallel to the image plane) where one inch on the book corresponds to 100 pixels.
