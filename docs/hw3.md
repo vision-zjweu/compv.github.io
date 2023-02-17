@@ -38,33 +38,40 @@ due: 11:59:59 p.m. on Tuesday, March 9, 2022
 
 ## Instructions
 
-- This homework is **due at {{ page.due }}**.
-- The submission includes two parts:
-    1. **To Canvas**: submit a `zip` file of all of your code.
+This homework is **due at {{ page.due }}**.
 
-        {{ code }} - 
-        <span class="red">We have indicated questions where you have to do something in code in red</span>  
-        {{ autograde }} - 
-        <span class="purple">We have indicated questions where we will definitely use an autograder in purple</span>
+The submission includes two parts:
+1. **To Canvas**: submit a `zip` file of all of your code.
 
-        Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name.
+    {{ code }} - 
+    <span class="red">We have indicated questions where you have to do something in code in red</span>  
+    {{ autograde }} - 
+    <span class="purple">We have indicated questions where we will definitely use an autograder in purple</span>
 
-        Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.  
-            
-        **What should I submit? At the end of the homework, there is a canvas submission checklist provided.** We provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py). If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
+    Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name.
 
-    2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
+    Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.  
+        
+    <div class="primer-spec-callout info" markdown="1">
+      **Submission Tip:** Use the [Canvas Submission Checklist](#canvas-submission-checklist) and [Gradescope Submission Checklist](#gradescope-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py).
 
-        {{ report }} - 
-        <span class="blue">We have indicated questions where you have to do something in the report in blue.</span>
+      If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
+    </div>
 
-        You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/) for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
+
+    {{ report }} - 
+    <span class="blue">We have indicated questions where you have to do something in the report in blue.</span>
+
+    You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/) for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
 
 ### Python Environment
 
-We are using Python 3.7. You can find references for the Python standard library [here](https://docs.python.org/3.7/library/index.html). To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/) for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html) when you have questions about Python utilties.
+
+To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/) for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
 - [Numpy](https://numpy.org/doc/stable/user/quickstart.html)
-- [Matplotlib](https://matplotlib.org/2.0.2/users/pyplot tutorial.html)
+- [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)
 - [OpenCV](https://opencv.org/)
 
 ## RANSAC and Fitting Models
@@ -73,11 +80,13 @@ We are using Python 3.7. You can find references for the Python standard library
 
 In this section, suppose we are fitting a 3D plane (i.e., $$ax + by + cz + d = 0$$). A 3D plane can be defined by 3 points (2 points define a line). Plane fitting happens when people analyze point clouds to reconstruct scenes from laser scans. To distinguish from other notations that you may find elsewhere, we will refer to the model that is fit within the loop of RANSAC (covered in the lecture) as the *putative* model.
 
-1. (3 points) <span class="blue">Write in your report</span> the minimum number of 3D points needed to sample in an iteration to compute a putative model.
-2. (3 points) <span class="blue">Determine the probability</span> that the data picked for to fit the putative model in a single iteration fails, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting 3D planes.
-3. (3 points) <span class="blue">Determine the minimum number of RANSAC trials</span> needed to have $$\geq 98\%$$ chance of success, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting planes.
+1. (3 points) {{ report }} <span class="blue">Write in your report</span> the minimum number of 3D points needed to sample in an iteration to compute a putative model.
+2. (3 points) {{ report }} <span class="blue">Determine the probability</span> that the data picked for to fit the putative model in a single iteration fails, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting 3D planes.
+3. (3 points) {{ report }} <span class="blue">Determine the minimum number of RANSAC trials</span> needed to have $$\geq 98\%$$ chance of success, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting planes.
 
-*Hint*: You can do this by explicit calculation or by search/trial and error with numpy.
+<div class="primer-spec-callout info" markdown="1">
+  *Hint*: You can do this by explicit calculation or by search/trial and error with numpy.
+</div>
 
 ### Task 2: Fitting Linear Transformations
 
@@ -85,6 +94,7 @@ Throughout, suppose we have a set of 2D correspondences ($$[x_i',y_i'] \leftrigh
 
 1. (3 points) Suppose we are fitting a linear transformation, which can be parameterized by a matrix $$\MB \in \mathbb{R}^{2\times 2}$$ (i.e., $$[x',y']^T = \MB [x,y]^T$$).
 
+    {{ report }} 
     <span class="blue">Write in your report</span> the number of degrees of freedom $$\MB$$ has and the minimum number of 2D correspondences that are required to fully constrain or estimate $$\MB$$.
 
 2. (3 points) Suppose we want to fit $$[x_i',y_i']^T = \MB [x_i,y_i]^T$$. We would like you formulate the fitting problem in the form of a least-squares problem of the form:
@@ -95,6 +105,7 @@ Throughout, suppose we have a set of 2D correspondences ($$[x_i',y_i'] \leftrigh
 
     where $$\mB \in \mathbb{R}^4$$ contains all the parameters of $$\MB$$, $$\AB$$ depends on the points $$[x_i,y_i]$$ and $$\bB$$ depends on the points $$[x'_i, y'_i]$$.
 
+    {{ report }} 
     <span class="blue">Write the form of $$\AB$$, $$\mB$$, and $$\bB$$ in your report.</span> 
 
 ### Task 3: Fitting Affine Transformations
@@ -117,25 +128,33 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
     and solving it via least-squares.
 
+    {{ report }} 
     <span class="blue">Report ($$\SB$$,$$\tB$$) in your report for `points_case_1.npy`.</span>
 
-    *Hint*:} There is no trick question -- use the setup from the foreword. Write a small amount of code that does this by loading a matrix, shuffling the data around, and then calling `np.linalg.lstsq`.
+    <div class="primer-spec-callout info" markdown="1">
+      *Hint*: There is no trick question -- use the setup from the foreword. Write a small amount of code that does this by loading a matrix, shuffling the data around, and then calling `np.linalg.lstsq`.
+    </div>
 
-2. Make as scatterplot of the points $$[x_i,y_i]$$, $$[x'_i,y'_i]$$ and $$\SB[x_i,y_i]^T+\tB$$ in one figure with different colors. Do this for both `points_case_1.npy` and `point_case_2.npy`. In other words, there should be two plots, each of which contains three sets of $$N$$ points.
+2. Make a scatterplot of the points $$[x_i,y_i]$$, $$[x'_i,y'_i]$$ and $$\SB[x_i,y_i]^T+\tB$$ in one figure with different colors. Do this for both `points_case_1.npy` and `point_case_2.npy`. In other words, there should be two plots, each of which contains three sets of $$N$$ points.
 
+    {{ report }} 
     <span class="blue">Save the figures and put them in your report</span>
 
-    *Hint*: Look at `plt.scatter` and `plt.savefig`. For drawing the scatterplot, you can do `plt.scatter(xy[:,0],xy[:,1],1)`. The last argument controls the size of the dot and you may want this to be small so you can set the pattern. As you ask it to scatterplot more plots, they accumulate on the current figure. End the figure by `plt.close()`.
+    <div class="primer-spec-callout info" markdown="1">
+      *Hint*: Look at `plt.scatter` and `plt.savefig`. For drawing the scatterplot, use `plt.scatter(xy[:,0],xy[:,1],1)`. The last argument controls the size of the dot and you may want this to be small so you can set the pattern. As you ask it to scatterplot more plots, they accumulate on the current figure. End the figure by `plt.close()`.
+    </div>
 
-3. (5 points) <span class="blue">Write in the report your answer to</span> how well does an affine transform describe the relationship between $$[x,y] \leftrightarrow [x',y']$$ for `points_case_1.npy` and `points_case_2.npy`? You should describe this in two to three sentences.
+3. (5 points) {{ report }} <span class="blue">Write in the report your answer to</span> how well does an affine transform describe the relationship between $$[x,y] \leftrightarrow [x',y']$$ for `points_case_1.npy` and `points_case_2.npy`? You should describe this in two to three sentences.
 
-    *Hint*: What properties are preserved by each transformation?
+    <div class="primer-spec-callout info" markdown="1">
+      *Hint*: What properties are preserved by each transformation?
+    </div>
 
 ### Task 4: Fitting Homographies
 
 **Files**: We have generated 9 cases of correspondences in `task4/`. These are named `points_case_k.npy` for $$1 \le k \le 9$$. All are the same format as the previous task and are matrices where each row contains $$[x_i,y_i,x'_i,y'_i]$$. Eight are transformed letters $$M$$. The last case (case 9) is copied from task 3. You can use these examples to verify your implementation of `fit_homography`.
 
-1. (5 points) <span class="purple">Fill in `fit_homography`</span> in `homography.py`.
+1. (5 points) {{ autograde }} <span class="purple">Fill in `fit_homography`</span> in `homography.py`.
 
     This should fit a homography mapping between the two given points. Remembering that $$\pB_i \equiv [x_i, y_i, 1]$$ and $$\pB'_i \equiv [x'_i, y'_i, 1]$$, your goal is to fit a homography $$\HB \in \mathbb{R}^{3}$$ that satisfies:
 
@@ -149,14 +168,17 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
     where $$\hB$$ has all the parameters of $$\HB$$.
 
-    *Hint*: Again, this is not meant to be a trick question -- use the setup from the foreword. 
+    <div class="primer-spec-callout info" markdown="1">
+      *Hint*: Again, this is not meant to be a trick question -- use the setup from the foreword.
+    </div> 
 
     **Important**: This part will be autograded. Please follow the specifications precisely.
 
-2. (3 points) <span class="blue">Report $$\HB$$</span> for cases `points_case_1.npy` and `points_case_4.npy`. You must normalize the last entry to $$1$$.
+2. (3 points) {{ report }} <span class="blue">Report $$\HB$$</span> for cases `points_case_1.npy` and `points_case_4.npy`. You must normalize the last entry to $$1$$.
 
 3. (3 points) Visualize the original points $$[x_i,y_i]$$,  target points $$[x'_i,y'_i]$$ and points after applying a homography transform $$T(H,[x_i,y_i])$$ in one figure. Please do this for `points_case_5.npy` and `points_case_9.npy`. Thus there should be two plots, each of which contains 3 sets of `N` points.
 
+    {{ report }} 
     <span class="blue">Save the figure and put it in the report.</span>
 
 ## Image Warping and Homographies
@@ -190,15 +212,15 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
 
 []()<br>
 
-1. (5 points) <span class="red">Fill in `make_synthetic_view(sceneImage,corners,size)`</span> in `task5.py`.
+1. (5 points) {{ code }} <span class="red">Fill in `make_synthetic_view(sceneImage,corners,size)`</span> in `task5.py`.
 
     This should return the image of the cover viewed head-on (i.e., with cover parallel to the image plane) where one inch on the book corresponds to 100 pixels.
 
     *Walkthrough*: First fit the homography between the book as seen in the image and book cover. In the new image, the top-left corner will be at $$[x,y] = [0,0]$$ and the bottom-right corner will be at $$[x,y] = [100w-1,100h-1]$$. Figure out where the other corners should go. Then read the documentation for `cv2.warpPerspective`.
 
-2. (3 points) <span class="blue">Put a copy of both book covers in your report.</span>
+2. (3 points) {{ report }} <span class="blue">Put a copy of both book covers in your report.</span>
 
-3. One of these images doesn't have perfectly straight lines. <span class="blue">Write in your report why you think the lines might be slightly crooked despite the book cover being roughly a plane.</span> You should write about 3 sentences.
+3. One of these images doesn't have perfectly straight lines. {{ report }} <span class="blue">Write in your report</span> why you think the lines might be slightly crooked despite the book cover being roughly a plane. You should write about 3 sentences.
 
 4. (Suggestion/optional) Before you proceed, see if you can make another function that does the operation in the reverse: it should map the corners of `synthetic` cover to `sceneImage` assuming the same relationship between the corners of synthetic and the listed corners in the scene. In other words, if you were to doodle on the cover of one of the books, and send it back into the scene, it should look as if it's viewed from an angle. Pixels that do not have a corresponding source should be set to $$0$$. What happens if synthetic contains only ones?
 
@@ -234,27 +256,34 @@ together. To enable you to run your code automatically on multiple panoramas wit
 
 Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also contain images (e.g., `p3.jpg`) which may or may not work. You should be able to match all the provided panoramas; you should be able to stitch all except for `florence3` and `florence3_alt`.
 
-1. (3 points) <span class="purple">Fill in `compute_distance`</span> in `task6.py`. This should compute the pairwise **squared** L2 distance between two matrices of descriptors. You can and should use the $$\|\xB-\yB\|^2_2 = \|\xB\|^2_2 + \|\yB\|^2_2 - 2 \xB^T \yB$$ trick from HW0, numpy test 11.
+1. (3 points) {{ autograde }} <span class="purple">Fill in `compute_distance`</span> in `task6.py`. This should compute the pairwise **squared** L2 distance between two matrices of descriptors. You can and should use the $$\|\xB-\yB\|^2_2 = \|\xB\|^2_2 + \|\yB\|^2_2 - 2 \xB^T \yB$$ trick from HW0, numpy test 11.
 
-2. (5 points) <span class="red">Fill in `find_matches`</span> in `task6.py`. This should use `compute_distance` plus the ratio test from the foreword to return the matches. You will have to pick a threshold for the ratio test. Something between $$0.7$$ and $$1$$ is reasonable, but you should experiment with it (look output of the `draw_matches` once you complete it). 
+2. (5 points) {{ code }} <span class="red">Fill in `find_matches`</span> in `task6.py`. This should use `compute_distance` plus the ratio test from the foreword to return the matches. You will have to pick a threshold for the ratio test. Something between $$0.7$$ and $$1$$ is reasonable, but you should experiment with it (look output of the `draw_matches` once you complete it). 
 
     **Beware!** The numbers for the ratio shown in the lecture slides apply to SIFT; the descriptor here is different so the ratio threshold you should use is different.
 
-    *Hint*: Look at `np.argsort` as well as `np.take_along_axis`.
+    <div class="primer-spec-callout info" markdown="1">
+      *Hint*: Look at `np.argsort` as well as `np.take_along_axis`.
+    <div>
 
-3. (5 points) <span class="red">Fill in `draw_matches`</span> in `task6.py`. This should put the images on top of each other and draw lines between the matches. You can use this to debug things.
+3. (5 points) {{ code }} <span class="red">Fill in `draw_matches`</span> in `task6.py`. This should put the images on top of each other and draw lines between the matches. You can use this to debug things.
 
-    *Hint*: Use `cv2.line`.
+    <div class="primer-spec-callout info" markdown="1">
+      *Hint*: Use `cv2.line`.
+    </div>
 
-4. (3 points) <span class="blue">Put a picture of the matches between two image pairs of your choice in your report.</span>
+4. (3 points) {{ report }} <span class="blue">Put a picture of the matches between two image pairs of your choice in your report.</span>
     
-5. (10 points) <span class="purple">Fill in `RANSAC_fit_homography`</span> in `homography.py`. 
+5. (10 points) {{ autograde }} <span class="purple">Fill in `RANSAC_fit_homography`</span> in `homography.py`. 
 
     This should RANSACify `fit_homography`. You should keep track of the best set of inliers you have seen in the RANSAC loop. Once the loop is done, please re-fit the model to these inliers. In other words, if you are told to run $$N$$ iterations of RANSAC, you should fit a homography $$N$$ times on the minimum number of points needed; this should be followed by a single fitting of a homography on many more points (the inliers for the best of the $$N$$ models). You will need to set epsilon's default value: $$0.1$$ pixels is too small; $$100$$ pixels is too big. You will need to play with this to get the later parts to work.
 
-    *Hints*: When sampling correspondences, draw **without** replacement; if you do it with replacement you may pick the same point repeatedly and then try to (effectively) fit a model to three points.
+    <div class="primer-spec-callout info" markdown="1">
+      *Hint*: When sampling correspondences, draw **without** replacement; if you do it with replacement you may pick the same point repeatedly and then try to (effectively) fit a model to three points.
+    </div>
 
-6. <span class="red">Fill in `make_warped`</span> in `task6.py`. This should take two images as an argument and do the whole pipeline described in the foreword. The resulting image should use `cv2.warpPerspective` to make a merged image where both images fit in. This merged image should have: (a) image 1's pixel data if only image 1 is present at that location; (b) image 2's pixel data if only image 2 is present at that location; (c) the average of image 1's data and image 2's data if both are present.
+6. {{ code }} 
+<span class="red">Fill in `make_warped`</span> in `task6.py`. This should take two images as an argument and do the whole pipeline described in the foreword. The resulting image should use `cv2.warpPerspective` to make a merged image where both images fit in. This merged image should have: (a) image 1's pixel data if only image 1 is present at that location; (b) image 2's pixel data if only image 2 is present at that location; (c) the average of image 1's data and image 2's data if both are present.
    
     *Walkthrough*:
 
@@ -264,17 +293,19 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
     
     3. Warp both images to the merged image. You can figure out where the images go by warping images containing ones to the merged images instead of the image and filling the image with 0s where the image doesn't go. These masks also tell you how to create the average.
 
-    *Debugging Hints*:
+    <div class="primer-spec-callout info" markdown="1">
+      *Debugging Hints*:
 
-    1. Make a fake pair of images by taking an image, rolling it by $$(10,30)$$ and then saving it. Debugging this is *far easier* if you know what the answer should be.
+      - Make a fake pair of images by taking an image, rolling it by $$(10,30)$$ and then saving it. Debugging this is *far easier* if you know what the answer should be.
 
-    2. If you want to debug the warping, you can also provide two images that are crops of the same image, (e.g., `I[100:400,100:400]` and `I[150:450,75:375]`) where you know the homography (since it is just a translation).
+      - If you want to debug the warping, you can also provide two images that are crops of the same image, (e.g., `I[100:400,100:400]` and `I[150:450,75:375]`) where you know the homography (since it is just a translation).
+    </div>
 
-7. (3 points) <span class="blue">Put merges from two of your favorite pairs in the report.</span> You can either choose an image we provide you or use a pair of images you take yourself.
+7. (3 points) {{ report }} <span class="blue">Put merges from two of your favorite pairs in the report.</span> You can either choose an image we provide you or use a pair of images you take yourself.
 
-8. (3 points) <span class="purple">Put these merges as `mypanorama1.jpg` and `mypanorama2.jpg` in your zip submission.</span> 
+8. (3 points) {{ autograde }} <span class="purple">Put these merges as `mypanorama1.jpg` and `mypanorama2.jpg` in your zip submission.</span> 
 
-9. (Optional) If you would like to submit a panorama, <span class="purple">please put your favorite as `myfavoritepanorama.jpg`</span>. We will have a vote. The winner gets 1 point of extra credit.
+9. (Optional) If you would like to submit a panorama, {{ autograde }} <span class="purple">please put your favorite as `myfavoritepanorama.jpg`</span>. We will have a vote. The winner gets 1 point of extra credit.
 
 ## Augmented Reality on a Budget
 
@@ -307,19 +338,23 @@ If you can warp images together, you can replace things in your reality. Imagine
 **Files**: We give a few examples of templates and scenes in `task7/scenes/`. Each folder contains:
  `template.png`: a viewed-from-head-on / distortion-free / fronto-parallel version of the texture; and `scene.jpg`: an image where the texture appears at some location and viewed at some angle. We provide a set of seals (e.g., the UM seal) that you may want to put on things in `task7/seals/`. You can substitute whatever you like.
 
- 1. <span class="red">Fill in the function `improve_image(scene,template,transfer)`</span> in `task7.py` that aligns `template` to `scene` using a homography, just as in task 6. Then, instead of warping `template` to the image, warp `transfer`. If you want to copy over your functions from task 6, you can either import them or just copy them.
+ 1. {{ code }} 
+ <span class="red">Fill in the function `improve_image(scene,template,transfer)`</span> in `task7.py` that aligns `template` to `scene` using a homography, just as in task 6. Then, instead of warping `template` to the image, warp `transfer`. If you want to copy over your functions from task 6, you can either import them or just copy them.
 
-    *Hints*:
+    <div class="primer-spec-callout info" markdown="1">
+      *Hints*:
 
-    - The matches that you get are definitely not one-to-one. You'll probably get better results if
+      - The matches that you get are definitely not one-to-one. You'll probably get better results if
     you match from the template to the scene (i.e., for each template keypoint, find the best match in scene). Be careful about ordering though if you transfer your code!
 
-    - The image to transfer might not be the same size as the template. You can either resize `transfer` to be the same size as `template` or automatically generate a homography.
+      - The image to transfer might not be the same size as the template. You can either resize `transfer` to be the same size as `template` or automatically generate a homography.
 
-    - For using the fucntion `warp_and_combine` from task 6, you may want to change it a little bit, since you should make sure you use warped `template` to cover areas in the `scene` completely as shown in Figure 3.
+      - For using the fucntion `warp_and_combine` from task 6, you may want to change it a little bit, since you should make sure you use warped `template` to cover areas in the `scene` completely as shown in Figure 3.
+    </div>
     
 2. Do something fun with this. Submit a synthetically done warp of something interesting. We'll have a contest. If you do something particularly neat to get the system to work, please write this in the report.
 
+    {{ autograde }} 
     <span class="purple">Submit in your zip file the following files:</span>
     - `myscene.jpg` -- the scene
     - `mytemplate.png` OR `mytemplate.jpg` -- the template. Submit either png or jpg but not both. 
@@ -334,6 +369,48 @@ If you can warp images together, you can replace things in your reality. Imagine
     
     - This trick is most impressive if you do this for something seen at a very different angle. You may be able to extend how far you can match by pre-generating synthetic warps of the template (i.e, generate $$\textrm{synth}_i = \textrm{apply}(\HB_i,T)$$ for a series of $$\HB_i$$, then see if you can find a good warping $$\hat{\HB}$$ from $$\textrm{synth}_i$$ to the scene. Then the final homography is $$\hat{\HB} \HB_i$$.
 
+## Gradescope Submission Checklist
+This section is meant to help you keep track of the many things that go in the report:
+- [ ] **RANSAC Theory**:
+    - [ ] 1.1 - Minimum # of points
+    - [ ] 1.2 - Probability single iteration fails
+    - [ ] 1.3 - Minimum # of RANSAC trials
+
+- [ ] **Fitting Linear Transformations**:
+    - [ ] 2.1 - Degrees of freedom, Minimum # of correspondences
+    - [ ] 2.2 - Form of $$\AB$$, $$\mB$$, and $$\bB$$
+
+- [ ] **Fitting Affine Transformations**:
+    - [ ] 3.1 - ($$\SB$$,$$\tB$$) in your report for `points_case_1.npy`
+    - [ ] 3.2 - Figures for `points_case_1.npy` and `points_case_2.npy`
+    - [ ] 3.3 - Affinity
+
+- [ ] **Fitting Homographies**:
+    - [ ] 4.1 - {{ autograde }} `fit_homography`
+    - [ ] 4.2 - $$\HB$$ for `points_case_1.npy` and `points_case_2.npy`
+    - [ ] 4.3 - Figures for `points_case_5.npy` and `points_case_9.npy
+
+- [ ] **Synthetic Views**:
+    - [ ] 5.1 - {{ code }} `make_synthetic_view`
+    - [ ] 5.2 - Both book covers
+    - [ ] 5.3 - Lines crooked?
+    - [ ] 5.4 - (_optional_) Reverse
+
+- [ ] **Stitching Stuff Together**:
+    - [ ] 6.1 - {{ autograde }} `compute_distance`
+    - [ ] 6.2 - {{ code }} `find_matches`
+    - [ ] 6.3 - {{ code }} `draw_matches`
+    - [ ] 6.4 - Two image pairs
+    - [ ] 6.5 - {{ autograde }} `RANSAC_fit_homography`
+    - [ ] 6.6 - {{ code }} `make_warped`
+    - [ ] 6.7 - Two merged pairs
+    - [ ] 6.8 - {{ autograde }} `mypanorama1.jpg` and `mypanorama1.jpg`
+    - [ ] 6.9 - (_optional_) {{ autograde }} `myfavoritepanorama.jpg`
+
+- [ ] **Augmented Reality**:
+    - [ ] 7.1 - {{ code }} `improve_image`
+    - [ ] 7.2 - {{ autograde }} `myscene.jpg`, `mytemplate.png/jpg`, `mytransfer.jpg`, `myimproved.jpg`
+
 ## Canvas Submission Checklist
 
 In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
@@ -342,6 +419,7 @@ In the `zip` file you submit to Canvas, the directory named after your uniqname 
 - [ ] `task5.py`
 - [ ] `task6.py`
 - [ ] `mypanorama1.jpg`, `mypanorama2.jpg`
+- [ ] `myscene.jpg`, `mytemplate.png/jpg`, `mytransfer.jpg`, `myimproved.jpg`
 
 The following are **optional**:
 - [ ] `myfavoritepanorama.jpg`
