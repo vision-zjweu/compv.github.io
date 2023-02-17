@@ -1,8 +1,10 @@
 ---
 layout: spec
 permalink: /hw3
-title: Homework 3 – Fitting Models and Image Warping
 latex: true
+
+title: Homework 3 – Fitting Models and Image Warping
+due: 11:59:59 p.m. on Tuesday, March 9, 2022
 ---
 <link href="style.css" rel="stylesheet">
 <div style="display:none">
@@ -28,15 +30,21 @@ latex: true
     \)
 </div>
 
+{% capture code %}<i class="fa fa-code icon-large"></i>{% endcapture %}
+{% capture autograde %}<i class="fa fa-robot icon-large"></i>{% endcapture %}
+{% capture report %}<i class="fa fa-file icon-large"></i>{% endcapture %}
+
 # Homework 3 – Fitting Models and Image Warping
 
 ## Instructions
 
-- This homework is **due at 11:59:59 p.m. on Tuesday, March 9, 2022**.
+- This homework is **due at {{ page.due }}**.
 - The submission includes two parts:
     1. **To Canvas**: submit a `zip` file of all of your code.
 
-        <span class="red">We have indicated questions where you have to do something in code in red.</span>  
+        {{ code }} - 
+        <span class="red">We have indicated questions where you have to do something in code in red</span>  
+        {{ autograde }} - 
         <span class="purple">We have indicated questions where we will definitely use an autograder in purple</span>
 
         Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name.
@@ -47,6 +55,7 @@ latex: true
 
     2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
+        {{ report }} - 
         <span class="blue">We have indicated questions where you have to do something in the report in blue.</span>
 
         You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/) for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
@@ -65,8 +74,8 @@ We are using Python 3.7. You can find references for the Python standard library
 In this section, suppose we are fitting a 3D plane (i.e., $$ax + by + cz + d = 0$$). A 3D plane can be defined by 3 points (2 points define a line). Plane fitting happens when people analyze point clouds to reconstruct scenes from laser scans. To distinguish from other notations that you may find elsewhere, we will refer to the model that is fit within the loop of RANSAC (covered in the lecture) as the *putative* model.
 
 1. (3 points) <span class="blue">Write in your report</span> the minimum number of 3D points needed to sample in an iteration to compute a putative model.
-2. (3 points) [REPORT] <span class="blue">Determine the probability</span> that the data picked for to fit the putative model in a single iteration fails, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting 3D planes.
-3. (3 points) [REPORT] <span class="blue">Determine the minimum number of RANSAC trials</span> needed to have $$\geq 98\%$$ chance of success, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting planes.
+2. (3 points) <span class="blue">Determine the probability</span> that the data picked for to fit the putative model in a single iteration fails, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting 3D planes.
+3. (3 points) <span class="blue">Determine the minimum number of RANSAC trials</span> needed to have $$\geq 98\%$$ chance of success, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting planes.
 
 *Hint*: You can do this by explicit calculation or by search/trial and error with numpy.
 

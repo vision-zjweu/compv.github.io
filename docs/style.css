@@ -13,14 +13,19 @@
     font-weight: bold;
 }
 
+.icon-size {
+    font-size: 1.0em;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    overflow-x: auto;
 }
 
 figure {
+    flex: 0 0 auto;
     margin-left: 5px;
     margin-right: 5px;
 }
