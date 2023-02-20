@@ -4,7 +4,7 @@ permalink: /hw3
 latex: true
 
 title: Homework 3 – Fitting Models and Image Warping
-due: 11:59:59 p.m. on Tuesday, March 9, 2022
+due: 5 p.m. on Monday, March 6, 2023
 ---
 <link href="style.css" rel="stylesheet">
 <div style="display:none">
