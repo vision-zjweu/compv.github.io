@@ -419,6 +419,7 @@ In the `zip` file you submit to Canvas, the directory named after your uniqname 
 - [ ] `task5.py`
 - [ ] `task6.py`
 - [ ] `mypanorama1.jpg`, `mypanorama2.jpg`
+- [ ] `task7.py`
 - [ ] `myscene.jpg`, `mytemplate.png/jpg`, `mytransfer.jpg`, `myimproved.jpg`
 
 The following are **optional**:
