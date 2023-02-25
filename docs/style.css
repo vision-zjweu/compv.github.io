@@ -1,14 +1,14 @@
-.red {
+.code {
     color: rgb(219, 71, 93);
     font-weight: bold;
 }
 
-.blue {
+.report {
     color: rgb(7, 130, 253);
     font-weight: bold;
 }
 
-.purple {
+.autograde {
     color: orchid;
     font-weight: bold;
 }
