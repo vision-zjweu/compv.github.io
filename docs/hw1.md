@@ -4,7 +4,7 @@ permalink: /hw1
 latex: true
 
 title: Homework 1 – Numbers and Images
-due: 5 p.m. on Wednesday January 25, 2023
+due: 5 p.m. on Wednesday January 25th, 2023
 ---
 
 <link href="style.css" rel="stylesheet">

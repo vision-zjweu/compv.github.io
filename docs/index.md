@@ -28,4 +28,5 @@ If you are rusty on linear algebra and calculus (who isn't), do not worry but do
 - [Homework 1: Numbers and Images]({{site.url}}/hw1)
 - Homework 2: Convolution and Feature Detection
 - [Homework 3: Fitting Models and Image Warping]({{site.url}}/hw3)
+- [Homework 4: Machine Learning]({{site.url}}/hw4)
 

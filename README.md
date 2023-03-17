@@ -19,3 +19,7 @@ To test locally ([ref](https://docs.github.com/en/pages/setting-up-a-github-page
 - [Primer Spec - Advanced Usage](https://eecs485staff.github.io/primer-spec/docs/USAGE_ADVANCED.html#advanced-usage)
     - [Markdown Tips](https://eecs485staff.github.io/primer-spec/docs/MARKDOWN_TIPS.html#markdown-tips)
 - Refer to existing code - it's probably been done somewhere already.
+
+## Todo:
+- [ ] - Figure out footnotes
+- [ ] - Resolve TODOs in HW1
