@@ -97,74 +97,64 @@ In the *forward pass* we receive the inputs (leaf nodes) of the graph and comput
 
 In the *backward pass* we compute the derivative of the graph's output $$L$$ with respect to each input of the graph. There is no need to reason *globally* about the derivative of the expression represented by the graph; instead when using backpropagation we need only think *locally* about how derivatives flow backward through each node of the graph. Specifically, during backpropagation a node that computes $$y=f(x_1, \ldots, x_N)$$ receive an *upstream gradient* $$\pd{L}{y}$$ giving the derivative of the loss with respect the the node output and computes *downstream gradients* $$\pd{L}{x_1},\ldots,\pd{L}{x_N}$$ giving the derivative of the loss with respect to the node inputs.
 
-Here's an example of a simple computational graph and the corresponding code for the forward and backward passes. Notice how each \textcolor{RoyalBlue}{\bf outgoing edge} from an operator gives rise to one line of code in the forward pass, and each \textcolor{ForestGreen}{\bf ingoing edge} to an operator gives rise to one line of code in the backward pass.
+Here's an example of a simple computational graph and the corresponding code for the forward and backward passes. Notice how each <span style="color:royalblue">**outgoing edge**</span> from an operator gives rise to one line of code in the forward pass, and each <span style="color:forestgreen">**ingoing edge**</span> to an operator gives rise to one line of code in the backward pass.
 
-<embed src="{{site.url}}/assets/hw4/figures/f1.pdf" height="200">
+<!-- Graph 1 + Code -->
+<figure>
+<div class="graph-code-container" markdown="1">
+    
+<img src="{{site.url}}/assets/hw4/figures/graph1.jpg" alt="Graph" width="350" style="border:0" class="graph">
 
-<div>
-    Hello World
-    ```python
-        for i in range(3)
-    ```
+```python
+def f(a, b, c):
+  d = a * b       # Start forward pass
+  L = c + d
+
+  grad_L = 1.0    # Start backward pass
+  grad_c = grad_L
+  grad_d = grad_L
+  grad_a = grad_d * b
+  grad_b = grad_d * a
+
+  return L, (grad_a, grad_b, grad_c)
+```
+
 </div>
-
-\begin{figure*}[h!]
-  \centering
-  \begin{minipage}{0.3\textwidth}
-    \includegraphics[width=\textwidth]{figures/graph1.pdf}
-  \end{minipage}%
-  \begin{minipage}{0.5\textwidth}
-    \begin{minted}[fontsize=\scriptsize]{python}
-    def f(a, b, c):
-      d = a * b       # Start forward pass
-      L = c + d
-
-      grad_L = 1.0    # Start backward pass
-      grad_c = grad_L
-      grad_d = grad_L
-      grad_a = grad_d * b
-      grad_b = grad_d * a
-
-      return L, (grad_a, grad_b, grad_c)
-    \end{minted}
-  \end{minipage}
-\end{figure*}
+</figure>
 
 Sometimes you'll see computational graphs where one piece of data is used as input to multiple operations. In such cases you can make the logic in the backward pass cleaner by rewriting the graph to include an explicit `copy` operator that returns multiple copies of its input. In the backward pass you can then compute separate gradients for the two copies, which will sum when backpropagating through the copy operator:
 
-\begin{figure*}[h!]
-  \centering
-  \begin{minipage}{0.3\textwidth}
-    \centering
-    \includegraphics[width=0.9\textwidth]{figures/graph2.pdf}%
-    \\*[2mm]
-    $$\downarrow$$ Add copy operator
-    \\*[2mm]
-    \includegraphics[width=0.9\textwidth]{figures/graph2_v2.pdf}
-  \end{minipage}% 
-  \begin{minipage}{0.4\textwidth}
-    \begin{minted}[fontsize=\scriptsize]{python}
-    def f(a, b, c):
-      b1 = b          # Start forward pass
-      b2 = b
-      d = a * b1
-      e = c * b2
-      L = d + e
+<!-- Graph 2 + Code -->
+<figure>
+<div class="graph-code-container" markdown="1">
+    
+<img src="{{site.url}}/assets/hw4/figures/graph2.jpg" alt="Graph" width="350" style="border:0" class="graph">
 
-      grad_L = 1.0    # Start backward pass
-      grad_d = grad_L
-      grad_e = grad_L
-      grad_a = grad_d * b1
-      grad_b1 = grad_d * a
-      grad_c = grad_e * b2
-      grad_b2 = grad_e * c
-      grad_b = grad_b1 + grad_b2  # Sum grads for copies
+```python
+def f(a, b, c):
+  # Start forward pass
+  b1 = b
+  b2 = b
+  d = a * b1
+  e = c * b2
+  L = d + e
 
-      return L, (grad_a, grad_b, grad_c)
-    \end{minted}
+  # Start backward pass
+  grad_L = 1.0
+  grad_d = grad_L
+  grad_e = grad_L
+  grad_a = grad_d * b1
+  grad_b1 = grad_d * a
+  grad_c = grad_e * b2
+  grad_b2 = grad_e * c
+  # Sum grads for copies
+  grad_b = grad_b1 + grad_b2
 
-  \end{minipage}
-\end{figure*}
+  return L, (grad_a, grad_b, grad_c)
+```
+
+</div>
+</figure>
 
 ### Task 1: Implementing Computational Graphs
 
@@ -180,52 +170,63 @@ $$\pd{f}{x}(x_0) \approx \frac{f(x_0 + h) - f(x_0 - h)}{2h}$$
 
 Each of these computational graphs implements a function or operation commonly used in machine learning. Can you guess what they are? (This is just for fun, not required).
 
-\begin{figure}[h!]
-  \centering
-  \begin{minipage}{0.42\textwidth}
-    \includegraphics[width=\textwidth]{figures/f1.pdf}
-  \end{minipage}%
-  \hspace{2mm}
-  \begin{minipage}{0.4\textwidth}
-    **`f1`: (OPTIONAL)** \\*[2mm]
-    The subtraction node computes $$d = \hat y - y$$ \\*[2mm]
-    The \verb|^2| node computes $$L = d^2$$
-  \end{minipage}
-  \vspace{-2mm}
-\end{figure}
 
+<div id="hw4-task1">
 
-\begin{figure}[h!]
-  \centering
-  \begin{minipage}{0.42\textwidth}
-    \includegraphics[width=\textwidth]{figures/f2.pdf}
-  \end{minipage}%
-  \hspace{2mm}
-  \begin{minipage}{0.4\textwidth}
-    **`f2`: (OPTIONAL)** \\*[2mm]
-    The $$\times2$$ node computes $$d = 2x$$ \\*[2mm]
-    The $$\div$$ node computes $$y = t / b$$
-  \end{minipage}
-  \vspace{2mm}
-\end{figure}
+<!-- f1 + Description -->
+<div class="graph-desc-container" markdown="1">
 
-\begin{figure}[h!]
-  \centering
-  \begin{minipage}{0.42\textwidth}
-    \includegraphics[width=\textwidth]{figures/f3.pdf}
-  \end{minipage}%
-  \hspace{2mm}
-  \begin{minipage}{0.4\textwidth}
-    **`f3`: (REQUIRED [10 points])** \\*[2mm]
-    $$y$$ is an integer equal to either 1 or 2. \\*
-    You don't need to compute a gradient for $$y$$. \\*[2mm]
-    The $$\div$$ nodes compute $$p_1 = e_1 / d$$ and \\* 
-    $$p_2 = e_2 / d$$. \\*[2mm]
-    The \verb|choose| node outputs outputs $$p_1$$ if $$y=1$$,
-    and outputs $$p_2$$ if $$y=2$$.
-  \end{minipage}
-  \vspace{-2mm}
-\end{figure}
+<img src="{{site.url}}/assets/hw4/figures/f1.jpg" alt="f1" width="350" style="border:0">
+
+<div class="graph-description" markdown="1">
+
+**`f1` (optional)**
+
+The subtraction node computes $$d = \hat y - y$$
+
+The `^2` node computes $$L = d^2$$
+
+</div>
+
+</div>
+
+<!-- f2 + Description -->
+<div class="graph-desc-container" markdown="1">
+
+<img src="{{site.url}}/assets/hw4/figures/f2.jpg" alt="f2" width="350" style="border:0">
+
+<div class="graph-description" markdown="1">
+
+**`f2`: (optional)**
+
+The $$\times2$$ node computes $$d = 2x$$
+
+The $$\div$$ node computes $$y = t / b$$
+
+</div>
+
+</div>
+
+<!-- f3 + Description -->
+<div class="graph-desc-container" markdown="1">
+
+<img src="{{site.url}}/assets/hw4/figures/f3.jpg" alt="f3" width="350" style="border:0">
+
+<div class="graph-description" markdown="1">
+
+**`f3`: (required - 10 points)**
+
+$$y$$ is an integer equal to either 1 or 2. You don't need to compute a gradient for $$y$$.
+
+The $$\div$$ nodes compute $$p_1 = e_1 / d$$ and $$p_2 = e_2 / d$$.
+    
+The `choose` node outputs outputs $$p_1$$ if $$y=1$$, and outputs $$p_2$$ if $$y=2$$.
+
+</div>
+
+</div>
+
+</div>
 
 ### Write Your Own Graph (Optional)
 
@@ -255,13 +256,13 @@ Along with forward and backward functions for operators to be used in the middle
 This modular API allows us to implement our operators and loss functions once, and reuse them in different computational graphs. For example, we can implement a full forward and backward pass to compute the loss and gradients for linear regression in just a few lines of code:
 
 ```python
-  from layers import fc_forward, fc_backward, l2_loss
+from layers import fc_forward, fc_backward, l2_loss
 
-  def linear_regression_step(X, y, W, b):
-      y_pred, cache = fc_forward(X, W, b)
-      loss, grad_y_pred = l2_loss(y_pred, y)
-      grad_X, grad_W, grad_b = fc_backward(grad_y_pred, cache)
-      return grad_W, grad_b
+def linear_regression_step(X, y, W, b):
+    y_pred, cache = fc_forward(X, W, b)
+    loss, grad_y_pred = l2_loss(y_pred, y)
+    grad_X, grad_W, grad_b = fc_backward(grad_y_pred, cache)
+    return grad_W, grad_b
 ```
 
 In the file `neuralnet/layers.py` you need to complete the implementation of the following:
@@ -338,10 +339,11 @@ After completing your implementation, you can run the script `gradcheck_classifi
 ### Task 4: Training Two-Layer Networks
 You will train a two-layer network to perform image classification on the CIFAR-10 dataset.  This dataset consists of $$32\times 32$$ RGB images of 10 different categories.  It provides 50,000 training images and 10,000 test images.  Here are a few example images from the dataset:
 
-\begin{figure*}[h!]
-  \centering
-  \includegraphics[width=0.5\textwidth]{figures/p2/CIFAR10.png}
-\end{figure*}
+<div style="width:100%;text-align:center">
+  <figure>
+    <img src="{{site.url}}/assets/hw4/CIFAR10.png" alt="CIFAR10">
+  </figure>
+</div>
 
 You can use the script `neuralnet/download_cifar.sh` to download and unpack the CIFAR10 dataset.
 
@@ -370,14 +372,15 @@ The loss should be the sum of two terms:
 
  Now it's time to train your model! Run the script `neuralnet/train.py` to train a two-layer network on the CIFAR-10 dataset. The script will print out training losses and train and val set accuracies as it trains. After training concludes, the script will also mke a plot of the training losses as well as the training and validation-set accuracies of the model during training; by default this will be saved in a file `plot.pdf`, but this can be customized with the flag `--plot-file`. You should see a plot that looks like this:
 
-\begin{figure*}[h!]
-  \centering
-  \includegraphics[width=0.9\textwidth]{figures/loss-plot.pdf}
-\end{figure*}
+<div style="width:100%;text-align:center">
+  <figure>
+    <img src="{{site.url}}/assets/hw4/figures/loss-plot.jpeg" alt="Loss Plot">
+  </figure>
+</div>
 
 Unfortunately, it seems that your model is not training very effectively -- the training loss has
 not decreased much from its initial value of $$\approx2.3$$, and the training and validation
-accuracies are very close to 10\% which is what we would expect from a model that randomly guesses
+accuracies are very close to $$10\%$$ which is what we would expect from a model that randomly guesses
 a category label for each input.
 
 You will need to tune the hyperparameters of your model in order to improve it.
@@ -394,7 +397,7 @@ You can consider changing any of the following hyperparameters:
 - `reg`: The strength of the L2 regularization term
 
 
-You should tune the hyperparameters and train a model that achieves at least 40\% on the validation set. After tuning your model, run your best model **exactly once** on the test set using the script `neuralnet/test.py`.
+You should tune the hyperparameters and train a model that achieves at least $$40\%$$ on the validation set. After tuning your model, run your best model **exactly once** on the test set using the script `neuralnet/test.py`.
 
 {{ report }} 
 <span class="report">In your report, include the loss / accuracy plot for your best model, describe the hyperparameter settings you used, and give the final test-set performance of your model.</span>
@@ -408,6 +411,9 @@ To gain more experience with hyperparameters, you should also tune the hyperpara
 
 As above, this should not take an excessive amount of training time -- we are able to train an overfit model that achieves $$\approx80\%$$ accuracy on the training set within about a minute of training.
 
-HINT: It's easier to overfit a smaller training set.
+<div class="primer-spec-callout info" markdown="1">
+  *Hint*: It's easier to overfit a smaller training set.
+<div>
+
 
 
