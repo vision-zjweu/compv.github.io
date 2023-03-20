@@ -4,24 +4,24 @@ permalink: /hw1
 latex: true
 
 title: Homework 1 – Numbers and Images
-due: 5 p.m. on Wednesday January 25, 2023
+due: 5 p.m. on Wednesday January 25th, 2023
 ---
 
 <link href="style.css" rel="stylesheet">
 <div style="display:none">
-    <!-- Define LaTeX commands here -->
-    \(
-        \DeclareMathOperator*{\argmin}{arg\,min}
+	<!-- Define LaTeX commands here -->
+	\(
+		\DeclareMathOperator*{\argmin}{arg\,min}
 
-        \newcommand{\DB}{\mathbf{D}}
-        \newcommand{\NB}{\mathbf{N}}
-        \newcommand{\PB}{\mathbf{P}}
-        \newcommand{\SB}{\mathbf{S}}
-        \newcommand{\XB}{\mathbf{X}}
+		\newcommand{\DB}{\mathbf{D}}
+		\newcommand{\NB}{\mathbf{N}}
+		\newcommand{\PB}{\mathbf{P}}
+		\newcommand{\SB}{\mathbf{S}}
+		\newcommand{\XB}{\mathbf{X}}
 
-        \newcommand{\xB}{\mathbf{x}}
-        \newcommand{\yB}{\mathbf{y}}
-    \)
+		\newcommand{\xB}{\mathbf{x}}
+		\newcommand{\yB}{\mathbf{y}}
+	\)
 
 </div>
 
@@ -49,7 +49,7 @@ The submission includes two parts:
    Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.
 
    <div class="primer-spec-callout info" markdown="1">
-     **Submission Tip:** Use the [Canvas Submission Checklist](#canvas-submission-checklist) and [Gradescope Submission Checklist](#gradescope-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py).
+	 **Submission Tip:** Use the [Canvas Submission Checklist](#canvas-submission-checklist) and [Gradescope Submission Checklist](#gradescope-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py).
 
    If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
    </div>
@@ -101,7 +101,7 @@ All the code/data for this is located in the folder `numpy/`. Each assignment re
 
 **Note**: All the `python` below refer to `python3`. As we stated earlier, we are going to use Python 3.7 in this assignment. Python 2 was [sunset](https://www.python.org/doc/sunset-python-2/) on January 1, 2022.
 
-1. (40 points) {{ report }} <span class="report">Fill in the code stubs in tests.py and warmups.py. Put the terminal output in your pdf from</span>:
+1. *(40 points)* {{ report }} <span class="report">Fill in the code stubs in tests.py and warmups.py. Put the terminal output in your pdf from</span>:
 
 ```console
 $ python run.py --allwarmups
@@ -116,26 +116,26 @@ When you open one of these two files, you will see starter code that looks like 
 
 ```python
 def sample1(xs):
-    """
-    Inputs:
-    - xs: A list of values
-    Returns:
-    The first entry of the list
-    """
-    return None
+	"""
+	Inputs:
+	- xs: A list of values
+	Returns:
+	The first entry of the list
+	"""
+	return None
 ```
 
 You should fill in the implementation of the function, like this:
 
 ```python
 def sample1(xs):
-    """
-    Inputs:
-    - xs: A list of values
-    Returns:
-    The first entry of the list
-    """
-    return xs[0]
+	"""
+	Inputs:
+	- xs: A list of values
+	Returns:
+	The first entry of the list
+	"""
+	return xs[0]
 ```
 
 You can test your implementation by running the test script:
@@ -175,20 +175,20 @@ Here is one example:
 
 ```python
 def t4(R, X):
-    """
-    Inputs:
-    - R: A numpy array of shape (3, 3) giving a rotation matrix
-    - X: A numpy array of shape (N, 3) giving a set of 3-dimensional vectors
-    Returns:
-    A numpy array Y of shape (N, 3) where Y[i] is X[i] rotated by R
-    Par: 3 lines
-    Instructor: 1 line
-    Hint:
-    1) If v is a vector, then the matrix-vector product Rv rotates the vector
-       by the matrix R.
-    2) .T gives the transpose of a matrix
-    """
-    return None
+	"""
+	Inputs:
+	- R: A numpy array of shape (3, 3) giving a rotation matrix
+	- X: A numpy array of shape (N, 3) giving a set of 3-dimensional vectors
+	Returns:
+	A numpy array Y of shape (N, 3) where Y[i] is X[i] rotated by R
+	Par: 3 lines
+	Instructor: 1 line
+	Hint:
+	1) If v is a vector, then the matrix-vector product Rv rotates the vector
+	   by the matrix R.
+	2) .T gives the transpose of a matrix
+	"""
+	return None
 ```
 
 ### What We Provide
@@ -233,27 +233,27 @@ of a row $$y$$ and column $$x$$. This is a not particularly intellectually stimu
 ## Data Interpretation and Visualization
 
 <figure>
-    <div class="flex-container">
-        {% for i in (0..8) %}
-        <figure>
-            <img src="{{site.url}}/assets/hw1/visualizeFig/vis_{{i}}.png" alt="vis_{{i}}" width="90px">
-            <figcaption>vis_{{i}}.png</figcaption>
-        </figure>
-        {% endfor %}
-    </div>
-    <figcaption>Figure 1: The Mystery Data</figcaption>
+	<div class="flex-container">
+		{% for i in (0..8) %}
+		<figure>
+			<img src="{{site.url}}/assets/hw1/visualizeFig/vis_{{i}}.png" alt="vis_{{i}}" width="90px">
+			<figcaption>vis_{{i}}.png</figcaption>
+		</figure>
+		{% endfor %}
+	</div>
+	<figcaption>Figure 1: The Mystery Data</figcaption>
 </figure>
 
 <figure>
-    <div class="flex-container">
-        {% for i in (0..8) %}
-        <figure>
-            <img src="{{site.url}}/assets/hw1/visualizeFig/vis_plasma_{{i}}.png" alt="vis_plasma_{{i}}" width="90px">
-            <figcaption>vis_{{i}}.png</figcaption>
-        </figure>
-        {% endfor %}
-    </div>
-    <figcaption>Figure 2: The Mystery Data, Visualized with the Plasma Colormap</figcaption>
+	<div class="flex-container">
+		{% for i in (0..8) %}
+		<figure>
+			<img src="{{site.url}}/assets/hw1/visualizeFig/vis_plasma_{{i}}.png" alt="vis_plasma_{{i}}" width="90px">
+			<figcaption>vis_{{i}}.png</figcaption>
+		</figure>
+		{% endfor %}
+	</div>
+	<figcaption>Figure 2: The Mystery Data, Visualized with the Plasma Colormap</figcaption>
 </figure>
 
 Throughout the course, a lot of the data you have access to will be in the form of an image. These won't be stored and saved in the same format that you're used towhen interacting with ordinary images, such as off your cell phone: sometimes they'll have negative values, really really big values, or invalid values. If you can look at images quickly, then you'll find bugs quicker. If you **only** print debug, you'll have a bad time. To teach you about interpreting things, I've got a bunch of mystery data that we'll analyze together. You'll write a brief version of the important `imsave` function for visualizing.
@@ -264,22 +264,22 @@ Let's load some of this mysterious data.
 >>> X = np.load("mysterydata/mysterydata.npy")
 >>> X
 array([[[0, 0, 0, ..., 0, 0, 1],
-        [0, 0, 0, ..., 0, 0, 0],
-        [0, 0, 0, ..., 0, 0, 0],
-        ...,
-        [0, 0, 0, ..., 0, 0, 0],
-        [0, 0, 0, ..., 0, 0, 0],
-        [0, 0, 0, ..., 0, 0, 0]],
+		[0, 0, 0, ..., 0, 0, 0],
+		[0, 0, 0, ..., 0, 0, 0],
+		...,
+		[0, 0, 0, ..., 0, 0, 0],
+		[0, 0, 0, ..., 0, 0, 0],
+		[0, 0, 0, ..., 0, 0, 0]],
 
-       ... (some more zeros) ...
+	   ... (some more zeros) ...
 
-       [[0, 0, 0, ..., 0, 0, 0],
-        [0, 0, 0, ..., 0, 0, 0],
-        [0, 0, 0, ..., 0, 0, 0],
-        ...,
-        [0, 0, 0, ..., 0, 0, 0],
-        [0, 0, 0, ..., 0, 0, 0],
-        [0, 0, 0, ..., 0, 0, 0]]], dtype=uint32)
+	   [[0, 0, 0, ..., 0, 0, 0],
+		[0, 0, 0, ..., 0, 0, 0],
+		[0, 0, 0, ..., 0, 0, 0],
+		...,
+		[0, 0, 0, ..., 0, 0, 0],
+		[0, 0, 0, ..., 0, 0, 0],
+		[0, 0, 0, ..., 0, 0, 0]]], dtype=uint32)
 ```
 
 Looks like it's a bunch of zeros. Nothing to see here folks! For better or worse: Python only shows the sides of an array when printing it and the sides of images that have gone through some processing tend to not be representative.
@@ -305,7 +305,7 @@ We don't see in 9 color channels, and so you can't look at them all at once. If 
 >>> plt.imsave("vis.png",X[:,:,0])
 ```
 
-You can see what the output looks like in Figure 1. This is a false color image. You can read about these in TODO, but the short version is that the given image, you find the minimum value (`vmin`) and the maximum value (`vmax`) and assign colors based on where each pixel's value falls between those. These colors look like: `Low` <img src="{{ site.url }}/assets/hw1/viridis.png" alt="viridis" width="60px" height="10px"> `High`. `plt.imsave` finds `vmin` and `vmax` for you on its own by computing the minimum and maximum
+You can see what the output looks like in Figure 1. This is a false color image. You can read about these in Section A.3 [TODO], but the short version is that the given image, you find the minimum value (`vmin`) and the maximum value (`vmax`) and assign colors based on where each pixel's value falls between those. These colors look like: `Low` <img src="{{ site.url }}/assets/hw1/viridis.png" alt="viridis" width="60px" height="10px"> `High`. `plt.imsave` finds `vmin` and `vmax` for you on its own by computing the minimum and maximum
 of the array.
 
 If you'd like to look at all 9 channels, save 9 images:
@@ -336,22 +336,22 @@ produces the outputs in Figure 2. These use the plasma colormap which looks like
 ### Pixel Value Ranges
 
 <figure>
-    <div class="flex-container">
-        {% for i in (0..8) %}
-        <figure>
-            <img src="{{site.url}}/assets/hw1/visualizeFig/vis2_{{i}}.png" alt="vis2_{{i}}" width="90px">
-            <figcaption>vis2_{{i}}.png</figcaption>
-        </figure>
-        {% endfor %}
-    </div>
-    <figcaption>Figure 3: The Mystery Data #2</figcaption>
+	<div class="flex-container">
+		{% for i in (0..8) %}
+		<figure>
+			<img src="{{site.url}}/assets/hw1/visualizeFig/vis2_{{i}}.png" alt="vis2_{{i}}" width="90px">
+			<figcaption>vis2_{{i}}.png</figcaption>
+		</figure>
+		{% endfor %}
+	</div>
+	<figcaption>Figure 3: The Mystery Data #2</figcaption>
 </figure>
 
-1. (2 points) Try loading `mysterydata2.npy` and visualizing it. You should get something like Figure 3. It's hard to see stuff because one spot is _really_ bright. In this case, it's because there's a solar flare that's
+1. *(2 points)* Try loading `mysterydata2.npy` and visualizing it. You should get something like Figure 3. It's hard to see stuff because one spot is _really_ bright. In this case, it's because there's a solar flare that's
    producing immense amounts of light. A common trick for making things easier to see is to apply a nonlinear correction. Here are a few options:
 
    $$
-    p^\gamma \ \textrm{with}\  \gamma \in [0,1] \quad\textrm{or}\quad \log(p) \quad\textrm{or}\quad \log(1+p)
+	p^\gamma \ \textrm{with}\  \gamma \in [0,1] \quad\textrm{or}\quad \log(p) \quad\textrm{or}\quad \log(1+p)
    $$
 
    where the last one can be done with `np.log1p`. Apply a nonlinear correction to the second mystery data and visualize it. {{ report }} <span class="report"> Put two of the channels i.e. `X[:,:,i]` as images into the report.</span> You can stick them side-by-side.
@@ -359,15 +359,15 @@ produces the outputs in Figure 2. These use the plasma colormap which looks like
 ### Invalid Pixel Values
 
 <figure>
-    <div class="flex-container">
-        {% for i in (0..8) %}
-        <figure>
-            <img src="{{site.url}}/assets/hw1/visualizeFig/vis3_{{i}}.png" alt="vis3_{{i}}" width="90px">
-            <figcaption>vis3_{{i}}.png</figcaption>
-        </figure>
-        {% endfor %}
-    </div>
-    <figcaption>Figure 4: The Mystery Data #3, Visualized! (Blank is Intentional)</figcaption>
+	<div class="flex-container">
+		{% for i in (0..8) %}
+		<figure>
+			<img src="{{site.url}}/assets/hw1/visualizeFig/vis3_{{i}}.png" alt="vis3_{{i}}" width="90px">
+			<figcaption>vis3_{{i}}.png</figcaption>
+		</figure>
+		{% endfor %}
+	</div>
+	<figcaption>Figure 4: The Mystery Data #3, Visualized! (Blank is Intentional)</figcaption>
 </figure>
 
 Let's try this again, using one of the other data.
@@ -398,7 +398,7 @@ Other things that check things are `np.isnan` (which returns `True` for `NaNs`) 
 and the minimum of a value and a `NaN` is a `NaN`. The resulting color is a `NaN` as well. If you've got `NaN`s in your data, many functions you may want to use (e.g., `mean`, `sum`, `min`, `max`, `median`, `quantile`) have a "nan" version.
 
 {:start="2"} 
-2. (2 points) Fix the images by determining the right range (use `np.nanmin`, `np.nanmax`) and then pass arguments into `plt.imsave` to set the range for the visualization. To figure out what arguments to set, look at the documentation for `plt.imsave`. {{ report }} <span class="report">Put two images from `mysterydata3.npy` in the report.</span>
+2. *(2 points)* Fix the images by determining the right range (use `np.nanmin`, `np.nanmax`) and then pass arguments into `plt.imsave` to set the range for the visualization. To figure out what arguments to set, look at the documentation for `plt.imsave`. {{ report }} <span class="report">Put two images from `mysterydata3.npy` in the report.</span>
 
 ### Rolling Your Own `plt.imsave`
 
@@ -412,15 +412,15 @@ $$
 However, you'll have to be very careful -- this precise equation won't always work. As an exercise -- can you spot something that might cause the expression to be a `NaN`?
 
 {:start="3"} 
-3. (3 points) {{ code }} <span class="code">Fill in `colormapArray`.</span> To test, you'll have to write some calling code in the main part. You can use either `plt.imsave` or `cv2.imwrite` to save the image to an file. 
+3. *(3 points)* {{ code }} <span class="code">Fill in `colormapArray`.</span> To test, you'll have to write some calling code in the main part. You can use either `plt.imsave` or `cv2.imwrite` to save the image to an file. 
 
-4. (3 points) {{ report }} <span class="report">Visualize `mysterydata4.npy` using your system without it crashing and put all nine images into your report</span>. You may have to make a design decision about
+4. *(3 points)* {{ report }} <span class="report">Visualize `mysterydata4.npy` using your system without it crashing and put all nine images into your report</span>. You may have to make a design decision about
 what to do about results that are undefined. If the results are undefined, then any option that seems reasonable is fine. Your colormap should look similar to Figure 2. If the colors look inverted, see Beware 3!
 
 <div class="primer-spec-callout warning" markdown="1">
   
    **Beware:**
-    
+	
    1. There are a bunch of edge cases in the equation for the color: it won't always return an integer between $$0$$ and $$N-1$$. It will also definitely blow up under certain input conditions (also, watch the type).
    2. You're asked by the code to return a `HxW uint8` image. There are a lot of shortcuts/implied sizes and shapes in computer vision notation -- since this is a `HxW` *color* image, it should have 3 channels (i.e., be `HxWx3`). Since it's `uint8`, you should make the image go from $$0$$ to $$255$$ before returning it (otherwise everything gets clipped to $$0$$ and $$1$$, which correspond to the two lowest brightness settings). Like all other jargon, this is annoying until it is learned; after it is learned, it is then useful.
    3. If you choose to save the results using opencv, you may have blue and red flipped -- `opencv` assumes blue is first and the rest of the world assumes red is first. You can identify this by the fact that the columns of the are defined as Red/Green/Blue and there is a lot of blue and not much red in the lowest entry.
@@ -434,43 +434,43 @@ The code and data for this are located in `dither/`. This contains starter code 
 While modern computer screens are typically capable of showing 256 different intensities per color (leading to $$256^3 = 16.7$$ million possible color combinations!) this wasn't always the case. Many types of displays are only capable of showing a smaller number of light intensities. Similarly, some image formats cannot represent all $$256^3$$ colors: GIFs, for instance, can only store 256 colors.
 
 <figure>
-    {% assign folders = "color, gray" | split: ", " %}
-    {% assign col_headers = "Input, Naive Rounding, Dithered" | split: ", " %}
-    <figure>
-        <figcaption>One bit, encoding two levels: 1.0/0.0</figcaption>
-        {% for f in folders %}
-            <div class="flex-container">
-                {% assign imgs = "aep.jpg, aep.jpg_quantizeNaive.png, aep.jpg_quantizeFloyd.png" | split: ", " %}
-                {% for i in (0..2) %}
-                    <figure>
-                        <img src="{{site.url}}/assets/hw1/illustFig/{{ f }}/{{ imgs[i] }}" alt="{{ imgs[i] }}" width="250px">
-                        {% if f == "gray" %}
-                            <figcaption>{{ col_headers[i] }}</figcaption>
-                        {% endif %}
-                    </figure>
-                {% endfor %}
-            </div>
-        {% endfor %}
-    </figure>
-    <figure>
-        <figcaption>Two bits encoding four levels: 1.0/0.66/0.33/0.0</figcaption>
-        {% for f in folders %}
-            <div class="flex-container">
-                {% assign imgs = "aep.jpg, aep.jpg_quantizeNaive2.png, aep.jpg_quantizeFloyd2.png" | split: ", " %}
-                {% for i in (0..2) %}
-                    <figure>
-                        <img src="{{site.url}}/assets/hw1/illustFig/{{ f }}/{{ imgs[i] }}" alt="{{ imgs[i] }}" width="250px">
-                        {% if f == "gray" %}
-                            <figcaption>{{ col_headers[i] }}</figcaption>
-                        {% endif %}
-                    </figure>
-                {% endfor %}
-            </div>
-        {% endfor %}
-    </figure>
-    <figcaption style="text-align:justify; width:90%; margin-left:5%; margin-right:5%"> 
-       <b>Figure 5</b>: (top two rows) Results with one bit of brightness (two levels -- off or on) per channel. With 3 channels, this leads to 2^3 possible colors. (bottom two rows) Results with two bits of brightness per channel. With 3 channels, this leads to 4^3 possible colors. In both cases, naively rounding to the nearest value produces weird results. You'll produce the result on the right. Both use the same values (look carefully!) but use them differently.
-    </figcaption>
+	{% assign folders = "color, gray" | split: ", " %}
+	{% assign col_headers = "Input, Naive Rounding, Dithered" | split: ", " %}
+	<figure>
+		<figcaption>One bit, encoding two levels: 1.0/0.0</figcaption>
+		{% for f in folders %}
+			<div class="flex-container">
+				{% assign imgs = "aep.jpg, aep.jpg_quantizeNaive.png, aep.jpg_quantizeFloyd.png" | split: ", " %}
+				{% for i in (0..2) %}
+					<figure>
+						<img src="{{site.url}}/assets/hw1/illustFig/{{ f }}/{{ imgs[i] }}" alt="{{ imgs[i] }}" width="250px">
+						{% if f == "gray" %}
+							<figcaption>{{ col_headers[i] }}</figcaption>
+						{% endif %}
+					</figure>
+				{% endfor %}
+			</div>
+		{% endfor %}
+	</figure>
+	<figure>
+		<figcaption>Two bits encoding four levels: 1.0/0.66/0.33/0.0</figcaption>
+		{% for f in folders %}
+			<div class="flex-container">
+				{% assign imgs = "aep.jpg, aep.jpg_quantizeNaive2.png, aep.jpg_quantizeFloyd2.png" | split: ", " %}
+				{% for i in (0..2) %}
+					<figure>
+						<img src="{{site.url}}/assets/hw1/illustFig/{{ f }}/{{ imgs[i] }}" alt="{{ imgs[i] }}" width="250px">
+						{% if f == "gray" %}
+							<figcaption>{{ col_headers[i] }}</figcaption>
+						{% endif %}
+					</figure>
+				{% endfor %}
+			</div>
+		{% endfor %}
+	</figure>
+	<figcaption style="text-align:justify; width:90%; margin-left:5%; margin-right:5%"> 
+	   <b>Figure 5</b>: (top two rows) Results with one bit of brightness (two levels -- off or on) per channel. With 3 channels, this leads to 2^3 possible colors. (bottom two rows) Results with two bits of brightness per channel. With 3 channels, this leads to 4^3 possible colors. In both cases, naively rounding to the nearest value produces weird results. You'll produce the result on the right. Both use the same values (look carefully!) but use them differently.
+	</figcaption>
 </figure>
 
 {% assign col_headers = "Input, Naive Rounding, Dithered" | split: ", " %}
@@ -520,33 +520,33 @@ We'll call this a _quantized_ image. You can take the palette and the quantized 
 
 The simplest way to make an image that's close is to just pick the closest value in the palette for each pixel.
 
-1. (8 points) 2 coding, 3 report questions.
+1. *(8 points)* 2 coding, 3 report questions.
 
    1. {{ code }} <span class="code">First, fill in `quantize(v,palette)` in the starter code.</span>
 
-      This should return the **index** of the nearest value in the palette to the single value `v`. Note that we're making this general by letting it take a palette. For speed this would normally done by pre-selecting a palette where the nearest entry could be calculated fast. You can do this without a for-loop. Look at `np.argmin`. Indeed, the beauty of the Internet is that if you search for "numpy find index of smallest value", you'll likely find this on your own. In general, you should feel free to search for numpy documentation or for whether there are functions that will make your life easier.
+	  This should return the **index** of the nearest value in the palette to the single value `v`. Note that we're making this general by letting it take a palette. For speed this would normally done by pre-selecting a palette where the nearest entry could be calculated fast. You can do this without a for-loop. Look at `np.argmin`. Indeed, the beauty of the Internet is that if you search for "numpy find index of smallest value", you'll likely find this on your own. In general, you should feel free to search for numpy documentation or for whether there are functions that will make your life easier.
 
    2. {{ code }} <span class="code">Second, fill in `quantizeNaive(IF,palette)` in the starter code.</span>
 
-      This takes a floating point image of size HxW and a palette of values. Create a new uint8 matrix and use quantize() to find the index of the nearest pixel. Return the `HxW uint8` image containing the palette indices (not values!). Once you've done this, you can call `python dither.py gallery200 results quantizeNaive` to see the results. Open up `view.htm`. You can sort of recognize the images, but this is not an aesthetically pleasing result. If you change `--numbits` you can control the size of the palette.
+	  This takes a floating point image of size HxW and a palette of values. Create a new uint8 matrix and use quantize() to find the index of the nearest pixel. Return the `HxW uint8` image containing the palette indices (not values!). Once you've done this, you can call `python dither.py gallery200 results quantizeNaive` to see the results. Open up `view.htm`. You can sort of recognize the images, but this is not an aesthetically pleasing result. If you change `--numbits` you can control the size of the palette.
 
-      <div class="primer-spec-callout warning" markdown="1">
+	  <div class="primer-spec-callout warning" markdown="1">
 
-      **Beware:**
+	  **Beware:**
 
-      At this stage, many people naturally want to do something like `output = IF`, which gives you an array that's as big as the input. Keep in mind that when you get `IF` as an argument, you are getting a _reference/address/pointer_! If you modify that variable, the underlying data changes.
+	  At this stage, many people naturally want to do something like `output = IF`, which gives you an array that's as big as the input. Keep in mind that when you get `IF` as an argument, you are getting a _reference/address/pointer_! If you modify that variable, the underlying data changes.
 
-      Allocate a new matrix via `output = np.zeros(IF.shape,dtype=np.uint8)`. Otherwise, this is like asking to copy your friends' notes, and then returning them with doodles all over them.
+	  Allocate a new matrix via `output = np.zeros(IF.shape,dtype=np.uint8)`. Otherwise, this is like asking to copy your friends' notes, and then returning them with doodles all over them.
 
-      </div>
+	  </div>
 
-   3. (2 points) {{ report }} <span class="report"> If you apply this to the folder `gallery`, why might your code (that calls quantize) take a very long time?</span> (1 sentence)
+   3. *(2 points)* {{ report }} <span class="report"> If you apply this to the folder `gallery`, why might your code (that calls quantize) take a very long time?</span> (1 sentence)
 
-   4. (2 points) Pause the program right after `algoFn` (the function for your dithering algorithm) gets called. Visualize the values in the image with `plt.imsave` or `plt.imshow`. These produce false color images (see Section TODO). The default value colormap goes from Low \includegraphics[width=24pt,height=6pt]{viridis.png} High. You should notice that something is different about the intensity values after they've been converted to the palette.
+   4. *(2 points)* Pause the program right after `algoFn` (the function for your dithering algorithm) gets called. Visualize the values in the image with `plt.imsave` or `plt.imshow`. These produce false color images (see Section A.3 [TODO]). The default value colormap goes from Low \includegraphics[width=24pt,height=6pt]{viridis.png} High. You should notice that something is different about the intensity values after they've been converted to the palette.
 
-      {{ report }} <span class="report">Do low intensity values correspond to low palette values? Explain (1 sentence) what's going on.</span> You may have to look through the code you're given (a good habit to get into).
+	  {{ report }} <span class="report">Do low intensity values correspond to low palette values? Explain (1 sentence) what's going on.</span> You may have to look through the code you're given (a good habit to get into).
 
-   5. (4 points) {{ report }} <span class="report">Put two results of inputs and outputs in your answer document. Use `aep.jpg` plus any other one that you like.</span> While you can play with `--num-bits` to get a sense of how things work, you should have `--num-bits` set to `1` for the output.
+   5. *(4 points)* {{ report }} <span class="report">Put two results of inputs and outputs in your answer document. Use `aep.jpg` plus any other one that you like.</span> While you can play with `--num-bits` to get a sense of how things work, you should have `--num-bits` set to `1` for the output.
 
 ### Floyd-Steinberg
 
@@ -557,77 +557,77 @@ Naively quantizing the image to a palette doesn't work. The key is to spread out
 # you'll have to set up pixel
 output = new HxW that indexes into the palette
 for y in range(H): for x in range(W):
-    oldValue = pixel[x][y]
-    colorIndex = quantize(oldValue,palette)
-    # See Beware 1! re: rows/columns
-    output[x][y] = colorIndex
-    newValue = palette[colorIndex]
-    error = oldValue-newValue
-    pixel[x+1][y]   += error*7/16
-    pixel[x-1][y+1] += error*3/16
-    pixel[x][y+1]   += error*5/16
-    pixel[x+1][y+1] += error*1/16
+	oldValue = pixel[x][y]
+	colorIndex = quantize(oldValue,palette)
+	# See Beware 1! re: rows/columns
+	output[x][y] = colorIndex
+	newValue = palette[colorIndex]
+	error = oldValue-newValue
+	pixel[x+1][y]   += error*7/16
+	pixel[x-1][y+1] += error*3/16
+	pixel[x][y+1]   += error*5/16
+	pixel[x+1][y+1] += error*1/16
 return output
 ```
 
 This is pseudocode; throughout the course (and indeed your career as a programmer) so you'll have to figure out to translate pseudocode.
 
 {:start="2"} 
-2. (15 points) 1 coding, 2 report questions. 
+2. *(15 points)* 1 coding, 2 report questions. 
 
-    1. {{ code }} <span class="code">Implement Floyd-Steinberg Dithering in `quantizeFloyd`.</span>
+	1. {{ code }} <span class="code">Implement Floyd-Steinberg Dithering in `quantizeFloyd`.</span>
 
-        <div class="primer-spec-callout warning" markdown="1">
+		<div class="primer-spec-callout warning" markdown="1">
 
-        **Beware:**
+		**Beware:**
 
-        1. In general, you should be careful with indices when working with images. Different programs, libraries, and notations will make different assumptions about whether x or y come first, and whether the image is height x width or width x height. Sometimes the system won't even say which it expects! Here, the person who wrote up the code on the Wikipedia article says that you should access pixels as pixel[x][y]. In numpy, we'll refer to the pixel at a given row y and column x as pixel[y,x]. When you're not sure, you can often tell by giving the code it a *non-square* image and seeing where it breaks.
+		1. In general, you should be careful with indices when working with images. Different programs, libraries, and notations will make different assumptions about whether x or y come first, and whether the image is height x width or width x height. Sometimes the system won't even say which it expects! Here, the person who wrote up the code on the Wikipedia article says that you should access pixels as pixel[x][y]. In numpy, we'll refer to the pixel at a given row y and column x as pixel[y,x]. When you're not sure, you can often tell by giving the code it a *non-square* image and seeing where it breaks.
 
-        2. This algorithm, like most image processing algorithms, has literal edge cases. You typically won't be told what to do because typically these cases aren't defined. I usually take the laziest functional solution that preserves the intent, but does not try something fancy. When you try to be oversmart, you open yourself up to oversmart bugs.
+		2. This algorithm, like most image processing algorithms, has literal edge cases. You typically won't be told what to do because typically these cases aren't defined. I usually take the laziest functional solution that preserves the intent, but does not try something fancy. When you try to be oversmart, you open yourself up to oversmart bugs.
 
-        3. The algorithm requires modifying the array you're given. Again, when you get `IF` as an argument, you are getting a *reference/address/pointer*! Modifying this data modifies the original data. Make a copy in a new variable via `IF.copy()`. It's generally not nice to tamper with data you're passed unless you've been explicitly told you can modify it or asked to. Try the algorithm with and without first making a copy. See what happens when the starter code tries to save the image it gave you.
+		3. The algorithm requires modifying the array you're given. Again, when you get `IF` as an argument, you are getting a *reference/address/pointer*! Modifying this data modifies the original data. Make a copy in a new variable via `IF.copy()`. It's generally not nice to tamper with data you're passed unless you've been explicitly told you can modify it or asked to. Try the algorithm with and without first making a copy. See what happens when the starter code tries to save the image it gave you.
 
-        </div>
+		</div>
 
-    2. (3 points) {{ report }} <span class="report">In your own words (1-2 sentences), why does dithering (the general concept) work?</span> Try stepping back from your computer screen or, if you wear glasses, take them off.
+	2. *(3 points)* {{ report }} <span class="report">In your own words (1-2 sentences), why does dithering (the general concept) work?</span> Try stepping back from your computer screen or, if you wear glasses, take them off.
 
-    3. (12 points) {{ report }} <span class="report">Run this on `gallery200`. Put three results in your document, including `aep.jpg`.</span> Don't adjust `--num-bits` and use the defaults.
+	3. *(12 points)* {{ report }} <span class="report">Run this on `gallery200`. Put three results in your document, including `aep.jpg`.</span> Don't adjust `--num-bits` and use the defaults.
 
 ### Resizing Images
 
 We provided you with two folders of images, `gallery/` and `gallery200/`. The images in `gallery200` are way too small; the images in `gallery` are way too big! Giving you the images in all sizes would be too big, so it would be ideal if we could resize images to some size we decide when we run the program.
 
 {:start="3"} 
-3. (15 points) 1 coding question. 
+3. *(15 points)* 1 coding question. 
 
-    1. {{ code }} <span class="code">Fill in `resizeToSquare(I,maxDim)`.</span>
+	1. {{ code }} <span class="code">Fill in `resizeToSquare(I,maxDim)`.</span>
 
-        If the input image is smaller than maxDim on both sides, leave it alone; if it is bigger, resize the image to fit inside a `maxDim` by `maxDim` square  **while keeping the aspect ratio the same** (i.e., the image should not stretch). Use the opencv function `cv2.resize`.  As is always the case in the course, you can look up any documentation you'd like for this function. You can now resize to your hearts content using the `--resizeto` flag.
+		If the input image is smaller than maxDim on both sides, leave it alone; if it is bigger, resize the image to fit inside a `maxDim` by `maxDim` square  **while keeping the aspect ratio the same** (i.e., the image should not stretch). Use the opencv function `cv2.resize`.  As is always the case in the course, you can look up any documentation you'd like for this function. You can now resize to your hearts content using the `--resizeto` flag.
 
 ### Handling Color
 
 You've written a version of dithering that handles grayscale images. Now you'll write one that handles color.
 
 {:start="4"} 
-4. (15 points) 2 coding, 1 report questions.
+4. *(15 points)* 2 coding, 1 report questions.
 
-    1.  {{ code }} <span class="code">Rewrite `quantize(v,palette)` so that it can handle both scalar `v` and vector `v`.
+	1.  {{ code }} <span class="code">Rewrite `quantize(v,palette)` so that it can handle both scalar `v` and vector `v`.
 
-        If `v` is a `n`-dimensional vector it should return a set of `n` vector indices (i.e., for each element, what is the closest value in the palette). You can use a `for` loop, but remember that: (a) broadcasting can take a `M`-dimensional vector and `N`-dimensional vector and produce a `MxN` dimensional matrix; and (b) many functions have an axis argument. If you are given a vector, don't overwrite individual elements of it either!
+		If `v` is a `n`-dimensional vector it should return a set of `n` vector indices (i.e., for each element, what is the closest value in the palette). You can use a `for` loop, but remember that: (a) broadcasting can take a `M`-dimensional vector and `N`-dimensional vector and produce a `MxN` dimensional matrix; and (b) many functions have an axis argument. If you are given a vector, don't overwrite individual elements of it either!
 
-    2. {{ code }} <span class="code">Make sure that your version of `quantizeFloyd(IF,palette)` can handle images with multiple channels.</span>
+	2. {{ code }} <span class="code">Make sure that your version of `quantizeFloyd(IF,palette)` can handle images with multiple channels.</span>
 
-       You may not have to do anything. If `IF` is a $H \times W \times 3$ array, `IF[i,j]` refers to the 3D vector at the `i,j`th pixel i.e., `[IF[i,j,0],IF[i,j,1],IF[i,j,2]]`. You can add and subtract that vector however you want.
+	   You may not have to do anything. If `IF` is a $H \times W \times 3$ array, `IF[i,j]` refers to the 3D vector at the `i,j`th pixel i.e., `[IF[i,j,0],IF[i,j,1],IF[i,j,2]]`. You can add and subtract that vector however you want.
 
-       <div class="primer-spec-callout warning" markdown="1">
+	   <div class="primer-spec-callout warning" markdown="1">
 
-       **Beware:** When you get `v = IF[i,j]`, you are getting a **reference/address/pointer**! If you modify that variable, the underlying data changes! This can lead to hard to track down bugs. You may want to `.copy()` the pixel if you're going to modify it.
+	   **Beware:** When you get `v = IF[i,j]`, you are getting a **reference/address/pointer**! If you modify that variable, the underlying data changes! This can lead to hard to track down bugs. You may want to `.copy()` the pixel if you're going to modify it.
 
-       </div>
+	   </div>
 
-    3. (5 points) Generate any three results of your choosing. This can be on the images we provide or on some other image you'd like. {{ report }} <span class="report">Put them in your document</span>.
+	3. *(5 points)* Generate any three results of your choosing. This can be on the images we provide or on some other image you'd like. {{ report }} <span class="report">Put them in your document</span>.
 
-    4. (optional -- no credit) Pick your favorite result and put the image saved as `dither/mychoice.jpg` in your zip file. We'll have a vote among the class for their favorite.
+	4. (optional -- no credit) Pick your favorite result and put the image saved as `dither/mychoice.jpg` in your zip file. We'll have a vote among the class for their favorite.
 
 ### (Optional) Gamma Correction
 
@@ -643,21 +643,21 @@ You should feel free to use the outputs from this implementation for your chosen
 
 The same color may look different under different lighting conditions. Images `rubik/indoor.png` and `rubik/outdoor.png` are two photos of a same Rubik's cube under different illuminances.
 
-1. (2.5 points) {{ code }} <span class="code">Load the images and plot their R, G, B channels separately as grayscale images using `plt.imshow()`.</span>
-2. (2.5 points) {{ code }} <span class="code">Then convert them into LAB color space using `cv2.cvtColor` and plot the three channels again.</span>
-3. (5 points) {{ report }} <span class="report">Include the LAB color space plots in your report. Which color space (RGB vs. LAB) better separates the illuminance (i.e., total amount of light) change from other factors such as hue? Why?</span>
-4. (10 points) {{ code }} <span class="code"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> Below in Figure 6 is an example of two photos of the same piece of paper, taken in the basement and by the window respectively.
+1. *(2.5 points)* {{ code }} <span class="code">Load the images and plot their R, G, B channels separately as grayscale images using `plt.imshow()`.</span>
+2. *(2.5 points)* {{ code }} <span class="code">Then convert them into LAB color space using `cv2.cvtColor` and plot the three channels again.</span>
+3. *(5 points)* {{ report }} <span class="report">Include the LAB color space plots in your report. Which color space (RGB vs. LAB) better separates the illuminance (i.e., total amount of light) change from other factors such as hue? Why?</span>
+4. *(10 points)* {{ code }} <span class="code"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> Below in Figure 6 is an example of two photos of the same piece of paper, taken in the basement and by the window respectively.
 
 <figure>
-    <div class="flex-container">
-        <figure>
-            <img src="{{site.url}}/assets/hw1/images/basement.png" alt="basement" width="250px">
-        </figure>
-        <figure>
-            <img src="{{site.url}}/assets/hw1/images/window.png" alt="window" width="250px">
-        </figure>
-    </div>
-    <figcaption>Figure 6: The same piece of paper in the basement and by the window</figcaption>
+	<div class="flex-container">
+		<figure>
+			<img src="{{site.url}}/assets/hw1/images/basement.png" alt="basement" width="250px">
+		</figure>
+		<figure>
+			<img src="{{site.url}}/assets/hw1/images/window.png" alt="window" width="250px">
+		</figure>
+	</div>
+	<figcaption>Figure 6: The same piece of paper in the basement and by the window</figcaption>
 </figure>
 
 **Submit** the following in the same folder:
@@ -676,46 +676,46 @@ The first image was taken in the basement under a light. The second was taken by
 
 Since the sense of color difference is subjective, we will display all images and patches on a webpage. Every student can vote for their favorite pair of images that illustrates color difference on Piazza. The winner will get **Extra Credits** (2 pts).
 
-## Gradescope Submission Checklist
+# Gradescope Submission Checklist
 
 This section is meant to help you keep track of the many things that go in the report:
 
-- [ ] NumPy Intro:
+- [ ] **NumPy Intro**:
   - [ ] 1.1 - Terminal Output
 
-- [ ] Data Interpretation and Visualization:
+- [ ] **Data Interpretation and Visualization**:
   - [ ] 2.1 - 2 images from `mysterydata2.npy`
   - [ ] 2.2 - 2 images from `mysterydata3.npy`
   - [ ] 2.3 - {{ code }} `colorMapArray`
   - [ ] 2.4 - 9 images from `mysterydata4.npy`
 
-- [ ] Lights on a Budget
-    - [ ] 3.1 Naive Approach
-        - [ ] 1 - {{ code }} `quantize`
-        - [ ] 2 - {{ code }} `quantizeNaive`
-        - [ ] 3 - Quantize Runtime
-        - [ ] 4 - Intensity Values vs Paletter Values
-        - [ ] 5 - Two input/output pairs: `aep.jpg` + your choice
-    - [ ] 3.2 Floyd-Steinberg
-        - [ ] 1 - {{ code }} `quantizeFloyd`
-        - [ ] 2 - Why does dithering work?
-        - [ ] 3 - 3 results from `gallery200/` including `aep.jpg`
-    - [ ] 3.3 Resizing Images
-        - [ ] 1 - {{ code }} `resizeToSquare`
-    - [ ] 3.4 Handling Color
-        - [ ] 1 - {{ code }} `quantize`
-        - [ ] 2 - {{ code }} `quantizeFloyd`
-        - [ ] 3 - 3 results
-        - [ ] 4 - (*optional*) `dither/mychoice.jpg`
-    - [ ] 3.5 Gamma Correction (*optional*)
+- [ ] **Lights on a Budget**:
+	- [ ] 3.1 Naive Approach
+		- [ ] 1 - {{ code }} `quantize`
+		- [ ] 2 - {{ code }} `quantizeNaive`
+		- [ ] 3 - Quantize Runtime
+		- [ ] 4 - Intensity Values vs Paletter Values
+		- [ ] 5 - Two input/output pairs: `aep.jpg` + your choice
+	- [ ] 3.2 Floyd-Steinberg
+		- [ ] 1 - {{ code }} `quantizeFloyd`
+		- [ ] 2 - Why does dithering work?
+		- [ ] 3 - 3 results from `gallery200/` including `aep.jpg`
+	- [ ] 3.3 Resizing Images
+		- [ ] 1 - {{ code }} `resizeToSquare`
+	- [ ] 3.4 Handling Color
+		- [ ] 1 - {{ code }} `quantize`
+		- [ ] 2 - {{ code }} `quantizeFloyd`
+		- [ ] 3 - 3 results
+		- [ ] 4 - (*optional*) `dither/mychoice.jpg`
+	- [ ] 3.5 Gamma Correction (*optional*)
 
-- [ ] Colorspaces
-    - [ ] 4.1 - {{ code }} R,G,B plots
-    - [ ] 4.2 - {{ code }} L,A,B plots
-    - [ ] 4.3 - L,A,B plots
-    - [ ] 4.4 - {{ code }} Coose two lighting conditions...
+- [ ] **Colorspaces**:
+	- [ ] 4.1 - {{ code }} R,G,B plots
+	- [ ] 4.2 - {{ code }} L,A,B plots
+	- [ ] 4.3 - L,A,B plots
+	- [ ] 4.4 - {{ code }} Coose two lighting conditions...
 
-## Canvas Submission Checklist
+# Canvas Submission Checklist
 
 In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
 - [ ] `warmups.py`

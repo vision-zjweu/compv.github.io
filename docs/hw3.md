@@ -4,7 +4,7 @@ permalink: /hw3
 latex: true
 
 title: Homework 3 – Fitting Models and Image Warping
-due: 5 p.m. on Monday, March 6, 2023
+due: 5 p.m. on Monday, March 6th, 2023
 ---
 <link href="style.css" rel="stylesheet">
 <div style="display:none">
@@ -80,9 +80,9 @@ To make your life easier, we recommend you to install the latest [Anaconda](http
 
 In this section, suppose we are fitting a 3D plane (i.e., $$ax + by + cz + d = 0$$). A 3D plane can be defined by 3 points (2 points define a line). Plane fitting happens when people analyze point clouds to reconstruct scenes from laser scans. To distinguish from other notations that you may find elsewhere, we will refer to the model that is fit within the loop of RANSAC (covered in the lecture) as the *putative* model.
 
-1. (3 points) {{ report }} <span class="report">Write in your report</span> the minimum number of 3D points needed to sample in an iteration to compute a putative model.
-2. (3 points) {{ report }} <span class="report">Determine the probability</span> that the data picked for to fit the putative model in a single iteration fails, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting 3D planes.
-3. (3 points) {{ report }} <span class="report">Determine the minimum number of RANSAC trials</span> needed to have $$\geq 98\%$$ chance of success, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting planes.
+1. *(3 points)* {{ report }} <span class="report">Write in your report</span> the minimum number of 3D points needed to sample in an iteration to compute a putative model.
+2. *(3 points)* {{ report }} <span class="report">Determine the probability</span> that the data picked for to fit the putative model in a single iteration fails, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting 3D planes.
+3. *(3 points)* {{ report }} <span class="report">Determine the minimum number of RANSAC trials</span> needed to have $$\geq 98\%$$ chance of success, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting planes.
 
 <div class="primer-spec-callout info" markdown="1">
   *Hint*: You can do this by explicit calculation or by search/trial and error with numpy.
@@ -92,12 +92,12 @@ In this section, suppose we are fitting a 3D plane (i.e., $$ax + by + cz + d = 0
 
 Throughout, suppose we have a set of 2D correspondences ($$[x_i',y_i'] \leftrightarrow [x_i,y_i]$$) for $$1 \le i \le N$$.
 
-1. (3 points) Suppose we are fitting a linear transformation, which can be parameterized by a matrix $$\MB \in \mathbb{R}^{2\times 2}$$ (i.e., $$[x',y']^T = \MB [x,y]^T$$).
+1. *(3 points)* Suppose we are fitting a linear transformation, which can be parameterized by a matrix $$\MB \in \mathbb{R}^{2\times 2}$$ (i.e., $$[x',y']^T = \MB [x,y]^T$$).
 
     {{ report }} 
     <span class="report">Write in your report</span> the number of degrees of freedom $$\MB$$ has and the minimum number of 2D correspondences that are required to fully constrain or estimate $$\MB$$.
 
-2. (3 points) Suppose we want to fit $$[x_i',y_i']^T = \MB [x_i,y_i]^T$$. We would like you formulate the fitting problem in the form of a least-squares problem of the form:
+2. *(3 points)* Suppose we want to fit $$[x_i',y_i']^T = \MB [x_i,y_i]^T$$. We would like you formulate the fitting problem in the form of a least-squares problem of the form:
 
     $$
     \argmin_{m \in \mathbb{R}^4} \|\AB \mB - \bB\|_2^2
@@ -144,7 +144,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
       *Hint*: Look at `plt.scatter` and `plt.savefig`. For drawing the scatterplot, use `plt.scatter(xy[:,0],xy[:,1],1)`. The last argument controls the size of the dot and you may want this to be small so you can set the pattern. As you ask it to scatterplot more plots, they accumulate on the current figure. End the figure by `plt.close()`.
     </div>
 
-3. (5 points) {{ report }} <span class="report">Write in the report your answer to</span> how well does an affine transform describe the relationship between $$[x,y] \leftrightarrow [x',y']$$ for `points_case_1.npy` and `points_case_2.npy`? You should describe this in two to three sentences.
+3. *(5 points)* {{ report }} <span class="report">Write in the report your answer to</span> how well does an affine transform describe the relationship between $$[x,y] \leftrightarrow [x',y']$$ for `points_case_1.npy` and `points_case_2.npy`? You should describe this in two to three sentences.
 
     <div class="primer-spec-callout info" markdown="1">
       *Hint*: What properties are preserved by each transformation?
@@ -154,7 +154,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
 **Files**: We have generated 9 cases of correspondences in `task4/`. These are named `points_case_k.npy` for $$1 \le k \le 9$$. All are the same format as the previous task and are matrices where each row contains $$[x_i,y_i,x'_i,y'_i]$$. Eight are transformed letters $$M$$. The last case (case 9) is copied from task 3. You can use these examples to verify your implementation of `fit_homography`.
 
-1. (5 points) {{ autograde }} <span class="autograde">Fill in `fit_homography`</span> in `homography.py`.
+1. *(5 points)* {{ autograde }} <span class="autograde">Fill in `fit_homography`</span> in `homography.py`.
 
     This should fit a homography mapping between the two given points. Remembering that $$\pB_i \equiv [x_i, y_i, 1]$$ and $$\pB'_i \equiv [x'_i, y'_i, 1]$$, your goal is to fit a homography $$\HB \in \mathbb{R}^{3}$$ that satisfies:
 
@@ -174,9 +174,9 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
     **Important**: This part will be autograded. Please follow the specifications precisely.
 
-2. (3 points) {{ report }} <span class="report">Report $$\HB$$</span> for cases `points_case_1.npy` and `points_case_4.npy`. You must normalize the last entry to $$1$$.
+2. *(3 points)* {{ report }} <span class="report">Report $$\HB$$</span> for cases `points_case_1.npy` and `points_case_4.npy`. You must normalize the last entry to $$1$$.
 
-3. (3 points) Visualize the original points $$[x_i,y_i]$$,  target points $$[x'_i,y'_i]$$ and points after applying a homography transform $$T(H,[x_i,y_i])$$ in one figure. Please do this for `points_case_5.npy` and `points_case_9.npy`. Thus there should be two plots, each of which contains 3 sets of `N` points.
+3. *(3 points)* Visualize the original points $$[x_i,y_i]$$,  target points $$[x'_i,y'_i]$$ and points after applying a homography transform $$T(H,[x_i,y_i])$$ in one figure. Please do this for `points_case_5.npy` and `points_case_9.npy`. Thus there should be two plots, each of which contains 3 sets of `N` points.
 
     {{ report }} 
     <span class="report">Save the figure and put it in the report.</span>
@@ -212,13 +212,13 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
 
 []()<br>
 
-1. (5 points) {{ code }} <span class="code">Fill in `make_synthetic_view(sceneImage,corners,size)`</span> in `task5.py`.
+1. *(5 points)* {{ code }} <span class="code">Fill in `make_synthetic_view(sceneImage,corners,size)`</span> in `task5.py`.
 
     This should return the image of the cover viewed head-on (i.e., with cover parallel to the image plane) where one inch on the book corresponds to 100 pixels.
 
     *Walkthrough*: First fit the homography between the book as seen in the image and book cover. In the new image, the top-left corner will be at $$[x,y] = [0,0]$$ and the bottom-right corner will be at $$[x,y] = [100w-1,100h-1]$$. Figure out where the other corners should go. Then read the documentation for `cv2.warpPerspective`.
 
-2. (3 points) {{ report }} <span class="report">Put a copy of both book covers in your report.</span>
+2. *(3 points)* {{ report }} <span class="report">Put a copy of both book covers in your report.</span>
 
 3. One of these images doesn't have perfectly straight lines. {{ report }} <span class="report">Write in your report</span> why you think the lines might be slightly crooked despite the book cover being roughly a plane. You should write about 3 sentences.
 
@@ -256,9 +256,9 @@ together. To enable you to run your code automatically on multiple panoramas wit
 
 Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also contain images (e.g., `p3.jpg`) which may or may not work. You should be able to match all the provided panoramas; you should be able to stitch all except for `florence3` and `florence3_alt`.
 
-1. (3 points) {{ autograde }} <span class="autograde">Fill in `compute_distance`</span> in `task6.py`. This should compute the pairwise **squared** L2 distance between two matrices of descriptors. You can and should use the $$\|\xB-\yB\|^2_2 = \|\xB\|^2_2 + \|\yB\|^2_2 - 2 \xB^T \yB$$ trick from HW0, numpy test 11.
+1. *(3 points)* {{ autograde }} <span class="autograde">Fill in `compute_distance`</span> in `task6.py`. This should compute the pairwise **squared** L2 distance between two matrices of descriptors. You can and should use the $$\|\xB-\yB\|^2_2 = \|\xB\|^2_2 + \|\yB\|^2_2 - 2 \xB^T \yB$$ trick from HW0, numpy test 11.
 
-2. (5 points) {{ code }} <span class="code">Fill in `find_matches`</span> in `task6.py`. This should use `compute_distance` plus the ratio test from the foreword to return the matches. You will have to pick a threshold for the ratio test. Something between $$0.7$$ and $$1$$ is reasonable, but you should experiment with it (look output of the `draw_matches` once you complete it). 
+2. *(5 points)* {{ code }} <span class="code">Fill in `find_matches`</span> in `task6.py`. This should use `compute_distance` plus the ratio test from the foreword to return the matches. You will have to pick a threshold for the ratio test. Something between $$0.7$$ and $$1$$ is reasonable, but you should experiment with it (look output of the `draw_matches` once you complete it). 
 
     **Beware!** The numbers for the ratio shown in the lecture slides apply to SIFT; the descriptor here is different so the ratio threshold you should use is different.
 
@@ -266,15 +266,15 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
       *Hint*: Look at `np.argsort` as well as `np.take_along_axis`.
     <div>
 
-3. (5 points) {{ code }} <span class="code">Fill in `draw_matches`</span> in `task6.py`. This should put the images on top of each other and draw lines between the matches. You can use this to debug things.
+3. *(5 points)* {{ code }} <span class="code">Fill in `draw_matches`</span> in `task6.py`. This should put the images on top of each other and draw lines between the matches. You can use this to debug things.
 
     <div class="primer-spec-callout info" markdown="1">
       *Hint*: Use `cv2.line`.
     </div>
 
-4. (3 points) {{ report }} <span class="report">Put a picture of the matches between two image pairs of your choice in your report.</span>
+4. *(3 points)* {{ report }} <span class="report">Put a picture of the matches between two image pairs of your choice in your report.</span>
     
-5. (10 points) {{ autograde }} <span class="autograde">Fill in `RANSAC_fit_homography`</span> in `homography.py`. 
+5. *(10 points)* {{ autograde }} <span class="autograde">Fill in `RANSAC_fit_homography`</span> in `homography.py`. 
 
     This should RANSACify `fit_homography`. You should keep track of the best set of inliers you have seen in the RANSAC loop. Once the loop is done, please re-fit the model to these inliers. In other words, if you are told to run $$N$$ iterations of RANSAC, you should fit a homography $$N$$ times on the minimum number of points needed; this should be followed by a single fitting of a homography on many more points (the inliers for the best of the $$N$$ models). You will need to set epsilon's default value: $$0.1$$ pixels is too small; $$100$$ pixels is too big. You will need to play with this to get the later parts to work.
 
@@ -301,9 +301,9 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
       - If you want to debug the warping, you can also provide two images that are crops of the same image, (e.g., `I[100:400,100:400]` and `I[150:450,75:375]`) where you know the homography (since it is just a translation).
     </div>
 
-7. (3 points) {{ report }} <span class="report">Put merges from two of your favorite pairs in the report.</span> You can either choose an image we provide you or use a pair of images you take yourself.
+7. *(3 points)* {{ report }} <span class="report">Put merges from two of your favorite pairs in the report.</span> You can either choose an image we provide you or use a pair of images you take yourself.
 
-8. (3 points) {{ autograde }} <span class="autograde">Put these merges as `mypanorama1.jpg` and `mypanorama2.jpg` in your zip submission.</span> 
+8. *(3 points)* {{ autograde }} <span class="autograde">Put these merges as `mypanorama1.jpg` and `mypanorama2.jpg` in your zip submission.</span> 
 
 9. (Optional) If you would like to submit a panorama, {{ autograde }} <span class="autograde">please put your favorite as `myfavoritepanorama.jpg`</span>. We will have a vote. The winner gets 1 point of extra credit.
 
@@ -369,7 +369,8 @@ If you can warp images together, you can replace things in your reality. Imagine
     
     - This trick is most impressive if you do this for something seen at a very different angle. You may be able to extend how far you can match by pre-generating synthetic warps of the template (i.e, generate $$\textrm{synth}_i = \textrm{apply}(\HB_i,T)$$ for a series of $$\HB_i$$, then see if you can find a good warping $$\hat{\HB}$$ from $$\textrm{synth}_i$$ to the scene. Then the final homography is $$\hat{\HB} \HB_i$$.
 
-## Gradescope Submission Checklist
+# Gradescope Submission Checklist
+
 This section is meant to help you keep track of the many things that go in the report:
 - [ ] **RANSAC Theory**:
     - [ ] 1.1 - Minimum # of points
@@ -411,7 +412,7 @@ This section is meant to help you keep track of the many things that go in the r
     - [ ] 7.1 - {{ code }} `improve_image`
     - [ ] 7.2 - {{ autograde }} `myscene.jpg`, `mytemplate.png/jpg`, `mytransfer.jpg`, `myimproved.jpg`
 
-## Canvas Submission Checklist
+# Canvas Submission Checklist
 
 In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
 - [ ] `common.py` -- do not edit though; this may be substituted
