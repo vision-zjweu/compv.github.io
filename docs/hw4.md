@@ -11,12 +11,7 @@ due: 5 p.m. on Friday March 31st, 2023
 <div style="display:none">
     <!-- Define LaTeX commands here -->
     \(
-        \DeclareMathOperator*{\argmin}{arg\,min}
-
-        \newcommand{\DB}{\mathbf{D}}
-
         \newcommand{\RR}{\mathbb{R}}
-
         \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
     \)
 
@@ -33,15 +28,16 @@ due: 5 p.m. on Friday March 31st, 2023
 This homework is **due at {{ page.due }}**.
 
 This homework is divided into two major sections based on how you're expected to write code:
-1. **Section 1**:
+
+**Section 1**:
     
-    You'll be writing the code in the same way you've been doing until now, i.e., in simple python files.
+- You'll be writing the code in the same way you've been doing until now, i.e., in simple python files.
 
-2. **Section 2**:
+**Section 2**:
 
-    - We are going to use  [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true) or local [Jupyter Notebook](https://jupyter.org/) on your on machine (both GPU and CPU) to run our code. For more information on using Colab, please see the [official Colab tutorial](https://colab.research.google.com/?utm_source=scs-index#). The whole assignment is designed to be **CPU friendly**, but we still strongly encourage you try with Colab first.
-    - We have also provided you with the python file version of the assignment in `python_backup` folder, but since the assignment is originally designed for Jupyter Notebook only, **we strongly suggest you do this assignment in Jupyter Notebook**. This option is provided only to backup the case of Colab failure or local Jupyter Notebook problem. {{ report }} <span class="report">If you're doing the homework in the python files, please attach your terminal output to the report</span>.
-    - To do the homework on Colab, you just need to login to Colab with your Google/UMich account and upload corresponding notebook to the Colab (`File -> Upload notebook`), then you can get started.
+- We are going to use  [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true) or local [Jupyter Notebook](https://jupyter.org/) on your on machine (both GPU and CPU) to run our code. For more information on using Colab, please see the [official Colab tutorial](https://colab.research.google.com/?utm_source=scs-index#). The whole assignment is designed to be **CPU friendly**, but we still strongly encourage you try with Colab first.
+- We have also provided you with the python file version of the assignment in `python_backup` folder, but since the assignment is originally designed for Jupyter Notebook only, **we strongly suggest you do this assignment in Jupyter Notebook**. This option is provided only to backup the case of Colab failure or local Jupyter Notebook problem. {{ report }} <span class="report">If you're doing the homework in the python files, please attach your terminal output to the report</span>.
+- To do the homework on Colab, you just need to login to Colab with your Google/UMich account and upload corresponding notebook to the Colab (`File -> Upload notebook`), then you can get started.
 
 The submission includes two parts:
 1. **To Canvas**: submit a `zip` file of all of your code.
@@ -107,16 +103,16 @@ Here's an example of a simple computational graph and the corresponding code for
 
 ```python
 def f(a, b, c):
-  d = a * b       # Start forward pass
-  L = c + d
+	d = a * b       # Start forward pass
+	L = c + d
 
-  grad_L = 1.0    # Start backward pass
-  grad_c = grad_L
-  grad_d = grad_L
-  grad_a = grad_d * b
-  grad_b = grad_d * a
+	grad_L = 1.0    # Start backward pass
+	grad_c = grad_L
+	grad_d = grad_L
+	grad_a = grad_d * b
+	grad_b = grad_d * a
 
-  return L, (grad_a, grad_b, grad_c)
+	return L, (grad_a, grad_b, grad_c)
 ```
 
 </div>
@@ -132,25 +128,25 @@ Sometimes you'll see computational graphs where one piece of data is used as inp
 
 ```python
 def f(a, b, c):
-  # Start forward pass
-  b1 = b
-  b2 = b
-  d = a * b1
-  e = c * b2
-  L = d + e
+	# Start forward pass
+	b1 = b
+	b2 = b
+	d = a * b1
+	e = c * b2
+	L = d + e
 
-  # Start backward pass
-  grad_L = 1.0
-  grad_d = grad_L
-  grad_e = grad_L
-  grad_a = grad_d * b1
-  grad_b1 = grad_d * a
-  grad_c = grad_e * b2
-  grad_b2 = grad_e * c
-  # Sum grads for copies
-  grad_b = grad_b1 + grad_b2
+	# Start backward pass
+	grad_L = 1.0
+	grad_d = grad_L
+	grad_e = grad_L
+	grad_a = grad_d * b1
+	grad_b1 = grad_d * a
+	grad_c = grad_e * b2
+	grad_b2 = grad_e * c
+	# Sum grads for copies
+	grad_b = grad_b1 + grad_b2
 
-  return L, (grad_a, grad_b, grad_c)
+	return L, (grad_a, grad_b, grad_c)
 ```
 
 </div>
@@ -160,7 +156,7 @@ def f(a, b, c):
 
 Below we've drawn three computational graphs for you to practice implementing forward and backward passes. The functions `f1` and `f2` are optional, and the function `f3` is required. The file `backprop/functions.py` contains stubs for each of these computational graphs. You can use the driver program `backprop/backprop.py` to check your implementation.
 
- {{ autograde }} <span class="autograde">Implement the forward and backward passes for the computational graph `f3` below.</span>
+1. *(10 points)* {{ autograde }} <span class="autograde">Implement the forward and backward passes for the computational graph `f3` below.</span>
 
 The file `backprop/backprop-data.pkl` contains sample inputs and outputs for the three computational graphs; the driver program loads inputs from this file for you when checking your forward passes.
 
@@ -230,9 +226,11 @@ The `choose` node outputs outputs $$p_1$$ if $$y=1$$, and outputs $$p_2$$ if $$y
 
 ### Write Your Own Graph (Optional)
 
- {{ report }} <span class="report">In your report, draw a computational graph for any function of your choosing.</span> It should have at least five operators. (You can hand-draw the graph and include a picture of it in your report.)
+{{ report }} 
+<span class="report">In your report, draw a computational graph for any function of your choosing.</span> It should have at least five operators. (You can hand-draw the graph and include a picture of it in your report.)
 
- {{ code }} <span class="code">In the file `backprop/functions.py`, implement a forward and backward pass through your computational graph in the function `f4`.</span> You can modify the function to take any number of input arguments. After implementing `f4`, you can use the driver script to perform numeric gradient checking. Depending on the functions in your graph, you may see errors $$\geq10^{-8}$$ even with a correct backward pass. This is ok!
+{{ code }} 
+<span class="code">In the file `backprop/functions.py`, implement a forward and backward pass through your computational graph in the function `f4`.</span> You can modify the function to take any number of input arguments. After implementing `f4`, you can use the driver script to perform numeric gradient checking. Depending on the functions in your graph, you may see errors $$\geq10^{-8}$$ even with a correct backward pass. This is ok!
 
 ## Fully-Connected Neural Networks
 
@@ -267,14 +265,11 @@ def linear_regression_step(X, y, W, b):
 
 In the file `neuralnet/layers.py` you need to complete the implementation of the following:
 
-1. {{ autograde }} 
-    <span class="autograde">Fully-connected layer</span>: `fc_forward` and `fc_backward`.
+1. *(5 points)* {{ autograde }} <span class="autograde">Fully-connected layer</span>: `fc_forward` and `fc_backward`.
 
-2. {{ autograde }} 
-    <span class="autograde">ReLU nonlinearity</span>: `relu_forward` and `relu_backward` which applies the function $$ReLU(x_i) = \max(0, x)$$ elementwise to its input.
+2. *(5 points)* {{ autograde }} <span class="autograde">ReLU nonlinearity</span>: `relu_forward` and `relu_backward` which applies the function $$ReLU(x_i) = \max(0, x)$$ elementwise to its input.
 
-3. {{ autograde }} 
-    <span class="autograde">Softmax Loss Function</span>:`softmax_loss`.
+3. *(5 points)* {{ autograde }} <span class="autograde">Softmax Loss Function</span>:`softmax_loss`.
 
     The softmax loss function receives a matrix $$x\in\RR^{N\times C}$$ giving a batch of classification scores for $$N$$ elements, where for each element we have a score for each of $$C$$ different categories. The softmax loss function first converts the scores into a set of $$N$$ probability distributions over the elements, defined as:     
     
@@ -306,8 +301,7 @@ In the file `neuralnet/layers.py` you need to complete the implementation of the
     
     **Your softmax implementation should use this max-subtraction trick for numeric stability.** You can run the script `neuralnet/check_softmax_stability.py` to check the numeric stability of your softmax loss implementation.
 
-4. {{ autograde }} 
-    <span class="autograde">L2 Regularization</span>: `l2_regularization` which implements the L2 regularization loss
+4. *(5 points)* {{ autograde }} <span class="autograde">L2 Regularization</span>: `l2_regularization` which implements the L2 regularization loss
     
     $$
     L(W) = \frac{\lambda}{2}\|W\|^2 = \frac{\lambda}{2} \sum_i W_i^2
@@ -331,8 +325,7 @@ In the file `neuralnet/linear_classifier.py` we've implemented a `LinearClassifi
 
 Now it's your turn! In the file `neuralnet/two_layer_net.py` we've provided the start to  an implementation of a `TwoLayerNet` class that implements a two-layer neural network  (with ReLU nonlinearity).
 
-{{ autograde }} 
-<span class="autograde">Complete the implementation of the `TwoLayerNet` class.</span>  Your implementations for the `forward` and `backward` methods should use the modular  forward and backward functions that you implemented in the previous task.
+1. *(10 points)* {{ autograde }} <span class="autograde">Complete the implementation of the `TwoLayerNet` class.</span>  Your implementations for the `forward` and `backward` methods should use the modular  forward and backward functions that you implemented in the previous task.
 
 After completing your implementation, you can run the script `gradcheck_classifier.py` to  perform numeric gradient checking on both the linear classifier we've implemented for you as well  as the two-layer network you've just implemented. You should see errors less than $$10^{-10}$$ for  the gradients of all parameters.
 
@@ -357,20 +350,14 @@ they work:
     implement optimization algorithms, and implements a subclass `SGD` which implements
     basic stochastic gradient descent with a constant learning rate.
 
-{{ autograde }} 
-<span class="autograde">Implement the `training_step` function in the file `neuralnet/train.py`</span>.
+1. {{ autograde }} <span class="autograde">Implement the `training_step` function in the file `neuralnet/train.py`</span>.
 
-This function inputs the model, a minibatch of data, and the regularization strength;
-it computes a forward and backward pass through the model and returns both the loss and the
-gradient of the loss with respect to the model parameters.
-The loss should be the sum of two terms:
-1. A *data loss* term, which is the softmax loss between the model's predicted scores
-    and the ground-truth image labels
-2. A *regularization loss* term, which penalizes the L2 norm of the weight matrices of
-    all the fully-connected layers of the model. You should not apply L2 regularization to the
-    biases.
+	This function inputs the model, a minibatch of data, and the regularization strength; it computes a forward and backward pass through the model and returns both the loss and the gradient of the loss with respect to the model parameters. The loss should be the sum of two terms:
 
- Now it's time to train your model! Run the script `neuralnet/train.py` to train a two-layer network on the CIFAR-10 dataset. The script will print out training losses and train and val set accuracies as it trains. After training concludes, the script will also mke a plot of the training losses as well as the training and validation-set accuracies of the model during training; by default this will be saved in a file `plot.pdf`, but this can be customized with the flag `--plot-file`. You should see a plot that looks like this:
+	1. A *data loss* term, which is the softmax loss between the model's predicted scores and the ground-truth image labels
+	2. A *regularization loss* term, which penalizes the L2 norm of the weight matrices of all the fully-connected layers of the model. You should not apply L2 regularization to the biases.
+
+Now it's time to train your model! Run the script `neuralnet/train.py` to train a two-layer network on the CIFAR-10 dataset. The script will print out training losses and train and val set accuracies as it trains. After training concludes, the script will also mke a plot of the training losses as well as the training and validation-set accuracies of the model during training; by default this will be saved in a file `plot.pdf`, but this can be customized with the flag `--plot-file`. You should see a plot that looks like this:
 
 <div style="width:100%;text-align:center">
   <figure>
@@ -378,15 +365,9 @@ The loss should be the sum of two terms:
   </figure>
 </div>
 
-Unfortunately, it seems that your model is not training very effectively -- the training loss has
-not decreased much from its initial value of $$\approx2.3$$, and the training and validation
-accuracies are very close to $$10\%$$ which is what we would expect from a model that randomly guesses
-a category label for each input.
+Unfortunately, it seems that your model is not training very effectively -- the training loss has not decreased much from its initial value of $$\approx2.3$$, and the training and validation accuracies are very close to $$10\%$$ which is what we would expect from a model that randomly guesses a category label for each input.
 
-You will need to tune the hyperparameters of your model in order to improve it.
-Try changing the hyperparameters of the model in the provided space of the
-`main` function of `neuralnet/train.py`.
-You can consider changing any of the following hyperparameters:
+You will need to tune the hyperparameters of your model in order to improve it. Try changing the hyperparameters of the model in the provided space of the `main` function of `neuralnet/train.py`. You can consider changing any of the following hyperparameters:
 
 - `num_train`: The number of images to use for training
 - `hidden_dim`: The width of the hidden layer of the model
@@ -396,24 +377,24 @@ You can consider changing any of the following hyperparameters:
 - `learning_rate`: The learning rate to use for SGD
 - `reg`: The strength of the L2 regularization term
 
-
 You should tune the hyperparameters and train a model that achieves at least $$40\%$$ on the validation set. After tuning your model, run your best model **exactly once** on the test set using the script `neuralnet/test.py`.
 
-{{ report }} 
+{:start="2"}
+2. {{ report }} 
 <span class="report">In your report, include the loss / accuracy plot for your best model, describe the hyperparameter settings you used, and give the final test-set performance of your model.</span>
 
-You may not need to change all of the hyperparameters; some are fine at their default values. Your model shouldn't take an excessive amount of time to train. For reference, our hyperparameter settings achieve $$\approx45\%$$ accuracy on the validation set in $$\approx5$$ minutes of training on a 2019 MacBook Pro.
+	You may not need to change all of the hyperparameters; some are fine at their default values. Your model shouldn't take an excessive amount of time to train. For reference, our hyperparameter settings achieve $$\approx45\%$$ accuracy on the validation set in $$\approx5$$ minutes of training on a 2019 MacBook Pro.
 
-To gain more experience with hyperparameters, you should also tune the hyperparameters to find a setting that results in an *overfit model* that achieves $$\geq75\%$$ accuracy on the *training set*.
+	To gain more experience with hyperparameters, you should also tune the hyperparameters to find a setting that results in an *overfit model* that achieves $$\geq75\%$$ accuracy on the *training set*.
 
-{{ report }} 
+3. {{ report }} 
 <span class="report">In your report, include the loss / accuracy plot for your overfit model and describe the hyperparameter settings you used.</span>
 
-As above, this should not take an excessive amount of training time -- we are able to train an overfit model that achieves $$\approx80\%$$ accuracy on the training set within about a minute of training.
+	As above, this should not take an excessive amount of training time -- we are able to train an overfit model that achieves $$\approx80\%$$ accuracy on the training set within about a minute of training.
 
-<div class="primer-spec-callout info" markdown="1">
-  *Hint*: It's easier to overfit a smaller training set.
-</div>
+	<div class="primer-spec-callout info" markdown="1">
+	*Hint*: It's easier to overfit a smaller training set.
+	</div>
 
 # Section 2
 
@@ -421,20 +402,18 @@ As above, this should not take an excessive amount of training time -- we are ab
 
 In this part, you will implement and train Convolutional Neural Networks (ConvNets) in **PyTorch** to classify images. Unlike previous section, backpropagation is automatically inferred by PyTorch in this assignment, so you only need to write code for the forward pass. If you still not familiar with the auto gradient feature of the PyTorch, we strongly encourage you to go through the [official tutorial for `TORCH.AUTOGRAD`](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html#sphx-glr-beginner-blitz-autograd-tutorial-py).
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=\linewidth]{images/cnn.png}
-    \caption{Convolutional Neural Networks for Image Classification\protect\footnotemark}
-\end{figure}
-\footnotetext{Image comes from https://medium.com/data-science-group-iitr/building-a-convolutional-neural-network-in-python-with-tensorflow-d251c3ca8117}
+<div style="width:100%;text-align:center">
+  <figure>
+    <img src="{{site.url}}/assets/hw4/cnn.png" alt="CNN">
+    <figcaption>Figure 1: Convolutional Neural Networks for Image Classification</figcaption>
+  </figure>
+  <figure>
+    <img src="{{site.url}}/assets/hw4/fashion_mnist.png" alt="Fashion MNIST">
+    <figcaption>Fgiure 2: Example images from the Fashion MNIST dataset</figcaption>
+  </figure>
+</div>
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=0.8\linewidth]{images/fashion_mnist.png}
-    \caption{Example images from Fashion MNIST dataset \cite{xiao2017fashionmnist}}
-\end{figure}
-
-The dataset we use is the Fashion-MNIST dataset, which is available [here](https://github.com/zalandoresearch/fashion-mnist) and in `torchvision.datasets`. Fashion-MNIST has 10 classes, 60000 training+validation images (we have splitted it to have 50000 training images and 10000 validation images, but you can change the numbers), and 10000 test images.
+The dataset we use is the Fashion-MNIST dataset, which is available [here](https://github.com/zalandoresearch/fashion-mnist) and in `torchvision.datasets`. Fashion-MNIST has 10 classes, 60000 training+validation images (we have split it to have 50000 training images and 10000 validation images, but you can change the numbers), and 10000 test images.
 
 ### Task 5: Train Your Own Classification Model
 
@@ -443,35 +422,87 @@ The dataset we use is the Fashion-MNIST dataset, which is available [here](https
 - The architecture of the network (define layers and implement forward pass)
 - The optimizer (SGD, RMSProp, Adam, etc.) and its parameters. (`weight_decay` is the L2 regularization strength)
 - Training parameters (batch size and number of epochs)
-\end{itemize}
+
 
 You should train your network on training set and change those listed above based on evaluation on the validation set. You should run evalution on the test set **only once** at the end.
 
 **Complete the following:**
 
-1. (15 points) {{ code }} <span class="code">Submit the notebook</span> **(with outputs)** that trains with your best combination of model architecture, optimizer and training parameters, and evaluates on the test set to report an accuracy at the end.
-2. (10 points) {{ report }} <span class="report">Report the detailed architecture of your best model</span>. Include information on {{ report }} <span class="report">hyperparameters chosen for training and a plot showing both training and validation accuracy</span> across iterations.
-3. (5 points) {{ report }} <span class="report">Report the accuracy of your best model on the test set</span>. We expect you to achieve over **85\%**.
+1. *(15 points)* {{ code }} <span class="code">Submit the notebook</span> **(with outputs)** that trains with your best combination of model architecture, optimizer and training parameters, and evaluates on the test set to report an accuracy at the end.
+2. *(10 points)* {{ report }} <span class="report">Report the detailed architecture of your best model</span>. Include information on {{ report }} <span class="report">hyperparameters chosen for training and a plot showing both training and validation accuracy</span> across iterations.
+3. *(5 points)* {{ report }} <span class="report">Report the accuracy of your best model on the test set</span>. We expect you to achieve over **85%**.
 
-
-**Hints:** Read [PyTorch documentation](https://pytorch.org/docs/stable/nn.html) for `torch.nn` and pick layers for your network. Some common choices are
+<div class="primer-spec-callout info" markdown="1">
+*Hint*: Read [PyTorch documentation](https://pytorch.org/docs/stable/nn.html) for `torch.nn` and pick layers for your network. Some common choices are:
 
 - `nn.Linear`
 - `nn.Conv2d`, try different number of filters (`out_channels`) and size of filters (`kernel_size`)
 - `nn.ReLU`, which provides non-linearity between layers
 - `nn.MaxPool2d` and `nn.AvgPool2d`, two kinds of pooling layer
 - `nn.Dropout`, which helps reduce overfitting
+</div>
 
-Your network does not need to be complicated. We achieved over **$$85\%$$** test accuracy with two convolutional layers, and it took less than 5 mins to train on Colab and less than 10 mins on local CPU machine. You will get partial credits for any accuracy over **$$70\%$$**, so do not worry too much and spend your time wisely.
+
+Your network does not need to be complicated. We achieved over **85%** test accuracy with two convolutional layers, and it took less than 5 mins to train on Colab and less than 10 mins on local CPU machine. You will get partial credits for any accuracy over **70%**, so do not worry too much and spend your time wisely.
 
 ### Task 6: Pre-trained NN 
 In order to get a better sense of the classification decisions made by convolutional networks, your job is now to experiment by running whatever images you want through a model pretrained on ImageNet.
-These can be images from your own photo collection, from the internet, or somewhere else but they should belong to one of the ImageNet classes. {{ code }} <span class="code">Look at the `idx2label` dictionary in `part2.ipynb` for all the ImageNet classes.</span>
+These can be images from your own photo collection, from the internet, or somewhere else but they should belong to one of the ImageNet classes. Look at the `idx2label` dictionary in `part2.ipynb` for all the ImageNet classes.
 
 {{ code }} <span class="code">For this task, you have to find:</span>
 
-- {{ code }} <span class="code">One image (`img1`)</span> where the pretrained model gives reasonable predictions, and produces a category label that seems to correctly describe the content of the image
-- {{ code }} <span class="code">One image (`img2`)</span> where the pretrained model gives unreasonable predictions, and produces a category label that does not correctly describe the content of the image.
+- <span class="code">One image (`img1`)</span> where the pretrained model gives reasonable predictions, and produces a category label that seems to correctly describe the content of the image
+- <span class="code">One image (`img2`)</span> where the pretrained model gives unreasonable predictions, and produces a category label that does not correctly describe the content of the image.
 
 
-You can upload images in Colab by using the upload button on the top left. For more details on how to upload files on Colab, please see our [Colab tutorial](https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/colab.html). For local Jupyter Notebook users, you may simply put the image under the same folder with the notebook and open it as you will do in a normal python file. {{ report }} <span class="report">Submit the two images with their predicted classes in your report</span>, we have provided you with the code to generate this image in the notebook.
+You can upload images in Colab by using the upload button on the top left. For more details on how to upload files on Colab, please see our [Colab tutorial](https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/colab.html). For local Jupyter Notebook users, you may simply put the image under the same folder with the notebook and open it as you will do in a normal python file. 
+
+1. *(10 points)* {{ report }} <span class="report">Submit the two images with their predicted classes in your report</span>, we have provided you with the code to generate this image in the notebook.
+
+# Gradescope Submission Checklist
+
+This section is meant to help you keep track of the many things that go in the report:
+- [ ] **Computational Graphs and Backprop**:
+	- [ ] Implementing Computational Graphs:
+		- [ ] 1.1 - {{ autograde }} `f3` (*required*); `f1` and `f2` (*optional*)
+		- [ ] 1.2 - (*optional*) Draw a computational graph and {{ code }} implement forward/backward
+
+- [ ] **Fully-Connected Neural Networks**:
+	- [ ] Modular Backprop API:
+		- [ ] 2.1 - {{ autograde }} `fc_forward` and `fc_backward`
+		- [ ] 2.2 - {{ autograde }} `relu_forward` and `relu_backward`
+		- [ ] 2.3 - {{ autograde }} `softmax_loss`
+		- [ ] 2.4 - {{ autograde }} `l2_regularization`
+	- [ ] Implement Two-Layer Network:
+		- [ ] 3.1 - {{ autograde }} `TwoLayerNet`
+	- [ ] Train Two-Layer Network:
+		- [ ] 4.1 - {{ autograde }} `training_step`
+		- [ ] 4.2 - Results of best model
+    	- [ ] 4.3 - Results of overfit model
+
+- [ ] **Fashion-MNIST Classfication**:
+	- [ ] Train Your Own Classification Model:
+		- [ ] 5.1 - {{ code }} `part1.ipynb` (**with outputs**)
+		- [ ] 5.2 - Report best model
+		- [ ] 5.3 - Report best model on test set
+	- [ ] Pre-trained NN:
+		- [ ] 6.1 - `img1` and `img2`
+
+# Canvas Submission Checklist
+
+In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
+- [ ] Python files:
+	- [ ] `functions.py`
+	- [ ] `fitting.py`
+	- [ ] `layers.py`
+	- [ ] `train.py`
+	- [ ] `two_layer_net.py`
+- [ ] Notebooks:
+	- [ ] `part1.ipynb`
+	- [ ] `part2.ipynb`
+
+<div class="primer-spec-callout info" markdown="1">
+All plots and answer to questions should be included in your {{ report }} <span class="report">pdf report</span> submitted to Gradescope. Run all the cells of your {{ code }} <span class="code">Colab notebooks</span>, and do not clear out the outputs before submitting. **You will only get credit for code that has been run**.
+</div>
+
+
