@@ -232,7 +232,7 @@ of a row $$y$$ and column $$x$$. This is a not particularly intellectually stimu
 
 ## Data Interpretation and Visualization
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		{% for i in (0..8) %}
 		<figure>
@@ -244,7 +244,7 @@ of a row $$y$$ and column $$x$$. This is a not particularly intellectually stimu
 	<figcaption>Figure 1: The Mystery Data</figcaption>
 </figure>
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		{% for i in (0..8) %}
 		<figure>
@@ -335,7 +335,7 @@ produces the outputs in Figure 2. These use the plasma colormap which looks like
 
 ### Pixel Value Ranges
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		{% for i in (0..8) %}
 		<figure>
@@ -358,7 +358,7 @@ produces the outputs in Figure 2. These use the plasma colormap which looks like
 
 ### Invalid Pixel Values
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		{% for i in (0..8) %}
 		<figure>
@@ -433,7 +433,7 @@ The code and data for this are located in `dither/`. This contains starter code 
 
 While modern computer screens are typically capable of showing 256 different intensities per color (leading to $$256^3 = 16.7$$ million possible color combinations!) this wasn't always the case. Many types of displays are only capable of showing a smaller number of light intensities. Similarly, some image formats cannot represent all $$256^3$$ colors: GIFs, for instance, can only store 256 colors.
 
-<figure>
+<figure class="figure-container">
 	{% assign folders = "color, gray" | split: ", " %}
 	{% assign col_headers = "Input, Naive Rounding, Dithered" | split: ", " %}
 	<figure>
@@ -647,7 +647,7 @@ The same color may look different under different lighting conditions. Images `r
 3. *(5 points)* {{ report }} <span class="report">Include the LAB color space plots in your report. Which color space (RGB vs. LAB) better separates the illuminance (i.e., total amount of light) change from other factors such as hue? Why?</span>
 4. *(10 points)* {{ code }} <span class="code"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> Below in Figure 6 is an example of two photos of the same piece of paper, taken in the basement and by the window respectively.
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		<figure>
 			<img src="{{site.url}}/assets/hw1/images/basement.png" alt="basement" width="250px">

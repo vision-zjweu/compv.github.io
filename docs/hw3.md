@@ -185,7 +185,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
 ## Image Warping and Homographies
 
-<figure>
+<figure class="figure-container">
     <div class="flex-container">
         <figure>
             <img src="{{site.url}}/assets/hw3/p1.jpg" alt="View Angle 1" height="200">
@@ -228,7 +228,7 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
 
 ### Task 6: Stitching Stuff Together
 
-<figure>
+<figure class="figure-container">
     <div class="flex-container">
         <figure>
             <img src="{{site.url}}/assets/hw3/p1_2.jpg" alt="View Angle 1" height="200">
@@ -311,7 +311,7 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
 
 ## Augmented Reality on a Budget
 
-<figure>
+<figure class="figure-container">
     <div class="flex-container">
         <figure>
             <img src="{{site.url}}/assets/hw3/template.png" alt="Template Angle 1" height="200">
