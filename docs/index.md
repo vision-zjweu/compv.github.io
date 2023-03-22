@@ -2,7 +2,7 @@
 layout: spec
 ---
 
-# Logistics
+# Overview
 
 - **Instructor**: David Fouhey (fouhey)
 - **GSIs**: 
@@ -28,7 +28,7 @@ layout: spec
 - [Homework 3: Fitting Models and Image Warping]({{site.url}}/hw3)
 - [Homework 4: Machine Learning]({{site.url}}/hw4)
 
-# Overview
+# Course Content
 
 This is an introduction to computer vision. Topics include: camera models, multi-view geometry, reconstruction, some low-level image processing, and high-level vision problems like object and scene recognition.
 
