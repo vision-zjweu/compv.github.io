@@ -61,7 +61,7 @@ The submission includes two parts:
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
     {{ report }} - 
-    <span class="report">We have indicated questions where you have to do something in the report in blue.</span>
+    <span class="report">We have indicated questions where you have to do something in the report in green.</span>
 
     You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/) for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
 
@@ -81,12 +81,14 @@ To make your life easier, we recommend you to install the latest [Anaconda](http
 In this section, suppose we are fitting a 3D plane (i.e., $$ax + by + cz + d = 0$$). A 3D plane can be defined by 3 points (2 points define a line). Plane fitting happens when people analyze point clouds to reconstruct scenes from laser scans. To distinguish from other notations that you may find elsewhere, we will refer to the model that is fit within the loop of RANSAC (covered in the lecture) as the *putative* model.
 
 1. *(3 points)* {{ report }} <span class="report">Write in your report</span> the minimum number of 3D points needed to sample in an iteration to compute a putative model.
+
 2. *(3 points)* {{ report }} <span class="report">Determine the probability</span> that the data picked for to fit the putative model in a single iteration fails, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting 3D planes.
+
 3. *(3 points)* {{ report }} <span class="report">Determine the minimum number of RANSAC trials</span> needed to have $$\geq 98\%$$ chance of success, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting planes.
 
-<div class="primer-spec-callout info" markdown="1">
-  *Hint*: You can do this by explicit calculation or by search/trial and error with numpy.
-</div>
+    <div class="primer-spec-callout info" markdown="1">
+    You can do this by explicit calculation or by search/trial and error with numpy.
+    </div>
 
 ### Task 2: Fitting Linear Transformations
 
@@ -132,7 +134,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
     <span class="report">Report ($$\SB$$,$$\tB$$) in your report for `points_case_1.npy`.</span>
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: There is no trick question -- use the setup from the foreword. Write a small amount of code that does this by loading a matrix, shuffling the data around, and then calling `np.linalg.lstsq`.
+      There is no trick question -- use the setup from the foreword. Write a small amount of code that does this by loading a matrix, shuffling the data around, and then calling `np.linalg.lstsq`.
     </div>
 
 2. Make a scatterplot of the points $$[x_i,y_i]$$, $$[x'_i,y'_i]$$ and $$\SB[x_i,y_i]^T+\tB$$ in one figure with different colors. Do this for both `points_case_1.npy` and `point_case_2.npy`. In other words, there should be two plots, each of which contains three sets of $$N$$ points.
@@ -141,13 +143,13 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
     <span class="report">Save the figures and put them in your report</span>
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: Look at `plt.scatter` and `plt.savefig`. For drawing the scatterplot, use `plt.scatter(xy[:,0],xy[:,1],1)`. The last argument controls the size of the dot and you may want this to be small so you can set the pattern. As you ask it to scatterplot more plots, they accumulate on the current figure. End the figure by `plt.close()`.
+      Look at `plt.scatter` and `plt.savefig`. For drawing the scatterplot, use `plt.scatter(xy[:,0],xy[:,1],1)`. The last argument controls the size of the dot and you may want this to be small so you can set the pattern. As you ask it to scatterplot more plots, they accumulate on the current figure. End the figure by `plt.close()`.
     </div>
 
 3. *(5 points)* {{ report }} <span class="report">Write in the report your answer to</span> how well does an affine transform describe the relationship between $$[x,y] \leftrightarrow [x',y']$$ for `points_case_1.npy` and `points_case_2.npy`? You should describe this in two to three sentences.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: What properties are preserved by each transformation?
+      What properties are preserved by each transformation?
     </div>
 
 ### Task 4: Fitting Homographies
@@ -169,7 +171,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
     where $$\hB$$ has all the parameters of $$\HB$$.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: Again, this is not meant to be a trick question -- use the setup from the foreword.
+      Again, this is not meant to be a trick question -- use the setup from the foreword.
     </div> 
 
     **Important**: This part will be autograded. Please follow the specifications precisely.
@@ -183,7 +185,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
 ## Image Warping and Homographies
 
-<figure>
+<figure class="figure-container">
     <div class="flex-container">
         <figure>
             <img src="{{site.url}}/assets/hw3/p1.jpg" alt="View Angle 1" height="200">
@@ -226,7 +228,7 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
 
 ### Task 6: Stitching Stuff Together
 
-<figure>
+<figure class="figure-container">
     <div class="flex-container">
         <figure>
             <img src="{{site.url}}/assets/hw3/p1_2.jpg" alt="View Angle 1" height="200">
@@ -263,13 +265,13 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
     **Beware!** The numbers for the ratio shown in the lecture slides apply to SIFT; the descriptor here is different so the ratio threshold you should use is different.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: Look at `np.argsort` as well as `np.take_along_axis`.
+      Look at `np.argsort` as well as `np.take_along_axis`.
     <div>
 
 3. *(5 points)* {{ code }} <span class="code">Fill in `draw_matches`</span> in `task6.py`. This should put the images on top of each other and draw lines between the matches. You can use this to debug things.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: Use `cv2.line`.
+      Use `cv2.line`.
     </div>
 
 4. *(3 points)* {{ report }} <span class="report">Put a picture of the matches between two image pairs of your choice in your report.</span>
@@ -279,7 +281,7 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
     This should RANSACify `fit_homography`. You should keep track of the best set of inliers you have seen in the RANSAC loop. Once the loop is done, please re-fit the model to these inliers. In other words, if you are told to run $$N$$ iterations of RANSAC, you should fit a homography $$N$$ times on the minimum number of points needed; this should be followed by a single fitting of a homography on many more points (the inliers for the best of the $$N$$ models). You will need to set epsilon's default value: $$0.1$$ pixels is too small; $$100$$ pixels is too big. You will need to play with this to get the later parts to work.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: When sampling correspondences, draw **without** replacement; if you do it with replacement you may pick the same point repeatedly and then try to (effectively) fit a model to three points.
+      When sampling correspondences, draw **without** replacement; if you do it with replacement you may pick the same point repeatedly and then try to (effectively) fit a model to three points.
     </div>
 
 6. {{ code }} 
@@ -309,7 +311,7 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
 
 ## Augmented Reality on a Budget
 
-<figure>
+<figure class="figure-container">
     <div class="flex-container">
         <figure>
             <img src="{{site.url}}/assets/hw3/template.png" alt="Template Angle 1" height="200">
@@ -338,18 +340,12 @@ If you can warp images together, you can replace things in your reality. Imagine
 **Files**: We give a few examples of templates and scenes in `task7/scenes/`. Each folder contains:
  `template.png`: a viewed-from-head-on / distortion-free / fronto-parallel version of the texture; and `scene.jpg`: an image where the texture appears at some location and viewed at some angle. We provide a set of seals (e.g., the UM seal) that you may want to put on things in `task7/seals/`. You can substitute whatever you like.
 
- 1. {{ code }} 
- <span class="code">Fill in the function `improve_image(scene,template,transfer)`</span> in `task7.py` that aligns `template` to `scene` using a homography, just as in task 6. Then, instead of warping `template` to the image, warp `transfer`. If you want to copy over your functions from task 6, you can either import them or just copy them.
+ 1. {{ code }} <span class="code">Fill in the function `improve_image(scene,template,transfer)`</span> in `task7.py` that aligns `template` to `scene` using a homography, just as in task 6. Then, instead of warping `template` to the image, warp `transfer`. If you want to copy over your functions from task 6, you can either import them or just copy them.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hints*:
-
-      - The matches that you get are definitely not one-to-one. You'll probably get better results if
-    you match from the template to the scene (i.e., for each template keypoint, find the best match in scene). Be careful about ordering though if you transfer your code!
-
-      - The image to transfer might not be the same size as the template. You can either resize `transfer` to be the same size as `template` or automatically generate a homography.
-
-      - For using the fucntion `warp_and_combine` from task 6, you may want to change it a little bit, since you should make sure you use warped `template` to cover areas in the `scene` completely as shown in Figure 3.
+    - The matches that you get are definitely not one-to-one. You'll probably get better results if you match from the template to the scene (i.e., for each template keypoint, find the best match in scene). Be careful about ordering though if you transfer your code!
+    - The image to transfer might not be the same size as the template. You can either resize `transfer` to be the same size as `template` or automatically generate a homography.
+    - For using the fucntion `warp_and_combine` from task 6, you may want to change it a little bit, since you should make sure you use warped `template` to cover areas in the `scene` completely as shown in Figure 3.
     </div>
     
 2. Do something fun with this. Submit a synthetically done warp of something interesting. We'll have a contest. If you do something particularly neat to get the system to work, please write this in the report.
@@ -369,45 +365,39 @@ If you can warp images together, you can replace things in your reality. Imagine
     
     - This trick is most impressive if you do this for something seen at a very different angle. You may be able to extend how far you can match by pre-generating synthetic warps of the template (i.e, generate $$\textrm{synth}_i = \textrm{apply}(\HB_i,T)$$ for a series of $$\HB_i$$, then see if you can find a good warping $$\hat{\HB}$$ from $$\textrm{synth}_i$$ to the scene. Then the final homography is $$\hat{\HB} \HB_i$$.
 
-# Gradescope Submission Checklist
+# Tasks Checklist
 
 This section is meant to help you keep track of the many things that go in the report:
 - [ ] **RANSAC Theory**:
-    - [ ] 1.1 - Minimum # of points
-    - [ ] 1.2 - Probability single iteration fails
-    - [ ] 1.3 - Minimum # of RANSAC trials
-
+    - [ ] 1.1 - {{ report }} Minimum # of points
+    - [ ] 1.2 - {{ report }} Probability single iteration fails
+    - [ ] 1.3 - {{ report }} Minimum # of RANSAC trials
 - [ ] **Fitting Linear Transformations**:
-    - [ ] 2.1 - Degrees of freedom, Minimum # of correspondences
-    - [ ] 2.2 - Form of $$\AB$$, $$\mB$$, and $$\bB$$
-
+    - [ ] 2.1 - {{ report }} Degrees of freedom, Minimum # of correspondences
+    - [ ] 2.2 - {{ report }} Form of $$\AB$$, $$\mB$$, and $$\bB$$
 - [ ] **Fitting Affine Transformations**:
-    - [ ] 3.1 - ($$\SB$$,$$\tB$$) in your report for `points_case_1.npy`
-    - [ ] 3.2 - Figures for `points_case_1.npy` and `points_case_2.npy`
-    - [ ] 3.3 - Affinity
-
+    - [ ] 3.1 - {{ report }} ($$\SB$$,$$\tB$$) in your report for `points_case_1.npy`
+    - [ ] 3.2 - {{ report }} Figures for `points_case_1.npy` and `points_case_2.npy`
+    - [ ] 3.3 - {{ report }} Affinity
 - [ ] **Fitting Homographies**:
     - [ ] 4.1 - {{ autograde }} `fit_homography`
-    - [ ] 4.2 - $$\HB$$ for `points_case_1.npy` and `points_case_2.npy`
-    - [ ] 4.3 - Figures for `points_case_5.npy` and `points_case_9.npy
-
+    - [ ] 4.2 - {{ report }} $$\HB$$ for `points_case_1.npy` and `points_case_2.npy`
+    - [ ] 4.3 - {{ report }} Figures for `points_case_5.npy` and `points_case_9.npy
 - [ ] **Synthetic Views**:
     - [ ] 5.1 - {{ code }} `make_synthetic_view`
-    - [ ] 5.2 - Both book covers
-    - [ ] 5.3 - Lines crooked?
+    - [ ] 5.2 - {{ report }} Both book covers
+    - [ ] 5.3 - {{ report }} Lines crooked?
     - [ ] 5.4 - (*optional*) Reverse
-
 - [ ] **Stitching Stuff Together**:
     - [ ] 6.1 - {{ autograde }} `compute_distance`
     - [ ] 6.2 - {{ code }} `find_matches`
     - [ ] 6.3 - {{ code }} `draw_matches`
-    - [ ] 6.4 - Two image pairs
+    - [ ] 6.4 - {{ report }} Two image pairs
     - [ ] 6.5 - {{ autograde }} `RANSAC_fit_homography`
     - [ ] 6.6 - {{ code }} `make_warped`
-    - [ ] 6.7 - Two merged pairs
+    - [ ] 6.7 - {{ report }} Two merged pairs
     - [ ] 6.8 - {{ autograde }} `mypanorama1.jpg` and `mypanorama1.jpg`
     - [ ] 6.9 - (*optional*) {{ autograde }} `myfavoritepanorama.jpg`
-
 - [ ] **Augmented Reality**:
     - [ ] 7.1 - {{ code }} `improve_image`
     - [ ] 7.2 - {{ autograde }} `myscene.jpg`, `mytemplate.png/jpg`, `mytransfer.jpg`, `myimproved.jpg`

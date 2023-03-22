@@ -57,7 +57,7 @@ The submission includes two parts:
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
    {{ report }} -
-   <span class="report">We have indicated questions where you have to do something in the report in blue.</span>
+   <span class="report">We have indicated questions where you have to do something in the report in green.</span>
 
    You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/) for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
 
@@ -232,7 +232,7 @@ of a row $$y$$ and column $$x$$. This is a not particularly intellectually stimu
 
 ## Data Interpretation and Visualization
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		{% for i in (0..8) %}
 		<figure>
@@ -244,7 +244,7 @@ of a row $$y$$ and column $$x$$. This is a not particularly intellectually stimu
 	<figcaption>Figure 1: The Mystery Data</figcaption>
 </figure>
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		{% for i in (0..8) %}
 		<figure>
@@ -335,7 +335,7 @@ produces the outputs in Figure 2. These use the plasma colormap which looks like
 
 ### Pixel Value Ranges
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		{% for i in (0..8) %}
 		<figure>
@@ -358,7 +358,7 @@ produces the outputs in Figure 2. These use the plasma colormap which looks like
 
 ### Invalid Pixel Values
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		{% for i in (0..8) %}
 		<figure>
@@ -433,7 +433,7 @@ The code and data for this are located in `dither/`. This contains starter code 
 
 While modern computer screens are typically capable of showing 256 different intensities per color (leading to $$256^3 = 16.7$$ million possible color combinations!) this wasn't always the case. Many types of displays are only capable of showing a smaller number of light intensities. Similarly, some image formats cannot represent all $$256^3$$ colors: GIFs, for instance, can only store 256 colors.
 
-<figure>
+<figure class="figure-container">
 	{% assign folders = "color, gray" | split: ", " %}
 	{% assign col_headers = "Input, Naive Rounding, Dithered" | split: ", " %}
 	<figure>
@@ -498,12 +498,11 @@ We'll call this a _quantized_ image. You can take the palette and the quantized 
 
 <div class="primer-spec-callout info" markdown="1">
    
-   You'll be able to call each implementation via a starter script `dither.py` that takes as arguments a source folder with images, a target image to put the results in, and the function to apply to each. For instance if there's a function `quantizeImageNaive`, you can call: 
-   ```console
-   $ python dither.py gallery/ results/ quantizeImageNaive
-   # python dither.py "source" "destination" "algorithm"
-   ```
-   and the folder results will contain the outputs of running `quantizeImageNaive` on each. There will also be a file `view.htm` that will show all the results in a table. The starter code contains a bunch of helper functions for you to use.
+You'll be able to call each implementation via a starter script `dither.py` that takes as arguments a source folder with images, a target image to put the results in, and the function to apply to each. For instance if there's a function `quantizeImageNaive`, you can call  
+
+`$ python dither.py gallery/ results/ quantizeImageNaive`
+
+and the folder results will contain the outputs of running `quantizeImageNaive` on each. There will also be a file `view.htm` that will show all the results in a table. The starter code contains a bunch of helper functions for you to use.
    
 </div>
 
@@ -648,7 +647,7 @@ The same color may look different under different lighting conditions. Images `r
 3. *(5 points)* {{ report }} <span class="report">Include the LAB color space plots in your report. Which color space (RGB vs. LAB) better separates the illuminance (i.e., total amount of light) change from other factors such as hue? Why?</span>
 4. *(10 points)* {{ code }} <span class="code"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> Below in Figure 6 is an example of two photos of the same piece of paper, taken in the basement and by the window respectively.
 
-<figure>
+<figure class="figure-container">
 	<div class="flex-container">
 		<figure>
 			<img src="{{site.url}}/assets/hw1/images/basement.png" alt="basement" width="250px">
@@ -676,43 +675,40 @@ The first image was taken in the basement under a light. The second was taken by
 
 Since the sense of color difference is subjective, we will display all images and patches on a webpage. Every student can vote for their favorite pair of images that illustrates color difference on Piazza. The winner will get **Extra Credits** (2 pts).
 
-# Gradescope Submission Checklist
+# Tasks Checklist
 
 This section is meant to help you keep track of the many things that go in the report:
 
 - [ ] **NumPy Intro**:
-  - [ ] 1.1 - Terminal Output
-
+  - [ ] 1.1 - {{ report }} Terminal Output
 - [ ] **Data Interpretation and Visualization**:
-  - [ ] 2.1 - 2 images from `mysterydata2.npy`
-  - [ ] 2.2 - 2 images from `mysterydata3.npy`
+  - [ ] 2.1 - {{ report }} 2 images from `mysterydata2.npy`
+  - [ ] 2.2 - {{ report }} 2 images from `mysterydata3.npy`
   - [ ] 2.3 - {{ code }} `colorMapArray`
-  - [ ] 2.4 - 9 images from `mysterydata4.npy`
-
+  - [ ] 2.4 - {{ report }} 9 images from `mysterydata4.npy`
 - [ ] **Lights on a Budget**:
 	- [ ] 3.1 Naive Approach
 		- [ ] 1 - {{ code }} `quantize`
 		- [ ] 2 - {{ code }} `quantizeNaive`
-		- [ ] 3 - Quantize Runtime
-		- [ ] 4 - Intensity Values vs Paletter Values
-		- [ ] 5 - Two input/output pairs: `aep.jpg` + your choice
+		- [ ] 3 - {{ report }} Quantize Runtime
+		- [ ] 4 - {{ report }} Intensity Values vs Paletter Values
+		- [ ] 5 - {{ report }} Two input/output pairs: `aep.jpg` + your choice
 	- [ ] 3.2 Floyd-Steinberg
 		- [ ] 1 - {{ code }} `quantizeFloyd`
-		- [ ] 2 - Why does dithering work?
-		- [ ] 3 - 3 results from `gallery200/` including `aep.jpg`
+		- [ ] 2 - {{ report }} Why does dithering work?
+		- [ ] 3 - {{ report }} 3 results from `gallery200/` including `aep.jpg`
 	- [ ] 3.3 Resizing Images
 		- [ ] 1 - {{ code }} `resizeToSquare`
 	- [ ] 3.4 Handling Color
 		- [ ] 1 - {{ code }} `quantize`
 		- [ ] 2 - {{ code }} `quantizeFloyd`
-		- [ ] 3 - 3 results
+		- [ ] 3 - {{ report }} 3 results
 		- [ ] 4 - (*optional*) `dither/mychoice.jpg`
 	- [ ] 3.5 Gamma Correction (*optional*)
-
 - [ ] **Colorspaces**:
 	- [ ] 4.1 - {{ code }} R,G,B plots
 	- [ ] 4.2 - {{ code }} L,A,B plots
-	- [ ] 4.3 - L,A,B plots
+	- [ ] 4.3 - {{ report }} L,A,B plots
 	- [ ] 4.4 - {{ code }} Coose two lighting conditions...
 
 # Canvas Submission Checklist

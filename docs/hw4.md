@@ -14,7 +14,6 @@ due: 5 p.m. on Friday March 31st, 2023
         \newcommand{\RR}{\mathbb{R}}
         \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
     \)
-
 </div>
 
 {% capture code %}<i class="fa fa-code icon-large"></i>{% endcapture %}
@@ -60,7 +59,7 @@ The submission includes two parts:
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
     {{ report }} - 
-    <span class="report">We have indicated questions where you have to do something in the report in blue.</span>
+    <span class="report">We have indicated questions where you have to do something in the report in green.</span>
 
     <div class="primer-spec-callout info" markdown="1">
       **Changes in format requirements:** 
@@ -332,11 +331,9 @@ After completing your implementation, you can run the script `gradcheck_classifi
 ### Task 4: Training Two-Layer Networks
 You will train a two-layer network to perform image classification on the CIFAR-10 dataset.  This dataset consists of $$32\times 32$$ RGB images of 10 different categories.  It provides 50,000 training images and 10,000 test images.  Here are a few example images from the dataset:
 
-<div style="width:100%;text-align:center">
-  <figure>
-    <img src="{{site.url}}/assets/hw4/CIFAR10.png" alt="CIFAR10">
-  </figure>
-</div>
+<figure class="figure-container">
+  <img src="{{site.url}}/assets/hw4/CIFAR10.png" alt="CIFAR10">
+</figure>
 
 You can use the script `neuralnet/download_cifar.sh` to download and unpack the CIFAR10 dataset.
 
@@ -359,11 +356,9 @@ they work:
 
 Now it's time to train your model! Run the script `neuralnet/train.py` to train a two-layer network on the CIFAR-10 dataset. The script will print out training losses and train and val set accuracies as it trains. After training concludes, the script will also mke a plot of the training losses as well as the training and validation-set accuracies of the model during training; by default this will be saved in a file `plot.pdf`, but this can be customized with the flag `--plot-file`. You should see a plot that looks like this:
 
-<div style="width:100%;text-align:center">
-  <figure>
-    <img src="{{site.url}}/assets/hw4/figures/loss-plot.jpeg" alt="Loss Plot">
-  </figure>
-</div>
+<figure class="figure-container">
+  <img src="{{site.url}}/assets/hw4/figures/loss-plot.jpeg" alt="Loss Plot" width="90%">
+</figure>
 
 Unfortunately, it seems that your model is not training very effectively -- the training loss has not decreased much from its initial value of $$\approx2.3$$, and the training and validation accuracies are very close to $$10\%$$ which is what we would expect from a model that randomly guesses a category label for each input.
 
@@ -393,7 +388,7 @@ You should tune the hyperparameters and train a model that achieves at least $$4
 	As above, this should not take an excessive amount of training time -- we are able to train an overfit model that achieves $$\approx80\%$$ accuracy on the training set within about a minute of training.
 
 	<div class="primer-spec-callout info" markdown="1">
-	*Hint*: It's easier to overfit a smaller training set.
+	It's easier to overfit a smaller training set.
 	</div>
 
 # Section 2
@@ -402,16 +397,14 @@ You should tune the hyperparameters and train a model that achieves at least $$4
 
 In this part, you will implement and train Convolutional Neural Networks (ConvNets) in **PyTorch** to classify images. Unlike previous section, backpropagation is automatically inferred by PyTorch in this assignment, so you only need to write code for the forward pass. If you still not familiar with the auto gradient feature of the PyTorch, we strongly encourage you to go through the [official tutorial for `TORCH.AUTOGRAD`](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html#sphx-glr-beginner-blitz-autograd-tutorial-py).
 
-<div style="width:100%;text-align:center">
-  <figure>
-    <img src="{{site.url}}/assets/hw4/cnn.png" alt="CNN">
-    <figcaption>Figure 1: Convolutional Neural Networks for Image Classification</figcaption>
-  </figure>
-  <figure>
-    <img src="{{site.url}}/assets/hw4/fashion_mnist.png" alt="Fashion MNIST">
-    <figcaption>Fgiure 2: Example images from the Fashion MNIST dataset</figcaption>
-  </figure>
-</div>
+<figure class="figure-container">
+  <img src="{{site.url}}/assets/hw4/cnn.png" alt="CNN" width="90%">
+  <figcaption>Figure 1: Convolutional Neural Networks for Image Classification</figcaption>
+</figure>
+<figure class="figure-container">
+  <img src="{{site.url}}/assets/hw4/fashion_mnist.png" alt="Fashion MNIST" width="90%">
+  <figcaption>Figure 2: Example images from the Fashion MNIST dataset</figcaption>
+</figure>
 
 The dataset we use is the Fashion-MNIST dataset, which is available [here](https://github.com/zalandoresearch/fashion-mnist) and in `torchvision.datasets`. Fashion-MNIST has 10 classes, 60000 training+validation images (we have split it to have 50000 training images and 10000 validation images, but you can change the numbers), and 10000 test images.
 
@@ -433,7 +426,7 @@ You should train your network on training set and change those listed above base
 3. *(5 points)* {{ report }} <span class="report">Report the accuracy of your best model on the test set</span>. We expect you to achieve over **85%**.
 
 <div class="primer-spec-callout info" markdown="1">
-*Hint*: Read [PyTorch documentation](https://pytorch.org/docs/stable/nn.html) for `torch.nn` and pick layers for your network. Some common choices are:
+Read [PyTorch documentation](https://pytorch.org/docs/stable/nn.html) for `torch.nn` and pick layers for your network. Some common choices are:
 
 - `nn.Linear`
 - `nn.Conv2d`, try different number of filters (`out_channels`) and size of filters (`kernel_size`)
@@ -459,34 +452,30 @@ You can upload images in Colab by using the upload button on the top left. For m
 
 1. *(10 points)* {{ report }} <span class="report">Submit the two images with their predicted classes in your report</span>, we have provided you with the code to generate this image in the notebook.
 
-# Gradescope Submission Checklist
+# Tasks Checklist
 
 This section is meant to help you keep track of the many things that go in the report:
-- [ ] **Computational Graphs and Backprop**:
-	- [ ] Implementing Computational Graphs:
-		- [ ] 1.1 - {{ autograde }} `f3` (*required*); `f1` and `f2` (*optional*)
-		- [ ] 1.2 - (*optional*) Draw a computational graph and {{ code }} implement forward/backward
 
-- [ ] **Fully-Connected Neural Networks**:
-	- [ ] Modular Backprop API:
-		- [ ] 2.1 - {{ autograde }} `fc_forward` and `fc_backward`
-		- [ ] 2.2 - {{ autograde }} `relu_forward` and `relu_backward`
-		- [ ] 2.3 - {{ autograde }} `softmax_loss`
-		- [ ] 2.4 - {{ autograde }} `l2_regularization`
-	- [ ] Implement Two-Layer Network:
-		- [ ] 3.1 - {{ autograde }} `TwoLayerNet`
-	- [ ] Train Two-Layer Network:
-		- [ ] 4.1 - {{ autograde }} `training_step`
-		- [ ] 4.2 - Results of best model
-    	- [ ] 4.3 - Results of overfit model
-
-- [ ] **Fashion-MNIST Classfication**:
-	- [ ] Train Your Own Classification Model:
-		- [ ] 5.1 - {{ code }} `part1.ipynb` (**with outputs**)
-		- [ ] 5.2 - Report best model
-		- [ ] 5.3 - Report best model on test set
-	- [ ] Pre-trained NN:
-		- [ ] 6.1 - `img1` and `img2`
+- [ ] **Implementing Computational Graphs**:
+	- [ ] 1.1 - {{ autograde }} `f3` (*required*); `f1` and `f2` (*optional*)
+	- [ ] 1.2 - (*optional*) {{ report }} Draw a computational graph and {{ code }} implement forward/backward
+- [ ] **Modular Backprop API**:
+	- [ ] 2.1 - {{ autograde }} `fc_forward` and `fc_backward`
+	- [ ] 2.2 - {{ autograde }} `relu_forward` and `relu_backward`
+	- [ ] 2.3 - {{ autograde }} `softmax_loss`
+	- [ ] 2.4 - {{ autograde }} `l2_regularization`
+- [ ] **Implement Two-Layer Network**:
+	- [ ] 3.1 - {{ autograde }} `TwoLayerNet`
+- [ ] **Train Two-Layer Network**:
+	- [ ] 4.1 - {{ autograde }} `training_step`
+	- [ ] 4.2 - {{ report }} Results of best model
+	- [ ] 4.3 - {{ report }} Results of overfit model
+- [ ] **Train Your Own Classification Model**:
+	- [ ] 5.1 - {{ code }} `part1.ipynb` (**with outputs**)
+	- [ ] 5.2 - {{ report }} Report best model
+	- [ ] 5.3 - {{ report }} Report best model on test set
+- [ ] **Pre-trained NN**:
+	- [ ] 6.1 - {{ report }} `img1` and `img2`
 
 # Canvas Submission Checklist
 
