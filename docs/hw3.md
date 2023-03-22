@@ -365,45 +365,39 @@ If you can warp images together, you can replace things in your reality. Imagine
     
     - This trick is most impressive if you do this for something seen at a very different angle. You may be able to extend how far you can match by pre-generating synthetic warps of the template (i.e, generate $$\textrm{synth}_i = \textrm{apply}(\HB_i,T)$$ for a series of $$\HB_i$$, then see if you can find a good warping $$\hat{\HB}$$ from $$\textrm{synth}_i$$ to the scene. Then the final homography is $$\hat{\HB} \HB_i$$.
 
-# Gradescope Submission Checklist
+# Tasks Checklist
 
 This section is meant to help you keep track of the many things that go in the report:
 - [ ] **RANSAC Theory**:
-    - [ ] 1.1 - Minimum # of points
-    - [ ] 1.2 - Probability single iteration fails
-    - [ ] 1.3 - Minimum # of RANSAC trials
-
+    - [ ] 1.1 - {{ report }} Minimum # of points
+    - [ ] 1.2 - {{ report }} Probability single iteration fails
+    - [ ] 1.3 - {{ report }} Minimum # of RANSAC trials
 - [ ] **Fitting Linear Transformations**:
-    - [ ] 2.1 - Degrees of freedom, Minimum # of correspondences
-    - [ ] 2.2 - Form of $$\AB$$, $$\mB$$, and $$\bB$$
-
+    - [ ] 2.1 - {{ report }} Degrees of freedom, Minimum # of correspondences
+    - [ ] 2.2 - {{ report }} Form of $$\AB$$, $$\mB$$, and $$\bB$$
 - [ ] **Fitting Affine Transformations**:
-    - [ ] 3.1 - ($$\SB$$,$$\tB$$) in your report for `points_case_1.npy`
-    - [ ] 3.2 - Figures for `points_case_1.npy` and `points_case_2.npy`
-    - [ ] 3.3 - Affinity
-
+    - [ ] 3.1 - {{ report }} ($$\SB$$,$$\tB$$) in your report for `points_case_1.npy`
+    - [ ] 3.2 - {{ report }} Figures for `points_case_1.npy` and `points_case_2.npy`
+    - [ ] 3.3 - {{ report }} Affinity
 - [ ] **Fitting Homographies**:
     - [ ] 4.1 - {{ autograde }} `fit_homography`
-    - [ ] 4.2 - $$\HB$$ for `points_case_1.npy` and `points_case_2.npy`
-    - [ ] 4.3 - Figures for `points_case_5.npy` and `points_case_9.npy
-
+    - [ ] 4.2 - {{ report }} $$\HB$$ for `points_case_1.npy` and `points_case_2.npy`
+    - [ ] 4.3 - {{ report }} Figures for `points_case_5.npy` and `points_case_9.npy
 - [ ] **Synthetic Views**:
     - [ ] 5.1 - {{ code }} `make_synthetic_view`
-    - [ ] 5.2 - Both book covers
-    - [ ] 5.3 - Lines crooked?
+    - [ ] 5.2 - {{ report }} Both book covers
+    - [ ] 5.3 - {{ report }} Lines crooked?
     - [ ] 5.4 - (*optional*) Reverse
-
 - [ ] **Stitching Stuff Together**:
     - [ ] 6.1 - {{ autograde }} `compute_distance`
     - [ ] 6.2 - {{ code }} `find_matches`
     - [ ] 6.3 - {{ code }} `draw_matches`
-    - [ ] 6.4 - Two image pairs
+    - [ ] 6.4 - {{ report }} Two image pairs
     - [ ] 6.5 - {{ autograde }} `RANSAC_fit_homography`
     - [ ] 6.6 - {{ code }} `make_warped`
-    - [ ] 6.7 - Two merged pairs
+    - [ ] 6.7 - {{ report }} Two merged pairs
     - [ ] 6.8 - {{ autograde }} `mypanorama1.jpg` and `mypanorama1.jpg`
     - [ ] 6.9 - (*optional*) {{ autograde }} `myfavoritepanorama.jpg`
-
 - [ ] **Augmented Reality**:
     - [ ] 7.1 - {{ code }} `improve_image`
     - [ ] 7.2 - {{ autograde }} `myscene.jpg`, `mytemplate.png/jpg`, `mytransfer.jpg`, `myimproved.jpg`

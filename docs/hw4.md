@@ -452,34 +452,30 @@ You can upload images in Colab by using the upload button on the top left. For m
 
 1. *(10 points)* {{ report }} <span class="report">Submit the two images with their predicted classes in your report</span>, we have provided you with the code to generate this image in the notebook.
 
-# Gradescope Submission Checklist
+# Tasks Checklist
 
 This section is meant to help you keep track of the many things that go in the report:
-- [ ] **Computational Graphs and Backprop**:
-	- [ ] Implementing Computational Graphs:
-		- [ ] 1.1 - {{ autograde }} `f3` (*required*); `f1` and `f2` (*optional*)
-		- [ ] 1.2 - (*optional*) Draw a computational graph and {{ code }} implement forward/backward
 
-- [ ] **Fully-Connected Neural Networks**:
-	- [ ] Modular Backprop API:
-		- [ ] 2.1 - {{ autograde }} `fc_forward` and `fc_backward`
-		- [ ] 2.2 - {{ autograde }} `relu_forward` and `relu_backward`
-		- [ ] 2.3 - {{ autograde }} `softmax_loss`
-		- [ ] 2.4 - {{ autograde }} `l2_regularization`
-	- [ ] Implement Two-Layer Network:
-		- [ ] 3.1 - {{ autograde }} `TwoLayerNet`
-	- [ ] Train Two-Layer Network:
-		- [ ] 4.1 - {{ autograde }} `training_step`
-		- [ ] 4.2 - Results of best model
-    	- [ ] 4.3 - Results of overfit model
-
-- [ ] **Fashion-MNIST Classfication**:
-	- [ ] Train Your Own Classification Model:
-		- [ ] 5.1 - {{ code }} `part1.ipynb` (**with outputs**)
-		- [ ] 5.2 - Report best model
-		- [ ] 5.3 - Report best model on test set
-	- [ ] Pre-trained NN:
-		- [ ] 6.1 - `img1` and `img2`
+- [ ] **Implementing Computational Graphs**:
+	- [ ] 1.1 - {{ autograde }} `f3` (*required*); `f1` and `f2` (*optional*)
+	- [ ] 1.2 - (*optional*) {{ report }} Draw a computational graph and {{ code }} implement forward/backward
+- [ ] **Modular Backprop API**:
+	- [ ] 2.1 - {{ autograde }} `fc_forward` and `fc_backward`
+	- [ ] 2.2 - {{ autograde }} `relu_forward` and `relu_backward`
+	- [ ] 2.3 - {{ autograde }} `softmax_loss`
+	- [ ] 2.4 - {{ autograde }} `l2_regularization`
+- [ ] **Implement Two-Layer Network**:
+	- [ ] 3.1 - {{ autograde }} `TwoLayerNet`
+- [ ] **Train Two-Layer Network**:
+	- [ ] 4.1 - {{ autograde }} `training_step`
+	- [ ] 4.2 - {{ report }} Results of best model
+	- [ ] 4.3 - {{ report }} Results of overfit model
+- [ ] **Train Your Own Classification Model**:
+	- [ ] 5.1 - {{ code }} `part1.ipynb` (**with outputs**)
+	- [ ] 5.2 - {{ report }} Report best model
+	- [ ] 5.3 - {{ report }} Report best model on test set
+- [ ] **Pre-trained NN**:
+	- [ ] 6.1 - {{ report }} `img1` and `img2`
 
 # Canvas Submission Checklist
 

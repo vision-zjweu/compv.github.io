@@ -281,7 +281,7 @@ In `filtermon/`, we've provided you with an image and its output for five differ
 	Watch out that the code does convolution. If you guess the filter based on the output, remember that the filter that gets used will be horizontally and vertically flipped/reflected! All filters look similar to filters that have been shown in class (although will not match precisely).
 	</div>
 
-- *(2 points)* {{ report }} <span class="report">What does filter 1 do, intuitively and how does it differ from filter 2?</span>
+2. *(2 points)* {{ report }} <span class="report">What does filter 1 do, intuitively and how does it differ from filter 2?</span>
 
 ## Feature Extraction
 
@@ -353,7 +353,7 @@ which is far easier since the determinants and traces of a 2x2 matrix can be cal
 
 ### Task 7: Harris Corner Detector
 
-1. *(10 points)* {{ code }} <span class="code">Implement</span> this optimization by completing the function `harris_detector()` in `corners.py`.
+1. *(10 points)* {{ code }} <span class="code">Implement this optimization</span> by completing the function `harris_detector()` in `corners.py`.
 
 	You cannot call a library function that has already implemented the Harris Corner Detector to solve the task. You can, however, look at where Harris corners are to get a sense of whether your implementation is doing well.
 
@@ -388,7 +388,7 @@ We have provided you with several helper functions in `common.py`: `visualize_sc
 
 The first two functions visualize the outputs for your scale space and detections, respectively. The last function detects maxima within some local neighborhood as defined by the function inputs. Those three functions are intended to help you inspect the results for different parameters with ease. The last two parts of this question require a degree of experimenting with different parameter choices, and visualizing the results of the parameters and understanding how they impact the detections is crucial to choosing finding good parameters. Use `scipy.ndimage.convolve()` to perform convolution whenever required. **Please use reflect padding. (Set `mode=`reflect'`)** 
 
-### Task 8: Single-scale Blob Detection
+### Task 8: Single-Scale Blob Detection
 
 Your first task is to use DoG filters to detect blobs of a single scale. 
 
@@ -411,6 +411,45 @@ This assignment is deliberately meant to be open-ended. Your detections don't ha
 *Note:*
 The images come from a project from the Visual Geometry Group at Oxford University, and have been used in a recent research project that focuses on counting cells and other objects in images; 
 you can check their work [here](http://www.robots.ox.ac.uk/~vgg/research/counting/index_org.html). 
+
+# Tasks Checklist
+
+This section is meant to help you keep track of the many things that go in the report:
+- [ ] **Image Patches**:
+	- [ ] 1.1 - {{ report }} 3 patches from `grace_hopper.png` and {{ code }} `image_patches`
+	- [ ] 1.2 - {{ report }} Why zero mean?
+	- [ ] 1.3 - {{ report }} Patches good or bad?
+- [ ] **Convolution and Gaussian Filter**
+	- [ ] 2.1 - {{ report }} Show $$G_{xy} \equiv G_x \ast G_y$$
+	- [ ] 2.2 - {{ code }} `convolve()`
+	- [ ] 2.3 - {{ report }} Apply `convolve()`
+	- [ ] 2.4 - {{ report }} Why should smoothing filters sum to $$1$$?
+	- [ ] 2.5 - {{ report }} Derive derivative kernels
+	- [ ] 2.6 - {{ code }} `edge_detection()`
+	- [ ] 2.7 - {{ report}} Apply `edge_detection()`
+- [ ] **Sobel Operator**:
+	- [ ] 3.1 - {{ report }} Show $$I \ast k_x \approx I \ast S_x$$
+	- [ ] 3.2 - {{ code }} `sobel_operator()`
+	- [ ] 3.3 - {{ report }} Apply `sobel_operator()`
+- [ ] **LoG Filter**:
+	- [ ] 4.1 - {{ report }} Apply LoG filters, discuss differences and detections
+	- [ ] 4.2 - {{ report }} Show $$(I \ast G_{k \sigma})-(I \ast G_{\sigma}) \approx I \ast LoG$$
+- [ ] **Who's That Filter?**:
+	- [ ] 5.1 - {{ report }} Deduce the 4 filters
+	- [ ] 5.2 - {{ report }} Filter 1 vs Filter 2
+- [ ] **Corner Score**:
+	- [ ] 6.1 - {{ code }} `corner_score()`
+	- [ ] 6.2 - {{ report }} Apply `corner_score()`
+	- [ ] 6.3 - {{ report }} Why is it impractical to check all $$(u,v)$$
+- [ ] **Harris Corner Detector**:
+	- [ ] 7.1 - {{ code }} `harris_detector()`
+	- [ ] 7.2 - {{ report }} Apply `harris_detector()`
+- [ ] **Single-Scale Blob Detection**:
+	- [ ] 8.1 - {{ code }} `gaussian_filter()`
+	- [ ] 8.2 - {{ report }} Apply `gaussian_filter()` and comment on results
+- [ ] **Cell Counting**:
+	- [ ] 9.1 - {{ report }} Scale space parameters and number of detected cells
+	- [ ] 9.2 - {{ report }} Include and discuss blob detection results
 
 # Canvas Submission Checklist
 In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:

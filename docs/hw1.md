@@ -675,43 +675,40 @@ The first image was taken in the basement under a light. The second was taken by
 
 Since the sense of color difference is subjective, we will display all images and patches on a webpage. Every student can vote for their favorite pair of images that illustrates color difference on Piazza. The winner will get **Extra Credits** (2 pts).
 
-# Gradescope Submission Checklist
+# Tasks Checklist
 
 This section is meant to help you keep track of the many things that go in the report:
 
 - [ ] **NumPy Intro**:
-  - [ ] 1.1 - Terminal Output
-
+  - [ ] 1.1 - {{ report }} Terminal Output
 - [ ] **Data Interpretation and Visualization**:
-  - [ ] 2.1 - 2 images from `mysterydata2.npy`
-  - [ ] 2.2 - 2 images from `mysterydata3.npy`
+  - [ ] 2.1 - {{ report }} 2 images from `mysterydata2.npy`
+  - [ ] 2.2 - {{ report }} 2 images from `mysterydata3.npy`
   - [ ] 2.3 - {{ code }} `colorMapArray`
-  - [ ] 2.4 - 9 images from `mysterydata4.npy`
-
+  - [ ] 2.4 - {{ report }} 9 images from `mysterydata4.npy`
 - [ ] **Lights on a Budget**:
 	- [ ] 3.1 Naive Approach
 		- [ ] 1 - {{ code }} `quantize`
 		- [ ] 2 - {{ code }} `quantizeNaive`
-		- [ ] 3 - Quantize Runtime
-		- [ ] 4 - Intensity Values vs Paletter Values
-		- [ ] 5 - Two input/output pairs: `aep.jpg` + your choice
+		- [ ] 3 - {{ report }} Quantize Runtime
+		- [ ] 4 - {{ report }} Intensity Values vs Paletter Values
+		- [ ] 5 - {{ report }} Two input/output pairs: `aep.jpg` + your choice
 	- [ ] 3.2 Floyd-Steinberg
 		- [ ] 1 - {{ code }} `quantizeFloyd`
-		- [ ] 2 - Why does dithering work?
-		- [ ] 3 - 3 results from `gallery200/` including `aep.jpg`
+		- [ ] 2 - {{ report }} Why does dithering work?
+		- [ ] 3 - {{ report }} 3 results from `gallery200/` including `aep.jpg`
 	- [ ] 3.3 Resizing Images
 		- [ ] 1 - {{ code }} `resizeToSquare`
 	- [ ] 3.4 Handling Color
 		- [ ] 1 - {{ code }} `quantize`
 		- [ ] 2 - {{ code }} `quantizeFloyd`
-		- [ ] 3 - 3 results
+		- [ ] 3 - {{ report }} 3 results
 		- [ ] 4 - (*optional*) `dither/mychoice.jpg`
 	- [ ] 3.5 Gamma Correction (*optional*)
-
 - [ ] **Colorspaces**:
 	- [ ] 4.1 - {{ code }} R,G,B plots
 	- [ ] 4.2 - {{ code }} L,A,B plots
-	- [ ] 4.3 - L,A,B plots
+	- [ ] 4.3 - {{ report }} L,A,B plots
 	- [ ] 4.4 - {{ code }} Coose two lighting conditions...
 
 # Canvas Submission Checklist
