@@ -14,7 +14,6 @@ due: 5 p.m. on Friday March 31st, 2023
         \newcommand{\RR}{\mathbb{R}}
         \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
     \)
-
 </div>
 
 {% capture code %}<i class="fa fa-code icon-large"></i>{% endcapture %}
@@ -60,7 +59,7 @@ The submission includes two parts:
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
     {{ report }} - 
-    <span class="report">We have indicated questions where you have to do something in the report in blue.</span>
+    <span class="report">We have indicated questions where you have to do something in the report in green.</span>
 
     <div class="primer-spec-callout info" markdown="1">
       **Changes in format requirements:** 
@@ -409,7 +408,7 @@ In this part, you will implement and train Convolutional Neural Networks (ConvNe
   </figure>
   <figure>
     <img src="{{site.url}}/assets/hw4/fashion_mnist.png" alt="Fashion MNIST">
-    <figcaption>Fgiure 2: Example images from the Fashion MNIST dataset</figcaption>
+    <figcaption>Figure 2: Example images from the Fashion MNIST dataset</figcaption>
   </figure>
 </div>
 
