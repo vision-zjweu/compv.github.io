@@ -498,12 +498,11 @@ We'll call this a _quantized_ image. You can take the palette and the quantized 
 
 <div class="primer-spec-callout info" markdown="1">
    
-   You'll be able to call each implementation via a starter script `dither.py` that takes as arguments a source folder with images, a target image to put the results in, and the function to apply to each. For instance if there's a function `quantizeImageNaive`, you can call: 
-   ```console
-   $ python dither.py gallery/ results/ quantizeImageNaive
-   # python dither.py "source" "destination" "algorithm"
-   ```
-   and the folder results will contain the outputs of running `quantizeImageNaive` on each. There will also be a file `view.htm` that will show all the results in a table. The starter code contains a bunch of helper functions for you to use.
+You'll be able to call each implementation via a starter script `dither.py` that takes as arguments a source folder with images, a target image to put the results in, and the function to apply to each. For instance if there's a function `quantizeImageNaive`, you can call  
+
+`$ python dither.py gallery/ results/ quantizeImageNaive`
+
+and the folder results will contain the outputs of running `quantizeImageNaive` on each. There will also be a file `view.htm` that will show all the results in a table. The starter code contains a bunch of helper functions for you to use.
    
 </div>
 

@@ -81,12 +81,14 @@ To make your life easier, we recommend you to install the latest [Anaconda](http
 In this section, suppose we are fitting a 3D plane (i.e., $$ax + by + cz + d = 0$$). A 3D plane can be defined by 3 points (2 points define a line). Plane fitting happens when people analyze point clouds to reconstruct scenes from laser scans. To distinguish from other notations that you may find elsewhere, we will refer to the model that is fit within the loop of RANSAC (covered in the lecture) as the *putative* model.
 
 1. *(3 points)* {{ report }} <span class="report">Write in your report</span> the minimum number of 3D points needed to sample in an iteration to compute a putative model.
+
 2. *(3 points)* {{ report }} <span class="report">Determine the probability</span> that the data picked for to fit the putative model in a single iteration fails, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting 3D planes.
+
 3. *(3 points)* {{ report }} <span class="report">Determine the minimum number of RANSAC trials</span> needed to have $$\geq 98\%$$ chance of success, assuming that the outlier ratio in the dataset is $$0.5$$ and we are fitting planes.
 
-<div class="primer-spec-callout info" markdown="1">
-  *Hint*: You can do this by explicit calculation or by search/trial and error with numpy.
-</div>
+    <div class="primer-spec-callout info" markdown="1">
+    You can do this by explicit calculation or by search/trial and error with numpy.
+    </div>
 
 ### Task 2: Fitting Linear Transformations
 
@@ -132,7 +134,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
     <span class="report">Report ($$\SB$$,$$\tB$$) in your report for `points_case_1.npy`.</span>
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: There is no trick question -- use the setup from the foreword. Write a small amount of code that does this by loading a matrix, shuffling the data around, and then calling `np.linalg.lstsq`.
+      There is no trick question -- use the setup from the foreword. Write a small amount of code that does this by loading a matrix, shuffling the data around, and then calling `np.linalg.lstsq`.
     </div>
 
 2. Make a scatterplot of the points $$[x_i,y_i]$$, $$[x'_i,y'_i]$$ and $$\SB[x_i,y_i]^T+\tB$$ in one figure with different colors. Do this for both `points_case_1.npy` and `point_case_2.npy`. In other words, there should be two plots, each of which contains three sets of $$N$$ points.
@@ -141,13 +143,13 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
     <span class="report">Save the figures and put them in your report</span>
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: Look at `plt.scatter` and `plt.savefig`. For drawing the scatterplot, use `plt.scatter(xy[:,0],xy[:,1],1)`. The last argument controls the size of the dot and you may want this to be small so you can set the pattern. As you ask it to scatterplot more plots, they accumulate on the current figure. End the figure by `plt.close()`.
+      Look at `plt.scatter` and `plt.savefig`. For drawing the scatterplot, use `plt.scatter(xy[:,0],xy[:,1],1)`. The last argument controls the size of the dot and you may want this to be small so you can set the pattern. As you ask it to scatterplot more plots, they accumulate on the current figure. End the figure by `plt.close()`.
     </div>
 
 3. *(5 points)* {{ report }} <span class="report">Write in the report your answer to</span> how well does an affine transform describe the relationship between $$[x,y] \leftrightarrow [x',y']$$ for `points_case_1.npy` and `points_case_2.npy`? You should describe this in two to three sentences.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: What properties are preserved by each transformation?
+      What properties are preserved by each transformation?
     </div>
 
 ### Task 4: Fitting Homographies
@@ -169,7 +171,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
     where $$\hB$$ has all the parameters of $$\HB$$.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: Again, this is not meant to be a trick question -- use the setup from the foreword.
+      Again, this is not meant to be a trick question -- use the setup from the foreword.
     </div> 
 
     **Important**: This part will be autograded. Please follow the specifications precisely.
@@ -263,13 +265,13 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
     **Beware!** The numbers for the ratio shown in the lecture slides apply to SIFT; the descriptor here is different so the ratio threshold you should use is different.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: Look at `np.argsort` as well as `np.take_along_axis`.
+      Look at `np.argsort` as well as `np.take_along_axis`.
     <div>
 
 3. *(5 points)* {{ code }} <span class="code">Fill in `draw_matches`</span> in `task6.py`. This should put the images on top of each other and draw lines between the matches. You can use this to debug things.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: Use `cv2.line`.
+      Use `cv2.line`.
     </div>
 
 4. *(3 points)* {{ report }} <span class="report">Put a picture of the matches between two image pairs of your choice in your report.</span>
@@ -279,7 +281,7 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
     This should RANSACify `fit_homography`. You should keep track of the best set of inliers you have seen in the RANSAC loop. Once the loop is done, please re-fit the model to these inliers. In other words, if you are told to run $$N$$ iterations of RANSAC, you should fit a homography $$N$$ times on the minimum number of points needed; this should be followed by a single fitting of a homography on many more points (the inliers for the best of the $$N$$ models). You will need to set epsilon's default value: $$0.1$$ pixels is too small; $$100$$ pixels is too big. You will need to play with this to get the later parts to work.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hint*: When sampling correspondences, draw **without** replacement; if you do it with replacement you may pick the same point repeatedly and then try to (effectively) fit a model to three points.
+      When sampling correspondences, draw **without** replacement; if you do it with replacement you may pick the same point repeatedly and then try to (effectively) fit a model to three points.
     </div>
 
 6. {{ code }} 
@@ -338,18 +340,12 @@ If you can warp images together, you can replace things in your reality. Imagine
 **Files**: We give a few examples of templates and scenes in `task7/scenes/`. Each folder contains:
  `template.png`: a viewed-from-head-on / distortion-free / fronto-parallel version of the texture; and `scene.jpg`: an image where the texture appears at some location and viewed at some angle. We provide a set of seals (e.g., the UM seal) that you may want to put on things in `task7/seals/`. You can substitute whatever you like.
 
- 1. {{ code }} 
- <span class="code">Fill in the function `improve_image(scene,template,transfer)`</span> in `task7.py` that aligns `template` to `scene` using a homography, just as in task 6. Then, instead of warping `template` to the image, warp `transfer`. If you want to copy over your functions from task 6, you can either import them or just copy them.
+ 1. {{ code }} <span class="code">Fill in the function `improve_image(scene,template,transfer)`</span> in `task7.py` that aligns `template` to `scene` using a homography, just as in task 6. Then, instead of warping `template` to the image, warp `transfer`. If you want to copy over your functions from task 6, you can either import them or just copy them.
 
     <div class="primer-spec-callout info" markdown="1">
-      *Hints*:
-
-      - The matches that you get are definitely not one-to-one. You'll probably get better results if
-    you match from the template to the scene (i.e., for each template keypoint, find the best match in scene). Be careful about ordering though if you transfer your code!
-
-      - The image to transfer might not be the same size as the template. You can either resize `transfer` to be the same size as `template` or automatically generate a homography.
-
-      - For using the fucntion `warp_and_combine` from task 6, you may want to change it a little bit, since you should make sure you use warped `template` to cover areas in the `scene` completely as shown in Figure 3.
+    - The matches that you get are definitely not one-to-one. You'll probably get better results if you match from the template to the scene (i.e., for each template keypoint, find the best match in scene). Be careful about ordering though if you transfer your code!
+    - The image to transfer might not be the same size as the template. You can either resize `transfer` to be the same size as `template` or automatically generate a homography.
+    - For using the fucntion `warp_and_combine` from task 6, you may want to change it a little bit, since you should make sure you use warped `template` to cover areas in the `scene` completely as shown in Figure 3.
     </div>
     
 2. Do something fun with this. Submit a synthetically done warp of something interesting. We'll have a contest. If you do something particularly neat to get the system to work, please write this in the report.

@@ -25,6 +25,11 @@ i {
 
 /* Figures */
 
+.figure-container {
+  width: 100%;
+  text-align: center;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
