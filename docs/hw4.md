@@ -34,7 +34,7 @@ This homework is divided into two major sections based on how you're expected to
 
 **Section 2**:
 
-- We are going to use  [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true) or local [Jupyter Notebook](https://jupyter.org/) on your on machine (both GPU and CPU) to run our code. For more information on using Colab, please see the [official Colab tutorial](https://colab.research.google.com/?utm_source=scs-index#). The whole assignment is designed to be **CPU friendly**, but we still strongly encourage you try with Colab first.
+- We are going to use  [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true){:target="_blank"} or local [Jupyter Notebook](https://jupyter.org/){:target="_blank"} on your on machine (both GPU and CPU) to run our code. For more information on using Colab, please see the [official Colab tutorial](https://colab.research.google.com/?utm_source=scs-index#){:target="_blank"}. The whole assignment is designed to be **CPU friendly**, but we still strongly encourage you try with Colab first.
 - We have also provided you with the python file version of the assignment in `python_backup` folder, but since the assignment is originally designed for Jupyter Notebook only, **we strongly suggest you do this assignment in Jupyter Notebook**. This option is provided only to backup the case of Colab failure or local Jupyter Notebook problem. {{ report }} <span class="report">If you're doing the homework in the python files, please attach your terminal output to the report</span>.
 - To do the homework on Colab, you just need to login to Colab with your Google/UMich account and upload corresponding notebook to the Colab (`File -> Upload notebook`), then you can get started.
 
@@ -51,7 +51,7 @@ The submission includes two parts:
     Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.  
         
     <div class="primer-spec-callout info" markdown="1">
-      **Submission Tip:** Use the [Canvas Submission Checklist](#canvas-submission-checklist) and [Gradescope Submission Checklist](#gradescope-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py).
+      **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
 
       If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
     </div>
@@ -68,20 +68,20 @@ The submission includes two parts:
       <br>
     </div>
 
-    You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/) for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+    You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/){:target="_blank"} for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
 
 ### Python Environment
 
-The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html) when you have questions about Python utilties.
+The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
 
-To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/) for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
-- [Numpy](https://numpy.org/doc/stable/user/quickstart.html)
-- [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)
-- [OpenCV](https://opencv.org/)
+To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+- [Numpy](https://numpy.org/doc/stable/user/quickstart.html){:target="_blank"}
+- [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html){:target="_blank"}
+- [OpenCV](https://opencv.org/){:target="_blank"}
 
 #### Local Development
 
- If you're doing this homework on your local machine instead of Colab, then other than the packages you should have already installed in previous homework, you will also need: `tqdm`, `pytorch>=1.8.0`, `torchvision` and `torchsummary` of the corresponding version. You may install these packages using `anaconda` or `pip`. Notice that some of the packages may need to be downloaded from certain anaconda channel, you may need to search on the [Anaconda](https://anaconda.org/) official website for more instructions.
+ If you're doing this homework on your local machine instead of Colab, then other than the packages you should have already installed in previous homework, you will also need: `tqdm`, `pytorch>=1.8.0`, `torchvision` and `torchsummary` of the corresponding version. You may install these packages using `anaconda` or `pip`. Notice that some of the packages may need to be downloaded from certain anaconda channel, you may need to search on the [Anaconda](https://anaconda.org/){:target="_blank"} official website for more instructions.
 
 # Section 1
 
@@ -395,7 +395,7 @@ You should tune the hyperparameters and train a model that achieves at least $$4
 
 ## Fashion-MNIST Classification
 
-In this part, you will implement and train Convolutional Neural Networks (ConvNets) in **PyTorch** to classify images. Unlike previous section, backpropagation is automatically inferred by PyTorch in this assignment, so you only need to write code for the forward pass. If you still not familiar with the auto gradient feature of the PyTorch, we strongly encourage you to go through the [official tutorial for `TORCH.AUTOGRAD`](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html#sphx-glr-beginner-blitz-autograd-tutorial-py).
+In this part, you will implement and train Convolutional Neural Networks (ConvNets) in **PyTorch** to classify images. Unlike previous section, backpropagation is automatically inferred by PyTorch in this assignment, so you only need to write code for the forward pass. If you still not familiar with the auto gradient feature of the PyTorch, we strongly encourage you to go through the [official tutorial](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html#sphx-glr-beginner-blitz-autograd-tutorial-py){:target="_blank"} for `TORCH.AUTOGRAD`.
 
 <figure class="figure-container">
   <img src="{{site.url}}/assets/hw4/cnn.png" alt="CNN" width="90%">
@@ -406,7 +406,7 @@ In this part, you will implement and train Convolutional Neural Networks (ConvNe
   <figcaption>Figure 2: Example images from the Fashion MNIST dataset</figcaption>
 </figure>
 
-The dataset we use is the Fashion-MNIST dataset, which is available [here](https://github.com/zalandoresearch/fashion-mnist) and in `torchvision.datasets`. Fashion-MNIST has 10 classes, 60000 training+validation images (we have split it to have 50000 training images and 10000 validation images, but you can change the numbers), and 10000 test images.
+The dataset we use is the Fashion-MNIST dataset, which is available [here](https://github.com/zalandoresearch/fashion-mnist){:target="_blank"} and in `torchvision.datasets`. Fashion-MNIST has 10 classes, 60000 training+validation images (we have split it to have 50000 training images and 10000 validation images, but you can change the numbers), and 10000 test images.
 
 ### Task 5: Train Your Own Classification Model
 
@@ -426,7 +426,7 @@ You should train your network on training set and change those listed above base
 3. *(5 points)* {{ report }} <span class="report">Report the accuracy of your best model on the test set</span>. We expect you to achieve over **85%**.
 
 <div class="primer-spec-callout info" markdown="1">
-Read [PyTorch documentation](https://pytorch.org/docs/stable/nn.html) for `torch.nn` and pick layers for your network. Some common choices are:
+Read [PyTorch documentation](https://pytorch.org/docs/stable/nn.html){:target="_blank"} for `torch.nn` and pick layers for your network. Some common choices are:
 
 - `nn.Linear`
 - `nn.Conv2d`, try different number of filters (`out_channels`) and size of filters (`kernel_size`)
@@ -448,7 +448,7 @@ These can be images from your own photo collection, from the internet, or somewh
 - <span class="code">One image (`img2`)</span> where the pretrained model gives unreasonable predictions, and produces a category label that does not correctly describe the content of the image.
 
 
-You can upload images in Colab by using the upload button on the top left. For more details on how to upload files on Colab, please see our [Colab tutorial](https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/colab.html). For local Jupyter Notebook users, you may simply put the image under the same folder with the notebook and open it as you will do in a normal python file. 
+You can upload images in Colab by using the upload button on the top left. For more details on how to upload files on Colab, please see our [Colab tutorial](https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/colab.html){:target="_blank"}. For local Jupyter Notebook users, you may simply put the image under the same folder with the notebook and open it as you will do in a normal python file. 
 
 1. *(10 points)* {{ report }} <span class="report">Submit the two images with their predicted classes in your report</span>, we have provided you with the code to generate this image in the notebook.
 

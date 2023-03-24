@@ -49,7 +49,7 @@ The submission includes two parts:
     Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.  
         
     <div class="primer-spec-callout info" markdown="1">
-      **Submission Tip:** Use the [Canvas Submission Checklist](#canvas-submission-checklist) and [Gradescope Submission Checklist](#gradescope-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py).
+      **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
 
       If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
     </div>
@@ -59,16 +59,16 @@ The submission includes two parts:
     {{ report }} - 
     <span class="report">We have indicated questions where you have to do something in the report in green.</span>
 
-    You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/) for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$$$\LaTeX$$$$ is recommended but not mandatory.
+    You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/){:target="_blank"} for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$$$\LaTeX$$$$ is recommended but not mandatory.
 
 ### Python Environment
 
-The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html) when you have questions about Python utilties.
+The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
 
-To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/) for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
-- [Numpy](https://numpy.org/doc/stable/user/quickstart.html)
-- [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)
-- [OpenCV](https://opencv.org/)
+To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+- [Numpy](https://numpy.org/doc/stable/user/quickstart.html){:target="_blank"}
+- [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html){:target="_blank"}
+- [OpenCV](https://opencv.org/){:target="_blank"}
 
 ## Patches
 	
@@ -167,7 +167,7 @@ where $$0$$ is the center of the filter (in both 1D and 2D) and $$\sigma$$ is a 
 
 	You may find it particularly useful to use the fact that $$\YB \ast \YB^T = \YB \YB^T$$ and that convolution is associative. Look at individual elements. If you do this correctly, the image does not have to be involved at all.
 
-	If you have not had much experience with proofs or need a refresher, [this guide](http://www.math.lsa.umich.edu/~kesmith/ProofTechniqueDocument.pdf) will help you get started. Here is another [link](https://artofproblemsolving.com/news/articles/how-to-write-a-solution)  that will help you write readable and easy to follow solutions. But in general, the key isn't formality, but just being precise.
+	If you have not had much experience with proofs or need a refresher, [this guide](http://www.math.lsa.umich.edu/~kesmith/ProofTechniqueDocument.pdf){:target="_blank"} will help you get started. Here is another [link](https://artofproblemsolving.com/news/articles/how-to-write-a-solution){:target="_blank"} that will help you write readable and easy to follow solutions. But in general, the key isn't formality, but just being precise.
     <div>
 
 2. *(4 points)* {{ code }} <span class="code">Complete the function</span> `convolve()` in `filters.py`. Be sure to implement convolution and not cross-correlation/filtering (i.e., flip the kernel as soon as you get it). For consistency purposes, please use **zero-padding** when implementing convolution.
@@ -410,7 +410,7 @@ This assignment is deliberately meant to be open-ended. Your detections don't ha
 
 *Note:*
 The images come from a project from the Visual Geometry Group at Oxford University, and have been used in a recent research project that focuses on counting cells and other objects in images; 
-you can check their work [here](http://www.robots.ox.ac.uk/~vgg/research/counting/index_org.html). 
+you can check their work [here](http://www.robots.ox.ac.uk/~vgg/research/counting/index_org.html){:target="_blank"}. 
 
 # Tasks Checklist
 

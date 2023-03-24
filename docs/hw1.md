@@ -49,7 +49,7 @@ The submission includes two parts:
    Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.
 
    <div class="primer-spec-callout info" markdown="1">
-	 **Submission Tip:** Use the [Canvas Submission Checklist](#canvas-submission-checklist) and [Gradescope Submission Checklist](#gradescope-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py).
+	 **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
 
    If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
    </div>
@@ -59,17 +59,17 @@ The submission includes two parts:
    {{ report }} -
    <span class="report">We have indicated questions where you have to do something in the report in green.</span>
 
-   You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/) for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+   You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/){:target="_blank"} for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
 
 ### Python Environment
 
-The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html) when you have questions about Python utilties.
+The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
 
-To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/) for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
 
-- [Numpy](https://numpy.org/doc/stable/user/quickstart.html)
-- [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)
-- [OpenCV](https://opencv.org/)
+- [Numpy](https://numpy.org/doc/stable/user/quickstart.html){:target="_blank"}
+- [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html){:target="_blank"}
+- [OpenCV](https://opencv.org/){:target="_blank"}
 
 ## Overview
 
@@ -88,7 +88,7 @@ The assignment has four parts and corresponding folders in the starter code:
 
 Here’s my recommendation for how to approach this homework:
 
-- If you have not had any experience with Numpy, read this [tutorial](http://cs231n.github.io/python-numpy-tutorial/). Numpy is like a lot of other high- level numerical programming languages. Once you get the hang of it, it makes a lot of things easy. However, you need to get the hang of it and it won’t happen overnight!
+- If you have not had any experience with Numpy, read this [tutorial](http://cs231n.github.io/python-numpy-tutorial/){:target="_blank"}. Numpy is like a lot of other high- level numerical programming languages. Once you get the hang of it, it makes a lot of things easy. However, you need to get the hang of it and it won’t happen overnight!
 - You should then do Section 2.
 - You should then read our description about images in Section A. Some will make sense; some may not. That’s OK! This is a bit like learning to ride a bike, swim, cook a new recipe, or play a new game by being told by someone. A little teaching in advance helps, but actually doing it yourself is crucial. Then, once you’ve tried yourself, you can revisit the instructions (which might make more sense).
   If you haven’t recently thought much about the difference between an integer and a floating point number, or thought about multidimensional arrays, it might be worth brushing up on both.
@@ -99,7 +99,7 @@ Here’s my recommendation for how to approach this homework:
 
 All the code/data for this is located in the folder `numpy/`. Each assignment requires you to fill in the blank in a function (in `tests.py` and `warmup.py`) and return the value described in the comment for the function. There’s driver code you do not need to read in `run.py` and `common.py`.
 
-**Note**: All the `python` below refer to `python3`. As we stated earlier, we are going to use Python 3.7 in this assignment. Python 2 was [sunset](https://www.python.org/doc/sunset-python-2/) on January 1, 2022.
+**Note**: All the `python` below refer to `python3`. As we stated earlier, we are going to use Python 3.7 in this assignment. Python 2 was [sunset](https://www.python.org/doc/sunset-python-2/){:target="_blank"} on January 1, 2022.
 
 1. *(40 points)* {{ report }} <span class="report">Fill in the code stubs in tests.py and warmups.py. Put the terminal output in your pdf from</span>:
 
@@ -482,13 +482,13 @@ You'll start out with a full byte of data to work with and will be asked to repr
 **Input:** As input the algorithm will get:
 
 1. A $$H \times W$$ **floating point** image with brightness ranging from 0 to 1, and
-2. A palette consisting of all the $$K$$ allowed brightness settings (each floats in the range 0 to 1). For the curious, the word [palette](<https://en.wikipedia.org/wiki/Palette_(painting)>) comes from painting.
+2. A palette consisting of all the $$K$$ allowed brightness settings (each floats in the range 0 to 1). For the curious, the word [palette](<https://en.wikipedia.org/wiki/Palette_(painting){:target="_blank"}>) comes from painting.
 
 **Output:** As output, each algorithm produces a $$H \times W$$ **uint8** image with brightness ranging from $$0$$ to $$K-1$$.
 
 We'll call this a _quantized_ image. You can take the palette and the quantized image and make a new image via `ReconstructedImage[y,x] = Palette[QuantizedImage[y,x]]`. Note that the array you get from numpy will get be indexed by `y` (or row) first and then by `x` (or column). The goal of the algorithm is to find a quantized image such that it is close to the reconstructed image. While this doesn't technically save us space if implemented naively, we could further gain savings by using $$\log_2(K)$$ bits rather than the $$8$$ bits.
 
-**The Rest of the Homework:** You'll build up to [Floyd-Steinberg Dithering](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering). You'll:
+**The Rest of the Homework:** You'll build up to [Floyd-Steinberg Dithering](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering){:target="_blank"}. You'll:
 
 1. Start with a really naive version;
 2. Do Floyd-Steinberg;
@@ -549,7 +549,7 @@ The simplest way to make an image that's close is to just pick the closest value
 
 ### Floyd-Steinberg
 
-Naively quantizing the image to a palette doesn't work. The key is to spread out the error to neighboring pixels. So if pixel `(i,j)` is quantized to a value that's a little darker, you can have pixel `(i,j+1)` and `(i+1,j)` be brighter. Your job is next to implement `quantizeFloyd`, or [Floyd-Steinberg Dithering](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering). The pseudocode from Wikipedia (more or less) is below (updated to handle the fact that we're returning the index):
+Naively quantizing the image to a palette doesn't work. The key is to spread out the error to neighboring pixels. So if pixel `(i,j)` is quantized to a value that's a little darker, you can have pixel `(i,j+1)` and `(i+1,j)` be brighter. Your job is next to implement `quantizeFloyd`, or [Floyd-Steinberg Dithering](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering){:target="_blank"}. The pseudocode from Wikipedia (more or less) is below (updated to handle the fact that we're returning the index):
 
 ```python
 # ... some calling code up here ..
