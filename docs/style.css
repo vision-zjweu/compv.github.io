@@ -1,3 +1,11 @@
+/* Global Styling */
+
+#primer-spec-preact-main-content > p,
+#primer-spec-preact-main-content > ol,
+#primer-spec-preact-main-content > ul {
+  text-align: justify;
+}
+
 /* Question Type Highlighting */
 
 .code {
