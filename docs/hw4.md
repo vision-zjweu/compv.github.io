@@ -482,7 +482,6 @@ This section is meant to help you keep track of the many things that go in the r
 In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
 - [ ] Python files:
 	- [ ] `functions.py`
-	- [ ] `fitting.py`
 	- [ ] `layers.py`
 	- [ ] `train.py`
 	- [ ] `two_layer_net.py`
