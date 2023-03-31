@@ -10,17 +10,20 @@
 
 .code {
   color: rgb(219, 71, 93);
-  font-weight: bold;
 }
 
 .report {
   color: rgb(130, 177, 47);
-  font-weight: bold;
 }
 
 .autograde {
   color: rgb(218, 112, 214);
-  font-weight: bold;
+}
+
+.code,
+.report,
+.autograde {
+  font-weight: 500;
 }
 
 .icon-size {

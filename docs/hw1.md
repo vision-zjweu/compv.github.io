@@ -347,8 +347,7 @@ produces the outputs in Figure 2. These use the plasma colormap which looks like
 	<figcaption>Figure 3: The Mystery Data #2</figcaption>
 </figure>
 
-1. *(2 points)* Try loading `mysterydata2.npy` and visualizing it. You should get something like Figure 3. It's hard to see stuff because one spot is _really_ bright. In this case, it's because there's a solar flare that's
-   producing immense amounts of light. A common trick for making things easier to see is to apply a nonlinear correction. Here are a few options:
+1. *(2 points)* Try loading `mysterydata2.npy` and visualizing it. You should get something like Figure 3. It's hard to see stuff because one spot is _really_ bright. In this case, it's because there's a solar flare that'sproducing immense amounts of light. A common trick for making things easier to see is to apply a nonlinear correction. Here are a few options:
 
    $$
 	p^\gamma \ \textrm{with}\  \gamma \in [0,1] \quad\textrm{or}\quad \log(p) \quad\textrm{or}\quad \log(1+p)
