@@ -27,6 +27,7 @@ layout: spec
 - [Homework 2: Convolution and Feature Detection]({{site.url}}/hw2)
 - [Homework 3: Fitting Models and Image Warping]({{site.url}}/hw3)
 - [Homework 4: Machine Learning]({{site.url}}/hw4)
+- [Homework 5: Cameras]({{site.url}}/hw5)
 
 # Course Content
 
