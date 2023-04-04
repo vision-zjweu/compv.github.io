@@ -113,10 +113,11 @@ and (see foreword) by deriving an optimization problem. The script `task1.py` sh
 	\frac{1}{N} \sum_{i}^{N} ||\textrm{proj}(\MB\XB_i) - \pB_i||_2 .
 	$$
 	where $$\textrm{proj}([x,y,w]) = [x/w, y/w]$$.
-	The distance quantifies how well the projection maps the points $$\XB_i$$ to $$\pB_i$$. You should use `find_projection` from part a).
+	The distance quantifies how well the projection maps the points $$\XB_i$$ to $$\pB_i$$. You should use `find_projection` from earlier.
+	
 	Note: You should feel good about the distance if it is **less than 0.01** for the given sample data. If you plug in different data, this threshold will of course vary.
 
-4.  *(5 points)* {{ report }} <span class="report">Describe what relationship, if any, there is between Equation \ref{eqn:projectionError</span> and Equation 6 in the HW5 Notes} 
+4.  *(5 points)* {{ report }} <span class="report">Describe what relationship, if any, there is between Equation 2 and Equation 6 in the HW5 Notes.</span>
 	
 	Note that the points we've given you are well-described by a linear projection -- there's no noise in the measurements -- but in practice, there will be an error that has to minimize. Both equations represent objectives that could be used. If they are the same, show it; if they are not the same, report which one makes more sense to minimize. Things to consider include whether the equations directly represent anything meaningful.
 
@@ -200,3 +201,5 @@ This section is meant to help you keep track of the many things that go in the r
 # Canvas Submission Checklist
 
 In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
+- [ ] `task1.py`
+- [ ] `task23.py`
