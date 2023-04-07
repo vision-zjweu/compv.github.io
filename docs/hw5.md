@@ -93,7 +93,7 @@ To make your life easier, we recommend you to install the latest [Anaconda](http
 
 ### Task 1: Estimating $$\MB$$
 
-We will give you a set of 3D points $$\{\XB_i\}_i$$ and corresponding 2D points $$\{\pB_i\}_i$$. %In part 1, you're given corresponding point locations in `pts2d-norm-pic.txt` and `pts3d-norm.txt`, which corresponds to a camera projection matrix. **Solve** the projection matrix $$P$$ and **include** it in your report. The goal is to compute the projection matrix $$\MB$$ that maps from world 3D coordinates to 2D image coordinates. Recall that 
+We will give you a set of 3D points $$\{\XB_i\}_i$$ and corresponding 2D points $$\{\pB_i\}_i$$. In part 1, you're given corresponding point locations in `pts2d-norm-pic.txt` and `pts3d-norm.txt`, which corresponds to a camera projection matrix. **Solve** the projection matrix $$P$$ and **include** it in your report. The goal is to compute the projection matrix $$\MB$$ that maps from world 3D coordinates to 2D image coordinates. Recall that 
 
 $$
 \pB \equiv \MB \XB
@@ -108,16 +108,17 @@ and (see foreword) by deriving an optimization problem. The script `task1.py` sh
 3.  *(10 points)* {{ code }} <span class="code">Fill in `compute_distance` in `task1.py`.</span> 
 	
 	In this question, you need to compute the average distance in the image plane (i.e., pixel locations) between the homogeneous points $$\MB \XB_i$$ and 2D image coordinates $$\pB_i$$, or
+
 	$$
-	\label{eqn:projectionError}
 	\frac{1}{N} \sum_{i}^{N} ||\textrm{proj}(\MB\XB_i) - \pB_i||_2 .
 	$$
+
 	where $$\textrm{proj}([x,y,w]) = [x/w, y/w]$$.
 	The distance quantifies how well the projection maps the points $$\XB_i$$ to $$\pB_i$$. You should use `find_projection` from earlier.
 	
 	Note: You should feel good about the distance if it is **less than 0.01** for the given sample data. If you plug in different data, this threshold will of course vary.
 
-4.  *(5 points)* {{ report }} <span class="report">Describe what relationship, if any, there is between Equation 2 and Equation 6 in the HW5 Notes.</span>
+4.  *(5 points)* {{ report }} <span class="report">Describe what relationship, if any, there is between the equation above and Equation 6 in the HW5 Notes.</span>
 	
 	Note that the points we've given you are well-described by a linear projection -- there's no noise in the measurements -- but in practice, there will be an error that has to minimize. Both equations represent objectives that could be used. If they are the same, show it; if they are not the same, report which one makes more sense to minimize. Things to consider include whether the equations directly represent anything meaningful.
 
