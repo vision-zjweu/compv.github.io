@@ -4,44 +4,125 @@ layout: spec
 
 # Overview
 
-- **Instructor**: David Fouhey (fouhey)
+- **Instructor**: Jeong Joon Park (jjparkcv)
 - **GSIs**: 
-	- Rakesh Chowdary Machineni (mrakeshc)
-	- Shreya Phirke (sphirke)
-	- Sachin Salim (sachinks)
-	- Kshama Nitin Shah (kshama)
+	- Alex Janosi (janosi)
+	- Anurekha Ravikumar (anurekha)
 	- Farzad Siraj (fsiraj)
-	- Jim Yang (yzr)
-- **IA**: Zixuan Pan (zxp)
+	- Jinfan Zhou (zjf)
+	- Shrikant Arvavasu (ashri)
+	- Yuhang Ning (dlning)
 - **Lecture**: Monday/Wednesday 10:30 AM - 12:00 Noon, STAMPS
 - **Discussions**: 
-	- Monday 12:30 - 1:30PM, 1005 EECS
+	- Monday 12:30 - 1:30PM, 2166 DOW
 	- Monday 3:30-4:30PM, 1005 DOW
 	- Wendesday 3:30-4:30PM, 3150 DOW
 	- Wednesday 4:30-5:30PM, 3150 DOW
-	- Wednesday 5:30-6:30PM, 1206 DOW
-	- Thursday 3:30-4:30PM, 3150 DOW.
+	- Wednesday 5:30-6:30PM, 107 GFL
+	- Thursday 3:30-4:30PM, 3150 DOW
 
 ## Homeworks
 - [Homework 1: Numbers and Images]({{site.url}}/hw1)
 - [Homework 2: Convolution and Feature Detection]({{site.url}}/hw2)
 - [Homework 3: Fitting Models and Image Warping]({{site.url}}/hw3)
 - [Homework 4: Machine Learning]({{site.url}}/hw4)
-- [Homework 5: Cameras]({{site.url}}/hw5)
+- Homework 5: Generative Models
+- Homework 6: 3D Deep Learning
 
-# Course Content
+# Schedule
 
-This is an introduction to computer vision. Topics include: camera models, multi-view geometry, reconstruction, some low-level image processing, and high-level vision problems like object and scene recognition.
+| Date                  | Topic                                                                                       | Material |
+|-----------------------|:-------------------------------------------------------------------------------------------:|----------|
+| Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | Slides   |
+| Monday<br>Jan 15      | **No Class**<br>Martin Luther King Day                                                      |          |
+| Wednesday<br>Jan 17   | **Cameras 2**<br>Intrinsics & Extrinsic Matrices, Lenses                                    | Slides   |
+| Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | Slides   |
+| Wednesday<br>Jan 24   | **Light & Shading**<br>Human Vision, Color Vision, Reflection                               | Slides   |
+| Monday<br>Jan 29      | **Filtering**<br>Linear Filters, Blurring, Separable Filters, Gradients                     | Slides   |
+| Wednesday<br>Jan 31   | **Detectors & Discriptors 1**<br>Edge Detection, Gaussian Derivatives, Harris Corners       | Slides   |
+| Monday<br>Feb 5       | **Detectors & Discriptors**<br>Scale-Space, Laplacian Blob Detection, SIFT                  | Slides   |
+| Wednesday<br>Feb 7    | **Transforms 1**<br>Linear Regression, Total Least Squares, RANSAC, Hough Transform         | Slides   |
+| Monday<br>Feb 12      | **Transforms 2**<br>Affine and Perspective Transforms, Fitting Transformations              | Slides   |
+| Wednesday<br>Feb 14   | **Machine Learning**<br>Supervised Learning, Linear Regression, Regularization              | Slides   |
+| Monday<br>Feb 19      | **Optimization**<br>SGD, SGD+Momentum                                                       | Slides   |
+| Wednesday<br>Feb 21   | **Neural Networks**<br>Backpropagation, Fully Connected Neural Networks                     | Slides   |
+| Monday<br>Feb 26      | **No Class**<br>Spring Break                                                                |          |
+| Wednesday<br>Feb 28   | **No Class**<br>Spring Break                                                                |          |
+| Monday<br>Mar 4       | **Convolutional Networks 1**<br>Convolution, Pooling                                        | Slides   |
+| Wednesday<br>Mar 6    | **Convolutional Networks 2**<br>CNN Architectures, Training Methods & Techniques            | Slides   |
+| Monday<br>Mar 11      | **Segmentation**<br>Semantic/Instance Segmentation                                          | Slides   |
+| Wednesday<br>Mar 13   | **Detection & Other Topics**                                                                | Slides   |
+| Monday<br>Mar 18      | **Image Synthesis**                                                                         | Slides   |
+| Wednesday<br>Mar 20   | **Midterm**                                                                                 |          |
+| Monday<br>Mar 25      | **Transformers & Other Models**                                                             | Slides   |
+| Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration                                   | Slides   |
+| Monday<br>April 1     | **Single-View 3D**<br>Perspective Invariants, Measuring Things                              | Slides   |
+| Wednesday<br>April 3  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides   |
+| Monday<br>April 8     | **Stereo**<br>Two-view Stereo, Multiview Stereo                                             | Slides   |
+| Wednesday<br>April 10 | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides   |
+| Monday<br>April 15    | **Learning 3D**                                                                             | Slides   |
+| Wednesday<br>April 17 | **Ethics & Fairness**                                                                       | Slides   |
+| Monday<br>April 22    | **AI for Science**                                                                          | Slides   |
 
-This course will be taught assuming:
-- computer science knowledge at the level of EECS 281 (data structures) and corresponding programming ability;
-- the ability to program in Python, or if not, the ability to learn to program in a new language quickly.
+# Syllabus
 
-It will also be helpful for you to have background in the following topics. We will provide some refreshers of the necessary concepts as they arise, but we may not go through a comprehensive treatment of these topics:
+## Prerequisites
 
-- **Array Manipulation**: Homework assignments will involve manipulating multidimensional arrays using numpy and PyTorch. Some prior exposure to either of these frameworks will help; however, if you haven't done any of this sort of work before, the first homework assignment will help get you up to speed.
-- **Linear algebra**: In addition to basic matrix and vector operations, it will be good to know least squares. We'll teach you about eigenvectors and the SVD as they come up.
-- **Calculus**: You should be comfortable with the chain rule. It would be nice for you to have seen gradients and partial derivatives, but experience suggests you can catch on if you haven't seen these before.
+Concretely, we will assume that you are familiar with the following topics and will not review them in class:
+- **Programming** - Algorithms and Data Structures at the level of EECS 281.
+- **Python** - All course assignments will involve programming in Python.
 
-If you are rusty on linear algebra and calculus (who isn't), do not worry but do make an effort to refresh your memory of both at the start of the course.
+It would be helpful for you to have background in these topics. We will provide refreshers on these topics, but we will not go through a comprehensive treatment:
+- **Array Manipulation** - Homework assignments will extensively involve manipulating multidimensional arrays with [NumPy](https://numpy.org/){:target="_blank"} and [PyTorch](https://pytorch.org/){:target="_blank"}. Some prior exposure will be useful, but if you've never used them before, then the first homework assignment will help you get up to speed.
+- **Linear Algebra** - In addition to basic matrix and vector operations, you will need to know about the cross product, eigenvectors and the singular value decomposition.
+- **Calculus** - You should be comfortable with the chain rule, and taking partial derivatives of vector-valued functions.
 
+Much of computer vision is applying linear algebra to real-world data. If you are unfamiliar with linear algebra or calculus, past experience suggests that you are are likely to struggle with the course. If you are rusty, we will provide math refreshers on the necessary topics, however, they are not meant as a first introduction.
+
+## Textbook
+
+There is no required textbook. Particularly thorny homeworks will often come with lecture notes to help. The following optional books may be useful, and we will provide suggested reading from these books to accompany some lectures:
+- Computer Vision: Algorithms and Applications by Richard Szeliski: [Available for free online here](http://szeliski.org/Book/){:target="_blank"}.
+- Computer vision: A Modern Approach (Second Edition), by David Forsyth and Jean Ponce
+- Elements of Statistical Learning by Trevor Hastie, Robert Tibshirani, and Jerome Friedman. [Available for free online here](https://hastie.su.domains/ElemStatLearn/){:target="_blank"}.
+- Multiview Geometry in Computer Vision (Second Edition), by Richard Hartley and Andrew Zisserman. [Available for free online through the UM Library (login required)](https://search.lib.umich.edu/catalog/record/013604161){:target="_blank"}.
+
+## Grading
+
+Your grade will be based on:
+- **Homework (60%)**: There will be six homeworks over the course of the semester. Each is worth 10%.
+- **Midterm (20%)**: There will be a midterm in-class.
+- **Final Project (20%)**: There will be a final project, in which you work in groups of 3-4 students to produce a substantial course project over the second half of the semester. This will consist of a proposal (worth 2%), and final report and video (worth 18%).
+
+## Contact Hours
+
+- **Lectures**: There are two sections. The lectures will be recorded and available on zoom. In person lecture attendance is optional.
+- **Discussions**: There are six discussion sections. You are free to attend whichever you would like.
+- **Office Hours**: Office hours are your time to ask questions one-on-one with course staff and get clarification on concepts from the course. We encourage you to go to GSI office hours for implementation questions about the homework and faculty office hours for conceptual questions.
+- **Piazza**: The primary way to communicate with the course staff is through Piazza. The link is on canvas. We will use Piazza to make announcements about the course, such as homework releases or course project details. If you have questions about course concepts, need help with the homework, or have questions about course logistics, please post on Piazza instead of emailing course staff directly. Since Piazza is a shared discussion forum, asking and answering questions there is encouraged. On the other hand, please **do not post homework solutions on Piazza**. If you have questions about a particular piece of code, please make a private post.
+- **Email**: If you need to discuss a sensitive matter that you would prefer not to be shared with the entire course staff, then please email the instructor or your section's GSI/IA directly.
+
+## Course Policies
+
+### Formatting and Submission
+Submissions that do not follow these rules (and any additional ones specified in the homeworks) will get a 0.
+- **No handwriting** - LaTeX is not required, but encouraged. Just put some effort into generating a readable PDF.
+- **Marks answers on Gradescope** - With a few hundred students, graders will not have time to search for answers.
+
+### Collaboration and External Sources
+- **Automated plagiarism detection**: The vast majority of students are honorable. To ensure that honorable behavior is the incentivized behavior, we will run MOSS on the submitted homework.
+- **Collaboration with students**: You should never know the specific implementation details of anyone else's homework or see their code. Working in teams and giving general advice about outputs or strategies (e.g., ‘‘if the image is really dark when you merge them together, you probably have screwed up the image mask with the number of images’’) is great. However, pair-programming or sitting next to someone else and debugging their code is not allowed.
+- **Consulting outside material**: You can and should turn to other documentation (suggested textbooks, other professors’ lecture notes or slides, documentation from libraries). You may not read a set of code (pseudocode is fine). If you come across code in your search, close the window and don't worry about it.
+- **Things you should never worry about (some adapted from here)**: Reading the documentation for publicly available libraries; clarifying ambiguities and mistakes in assignments, slides, handouts, textbooks, or documentation; discussion the general material; helping with things like cryptic numpy errors that are not related to class but part of the cost of doing business with a library; discussing the assignments to better understand what's expected and general solution strategies; discussing the starter code; discussing general strategies for writing and debugging code.
+- **Generative AI**: Tools like ChatGPT are strongly discouraged. We know we can't stop you, however, using them will lead to you getting very little hands-on coding ability from this course and you will struggle on the midterm. The libraries used in this course are industry-standard and it is very helpful to be comfortable with them.
+
+### Late Submissions
+Our policy is quite generous. Exceptions will be made in only truly exceptional circumstances by the professor.
+- **Late Days** - **6 total** late days across all homeworks. These will be applied automatically, no need to contact us. Homeworks are due by 11:59:59 on the due date. Thus, the late day would start at 12:00:00.
+- **Penalty** - If you have 0 late days available, any subsequent late submissions will receive a 10% max score reduction per day. For example, if you submit 3 days late, you can receive at most 70% credit.
+- **Project** - No late submissions. Late days and penalties will not be applied. This will be due as late as we can take them while still delivering grades on time.
+
+### Regrades
+- **Method** - Please submit regrade requests through Gradescope.
+- **Deadline** - Submit regrade requests **within 1 week** of grades being released.
+- **Minor Regrades** - Regrade requests that concern minor judgement calls that change the grade by <= 1 point for a problem or by <= 3 points for the whole homework will not be considered. If you believe this may affect your grade at the end of the semester, contact the professor.
