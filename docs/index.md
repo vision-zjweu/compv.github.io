@@ -40,16 +40,16 @@ Tentative Schedule. Details are subject to change.
 
 | Date                  | Topic                                                                                       | Material                                                                                                       |
 |-----------------------|:-------------------------------------------------------------------------------------------:|----------------------------------------------------------------------------------------------------------------|
-| Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | [Slides](https://drive.google.com/file/d/1aXUBzyCN9x5M7lZ7u5ah_pDzalEVuKM3/view?usp=sharing){:target="_blank"} <br> [Homogeneous Coordinates](https://colab.research.google.com/drive/1-6l2H5QU_xBrCY9tJdWXubAMDst_DVWn){:target="_blank"} <br> [Dolly Zoom on a Cube](https://colab.research.google.com/drive/1LlOwsp5zCV-dIfZRlmWMJfbeArUTclQo){:target="_blank"}|
+| Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | [Slides]|
 | Monday<br>Jan 15      | **No Class**<br>Martin Luther King Day                                                      |          |
 | Wednesday<br>Jan 17   | **Cameras 2**<br>Intrinsics & Extrinsic Matrices, Lenses                                    | Slides   |
-| Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | Slides <br> [Things Don't add up](https://colab.research.google.com/drive/1rDRTb0x1snPYwqDqFPfYr3zwQ9c8vhQW){:target="_blank"} <br> [Using a Byte](https://colab.research.google.com/drive/115HcwLMmMb2rbZwVRV2MZO7mEnGB8LS5){:target="_blank"} <br> [Distance 3 Ways](https://colab.research.google.com/drive/1Ho1gJNaDR82HvN4dbrknk5ejiOuIgEdK){:target="_blank"}|
+| Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | Slides   |
 | Wednesday<br>Jan 24   | **Light & Shading**<br>Human Vision, Color Vision, Reflection                               | Slides   |
-| Monday<br>Jan 29      | **Filtering**<br>Linear Filters, Blurring, Separable Filters, Gradients                     | Slides <br>  [Convolving Gracefully](https://colab.research.google.com/drive/17r49CyXqliyiCg9PjqZ054b0BXojK-qI){:target="_blank"} |
-| Wednesday<br>Jan 31   | **Detectors & Discriptors 1**<br>Edge Detection, Gaussian Derivatives, Harris Corners       | Slides <br> [Multiscale Harris Corner Detection](https://colab.research.google.com/drive/1K7D47sSxQlJ2JpxEXgDooDx6m85P7oLX){:target="_blank"}|
+| Monday<br>Jan 29      | **Filtering**<br>Linear Filters, Blurring, Separable Filters, Gradients                     | Slides   |
+| Wednesday<br>Jan 31   | **Detectors & Discriptors 1**<br>Edge Detection, Gaussian Derivatives, Harris Corners       | Slides   |
 | Monday<br>Feb 5       | **Detectors & Discriptors**<br>Scale-Space, Laplacian Blob Detection, SIFT                  | Slides   |
 | Wednesday<br>Feb 7    | **Transforms 1**<br>Linear Regression, Total Least Squares, RANSAC, Hough Transform         | Slides   |
-| Monday<br>Feb 12      | **Transforms 2**<br>Affine and Perspective Transforms, Fitting Transformations              | Slides   <br> [Grace in the Middle](https://colab.research.google.com/drive/1dr0qQZQVlcBN_XLNUAvsvw1_mVa-fzKl){:target="_blank"} |
+| Monday<br>Feb 12      | **Transforms 2**<br>Affine and Perspective Transforms, Fitting Transformations              | Slides   |
 | Wednesday<br>Feb 14   | **Machine Learning**<br>Supervised Learning, Linear Regression, Regularization              | Slides   |
 | Monday<br>Feb 19      | **Optimization**<br>SGD, SGD+Momentum                                                       | Slides   |
 | Wednesday<br>Feb 21   | **Neural Networks**<br>Backpropagation, Fully Connected Neural Networks                     | Slides   |
