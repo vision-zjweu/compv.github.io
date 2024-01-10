@@ -24,6 +24,7 @@ layout: spec
 	- Thursday 3:30-4:30PM, 3150 DOW
 - [**Piazza Signup**](https://piazza.com/umich/winter2024/c9b2){:target="_blank"}
 - [**Lecture Recordings**](https://leccap.engin.umich.edu/leccap/site/rxk3s2yc2cg9pggod0u){:target="_blank"}
+- [**Course Calendar**](https://calendar.google.com/calendar/u/0?cid=Y18zYjdmOTM1ODhjOTk2NDg0YTM5OTRkMTc1NWIwZWM5MzViZWZlMjgzYzI2ZjA1NjlkNGEzNDE5ZWI5M2ZlZmM1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20){:target="_blank"}
 
 ## Homeworks
 - Homework 1: Numbers and Images
