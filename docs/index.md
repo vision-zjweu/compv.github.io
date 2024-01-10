@@ -40,7 +40,7 @@ Tentative Schedule. Details are subject to change.
 
 | Date                  | Topic                                                                                       | Material                                                                                                       |
 |-----------------------|:-------------------------------------------------------------------------------------------:|----------------------------------------------------------------------------------------------------------------|
-| Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | [Slides]|
+| Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | [Slides](https://drive.google.com/file/d/1aXUBzyCN9x5M7lZ7u5ah_pDzalEVuKM3/view?usp=sharing){:target="_blank"}|
 | Monday<br>Jan 15      | **No Class**<br>Martin Luther King Day                                                      |          |
 | Wednesday<br>Jan 17   | **Cameras 2**<br>Intrinsics & Extrinsic Matrices, Lenses                                    | Slides   |
 | Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | Slides   |
