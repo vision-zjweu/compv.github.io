@@ -36,21 +36,21 @@ layout: spec
 - Homework 6: 3D Deep Learning
 
 # Schedule
-Tentative Schedule. Details are subject to change.
+Tentative Schedule. Details are subject to change. The meaning of S, H&Z, Kotler, ESL can be found in Textbook section, where the link to the material is provided.
 
 | Date                  | Topic                                                                                       | Material                                                                                                       |
 |-----------------------|:-------------------------------------------------------------------------------------------:|----------------------------------------------------------------------------------------------------------------|
-| Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | [Slides](https://drive.google.com/file/d/1aXUBzyCN9x5M7lZ7u5ah_pDzalEVuKM3/view?usp=sharing){:target="_blank"}|
+| Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | [Slides](https://drive.google.com/file/d/1aXUBzyCN9x5M7lZ7u5ah_pDzalEVuKM3/view?usp=sharing){:target="_blank"} <br> Reading: S2.1, H&Z 2, 6|
 | Monday<br>Jan 15      | **No Class**<br>Martin Luther King Day                                                      |          |
-| Wednesday<br>Jan 17   | **Cameras 2**<br>Intrinsics & Extrinsic Matrices, Lenses                                    | Slides   |
-| Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | Slides   |
+| Wednesday<br>Jan 17   | **Cameras 2**<br>Intrinsics & Extrinsic Matrices, Lenses                                    | Slides <br> Reading: S2.1, H&Z 2, 6  |
+| Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | Slides <br> Kolter |
 | Wednesday<br>Jan 24   | **Light & Shading**<br>Human Vision, Color Vision, Reflection                               | Slides   |
-| Monday<br>Jan 29      | **Filtering**<br>Linear Filters, Blurring, Separable Filters, Gradients                     | Slides   |
+| Monday<br>Jan 29      | **Filtering**<br>Linear Filters, Blurring, Separable Filters, Gradients                     | Slides <br> Reading: S2.2, S2.3  |
 | Wednesday<br>Jan 31   | **Detectors & Discriptors 1**<br>Edge Detection, Gaussian Derivatives, Harris Corners       | Slides   |
 | Monday<br>Feb 5       | **Detectors & Discriptors**<br>Scale-Space, Laplacian Blob Detection, SIFT                  | Slides   |
-| Wednesday<br>Feb 7    | **Transforms 1**<br>Linear Regression, Total Least Squares, RANSAC, Hough Transform         | Slides   |
-| Monday<br>Feb 12      | **Transforms 2**<br>Affine and Perspective Transforms, Fitting Transformations              | Slides   |
-| Wednesday<br>Feb 14   | **Machine Learning**<br>Supervised Learning, Linear Regression, Regularization              | Slides   |
+| Wednesday<br>Feb 7    | **Transforms 1**<br>Linear Regression, Total Least Squares, RANSAC, Hough Transform         | Slides <br> Reading: S2.1, S6  |
+| Monday<br>Feb 12      | **Transforms 2**<br>Affine and Perspective Transforms, Fitting Transformations              | Slides <br> Reading: S2.1, S6 |
+| Wednesday<br>Feb 14   | **Machine Learning**<br>Supervised Learning, Linear Regression, Regularization              | Slides <br> Reading: ESL 3.1, 3.2(skim) |
 | Monday<br>Feb 19      | **Optimization**<br>SGD, SGD+Momentum                                                       | Slides   |
 | Wednesday<br>Feb 21   | **Neural Networks**<br>Backpropagation, Fully Connected Neural Networks                     | Slides   |
 | Monday<br>Feb 26      | **No Class**<br>Spring Break                                                                |          |
@@ -62,10 +62,10 @@ Tentative Schedule. Details are subject to change.
 | Monday<br>Mar 18      | **Transformers and Image Generative Models**                                                | Slides   |
 | Wednesday<br>Mar 20   | **Image Generative Models**                                                                 | Slides   |
 | Monday<br>Mar 25      | **Midterm**                                                                                 |          |
-| Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration                                   | Slides   |
-| Wednesday<br>April 1  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides   |
-| Monday<br>April 3     | **Stereo**<br>Two-view Stereo, Multiview Stereo                                             | Slides   |
-| Wednesday<br>April 8  | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides   |
+| Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration                                   | Slides  <br> Reading: S6.3 |
+| Wednesday<br>April 1  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
+| Monday<br>April 3     | **Stereo**<br>Two-view Stereo, Multiview Stereo                                             | Slides  <br> Reading: S11 |
+| Wednesday<br>April 8  | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides  <br> Reading: S7 |
 | Monday<br>April 10    | **3D Deep Learning**                                                                        | Slides   |
 | Wednesday<br>April 15 | **Neural Fields**                                                                           | Slides   |
 | Monday<br>April 17    | **Ethics & Fairness**                                                                       | Slides   |
@@ -89,10 +89,11 @@ Much of computer vision is applying linear algebra to real-world data. If you ar
 ## Textbook
 
 There is no required textbook. Particularly thorny homeworks will often come with lecture notes to help. The following optional books may be useful, and we will provide suggested reading from these books to accompany some lectures:
-- Computer Vision: Algorithms and Applications by Richard Szeliski: [Available for free online here](http://szeliski.org/Book/){:target="_blank"}.
-- Computer vision: A Modern Approach (Second Edition), by David Forsyth and Jean Ponce
-- Elements of Statistical Learning by Trevor Hastie, Robert Tibshirani, and Jerome Friedman. [Available for free online here](https://hastie.su.domains/ElemStatLearn/){:target="_blank"}.
-- Multiview Geometry in Computer Vision (Second Edition), by Richard Hartley and Andrew Zisserman. [Available for free online through the UM Library (login required)](https://search.lib.umich.edu/catalog/record/013604161){:target="_blank"}.
+- Computer Vision: Algorithms and Applications by Richard Szeliski: [Available for free online here](http://szeliski.org/Book/){:target="_blank"}. (S)
+- Computer vision: A Modern Approach (Second Edition), by David Forsyth and Jean Ponce. 
+- Elements of Statistical Learning by Trevor Hastie, Robert Tibshirani, and Jerome Friedman. [Available for free online here](https://hastie.su.domains/ElemStatLearn/){:target="_blank"}. (ESL)
+- Multiview Geometry in Computer Vision (Second Edition), by Richard Hartley and Andrew Zisserman. [Available for free online through the UM Library (login required)](https://search.lib.umich.edu/catalog/record/013604161){:target="_blank"}. (H&Z)
+- Linear Algebra review and reference, by Zico Kolter. [Available for free online here](https://www.cs.cmu.edu/~zkolter/course/15-884/linalg-review.pdf){:target="_blank"}. (Kotler)
 
 ## Grading
 
