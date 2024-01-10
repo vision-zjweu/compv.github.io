@@ -20,6 +20,7 @@ layout: spec
 	- Wednesday 4:30-5:30PM, 3150 DOW
 	- Wednesday 5:30-6:30PM, 107 GFL
 	- Thursday 3:30-4:30PM, 3150 DOW
+- [**Piazza Signup**](https://piazza.com/umich/winter2024/c9b2)
 
 ## Homeworks
 - [Homework 1: Numbers and Images]({{site.url}}/hw1)
@@ -30,6 +31,7 @@ layout: spec
 - Homework 6: 3D Deep Learning
 
 # Schedule
+Tentative Schedule. Details are subject to change.
 
 | Date                  | Topic                                                                                       | Material |
 |-----------------------|:-------------------------------------------------------------------------------------------:|----------|
@@ -52,17 +54,17 @@ layout: spec
 | Wednesday<br>Mar 6    | **Convolutional Networks 2**<br>CNN Architectures, Training Methods & Techniques            | Slides   |
 | Monday<br>Mar 11      | **Segmentation**<br>Semantic/Instance Segmentation                                          | Slides   |
 | Wednesday<br>Mar 13   | **Detection & Other Topics**                                                                | Slides   |
-| Monday<br>Mar 18      | **Image Synthesis**                                                                         | Slides   |
-| Wednesday<br>Mar 20   | **Midterm**                                                                                 |          |
-| Monday<br>Mar 25      | **Transformers & Other Models**                                                             | Slides   |
+| Monday<br>Mar 18      | **Transformers and Image Generative Models**                                                | Slides   |
+| Wednesday<br>Mar 20   | **Image Generative Models**                                                                 | Slides   |
+| Monday<br>Mar 25      | **Midterm**                                                                                 |          |
 | Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration                                   | Slides   |
-| Monday<br>April 1     | **Single-View 3D**<br>Perspective Invariants, Measuring Things                              | Slides   |
-| Wednesday<br>April 3  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides   |
-| Monday<br>April 8     | **Stereo**<br>Two-view Stereo, Multiview Stereo                                             | Slides   |
-| Wednesday<br>April 10 | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides   |
-| Monday<br>April 15    | **Learning 3D**                                                                             | Slides   |
-| Wednesday<br>April 17 | **Ethics & Fairness**                                                                       | Slides   |
-| Monday<br>April 22    | **AI for Science**                                                                          | Slides   |
+| Wednesday<br>April 1  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides   |
+| Monday<br>April 3     | **Stereo**<br>Two-view Stereo, Multiview Stereo                                             | Slides   |
+| Wednesday<br>April 8  | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides   |
+| Monday<br>April 10    | **3D Deep Learning**                                                                        | Slides   |
+| Wednesday<br>April 15 | **Neural Fields**                                                                           | Slides   |
+| Monday<br>April 17    | **Ethics & Fairness**                                                                       | Slides   |
+| Monday<br>April 22    | **Special Topics**                                                                          | Slides   |
 
 # Syllabus
 
