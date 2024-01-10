@@ -43,7 +43,7 @@ Tentative Schedule. Details are subject to change. The meaning of S, H&Z, Kotler
 | Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | [Slides](https://drive.google.com/file/d/1aXUBzyCN9x5M7lZ7u5ah_pDzalEVuKM3/view?usp=sharing){:target="_blank"} <br> Reading: S2.1, H&Z 2, 6|
 | Monday<br>Jan 15      | **No Class**<br>Martin Luther King Day                                                      |          |
 | Wednesday<br>Jan 17   | **Cameras 2**<br>Intrinsics & Extrinsic Matrices, Lenses                                    | Slides <br> Reading: S2.1, H&Z 2, 6  |
-| Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | Slides <br> Kolter |
+| Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | Slides <br> Reading: Kolter |
 | Wednesday<br>Jan 24   | **Light & Shading**<br>Human Vision, Color Vision, Reflection                               | Slides   |
 | Monday<br>Jan 29      | **Filtering**<br>Linear Filters, Blurring, Separable Filters, Gradients                     | Slides <br> Reading: S2.2, S2.3  |
 | Wednesday<br>Jan 31   | **Detectors & Discriptors 1**<br>Edge Detection, Gaussian Derivatives, Harris Corners       | Slides   |
