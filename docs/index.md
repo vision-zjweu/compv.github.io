@@ -2,6 +2,8 @@
 layout: spec
 ---
 
+<link href="style.css" rel="stylesheet">
+
 # Overview
 
 - **Instructor**: Jeong Joon Park (jjparkcv)
@@ -20,13 +22,14 @@ layout: spec
 	- Wednesday 4:30-5:30PM, 3150 DOW
 	- Wednesday 5:30-6:30PM, 107 GFL
 	- Thursday 3:30-4:30PM, 3150 DOW
-- [**Piazza Signup**](https://piazza.com/umich/winter2024/c9b2)
+- [**Piazza Signup**](https://piazza.com/umich/winter2024/c9b2){:target="_blank"}
+- [**Lecture Recordings**](https://leccap.engin.umich.edu/leccap/site/rxk3s2yc2cg9pggod0u){:target="_blank"}
 
 ## Homeworks
-- [Homework 1: Numbers and Images]({{site.url}}/hw1)
-- [Homework 2: Convolution and Feature Detection]({{site.url}}/hw2)
-- [Homework 3: Fitting Models and Image Warping]({{site.url}}/hw3)
-- [Homework 4: Machine Learning]({{site.url}}/hw4)
+- Homework 1: Numbers and Images
+- Homework 2: Convolution and Feature Detection
+- Homework 3: Fitting Models and Image Warping
+- Homework 4: Machine Learning
 - Homework 5: Generative Models
 - Homework 6: 3D Deep Learning
 
