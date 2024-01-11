@@ -17,7 +17,7 @@ layout: spec
 	- Yuhang Ning (dlning)
 - **Lecture**: Monday/Wednesday 10:30 AM - 12:00 Noon, STAMPS
 - **Discussions**: 
-	- Monday 12:30 - 1:30PM, 2166 DOW
+	- Monday 12:30-1:30PM, 2166 DOW
 	- Monday 3:30-4:30PM, 1005 DOW
 	- Wendesday 3:30-4:30PM, 3150 DOW
 	- Wednesday 4:30-5:30PM, 3150 DOW
@@ -36,10 +36,10 @@ layout: spec
 - Homework 6: 3D Deep Learning
 
 # Schedule
-Tentative Schedule. Details are subject to change. The meaning of S, H&Z, Kotler, ESL can be found in Textbook section, where the link to the material is provided.
+Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.url }}/#textbooks) for textbook acronyms in readings.
 
-| Date                  | Topic                                                                                       | Material                                                                                                       |
-|-----------------------|:-------------------------------------------------------------------------------------------:|----------------------------------------------------------------------------------------------------------------|
+| Date                  | Topic                                                                                       | Material |
+|-----------------------|:-------------------------------------------------------------------------------------------:|----------|
 | Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | [Slides](https://drive.google.com/file/d/1aXUBzyCN9x5M7lZ7u5ah_pDzalEVuKM3/view?usp=sharing){:target="_blank"} <br> Reading: S2.1, H&Z 2, 6|
 | Monday<br>Jan 15      | **No Class**<br>Martin Luther King Day                                                      |          |
 | Wednesday<br>Jan 17   | **Cameras 2**<br>Intrinsics & Extrinsic Matrices, Lenses                                    | Slides <br> Reading: S2.1, H&Z 2, 6  |
@@ -86,7 +86,7 @@ It would be helpful for you to have background in these topics. We will provide 
 
 Much of computer vision is applying linear algebra to real-world data. If you are unfamiliar with linear algebra or calculus, past experience suggests that you are are likely to struggle with the course. If you are rusty, we will provide math refreshers on the necessary topics, however, they are not meant as a first introduction.
 
-## Textbook
+## Textbooks
 
 There is no required textbook. Particularly thorny homeworks will often come with lecture notes to help. The following optional books may be useful, and we will provide suggested reading from these books to accompany some lectures:
 - Computer Vision: Algorithms and Applications by Richard Szeliski: [Available for free online here](http://szeliski.org/Book/){:target="_blank"}. (S)
@@ -115,7 +115,7 @@ Your grade will be based on:
 ### Formatting and Submission
 Submissions that do not follow these rules (and any additional ones specified in the homeworks) will get a 0.
 - **No handwriting** - LaTeX is not required, but encouraged. Just put some effort into generating a readable PDF.
-- **Marks answers on Gradescope** - With a few hundred students, graders will not have time to search for answers.
+- **Mark answers on Gradescope** - With a few hundred students, graders will not have time to search for answers.
 
 ### Collaboration and External Sources
 - **Automated plagiarism detection**: The vast majority of students are honorable. To ensure that honorable behavior is the incentivized behavior, we will run MOSS on the submitted homework.
