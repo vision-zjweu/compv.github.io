@@ -17,15 +17,16 @@ layout: spec
 	- Yuhang Ning (dlning)
 - **Lecture**: Monday/Wednesday 10:30 AM - 12:00 Noon, STAMPS
 - **Discussions**: 
-	- Monday 12:30-1:30PM, 2166 DOW
-	- Monday 3:30-4:30PM, 1005 DOW
-	- Wendesday 3:30-4:30PM, 3150 DOW
-	- Wednesday 4:30-5:30PM, 3150 DOW
-	- Wednesday 5:30-6:30PM, 107 GFL
-	- Thursday 3:30-4:30PM, 3150 DOW
+	- Monday 12:30-1:30PM, 2166 DOW - Alex
+	- Monday 3:30-4:30PM, 1005 DOW - Anurekha
+	- Wendesday 3:30-4:30PM, 3150 DOW - Farzad
+	- Wednesday 4:30-5:30PM, 3150 DOW - Yuhang
+	- Wednesday 5:30-6:30PM, 107 GFL - Jinfan
+	- Thursday 3:30-4:30PM, 3150 DOW - Shrikant
 - [**Piazza Signup**](https://piazza.com/umich/winter2024/c9b2){:target="_blank"}
 - [**Lecture Recordings**](https://leccap.engin.umich.edu/leccap/site/rxk3s2yc2cg9pggod0u){:target="_blank"}
 - [**Course Calendar**](https://calendar.google.com/calendar/u/0?cid=Y18zYjdmOTM1ODhjOTk2NDg0YTM5OTRkMTc1NWIwZWM5MzViZWZlMjgzYzI2ZjA1NjlkNGEzNDE5ZWI5M2ZlZmM1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20){:target="_blank"}
+- [**Virtual Office Hours**](https://officehours.it.umich.edu/queue/1511){:target="_blank"}
 
 ## Homeworks
 - Homework 1: Numbers and Images
@@ -42,26 +43,26 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 |-----------------------|:-------------------------------------------------------------------------------------------:|----------|
 | Wednesday<br>Jan 10   | **Introduction + Cameras 1**<br>Overview, Logistics, Pinhole Model, Homogeneous Coordinates | [Slides](https://drive.google.com/file/d/1aXUBzyCN9x5M7lZ7u5ah_pDzalEVuKM3/view?usp=sharing){:target="_blank"} <br> Reading: S2.1, H&Z 2, 6|
 | Monday<br>Jan 15      | **No Class**<br>Martin Luther King Day                                                      |          |
-| Wednesday<br>Jan 17   | **Cameras 2**<br>Intrinsics & Extrinsic Matrices, Lenses                                    | Slides <br> Reading: S2.1, H&Z 2, 6  |
+| Wednesday<br>Jan 17   | **Cameras 2**<br>Intrinsics & Extrinsic Matrices, Lenses<br> :warning: ***Homework 1 Released***       | Slides <br> Reading: S2.1, H&Z 2, 6  |
 | Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | Slides <br> Reading: Kolter |
 | Wednesday<br>Jan 24   | **Light & Shading**<br>Human Vision, Color Vision, Reflection                               | Slides   |
 | Monday<br>Jan 29      | **Filtering**<br>Linear Filters, Blurring, Separable Filters, Gradients                     | Slides <br> Reading: S2.2, S2.3  |
-| Wednesday<br>Jan 31   | **Detectors & Discriptors 1**<br>Edge Detection, Gaussian Derivatives, Harris Corners       | Slides   |
+| Wednesday<br>Jan 31   | **Detectors & Discriptors 1**<br>Edge Detection, Gaussian Derivatives, Harris Corners<br> :warning: ***Homework 1 Due***       | Slides   |
 | Monday<br>Feb 5       | **Detectors & Discriptors**<br>Scale-Space, Laplacian Blob Detection, SIFT                  | Slides   |
 | Wednesday<br>Feb 7    | **Transforms 1**<br>Linear Regression, Total Least Squares, RANSAC, Hough Transform         | Slides <br> Reading: S2.1, S6  |
 | Monday<br>Feb 12      | **Transforms 2**<br>Affine and Perspective Transforms, Fitting Transformations              | Slides <br> Reading: S2.1, S6 |
 | Wednesday<br>Feb 14   | **Machine Learning**<br>Supervised Learning, Linear Regression, Regularization              | Slides <br> Reading: ESL 3.1, 3.2(skim) |
 | Monday<br>Feb 19      | **Optimization**<br>SGD, SGD+Momentum                                                       | Slides   |
 | Wednesday<br>Feb 21   | **Neural Networks**<br>Backpropagation, Fully Connected Neural Networks                     | Slides   |
-| Monday<br>Feb 26      | **No Class**<br>Spring Break                                                                |          |
-| Wednesday<br>Feb 28   | **No Class**<br>Spring Break                                                                |          |
+| Monday<br>Feb 26      | **No Class**<br> :sunny: :beach_umbrella: Spring Break                                                                |          |
+| Wednesday<br>Feb 28   | **No Class**<br> :sunny: :beach_umbrella: Spring Break                                                                |          |
 | Monday<br>Mar 4       | **Convolutional Networks 1**<br>Convolution, Pooling                                        | Slides   |
 | Wednesday<br>Mar 6    | **Convolutional Networks 2**<br>CNN Architectures, Training Methods & Techniques            | Slides   |
 | Monday<br>Mar 11      | **Segmentation**<br>Semantic/Instance Segmentation                                          | Slides   |
 | Wednesday<br>Mar 13   | **Detection & Other Topics**                                                                | Slides   |
 | Monday<br>Mar 18      | **Transformers and Image Generative Models**                                                | Slides   |
 | Wednesday<br>Mar 20   | **Image Generative Models**                                                                 | Slides   |
-| Monday<br>Mar 25      | **Midterm**                                                                                 |          |
+| Monday<br>Mar 25      | :exclamation: **Midterm**                                                                                 |          |
 | Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration                                   | Slides  <br> Reading: S6.3 |
 | Wednesday<br>April 1  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
 | Monday<br>April 3     | **Stereo**<br>Two-view Stereo, Multiview Stereo                                             | Slides  <br> Reading: S11 |
