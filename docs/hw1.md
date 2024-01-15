@@ -4,7 +4,7 @@ permalink: /hw1
 latex: true
 
 title: Homework 1 – Numbers and Images
-due: 5 p.m. on Wednesday January 25th, 2023
+due: 11:59 p.m. on Wednesday January 31st, 2024
 ---
 
 <link href="style.css" rel="stylesheet">
@@ -37,21 +37,17 @@ This homework is **due at {{ page.due }}**.
 
 The submission includes two parts:
 
-1. **To Canvas**: submit a `zip` file of all of your code.
+1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code (subdirectories are fine).
 
    {{ code }} -
    <span class="code">We have indicated questions where you have to do something in code in red</span>  
    {{ autograde }} -
    <span class="autograde">We have indicated questions where we will definitely use an autograder in purple</span>
 
-   Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name.
-
-   Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.
+   Please be especially careful on the autograded assignments to follow the instructions and not change function signatures. Clean up your submission to include only the necessary files.
 
    <div class="primer-spec-callout info" markdown="1">
 	 **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
-
-   If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
    </div>
 
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
@@ -59,13 +55,13 @@ The submission includes two parts:
    {{ report }} -
    <span class="report">We have indicated questions where you have to do something in the report in green.</span>
 
-   You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/){:target="_blank"} for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+   The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
 
 ### Python Environment
 
 The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
 
-To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+We recommend you install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
 
 - [Numpy](https://numpy.org/doc/stable/user/quickstart.html){:target="_blank"}
 - [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html){:target="_blank"}
@@ -73,27 +69,17 @@ To make your life easier, we recommend you to install the latest [Anaconda](http
 
 ## Overview
 
-In this assignment, you’ll work through three tasks that help set you up for success in the class as well as a short assignment involving playing with color. The document seems big, but most of it is information, advice, and hand-holding. Indeed, one section was a bit more open-ended and terse in the past, and has been expanded to four pages that walk you through visualizing images. The assignment has three goals.
+In this assignment, you’ll work through three tasks that help set you up for success in the class as well as a short assignment involving playing with color. The assignment has three goals.
 
-1. **The assignment will show you bugs in a low-stakes setting**. You’ll encounter a lot of programming mistakes in the course. If you have buggy code, it could be that the concept is incorrect (or incorrectly understood) or it could be that the implementation in code is incorrect. You’ll have to sort out the difference. It’s a lot easier if you’ve seen the bugs in a controlled environment where you know what the answer is. Here, the programming problems are deliberately easy and we even provide the solution for one!
-2. **The assignment incentivizes you to learn how to write reasonably good python and numpy code**. You should learn to do this anyway, so this gives you credit for doing it and incentivizes you to learn things in advance.
-3. **You don’t need to worry about having similar solutions for coding in this homework**. The code in this homework (especially warmups, test, and dither) are going to be very similar across students becauseeach function is so short. Please do not worry that we will be looking to find people who copied off each other’s code.
+1. **Show you bugs in a low-stakes setting**. You’ll encounter a lot of programming mistakes in the course and we want to show you common bugs early on. Here, the programming problems are deliberately easy!
+2. **Learn to write reasonably good Python and NumPy code**. Having layers of nested `for` loops will cause bugs and is not feasible for us to debug, use NumPy effectively! If you have not had any experience with NumPy, read this [tutorial](http://cs231n.github.io/python-numpy-tutorial/){:target="_blank"} before starting.
 
 The assignment has four parts and corresponding folders in the starter code:
 
-- Numpy (Section 2 – folder `numpy/`)
-- Data visualization (Section 3 – folder `visualize/`)
-- Image dithering (Section 4 – folder `dither/`)
-- Looking at color (Section 5)
-
-Here’s my recommendation for how to approach this homework:
-
-- If you have not had any experience with Numpy, read this [tutorial](http://cs231n.github.io/python-numpy-tutorial/){:target="_blank"}. Numpy is like a lot of other high- level numerical programming languages. Once you get the hang of it, it makes a lot of things easy. However, you need to get the hang of it and it won’t happen overnight!
-- You should then do Section 2.
-- You should then read our description about images in Section A. Some will make sense; some may not. That’s OK! This is a bit like learning to ride a bike, swim, cook a new recipe, or play a new game by being told by someone. A little teaching in advance helps, but actually doing it yourself is crucial. Then, once you’ve tried yourself, you can revisit the instructions (which might make more sense).
-  If you haven’t recently thought much about the difference between an integer and a floating point number, or thought about multidimensional arrays, it might be worth brushing up on both.
-- You should then do Section 3 and then Section 4. Both are specifically designed to produce common bugs, issues, and challenges that you will likely run into the course.
-- Finally, conclude with Section 5.
+- Numpy Intro (folder `numpy/`)
+- Data Interpretation and Visualization (folder `visualize/`)
+- Lights on a Budget (folder `dither/`)
+- Colorspaces
 
 ## Numpy Intro
 
@@ -436,7 +422,7 @@ While modern computer screens are typically capable of showing 256 different int
 	{% assign folders = "color, gray" | split: ", " %}
 	{% assign col_headers = "Input, Naive Rounding, Dithered" | split: ", " %}
 	<figure>
-		<figcaption>One bit, encoding two levels: 1.0/0.0</figcaption>
+		<figcaption>One Bit Encoding (Two Levels: 1.0, 0.0)</figcaption>
 		{% for f in folders %}
 			<div class="flex-container">
 				{% assign imgs = "aep.jpg, aep.jpg_quantizeNaive.png, aep.jpg_quantizeFloyd.png" | split: ", " %}
@@ -452,7 +438,7 @@ While modern computer screens are typically capable of showing 256 different int
 		{% endfor %}
 	</figure>
 	<figure>
-		<figcaption>Two bits encoding four levels: 1.0/0.66/0.33/0.0</figcaption>
+		<figcaption>Two Bit Encoding (Four Levels: 1.0, 0.66, 0.33, 0.0)</figcaption>
 		{% for f in folders %}
 			<div class="flex-container">
 				{% assign imgs = "aep.jpg, aep.jpg_quantizeNaive2.png, aep.jpg_quantizeFloyd2.png" | split: ", " %}
@@ -468,7 +454,7 @@ While modern computer screens are typically capable of showing 256 different int
 		{% endfor %}
 	</figure>
 	<figcaption style="text-align:justify; width:90%; margin-left:5%; margin-right:5%"> 
-	   <b>Figure 5</b>: (top two rows) Results with one bit of brightness (two levels -- off or on) per channel. With 3 channels, this leads to 2^3 possible colors. (bottom two rows) Results with two bits of brightness per channel. With 3 channels, this leads to 4^3 possible colors. In both cases, naively rounding to the nearest value produces weird results. You'll produce the result on the right. Both use the same values (look carefully!) but use them differently.
+	   <b>Figure 5</b>: Top two rows: Results with one bit encoding of brightness (two levels -- off or on) per channel. With 3 color channels, this leads to 2^3 possible colors. Bottom two rows: Results with two bit encoding of brightness per channel. With 3 channels, this leads to 4^3 possible colors. In both cases, naively rounding to the nearest value produces weird results. You'll produce the result on the right. Both use the same values (look carefully!) but use them differently.
 	</figcaption>
 </figure>
 
@@ -481,7 +467,7 @@ You'll start out with a full byte of data to work with and will be asked to repr
 **Input:** As input the algorithm will get:
 
 1. A $$H \times W$$ **floating point** image with brightness ranging from 0 to 1, and
-2. A palette consisting of all the $$K$$ allowed brightness settings (each floats in the range 0 to 1). For the curious, the word [palette](<https://en.wikipedia.org/wiki/Palette_(painting){:target="_blank"}>) comes from painting.
+2. A palette consisting of all the $$K$$ allowed brightness settings (each floats in the range 0 to 1).
 
 **Output:** As output, each algorithm produces a $$H \times W$$ **uint8** image with brightness ranging from $$0$$ to $$K-1$$.
 
@@ -497,11 +483,11 @@ We'll call this a _quantized_ image. You can take the palette and the quantized 
 
 <div class="primer-spec-callout info" markdown="1">
    
-You'll be able to call each implementation via a starter script `dither.py` that takes as arguments a source folder with images, a target image to put the results in, and the function to apply to each. For instance if there's a function `quantizeImageNaive`, you can call  
+You'll be able to call each implementation via a starter script `dither.py` that takes as arguments a source folder with images, a target image to put the results in, and the function to apply to each. For instance if there's a function `quantizeNaive`, you can call  
 
-`$ python dither.py gallery/ results/ quantizeImageNaive`
+`$ python dither.py gallery/ results/ quantizeNaive`
 
-and the folder results will contain the outputs of running `quantizeImageNaive` on each. There will also be a file `view.htm` that will show all the results in a table. The starter code contains a bunch of helper functions for you to use.
+and the folder results will contain the outputs of running `quantizeNaive` on each. There will also be a file `view.htm` that will show all the results in a table. The starter code contains a bunch of helper functions for you to use.
    
 </div>
 
@@ -509,8 +495,8 @@ and the folder results will contain the outputs of running `quantizeImageNaive` 
    
    **Important:** There are two caveats for verifying your results.
 
-1.  **Web browsers mess with images. Set your zoom to 100%.** The images are outputted so that each pixel in the original image corresponds to a few pixels in the output image (i.e., they're upsampled to deliberately be blocky). Try opening `bbb/view.htm`. The outputs quantizeFloyd and quantizeFloydGamma should look like BBB. The quantizeNaive outputs should look bad.
-2.  Due to slight variations in implementations, your outputs may not look bit-wise identical to these outputs. You can check your results with what I call the **"look away from the screen" test**. To do this, load up your output and our output side by side. Cover your output with your hand; and look at our output. Now, look at something else and move your hand over our output. Look at your output for under a second. Does it look the same? If it's hard to tell and they seem to be the same, you're fine.
+1.  **Web browsers mess with images. Set your zoom to 100%.** The images are outputted so that each pixel in the original image corresponds to a few pixels in the output image (i.e., they're upsampled to deliberately be blocky). Try opening `bbb/view.htm`. The outputs `quantizeFloyd` and `quantizeFloydGamma` should look like BBB. The `quantizeNaive` outputs should look bad.
+2.  Due to slight variations in implementations, your outputs may not look bit-wise identical to these outputs. You can check your results *by inspection* by comparing them visually to our provided outputs.
 
 </div>
 
@@ -522,7 +508,7 @@ The simplest way to make an image that's close is to just pick the closest value
 
    1. {{ code }} <span class="code">First, fill in `quantize(v,palette)` in the starter code.</span>
 
-	  This should return the **index** of the nearest value in the palette to the single value `v`. Note that we're making this general by letting it take a palette. For speed this would normally done by pre-selecting a palette where the nearest entry could be calculated fast. You can do this without a for-loop. Look at `np.argmin`. Indeed, the beauty of the Internet is that if you search for "numpy find index of smallest value", you'll likely find this on your own. In general, you should feel free to search for numpy documentation or for whether there are functions that will make your life easier.
+	  This should return the **index** of the nearest value in the palette to the single value `v`. Note that we're making this general by letting it take a palette. For speed this would normally done by pre-selecting a palette where the nearest entry could be calculated fast. Do this without a for-loop. Look at `np.argmin`. Indeed, the beauty of the Internet is that if you search for "numpy find index of smallest value", you'll likely find this on your own. In general, you should feel free to search for numpy documentation or for whether there are functions that will make your life easier.
 
    2. {{ code }} <span class="code">Second, fill in `quantizeNaive(IF,palette)` in the starter code.</span>
 
@@ -540,7 +526,7 @@ The simplest way to make an image that's close is to just pick the closest value
 
    3. *(2 points)* {{ report }} <span class="report"> If you apply this to the folder `gallery`, why might your code (that calls quantize) take a very long time?</span> (1 sentence)
 
-   4. *(2 points)* Pause the program right after `algoFn` (the function for your dithering algorithm) gets called. Visualize the values in the image with `plt.imsave` or `plt.imshow`. These produce false color images (see Section A.3 [TODO]). The default value colormap goes from Low \includegraphics[width=24pt,height=6pt]{viridis.png} High. You should notice that something is different about the intensity values after they've been converted to the palette.
+   4. *(2 points)* Pause the program right after `algoFn` (the function for your dithering algorithm) gets called. Visualize the values in the image with `plt.imsave` or `plt.imshow`. These produce [false color](https://en.wikipedia.org/wiki/False_color){:target="_blank"} images. The default colormap in `matplotlib` looks like: Low ![Viridis]({{site.url}}/assets/hw1/viridis.png){:height="10px" width="120px"} High. You should notice that something is different about the intensity values after they've been converted to the palette.
 
 	  {{ report }} <span class="report">Do low intensity values correspond to low palette values? Explain (1 sentence) what's going on.</span> You may have to look through the code you're given (a good habit to get into).
 
@@ -548,7 +534,7 @@ The simplest way to make an image that's close is to just pick the closest value
 
 ### Floyd-Steinberg
 
-Naively quantizing the image to a palette doesn't work. The key is to spread out the error to neighboring pixels. So if pixel `(i,j)` is quantized to a value that's a little darker, you can have pixel `(i,j+1)` and `(i+1,j)` be brighter. Your job is next to implement `quantizeFloyd`, or [Floyd-Steinberg Dithering](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering){:target="_blank"}. The pseudocode from Wikipedia (more or less) is below (updated to handle the fact that we're returning the index):
+Naively quantizing the image to a palette doesn't work. The key is to spread out the error to neighboring pixels. So if pixel `(i,j)` is quantized to a value that's a little darker, you can have pixel `(i,j+1)` and `(i+1,j)` be brighter. Your job is next to implement `quantizeFloyd`, or [Floyd-Steinberg Dithering](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering){:target="_blank"}. The *pseudocode* from Wikipedia (more or less) is below (updated to handle the fact that we're returning the index):
 
 ```python
 # ... some calling code up here ..
@@ -568,8 +554,6 @@ for y in range(H): for x in range(W):
 return output
 ```
 
-This is pseudocode; throughout the course (and indeed your career as a programmer) so you'll have to figure out to translate pseudocode.
-
 {:start="2"} 
 2. *(15 points)* 1 coding, 2 report questions. 
 
@@ -579,11 +563,11 @@ This is pseudocode; throughout the course (and indeed your career as a programme
 
 		**Beware:**
 
-		1. In general, you should be careful with indices when working with images. Different programs, libraries, and notations will make different assumptions about whether x or y come first, and whether the image is height x width or width x height. Sometimes the system won't even say which it expects! Here, the person who wrote up the code on the Wikipedia article says that you should access pixels as pixel[x][y]. In numpy, we'll refer to the pixel at a given row y and column x as pixel[y,x]. When you're not sure, you can often tell by giving the code it a *non-square* image and seeing where it breaks.
+		1. Different programs, libraries, and notations will make different assumptions about whether x or y come first, and whether the image is height $$\times$$ width or width $$\times$$ height. 
 
-		2. This algorithm, like most image processing algorithms, has literal edge cases. You typically won't be told what to do because typically these cases aren't defined. I usually take the laziest functional solution that preserves the intent, but does not try something fancy. When you try to be oversmart, you open yourself up to oversmart bugs.
+		2. This algorithm, like most image processing algorithms, has literal edge cases. Keep it simple, no need to be fancy.
 
-		3. The algorithm requires modifying the array you're given. Again, when you get `IF` as an argument, you are getting a *reference/address/pointer*! Modifying this data modifies the original data. Make a copy in a new variable via `IF.copy()`. It's generally not nice to tamper with data you're passed unless you've been explicitly told you can modify it or asked to. Try the algorithm with and without first making a copy. See what happens when the starter code tries to save the image it gave you.
+		3. In Python, objects like lists, dictionaries, and *NumPy arrays* are passed by **reference**!
 
 		</div>
 
@@ -600,7 +584,7 @@ We provided you with two folders of images, `gallery/` and `gallery200/`. The im
 
 	1. {{ code }} <span class="code">Fill in `resizeToSquare(I,maxDim)`.</span>
 
-		If the input image is smaller than maxDim on both sides, leave it alone; if it is bigger, resize the image to fit inside a `maxDim` by `maxDim` square  **while keeping the aspect ratio the same** (i.e., the image should not stretch). Use the opencv function `cv2.resize`.  As is always the case in the course, you can look up any documentation you'd like for this function. You can now resize to your hearts content using the `--resizeto` flag.
+		If the input image is smaller than maxDim on both sides, leave it alone; if it is bigger, resize the image to fit inside a `maxDim` by `maxDim` square  **while keeping the aspect ratio the same** (i.e., the image should not stretch). Use the opencv function `cv2.resize` (and refer to documentation). You can now resize to your hearts content using the `--resizeto` flag.
 
 ### Handling Color
 
@@ -619,19 +603,18 @@ You've written a version of dithering that handles grayscale images. Now you'll 
 
 	   <div class="primer-spec-callout warning" markdown="1">
 
-	   **Beware:** When you get `v = IF[i,j]`, you are getting a **reference/address/pointer**! If you modify that variable, the underlying data changes! This can lead to hard to track down bugs. You may want to `.copy()` the pixel if you're going to modify it.
+	   **Beware:** When you get `v = IF[i,j]`, you are getting a **reference/address/pointer**! 
 
 	   </div>
 
 	3. *(5 points)* Generate any three results of your choosing. This can be on the images we provide or on some other image you'd like. {{ report }} <span class="report">Put them in your document</span>.
 
-	4. (optional -- no credit) Pick your favorite result and put the image saved as `dither/mychoice.jpg` in your zip file. We'll have a vote among the class for their favorite.
 
 ### (Optional) Gamma Correction
 
 If you look at your outputs from a distance (unless you crank up the number of bits used), you'll notice they're quite a bit brighter! This is a bit puzzling. As a sanity check, you can check the average light via `np.mean(reconstructed)` and `np.mean(original)`. They should be about the same.
 
-The amount of light your monitor sends out isn't linearly related to the value of the image. In reality, if the image has a value $$v \in [0,1]$$, the monitor actually shows something like $$v^\gamma$$ for $$\gamma = 2.4$$ (for most values, except for some minus some technicalities near 0 -- \href{https://en.wikipedia.org/wiki/SRGB}{see sRGB on Wikipedia} ). This is because human perception isn't linearly related to light intensity and storing the data pre-exponent makes better use of a set of equally-spaced values. However, this messes with the algorithm's assumptions: suppose the algorithm reconstructs two pixels which are both $$0.5$$ as a pixel with a $$0$$ and one with a $$1$$. The total amount of light that comes off the screen is $$2 * 0.5^{2.4} \approx 0.379$$ and $$0 + 1^{2.4} = 1$$. They're not the same! Oof.
+The amount of light your monitor sends out isn't linearly related to the value of the image. In reality, if the image has a value $$v \in [0,1]$$, the monitor actually shows something like $$v^\gamma$$ for $$\gamma = 2.4$$ (for most values, except for some minus some technicalities near 0 -- see [sRGB](https://en.wikipedia.org/wiki/SRGB){:target="_blank"} on Wikipedia). This is because human perception isn't linearly related to light intensity and storing the data pre-exponent makes better use of a set of equally-spaced values. However, this messes with the algorithm's assumptions: suppose the algorithm reconstructs two pixels which are both $$0.5$$ as a pixel with a $$0$$ and one with a $$1$$. The total amount of light that comes off the screen is $$2 * 0.5^{2.4} \approx 0.379$$ and $$0 + 1^{2.4} = 1$$. They're not the same! Oof.
 
 The solution is to operate in linear space. You can convert between linear and sRGB via `linearToSRGB` and `SRGBToLinear`. First convert the image from sRGB to linear; whenever you want to quantize, convert the linear value back to SRGB and find the nearest sRGB value in the palette; when you compute the error, make sure to convert the new value back to linear.
 
@@ -676,7 +659,7 @@ Since the sense of color difference is subjective, we will display all images an
 
 # Tasks Checklist
 
-This section is meant to help you keep track of the many things that go in the report:
+This section is meant to help you keep track of the many tasks you have to complete:
 
 - [ ] **NumPy Intro**:
   - [ ] 1.1 - {{ report }} Terminal Output
@@ -719,6 +702,3 @@ In the `zip` file you submit to Canvas, the directory named after your uniqname 
 - [ ] `mystery_visualize.py`
 - [ ] `im1.jpg`, `im2.jpg`
 - [ ] `info.txt`
-
-The following are **optional**:
-- [ ] `dither/mychoice.jpg`
