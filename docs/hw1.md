@@ -289,7 +289,7 @@ We don't see in 9 color channels, and so you can't look at them all at once. If 
 >>> plt.imsave("vis.png",X[:,:,0])
 ```
 
-You can see what the output looks like in Figure 1. This is a false color image. You can read about these in Section A.3 [TODO], but the short version is that the given image, you find the minimum value (`vmin`) and the maximum value (`vmax`) and assign colors based on where each pixel's value falls between those. These colors look like: `Low` <img src="{{ site.url }}/assets/hw1/viridis.png" alt="viridis" width="60px" height="10px"> `High`. `plt.imsave` finds `vmin` and `vmax` for you on its own by computing the minimum and maximum
+You can see what the output looks like in Figure 1. This is a false color image. Given the image, you want to find the minimum value (`vmin`) and the maximum value (`vmax`) and assign colors based on where each pixel's value falls between those. These colors look like: `Low` <img src="{{ site.url }}/assets/hw1/viridis.png" alt="viridis" width="60px" height="10px"> `High`. `plt.imsave` finds `vmin` and `vmax` for you on its own by computing the minimum and maximum
 of the array.
 
 If you'd like to look at all 9 channels, save 9 images:
@@ -683,7 +683,6 @@ This section is meant to help you keep track of the many tasks you have to compl
 		- [ ] 1 - {{ code }} `quantize`
 		- [ ] 2 - {{ code }} `quantizeFloyd`
 		- [ ] 3 - {{ report }} 3 results
-		- [ ] 4 - (*optional*) `dither/mychoice.jpg`
 	- [ ] 3.5 Gamma Correction (*optional*)
 - [ ] **Colorspaces**:
 	- [ ] 4.1 - {{ code }} R,G,B plots
