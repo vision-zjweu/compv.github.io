@@ -41,10 +41,8 @@ The submission includes two parts:
 
    {{ code }} -
    <span class="code">We have indicated questions where you have to do something in code in red</span>  
-   {{ autograde }} -
-   <span class="autograde">We have indicated questions where we will definitely use an autograder in purple</span>
 
-   Please be especially careful on the autograded assignments to follow the instructions and not change function signatures. Clean up your submission to include only the necessary files.
+   Clean up your submission to include only the necessary files.
 
    <div class="primer-spec-callout info" markdown="1">
 	 **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
@@ -59,9 +57,9 @@ The submission includes two parts:
 
 ### Python Environment
 
-The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
+Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
 
-We recommend you install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+We recommend you install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.12. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
 
 - [Numpy](https://numpy.org/doc/stable/user/quickstart.html){:target="_blank"}
 - [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html){:target="_blank"}
@@ -85,7 +83,7 @@ The assignment has four parts and corresponding folders in the starter code:
 
 All the code/data for this is located in the folder `numpy/`. Each assignment requires you to fill in the blank in a function (in `tests.py` and `warmup.py`) and return the value described in the comment for the function. There’s driver code you do not need to read in `run.py` and `common.py`.
 
-**Note**: All the `python` below refer to `python3`. As we stated earlier, we are going to use Python 3.7 in this assignment. Python 2 was [sunset](https://www.python.org/doc/sunset-python-2/){:target="_blank"} on January 1, 2022.
+**Note**: All the `python` below refer to `python3`. As we stated earlier, we are going to use Python 3.12 in this assignment. Python 2 was [sunset](https://www.python.org/doc/sunset-python-2/){:target="_blank"} on January 1, 2022.
 
 1. *(40 points)* {{ report }} <span class="report">Fill in the code stubs in tests.py and warmups.py. Put the terminal output in your pdf from</span>:
 
@@ -242,7 +240,7 @@ of a row $$y$$ and column $$x$$. This is a not particularly intellectually stimu
 	<figcaption>Figure 2: The Mystery Data, Visualized with the Plasma Colormap</figcaption>
 </figure>
 
-Throughout the course, a lot of the data you have access to will be in the form of an image. These won't be stored and saved in the same format that you're used towhen interacting with ordinary images, such as off your cell phone: sometimes they'll have negative values, really really big values, or invalid values. If you can look at images quickly, then you'll find bugs quicker. If you **only** print debug, you'll have a bad time. To teach you about interpreting things, I've got a bunch of mystery data that we'll analyze together. You'll write a brief version of the important `imsave` function for visualizing.
+Throughout the course, a lot of the data you have access to will be in the form of an image. These won't be stored and saved in the same format that you're used to when interacting with ordinary images, such as off your cell phone: sometimes they'll have negative values, really really big values, or invalid values. If you can look at images quickly, then you'll find bugs quicker. If you **only** print debug, you'll have a bad time. To teach you about interpreting things, I've got a bunch of mystery data that we'll analyze together. You'll write a brief version of the important `imsave` function for visualizing.
 
 Let's load some of this mysterious data.
 
