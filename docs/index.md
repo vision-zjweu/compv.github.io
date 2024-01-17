@@ -93,7 +93,7 @@ There is no required textbook. Particularly thorny homeworks will often come wit
 - Computer Vision: Algorithms and Applications by Richard Szeliski: [Available for free online here](http://szeliski.org/Book/){:target="_blank"}. (S)
 - Computer vision: A Modern Approach (Second Edition), by David Forsyth and Jean Ponce. 
 - Elements of Statistical Learning by Trevor Hastie, Robert Tibshirani, and Jerome Friedman. [Available for free online here](https://hastie.su.domains/ElemStatLearn/){:target="_blank"}. (ESL)
-- Multiple Geometry in Computer Vision (Second Edition), by Richard Hartley and Andrew Zisserman. [Available for free online through the UM Library (login required)]([[https://search.lib.umich.edu/catalog/record/013604161](https://search.lib.umich.edu/catalog/record/990043490850106381?query=Richard+Hartley&library=U-M+Ann+Arbor+Libraries))]{:target="_blank"}. (H&Z)
+- Multiple Geometry in Computer Vision (Second Edition), by Richard Hartley and Andrew Zisserman. [Available for free online through the UM Library (login required)](https://search.lib.umich.edu/catalog/record/990043490850106381?query=Richard+Hartley&library=U-M+Ann+Arbor+Libraries){:target="_blank"}. (H&Z)
 - Linear Algebra review and reference, by Zico Kolter. [Available for free online here](https://www.cs.cmu.edu/~zkolter/course/15-884/linalg-review.pdf){:target="_blank"}. (Kotler)
 
 ## Grading
