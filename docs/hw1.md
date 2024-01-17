@@ -625,7 +625,7 @@ The same color may look different under different lighting conditions. Images `r
 1. *(2.5 points)* {{ code }} <span class="code">Load the images and plot their R, G, B channels separately as grayscale images using `plt.imshow()`.</span>
 2. *(2.5 points)* {{ code }} <span class="code">Then convert them into LAB color space using `cv2.cvtColor` and plot the three channels again.</span>
 3. *(5 points)* {{ report }} <span class="report">Include the LAB color space plots in your report. Which color space (RGB vs. LAB) better separates the illuminance (i.e., total amount of light) change from other factors such as hue? Why?</span>
-4. *(5 points)* {{ report }} <span class="report"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> 
+4. *(10 points)* {{ report }} <span class="report"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> 
 
 <figure class="figure-container">
 	<div class="flex-container">
