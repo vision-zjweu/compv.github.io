@@ -42,7 +42,7 @@ The submission includes two parts:
    {{ code }} -
    <span class="code">We have indicated questions where you have to do something in code in red</span>  
 
-   Clean up your submission to include only the necessary files.
+   Starter code is given to you on Canvas under the "Homework 1" assignment. Clean up your submission to include only the necessary files.
 
    <div class="primer-spec-callout info" markdown="1">
 	 **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
@@ -653,8 +653,6 @@ Your `info.txt` should look something like:
 The first image was taken in the basement under a light. The second was taken by a window with natural light.
 ```
 
-Since the sense of color difference is subjective, we will display all images and patches on a webpage. Every student can vote for their favorite pair of images that illustrates color difference on Piazza. The winner will get **Extra Credits** (2 pts).
-
 # Tasks Checklist
 
 This section is meant to help you keep track of the many tasks you have to complete:
@@ -688,7 +686,7 @@ This section is meant to help you keep track of the many tasks you have to compl
 	- [ ] 4.1 - {{ code }} R,G,B plots
 	- [ ] 4.2 - {{ code }} L,A,B plots
 	- [ ] 4.3 - {{ report }} L,A,B plots
-	- [ ] 4.4 - {{ code }} Coose two lighting conditions...
+	- [ ] 4.4 - {{ report }} Coose two lighting conditions...
 
 # Canvas Submission Checklist
 
