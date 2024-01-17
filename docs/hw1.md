@@ -625,7 +625,7 @@ The same color may look different under different lighting conditions. Images `r
 1. *(2.5 points)* {{ code }} <span class="code">Load the images and plot their R, G, B channels separately as grayscale images using `plt.imshow()`.</span>
 2. *(2.5 points)* {{ code }} <span class="code">Then convert them into LAB color space using `cv2.cvtColor` and plot the three channels again.</span>
 3. *(5 points)* {{ report }} <span class="report">Include the LAB color space plots in your report. Which color space (RGB vs. LAB) better separates the illuminance (i.e., total amount of light) change from other factors such as hue? Why?</span>
-4. *(10 points)* {{ code }} <span class="code"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> Below in Figure 6 is an example of two photos of the same piece of paper, taken in the basement and by the window respectively.
+4. *(5 points)* {{ report }} <span class="report"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> 
 
 <figure class="figure-container">
 	<div class="flex-container">
@@ -639,19 +639,10 @@ The same color may look different under different lighting conditions. Images `r
 	<figcaption>Figure 6: The same piece of paper in the basement and by the window</figcaption>
 </figure>
 
-**Submit** the following in the same folder:
+In your report include:
 
-- The two images with names `im1.jpg` and `im2.jpg`, both cropped and scaled to $$256\times256 $$. You can use python and opencv to resize; you can also crop. On many systems, you can use a program called imagemagick.
-- Also submit a file `info.txt` that contains **only** two lines:
-  - Line 1 contains four integers `x1,y1,x2,y2` where we will take a $$32\times32 $$ patch around the coordinate on each image and compare colors. (You can use `plt.imshow()` and `plt.show()` to bring up a window where you can select pixel with coordinates.) This coordinate should be somewhere on your object in the image.
-  - Line 2 is a description of the lighting conditions that you choose.
-
-Your `info.txt` should look something like:
-
-```
-92 101 82 110
-The first image was taken in the basement under a light. The second was taken by a window with natural light.
-```
+- The two images, both cropped and scaled to $$256\times256 $$. You can use python and opencv or any other tool to resize and crop.
+- Two corresponding plots of the same size (and crop) of the Luminance channel (the L in LAB). 
 
 # Tasks Checklist
 
@@ -686,7 +677,7 @@ This section is meant to help you keep track of the many tasks you have to compl
 	- [ ] 4.1 - {{ code }} R,G,B plots
 	- [ ] 4.2 - {{ code }} L,A,B plots
 	- [ ] 4.3 - {{ report }} L,A,B plots
-	- [ ] 4.4 - {{ report }} Coose two lighting conditions...
+	- [ ] 4.4 - {{ report }} Two images and their Luminance plots
 
 # Canvas Submission Checklist
 
@@ -695,5 +686,3 @@ In the `zip` file you submit to Canvas, the directory named after your uniqname 
 - [ ] `tests.py`
 - [ ] `dither.py`
 - [ ] `mystery_visualize.py`
-- [ ] `im1.jpg`, `im2.jpg`
-- [ ] `info.txt`
