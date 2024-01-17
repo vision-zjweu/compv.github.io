@@ -29,7 +29,7 @@ layout: spec
 - [**Virtual Office Hours**](https://officehours.it.umich.edu/queue/1511){:target="_blank"}
 
 ## Homeworks
-- Homework 1: Numbers and Images
+- [Homework 1: Numbers and Images](https://github.com/eecs442/eecs442.github.io/edit/main/docs/hw1.md)
 - Homework 2: Convolution and Feature Detection
 - Homework 3: Fitting Models and Image Warping
 - Homework 4: Machine Learning
