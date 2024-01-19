@@ -42,7 +42,7 @@ The submission includes two parts:
    {{ code }} -
    <span class="code">We have indicated questions where you have to do something in code in red</span>  
 
-   Starter code is given to you on Canvas under the "Homework 1" assignment. Clean up your submission to include only the necessary files.
+   Starter code is given to you on Canvas under the "Homework 1" assignment. You can also download it [here](https://drive.google.com/file/d/1Bpqc8LLT67uLR4ZmbKYeMwvvYMrw_Gl-/view?usp=sharing). Clean up your submission to include only the necessary files.
 
    <div class="primer-spec-callout info" markdown="1">
 	 **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
@@ -597,7 +597,7 @@ You've written a version of dithering that handles grayscale images. Now you'll 
 
 	2. {{ code }} <span class="code">Make sure that your version of `quantizeFloyd(IF,palette)` can handle images with multiple channels.</span>
 
-	   You may not have to do anything. If `IF` is a $H \times W \times 3$ array, `IF[i,j]` refers to the 3D vector at the `i,j`th pixel i.e., `[IF[i,j,0],IF[i,j,1],IF[i,j,2]]`. You can add and subtract that vector however you want.
+	   You may not have to do anything. If `IF` is a $$H \times W \times 3$$ array, `IF[i,j]` refers to the 3D vector at the `i,j`th pixel i.e., `[IF[i,j,0],IF[i,j,1],IF[i,j,2]]`. You can add and subtract that vector however you want.
 
 	   <div class="primer-spec-callout warning" markdown="1">
 
