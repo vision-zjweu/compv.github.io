@@ -528,7 +528,7 @@ The simplest way to make an image that's close is to just pick the closest value
 
 	  {{ report }} <span class="report">Do low intensity values correspond to low palette values? Explain (1 sentence) what's going on.</span> You may have to look through the code you're given (a good habit to get into).
 
-   5. *(4 points)* {{ report }} <span class="report">Put two results of inputs and outputs in your answer document. Use `aep.jpg` plus any other one that you like.</span> While you can play with `--num-bits` to get a sense of how things work, you should have `--num-bits` set to `1` for the output.
+   5. *(4 points)* {{ report }} <span class="report">Put two results of inputs from `gallery` and corresponding outputs in your answer document. Use `aep.jpg` plus any other one that you like.</span> While you can play with `--num-bits` to get a sense of how things work, you should have `--num-bits` set to `1` for the output.
 
 ### Floyd-Steinberg
 
@@ -571,7 +571,7 @@ return output
 
 	2. *(3 points)* {{ report }} <span class="report">In your own words (1-2 sentences), why does dithering (the general concept) work?</span> Try stepping back from your computer screen or, if you wear glasses, take them off.
 
-	3. *(12 points)* {{ report }} <span class="report">Run this on `gallery200`. Put three results in your document, including `aep.jpg`.</span> Don't adjust `--num-bits` and use the defaults.
+	3. *(12 points)* {{ report }} <span class="report">Run this on `gallery`. Put three results in your document, including `aep.jpg`.</span> Don't adjust `--num-bits` and use the defaults.
 
 ### Resizing Images
 
