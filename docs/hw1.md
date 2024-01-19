@@ -524,7 +524,7 @@ The simplest way to make an image that's close is to just pick the closest value
 
    3. *(2 points)* {{ report }} <span class="report"> If you apply this to the folder `gallery`, why might your code (that calls quantize) take a very long time?</span> (1 sentence)
 
-   4. *(2 points)* Pause the program right after `algoFn` (the function for your dithering algorithm) gets called. Visualize the values in the image with `plt.imsave` or `plt.imshow`. These produce [false color](https://en.wikipedia.org/wiki/False_color){:target="_blank"} images. The default colormap in `matplotlib` looks like: Low ![Viridis]({{site.url}}/assets/hw1/viridis.png){:height="10px" width="120px"} High. You should notice that something is different about the intensity values after they've been converted to the palette.
+   4. *(2 points)* Pause the program right after `algoFn` (the function for your dithering algorithm) gets called. Visualize the values in the image with `plt.imsave` or `plt.imshow`. These produce [false color](https://en.wikipedia.org/wiki/False_color){:target="_blank"} images. The default colormap in `matplotlib` looks like: Low ![Viridis]({{site.url}}/assets/hw1/viridis.png){:width="60px" height="10px"} High. You should notice that something is different about the intensity values after they've been converted to the palette.
 
 	  {{ report }} <span class="report">Do low intensity values correspond to low palette values? Explain (1 sentence) what's going on.</span> You may have to look through the code you're given (a good habit to get into).
 
