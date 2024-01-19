@@ -129,6 +129,7 @@ Submissions that do not follow these rules (and any additional ones specified in
 Our policy is quite generous. Exceptions will be made in only truly exceptional circumstances by the professor.
 - **Late Days** - **6 total** late days across all homeworks. These will be applied automatically, no need to contact us. Homeworks are due by 11:59:59 on the due date. Thus, the late day would start at 12:00:00.
 - **Penalty** - If you have 0 late days available, any subsequent late submissions will receive a 10% max score reduction per day. For example, if you submit 3 days late, you can receive at most 70% credit.
+- **Late Deadline** - Late submissions will be accepted until a week after the deadline.
 - **Project** - No late submissions. Late days and penalties will not be applied. This will be due as late as we can take them while still delivering grades on time.
 
 ### Regrades
