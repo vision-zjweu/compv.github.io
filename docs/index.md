@@ -28,6 +28,8 @@ layout: spec
 - [**Course Calendar**](https://calendar.google.com/calendar/u/0?cid=Y18zYjdmOTM1ODhjOTk2NDg0YTM5OTRkMTc1NWIwZWM5MzViZWZlMjgzYzI2ZjA1NjlkNGEzNDE5ZWI5M2ZlZmM1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20){:target="_blank"}
 - [**Virtual Office Hours**](https://officehours.it.umich.edu/queue/1511){:target="_blank"}
 
+- Note on Waitlist: We DO NOT reorder waitlist. Please talk to the undergraduate advising office regarding your course enrollment.
+
 ## Homeworks
 - [Homework 1: Numbers and Images](hw1.md)
 - Homework 2: Convolution and Feature Detection
