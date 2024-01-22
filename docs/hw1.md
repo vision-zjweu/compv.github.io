@@ -40,7 +40,7 @@ The submission includes two parts:
 1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code (subdirectories are fine).
 
    {{ code }} -
-   <span class="code">We have indicated questions where you have to do something in code in red</span>  
+   <span class="code">We have indicated questions where you have to do something in code in red. **If gradecope asks for it, also submit your code in the report.** </span>  
 
    Starter code is given to you on Canvas under the "Homework 1" assignment. You can also download it [here](https://drive.google.com/file/d/1Bpqc8LLT67uLR4ZmbKYeMwvvYMrw_Gl-/view?usp=sharing). Clean up your submission to include only the necessary files.
 
@@ -508,7 +508,7 @@ The simplest way to make an image that's close is to just pick the closest value
 
 	  This should return the **index** of the nearest value in the palette to the single value `v`. Note that we're making this general by letting it take a palette. For speed this would normally done by pre-selecting a palette where the nearest entry could be calculated fast. Do this without a for-loop. Look at `np.argmin`. Indeed, the beauty of the Internet is that if you search for "numpy find index of smallest value", you'll likely find this on your own. In general, you should feel free to search for numpy documentation or for whether there are functions that will make your life easier.
 
-   2. {{ code }} <span class="code">Second, fill in `quantizeNaive(IF,palette)` in the starter code.</span>
+   2. *(2 points)* {{ code }} <span class="code">Second, fill in `quantizeNaive(IF,palette)` in the starter code.</span>
 
 	  This takes a floating point image of size HxW and a palette of values. Create a new uint8 matrix and use quantize() to find the index of the nearest pixel. Return the `HxW uint8` image containing the palette indices (not values!). Once you've done this, you can call `python dither.py gallery200 results quantizeNaive` to see the results. Open up `view.htm`. You can sort of recognize the images, but this is not an aesthetically pleasing result. If you change `--numbits` you can control the size of the palette.
 
@@ -553,7 +553,7 @@ return output
 ```
 
 {:start="2"} 
-2. *(15 points)* 1 coding, 2 report questions. 
+2. *(8 points)* 1 coding, 2 report questions. 
 
 	1. {{ code }} <span class="code">Implement Floyd-Steinberg Dithering in `quantizeFloyd`.</span>
 
@@ -569,16 +569,16 @@ return output
 
 		</div>
 
-	2. *(3 points)* {{ report }} <span class="report">In your own words (1-2 sentences), why does dithering (the general concept) work?</span> Try stepping back from your computer screen or, if you wear glasses, take them off.
+	2. *(2 points)* {{ report }} <span class="report">In your own words (1-2 sentences), why does dithering (the general concept) work?</span> Try stepping back from your computer screen or, if you wear glasses, take them off.
 
-	3. *(12 points)* {{ report }} <span class="report">Run this on `gallery`. Put three results in your document, including `aep.jpg`.</span> Don't adjust `--num-bits` and use the defaults.
+	3. *(6 points)* {{ report }} <span class="report">Run this on `gallery`. Put three results in your document, including `aep.jpg`.</span> Don't adjust `--num-bits` and use the defaults.
 
 ### Resizing Images
 
 We provided you with two folders of images, `gallery/` and `gallery200/`. The images in `gallery200` are way too small; the images in `gallery` are way too big! Giving you the images in all sizes would be too big, so it would be ideal if we could resize images to some size we decide when we run the program.
 
 {:start="3"} 
-3. *(15 points)* 1 coding question. 
+3. *(2 points)* 1 coding question. 
 
 	1. {{ code }} <span class="code">Fill in `resizeToSquare(I,maxDim)`.</span>
 
@@ -589,13 +589,13 @@ We provided you with two folders of images, `gallery/` and `gallery200/`. The im
 You've written a version of dithering that handles grayscale images. Now you'll write one that handles color.
 
 {:start="4"} 
-4. *(15 points)* 2 coding, 1 report questions.
+4. *(20 points)* 2 coding, 1 report questions.
 
-	1.  {{ code }} <span class="code">Rewrite `quantize(v,palette)` so that it can handle both scalar `v` and vector `v`.
+	1. *(4 points)* {{ code }} <span class="code">Rewrite `quantize(v,palette)` so that it can handle both scalar `v` and vector `v`.
 
 		If `v` is a `n`-dimensional vector it should return a set of `n` vector indices (i.e., for each element, what is the closest value in the palette). You can use a `for` loop, but remember that: (a) broadcasting can take a `M`-dimensional vector and `N`-dimensional vector and produce a `MxN` dimensional matrix; and (b) many functions have an axis argument. If you are given a vector, don't overwrite individual elements of it either!
 
-	2. {{ code }} <span class="code">Make sure that your version of `quantizeFloyd(IF,palette)` can handle images with multiple channels.</span>
+	2. *(8 points)* {{ code }} <span class="code">Make sure that your version of `quantizeFloyd(IF,palette)` can handle images with multiple channels.</span>
 
 	   You may not have to do anything. If `IF` is a $$H \times W \times 3$$ array, `IF[i,j]` refers to the 3D vector at the `i,j`th pixel i.e., `[IF[i,j,0],IF[i,j,1],IF[i,j,2]]`. You can add and subtract that vector however you want.
 
@@ -605,7 +605,7 @@ You've written a version of dithering that handles grayscale images. Now you'll 
 
 	   </div>
 
-	3. *(5 points)* Generate any three results of your choosing. This can be on the images we provide or on some other image you'd like. {{ report }} <span class="report">Put them in your document</span>.
+	3. *(8 points)* Generate any **four** results of your choosing. This can be on the images we provide or on some other image you'd like. {{ report }} <span class="report">Put them in your document</span>.
 
 
 ### (Optional) Gamma Correction
@@ -622,10 +622,10 @@ You should feel free to use the outputs from this implementation for your chosen
 
 The same color may look different under different lighting conditions. Images `rubik/indoor.png` and `rubik/outdoor.png` are two photos of a same Rubik's cube under different illuminances.
 
-1. *(2.5 points)* {{ code }} <span class="code">Load the images and plot their R, G, B channels separately as grayscale images using `plt.imshow()`.</span>
-2. *(2.5 points)* {{ code }} <span class="code">Then convert them into LAB color space using `cv2.cvtColor` and plot the three channels again.</span>
-3. *(5 points)* {{ report }} <span class="report">Include the LAB color space plots in your report. Which color space (RGB vs. LAB) better separates the illuminance (i.e., total amount of light) change from other factors such as hue? Why?</span>
-4. *(10 points)* {{ report }} <span class="report"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> 
+1. *(2 points)* {{ code }} <span class="code">Load the images and plot their R, G, B channels separately as grayscale images using `plt.imshow()`.</span>
+2. *(2 points)* {{ code }} <span class="code">Then convert them into LAB color space using `cv2.cvtColor` and plot the three channels again.</span>
+3. *(2 points)* {{ report }} <span class="report">Include the LAB color space plots in your report. Which color space (RGB vs. LAB) better separates the illuminance (i.e., total amount of light) change from other factors such as hue? Why?</span>
+4. *(4 points)* {{ report }} <span class="report"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> 
 
 <figure class="figure-container">
 	<div class="flex-container">
@@ -660,7 +660,7 @@ This section is meant to help you keep track of the many tasks you have to compl
 		- [ ] 1 - {{ code }} `quantize`
 		- [ ] 2 - {{ code }} `quantizeNaive`
 		- [ ] 3 - {{ report }} Quantize Runtime
-		- [ ] 4 - {{ report }} Intensity Values vs Paletter Values
+		- [ ] 4 - {{ report }} Intensity Values vs Palette Values
 		- [ ] 5 - {{ report }} Two input/output pairs: `aep.jpg` + your choice
 	- [ ] 3.2 Floyd-Steinberg
 		- [ ] 1 - {{ code }} `quantizeFloyd`
@@ -669,14 +669,14 @@ This section is meant to help you keep track of the many tasks you have to compl
 	- [ ] 3.3 Resizing Images
 		- [ ] 1 - {{ code }} `resizeToSquare`
 	- [ ] 3.4 Handling Color
-		- [ ] 1 - {{ code }} `quantize`
-		- [ ] 2 - {{ code }} `quantizeFloyd`
-		- [ ] 3 - {{ report }} 3 results
+		- [ ] 1 - {{ code }} `quantize` (scalar and vector)
+		- [ ] 2 - {{ code }} `quantizeFloyd` (multi-channel)
+		- [ ] 3 - {{ report }} 4 results
 	- [ ] 3.5 Gamma Correction (*optional*)
 - [ ] **Colorspaces**:
 	- [ ] 4.1 - {{ code }} R,G,B plots
 	- [ ] 4.2 - {{ code }} L,A,B plots
-	- [ ] 4.3 - {{ report }} L,A,B plots
+	- [ ] 4.3 - {{ report }} RGB vs LAB
 	- [ ] 4.4 - {{ report }} Two images and their Luminance plots
 
 # Canvas Submission Checklist
