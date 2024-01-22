@@ -31,6 +31,12 @@ due: 11:59 p.m. on Wednesday January 31st, 2024
 
 # Homework 1 – Numbers and Images
 
+<div class="primer-spec-callout warning" markdown="1">
+   
+   **Important:** Changes to rubric and submission format announced on Piazza [@58](https://piazza.com/class/lr0rfd6e5dm5wf/post/58){:target="_blank"} .
+
+</div>
+
 ## Instructions
 
 This homework is **due at {{ page.due }}**.
@@ -40,7 +46,7 @@ The submission includes two parts:
 1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code (subdirectories are fine).
 
    {{ code }} -
-   <span class="code">We have indicated questions where you have to do something in code in red. **If gradecope asks for it, also submit your code in the report.** </span>  
+   <span class="code">We have indicated questions where you have to do something in code in red. **If gradecope asks for it, also submit your code in the report with the formatting below.** </span>  
 
    Starter code is given to you on Canvas under the "Homework 1" assignment. You can also download it [here](https://drive.google.com/file/d/1Bpqc8LLT67uLR4ZmbKYeMwvvYMrw_Gl-/view?usp=sharing). Clean up your submission to include only the necessary files.
 
@@ -51,9 +57,11 @@ The submission includes two parts:
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
    {{ report }} -
-   <span class="report">We have indicated questions where you have to do something in the report in green.</span>
+   <span class="report">We have indicated questions where you have to do something in the report in green. **Some coding questions also need to be included in the report.**</span>
 
    The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+
+   For including code, **do not use screenshots**. Generate a PDF using a [tool like this](https://www.i2pdf.com/source-code-to-pdf){:target="_blank"} or using this [Overleaf LaTeX template](https://www.overleaf.com/read/wbpyympmgfkf#bac472){:target="_blank"}. If this PDF contains only code, be sure to append it to the end of your report and match the questions carefully on Gradescope.
 
 ### Python Environment
 
@@ -395,7 +403,7 @@ $$
 However, you'll have to be very careful -- this precise equation won't always work. As an exercise -- can you spot something that might cause the expression to be a `NaN`?
 
 {:start="3"} 
-3. *(3 points)* {{ code }} <span class="code">Fill in `colormapArray`.</span> To test, you'll have to write some calling code in the main part. You can use either `plt.imsave` or `cv2.imwrite` to save the image to an file. 
+3. *(3 points)* {{ code }} <span class="code">Fill in `colormapArray`.</span> To test, you'll have to write some calling code in the main part. You can use either `plt.imsave` or `cv2.imwrite` to save the image to an file. {{ report }} <span class="report">Include source code in the report</span>.
 
 4. *(3 points)* {{ report }} <span class="report">Visualize `mysterydata4.npy` using your system without it crashing and put all nine images into your report</span>. You may have to make a design decision about
 what to do about results that are undefined. If the results are undefined, then any option that seems reasonable is fine. Your colormap should look similar to Figure 2. If the colors look inverted, see Beware 3!
@@ -502,13 +510,13 @@ and the folder results will contain the outputs of running `quantizeNaive` on ea
 
 The simplest way to make an image that's close is to just pick the closest value in the palette for each pixel.
 
-1. *(8 points)* 2 coding, 3 report questions.
+1. *(10 points)* 2 coding, 3 report questions.
 
    1. {{ code }} <span class="code">First, fill in `quantize(v,palette)` in the starter code.</span>
 
 	  This should return the **index** of the nearest value in the palette to the single value `v`. Note that we're making this general by letting it take a palette. For speed this would normally done by pre-selecting a palette where the nearest entry could be calculated fast. Do this without a for-loop. Look at `np.argmin`. Indeed, the beauty of the Internet is that if you search for "numpy find index of smallest value", you'll likely find this on your own. In general, you should feel free to search for numpy documentation or for whether there are functions that will make your life easier.
 
-   2. *(2 points)* {{ code }} <span class="code">Second, fill in `quantizeNaive(IF,palette)` in the starter code.</span>
+   2. *(2 points)* {{ code }} <span class="code">Second, fill in `quantizeNaive(IF,palette)` in the starter code</span>. {{ report }} <span class="report">Include source code in the report</span>.
 
 	  This takes a floating point image of size HxW and a palette of values. Create a new uint8 matrix and use quantize() to find the index of the nearest pixel. Return the `HxW uint8` image containing the palette indices (not values!). Once you've done this, you can call `python dither.py gallery200 results quantizeNaive` to see the results. Open up `view.htm`. You can sort of recognize the images, but this is not an aesthetically pleasing result. If you change `--numbits` you can control the size of the palette.
 
@@ -580,7 +588,7 @@ We provided you with two folders of images, `gallery/` and `gallery200/`. The im
 {:start="3"} 
 3. *(2 points)* 1 coding question. 
 
-	1. {{ code }} <span class="code">Fill in `resizeToSquare(I,maxDim)`.</span>
+	1. {{ code }} <span class="code">Fill in `resizeToSquare(I,maxDim)`</span>. {{ report }} <span class="report">Include source code in the report</span>.
 
 		If the input image is smaller than maxDim on both sides, leave it alone; if it is bigger, resize the image to fit inside a `maxDim` by `maxDim` square  **while keeping the aspect ratio the same** (i.e., the image should not stretch). Use the opencv function `cv2.resize` (and refer to documentation). You can now resize to your hearts content using the `--resizeto` flag.
 
@@ -591,11 +599,11 @@ You've written a version of dithering that handles grayscale images. Now you'll 
 {:start="4"} 
 4. *(20 points)* 2 coding, 1 report questions.
 
-	1. *(4 points)* {{ code }} <span class="code">Rewrite `quantize(v,palette)` so that it can handle both scalar `v` and vector `v`.
+	1. *(4 points)* {{ code }} <span class="code">Rewrite `quantize(v,palette)` so that it can handle both scalar `v` and vector `v`</span>. <span class="report">Include source code in the report</span>.
 
 		If `v` is a `n`-dimensional vector it should return a set of `n` vector indices (i.e., for each element, what is the closest value in the palette). You can use a `for` loop, but remember that: (a) broadcasting can take a `M`-dimensional vector and `N`-dimensional vector and produce a `MxN` dimensional matrix; and (b) many functions have an axis argument. If you are given a vector, don't overwrite individual elements of it either!
 
-	2. *(8 points)* {{ code }} <span class="code">Make sure that your version of `quantizeFloyd(IF,palette)` can handle images with multiple channels.</span>
+	2. *(8 points)* {{ code }} <span class="code">Make sure that your version of `quantizeFloyd(IF,palette)` can handle images with multiple channels</span>. <span class="report">Include source code in the report</span>.
 
 	   You may not have to do anything. If `IF` is a $$H \times W \times 3$$ array, `IF[i,j]` refers to the 3D vector at the `i,j`th pixel i.e., `[IF[i,j,0],IF[i,j,1],IF[i,j,2]]`. You can add and subtract that vector however you want.
 
@@ -622,8 +630,8 @@ You should feel free to use the outputs from this implementation for your chosen
 
 The same color may look different under different lighting conditions. Images `rubik/indoor.png` and `rubik/outdoor.png` are two photos of a same Rubik's cube under different illuminances.
 
-1. *(2 points)* {{ code }} <span class="code">Load the images and plot their R, G, B channels separately as grayscale images using `plt.imshow()`.</span>
-2. *(2 points)* {{ code }} <span class="code">Then convert them into LAB color space using `cv2.cvtColor` and plot the three channels again.</span>
+1. *(2 points)* {{ code }} <span class="code">Load the images and plot their R, G, B channels separately as grayscale images using `plt.imshow()`</span>. <span class="report">Include source code in the report</span>.
+2. *(2 points)* {{ code }} <span class="code">Then convert them into LAB color space using `cv2.cvtColor` and plot the three channels again</span>. <span class="report">Include source code in the report</span>.
 3. *(2 points)* {{ report }} <span class="report">Include the LAB color space plots in your report. Which color space (RGB vs. LAB) better separates the illuminance (i.e., total amount of light) change from other factors such as hue? Why?</span>
 4. *(4 points)* {{ report }} <span class="report"> Choose two different lighting conditions and take two photos of a non-specular object. Try to make the same color look as different as possible (a large distance on AB plane in LAB space).</span> 
 
@@ -653,12 +661,12 @@ This section is meant to help you keep track of the many tasks you have to compl
 - [ ] **Data Interpretation and Visualization**:
   - [ ] 2.1 - {{ report }} 2 images from `mysterydata2.npy`
   - [ ] 2.2 - {{ report }} 2 images from `mysterydata3.npy`
-  - [ ] 2.3 - {{ code }} `colorMapArray`
+  - [ ] 2.3 - {{ code }}{{ report }} `colorMapArray`
   - [ ] 2.4 - {{ report }} 9 images from `mysterydata4.npy`
 - [ ] **Lights on a Budget**:
 	- [ ] 3.1 Naive Approach
 		- [ ] 1 - {{ code }} `quantize`
-		- [ ] 2 - {{ code }} `quantizeNaive`
+		- [ ] 2 - {{ code }}{{ report }} `quantizeNaive`
 		- [ ] 3 - {{ report }} Quantize Runtime
 		- [ ] 4 - {{ report }} Intensity Values vs Palette Values
 		- [ ] 5 - {{ report }} Two input/output pairs: `aep.jpg` + your choice
@@ -667,15 +675,15 @@ This section is meant to help you keep track of the many tasks you have to compl
 		- [ ] 2 - {{ report }} Why does dithering work?
 		- [ ] 3 - {{ report }} 3 results from `gallery200/` including `aep.jpg`
 	- [ ] 3.3 Resizing Images
-		- [ ] 1 - {{ code }} `resizeToSquare`
+		- [ ] 1 - {{ code }}{{ report }} `resizeToSquare`
 	- [ ] 3.4 Handling Color
-		- [ ] 1 - {{ code }} `quantize` (scalar and vector)
-		- [ ] 2 - {{ code }} `quantizeFloyd` (multi-channel)
+		- [ ] 1 - {{ code }}{{ report }} `quantize` (scalar and vector)
+		- [ ] 2 - {{ code }}{{ report }} `quantizeFloyd` (multi-channel)
 		- [ ] 3 - {{ report }} 4 results
 	- [ ] 3.5 Gamma Correction (*optional*)
 - [ ] **Colorspaces**:
-	- [ ] 4.1 - {{ code }} R,G,B plots
-	- [ ] 4.2 - {{ code }} L,A,B plots
+	- [ ] 4.1 - {{ code }}{{ report }} R,G,B plots
+	- [ ] 4.2 - {{ code }}{{ report }} L,A,B plots
 	- [ ] 4.3 - {{ report }} RGB vs LAB
 	- [ ] 4.4 - {{ report }} Two images and their Luminance plots
 
