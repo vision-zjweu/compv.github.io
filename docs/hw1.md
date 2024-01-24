@@ -613,7 +613,7 @@ You've written a version of dithering that handles grayscale images. Now you'll 
 
 	   </div>
 
-	3. *(8 points)* Generate any **four** results of your choosing. This can be on the images we provide or on some other image you'd like. {{ report }} <span class="report">Put them in your document</span>.
+	3. *(8 points)* Generate any **four** results of your choosing. This can be on the images we provide or on some other image you'd like. {{ report }} <span class="report">Put them in your document</span>. For your submission, don't adjust `--num-bits`, use the default value of `1`.
 
 
 ### (Optional) Gamma Correction
