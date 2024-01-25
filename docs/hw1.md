@@ -673,7 +673,7 @@ This section is meant to help you keep track of the many tasks you have to compl
 	- [ ] 3.2 Floyd-Steinberg
 		- [ ] 1 - {{ code }} `quantizeFloyd`
 		- [ ] 2 - {{ report }} Why does dithering work?
-		- [ ] 3 - {{ report }} 3 results from `gallery200/` including `aep.jpg`
+		- [ ] 3 - {{ report }} 3 results from `gallery/` including `aep.jpg`
 	- [ ] 3.3 Resizing Images
 		- [ ] 1 - {{ code }}{{ report }} `resizeToSquare`
 	- [ ] 3.4 Handling Color
