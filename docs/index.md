@@ -6,13 +6,13 @@ layout: spec
 
 # Overview
 
-- **Instructor**: Jeong Joon Park (jjparkcv)
+- **Instructor**: Jeong Joon Park
 - **GSIs**: 
-	- Alex Janosi (janosi)
-	- Anurekha Ravikumar (anurekha)
-	- Farzad Siraj (fsiraj)
-	- Jinfan Zhou (zjf)
-	- Shrikant Arvavasu (ashri)
+	- Alex Janosi
+	- Anurekha Ravikumar
+	- Farzad Siraj
+	- Jinfan Zhou
+	- Shrikant Arvavasu
 - **IA**: 
 	- Yuhang Ning (dlning)
 - **Lecture**: Monday/Wednesday 10:30 AM - 12:00 Noon, STAMPS
@@ -27,6 +27,7 @@ layout: spec
 - [**Lecture Recordings**](https://leccap.engin.umich.edu/leccap/site/rxk3s2yc2cg9pggod0u){:target="_blank"} (It could take a couple of days to be processed and uploaded)
 - [**Course Calendar**](https://calendar.google.com/calendar/u/0?cid=Y18zYjdmOTM1ODhjOTk2NDg0YTM5OTRkMTc1NWIwZWM5MzViZWZlMjgzYzI2ZjA1NjlkNGEzNDE5ZWI5M2ZlZmM1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20){:target="_blank"}
 - [**Virtual Office Hours**](https://officehours.it.umich.edu/queue/1511){:target="_blank"}
+- Course email: eecs442-wn24@umich.edu
 - Note on Waitlist: We DO NOT reorder waitlist. Please talk to the undergraduate advising office regarding your course enrollment.
 
 ## Homeworks
