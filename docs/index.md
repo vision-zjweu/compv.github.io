@@ -65,7 +65,7 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Monday<br>Mar 18      | **Transformers and Image Generative Models** <br> Vision Transformers, Autoregressive Models, GANs                                              | Slides   |
 | Wednesday<br>Mar 20   | **Image Generative Models**<br>***Homework 4 Due*** <br> Score-based Models, Diffusion Models, Flow-based Models                                                                 | Slides   |
 | Monday<br>Mar 25      | :exclamation: **Midterm**                                                                                 |          |
-| Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration                                   | Slides  <br> Reading: S6.3 |
+| Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration <br> ***Project Proposal Due***                                  | Slides  <br> Reading: S6.3 |
 | Monday<br>April 1  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
 | Wednesday<br>April 3     | **Stereo**<br>Two-view Stereo, Multiview Stereo <br> ***Homework 5 Due***                                             | Slides  <br> Reading: S11 |
 | Monday<br>April 8  | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides  <br> Reading: S7 |
