@@ -49,31 +49,31 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Monday<br>Jan 22      | **Math Recap**<br>Floating point numbers, Linear Algebra, Calculus                          | [Slides](https://drive.google.com/file/d/13b1OKtvBM6DjC0YFHWL79TOeWJqFj94t/view?usp=sharing) <br> Reading: Kolter |
 | Wednesday<br>Jan 24   | **Light & Shading**<br>Human Vision, Color Vision, Reflection                               | [Slides](https://drive.google.com/file/d/1IfhiQVtWPvEWAJc-6JiIOeOF79MIitQD/view?usp=drive_link)   |
 | Monday<br>Jan 29      | **Filtering**<br>Linear Filters, Blurring, Separable Filters, Gradients                     | [Slides](https://drive.google.com/file/d/1w9PYKGMQFZOUcsRin2OiQLuAjEQ2hoiq/view?usp=drive_link) <br> [Discussion Slides](https://drive.google.com/file/d/10VO-aPQcS9DEdsTUFyF5QHrY3SPWJHEZ/view?usp=sharing){:target="_blank"} <br> Reading: S2.2, S2.3  |
-| Wednesday<br>Jan 31   | **Detectors & Discriptors 1**<br>Edge Detection, Gaussian Derivatives, Harris Corners<br> :warning: ***Homework 1 Due***       | Slides   |
+| Wednesday<br>Jan 31   | **Detectors & Discriptors 1**<br>Edge Detection, Gaussian Derivatives, Harris Corners<br> :warning: ***Homework 1 Due*** <br> :warning: ***Homework 2 Released***      | Slides   |
 | Monday<br>Feb 5       | **Detectors & Discriptors**<br>Scale-Space, Laplacian Blob Detection, SIFT                  | Slides   |
 | Wednesday<br>Feb 7    | **Transforms 1**<br>Linear Regression, Total Least Squares, RANSAC, Hough Transform         | Slides <br> Reading: S2.1, S6  |
 | Monday<br>Feb 12      | **Transforms 2**<br>Affine and Perspective Transforms, Fitting Transformations              | Slides <br> Reading: S2.1, S6 |
-| Wednesday<br>Feb 14   | **Machine Learning**<br>Supervised Learning, Linear Regression, Regularization <br> ***Homework 2 Due***             | Slides <br> Reading: ESL 3.1, 3.2(skim) |
+| Wednesday<br>Feb 14   | **Machine Learning**<br>Supervised Learning, Linear Regression, Regularization <br> :warning: ***Homework 2 Due*** <br> :warning: ***Homework 3 Released*** | Slides <br> Reading: ESL 3.1, 3.2(skim) |
 | Monday<br>Feb 19      | **Optimization**<br>SGD, SGD+Momentum                                                       | Slides   |
 | Wednesday<br>Feb 21   | **Neural Networks**<br>Backpropagation, Fully Connected Neural Networks                     | Slides   |
-| Monday<br>Feb 26      | **No Class**<br> :sunny: :beach_umbrella: Spring Break                                                                |          |
-| Wednesday<br>Feb 28   | **No Class**<br> :sunny: :beach_umbrella: Spring Break                                                                |          |
+| Monday<br>Feb 26      | **No Class**<br> :sunny: :beach_umbrella: Spring Break                                      |          |
+| Wednesday<br>Feb 28   | **No Class**<br> :sunny: :beach_umbrella: Spring Break                                      |          |
 | Monday<br>Mar 4       | **Convolutional Networks 1**<br>Convolution, Pooling                                        | Slides   |
-| Wednesday<br>Mar 6    | **Convolutional Networks 2**<br>CNN Architectures, Training Methods & Techniques <br> ***Homework 3 Due***            | Slides   |
+| Wednesday<br>Mar 6    | **Convolutional Networks 2**<br>CNN Architectures, Training Methods & Techniques <br> :warning: ***Homework 3 Due*** <br> :warning: ***Homework 4 Released*** | Slides |
 | Monday<br>Mar 11      | **Segmentation**<br>Semantic/Instance Segmentation                                          | Slides   |
 | Wednesday<br>Mar 13   | **Detection & Other Topics**                                                                | Slides   |
-| Monday<br>Mar 18      | **Transformers and Image Generative Models** <br> Vision Transformers, Autoregressive Models, GANs                                              | Slides   |
-| Wednesday<br>Mar 20   | **Image Generative Models**<br>***Homework 4 Due*** <br> Score-based Models, Diffusion Models, Flow-based Models                                                                 | Slides   |
-| Monday<br>Mar 25      | :exclamation: **Midterm**                                                                                 |          |
+| Monday<br>Mar 18      | **Transformers and Image Generative Models** <br> Vision Transformers, Autoregressive Models, GANs                                              | Slides |
+| Wednesday<br>Mar 20   | **Image Generative Models** <br> Score-based Models, Diffusion Models, Flow-based Models <br> :warning: ***Homework 4 Due*** <br> :warning: ***Homework 5 Released*** | Slides |
+| Monday<br>Mar 25      | :exclamation: **Midterm**                                                                   |          |
 | Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration <br> ***Project Proposal Due***                                  | Slides  <br> Reading: S6.3 |
-| Monday<br>April 1  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
-| Wednesday<br>April 3     | **Stereo**<br>Two-view Stereo, Multiview Stereo <br> ***Homework 5 Due***                                             | Slides  <br> Reading: S11 |
-| Monday<br>April 8  | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides  <br> Reading: S7 |
-| Wednesday<br>April 10    | **3D Deep Learning**<br> 3D Representations, 3D Architectures                                                                        | Slides   |
-| Monday<br>April 15 | **Neural Fields**                                                                          | Slides   |
-| Wednesday<br>April 17    | **Ethics & Fairness** <br> ***Homework 6 Due***                                                                      | Slides   |
+| Monday<br>April 1     | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
+| Wednesday<br>April 3  | **Stereo**<br>Two-view Stereo, Multiview Stereo <br> :warning: ***Homework 5 Due*** <br> :warning: ***Homework 6 Released*** | Slides  <br> Reading: S11 |
+| Monday<br>April 8     | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides  <br> Reading: S7 |
+| Wednesday<br>April 10 | **3D Deep Learning**<br> 3D Representations, 3D Architectures                                                                        | Slides   |
+| Monday<br>April 15    | **Neural Fields**                                                                           | Slides   |
+| Wednesday<br>April 17 | **Ethics & Fairness** <br> :warning: ***Homework 6 Due***                                   | Slides   |
 | Monday<br>April 22    | **Special Topics**                                                                          | Slides   |
-| Saturday<br>April 27    | **Project Report Due**                                                                          | Slides   |
+| Saturday<br>April 27  | **Project Report Due**                                                                      | Slides   |
 
 # Syllabus
 
