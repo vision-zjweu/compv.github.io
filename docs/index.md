@@ -66,12 +66,12 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Wednesday<br>Mar 20   | **Image Generative Models**<br>***Homework 4 Due*** <br> Score-based Models, Diffusion Models, Flow-based Models                                                                 | Slides   |
 | Monday<br>Mar 25      | :exclamation: **Midterm**                                                                                 |          |
 | Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration                                   | Slides  <br> Reading: S6.3 |
-| Wednesday<br>April 1  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
-| Monday<br>April 3     | **Stereo**<br>Two-view Stereo, Multiview Stereo <br> ***Homework 5 Due***                                             | Slides  <br> Reading: S11 |
-| Wednesday<br>April 8  | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides  <br> Reading: S7 |
-| Monday<br>April 10    | **3D Deep Learning**<br> 3D Representations, 3D Architectures                                                                        | Slides   |
-| Wednesday<br>April 15 | **Neural Fields**                                                                          | Slides   |
-| Monday<br>April 17    | **Ethics & Fairness** <br> ***Homework 6 Due***                                                                      | Slides   |
+| Monday<br>April 1  | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
+| Wednesday<br>April 3     | **Stereo**<br>Two-view Stereo, Multiview Stereo <br> ***Homework 5 Due***                                             | Slides  <br> Reading: S11 |
+| Monday<br>April 8  | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides  <br> Reading: S7 |
+| Wednesday<br>April 10    | **3D Deep Learning**<br> 3D Representations, 3D Architectures                                                                        | Slides   |
+| Monday<br>April 15 | **Neural Fields**                                                                          | Slides   |
+| Wednesday<br>April 17    | **Ethics & Fairness** <br> ***Homework 6 Due***                                                                      | Slides   |
 | Monday<br>April 22    | **Special Topics**                                                                          | Slides   |
 | Saturday<br>April 27    | **Project Report Due**                                                                          | Slides   |
 
