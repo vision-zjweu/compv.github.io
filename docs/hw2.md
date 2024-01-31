@@ -38,12 +38,12 @@ This homework is **due at {{ page.due }}**.
 
 The submission includes two parts:
 
-1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code (subdirectories are fine).
+1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories.
 
    {{ code }} -
    <span class="code">We have indicated questions where you have to do something in code in red. **If gradecope asks for it, also submit your code in the report with the formatting below.** </span>  
 
-   Starter code is given to you on Canvas under the "Homework 1" assignment. You can also download it [here](https://drive.google.com/file/d/1Bpqc8LLT67uLR4ZmbKYeMwvvYMrw_Gl-/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
+   Starter code is given to you on Canvas under the "Homework 2" assignment. You can also download it [here](https://drive.google.com/file/d/1WsrZDEEscD7SZr8ATuqAbxrEHomrsmiV/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
 
    <div class="primer-spec-callout info" markdown="1">
 	 **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
@@ -203,27 +203,29 @@ where $$0$$ is the center of the filter (in both 1D and 2D) and $$\sigma$$ is a 
 
 7. *(3 points)* Use the original image and the Gaussian-filtered image as inputs respectively and use `edge_detection()` to get their gradient magnitudes. {{ report }} <span class="report">Plot both outputs and put them in your report. Discuss in your report</span> the difference between the two images in no more than three sentences.
 
-8. *(3 points)* Bilateral Filter. Gaussian filtering blurs the image while removing the noise. There are other denoising methods that preserve image edges. Bilateral filter is one of them. Bilateral filter is not linear (as opposed to Gaussian) and can be understood as a weighted Guassian filtering. (see: <a href="https://en.wikipedia.org/wiki/Bilateral_filter">Bilateral_filter</a>)
+8. *(3 points)* Bilateral Filter. Gaussian filtering blurs the image while removing the noise. There are other denoising methods that preserve image edges. Bilateral filter is one of them. Bilateral filter is not linear (as opposed to Gaussian) and can be understood as a weighted Guassian filtering. (see: [Bilateral filter](https://en.wikipedia.org/wiki/Bilateral_filter){:target="_blank"})
 
 The bilateral filter is defined as:
-    $$I^\text{filtered}{ ( x ) }=\frac1{W_p}\sum_{x_i\in\Omega}I(x_i)f_r(\|I(x_i)-I(x)\|)g_s(\|x_i-x\|)$$
+    
+$$I^\text{filtered}{ ( x ) }=\frac1{W_p}\sum_{x_i\in\Omega}I(x_i)f_r(\|I(x_i)-I(x)\|)g_s(\|x_i-x\|)$$
 
 and normalization term, $$W_p$$, is defined as 
-    $$W_p=\sum_{x_i\in\Omega}f_r(\|I(x_i)-I(x)\|)g_s(\|x_i-x\|)$$
+    
+$$W_p=\sum_{x_i\in\Omega}f_r(\|I(x_i)-I(x)\|)g_s(\|x_i-x\|)$$
 
-where $$I^{filtered}$$ is the filtered image; $$I$$ is the original input image to be filtered; $$x$$ are the coordinates of the current pixel to be filtered; $$\Omega$$ is the window centered in $x$, so $$x_i \in \Omega$$ is another pixel. $f_r$ is the range kernel for smoothing differences in intensities (this function can be a Gaussian function); $$g_s$$ is the spatial (or domain) kernel for smoothing differences in coordinates (this function can be a Gaussian function).
+where $$I^{filtered}$$ is the filtered image; $$I$$ is the original input image to be filtered; $$x$$ are the coordinates of the current pixel to be filtered; $$\Omega$$ is the window centered in $$x$$, so $$x_i \in \Omega$$ is another pixel. $$f_r$$ is the range kernel for smoothing differences in intensities (this function can be a Gaussian function); $$g_s$$ is the spatial (or domain) kernel for smoothing differences in coordinates (this function can be a Gaussian function).
 
-The weight $$W_p$$ is assigned using the spatial closeness (using the spatial kernel $$g_s$$ and the intensity difference (using the range kernel $$f_r$$). Consider a pixel located at $$(i, j)$$ that needs to be denoised in image using its neighbouring pixels and one of its neighbouring pixels is located at $$(k, l)$$. We assume the range and spatial kernels to be \textbf{Gaussian kernels}, the weight assigned for pixel to denoise the pixel $$(i, j)$$ is given by 
-    $$w(i,j,k,l)=\exp\left(-\frac{(i-k)^2+(j-l)^2}{2\sigma_d^2}-\frac{\|I(i,j)-I(k,l)\|^2}{2\sigma_r^2}\right)$$
+The weight $$W_p$$ is assigned using the spatial closeness (using the spatial kernel $$g_s$$ and the intensity difference (using the range kernel $$f_r$$). Consider a pixel located at $$(i, j)$$ that needs to be denoised in image using its neighbouring pixels and one of its neighbouring pixels is located at $$(k, l)$$. We assume the range and spatial kernels to be **Gaussian kernels**, the weight assigned for pixel to denoise the pixel $$(i, j)$$ is given by 
+    
+$$w(i,j,k,l)=\exp\left(-\frac{(i-k)^2+(j-l)^2}{2\sigma_d^2}-\frac{\|I(i,j)-I(k,l)\|^2}{2\sigma_r^2}\right)$$
 
 After calculating the weights, normalize them:
-    $$I_D(i,j)=\frac{\sum_{k,l}I(k,l)w(i,j,k,l)}{\sum_{k,l}w(i,j,k,l)}$$
+    
+$$I_D(i,j)=\frac{\sum_{k,l}I(k,l)w(i,j,k,l)}{\sum_{k,l}w(i,j,k,l)}$$
 
 where $$I_D$$ is the denoised intensity of pixel $$(i, j)$$.
 
-Follow the detailed instructions in `filters.py` and <span class="code">complete the function</span> `biliateral\_filter()` in `filters.py`. Use a bilateral filter of window size 5x5 and $$\sigma_d=20$$ and $$\sigma_r=50$$. You can use `cv2.bilateralFilter()` to check your implementation. The results are not necessarily to be the same as long as they look similar.  <span class="report">Plot the filtered output and put it in your report</span>.
-
-
+Follow the detailed instructions in `filters.py` and <span class="code">complete the function</span> `bilateral_filter()` in `filters.py`. Use a bilateral filter of window size 5x5 and $$\sigma_d=20$$ and $$\sigma_r=50$$. You can use `cv2.bilateralFilter()` to check your implementation. The results are not necessarily to be the same as long as they look similar.  <span class="report">Plot the filtered output and put it in your report</span>.
 
 ### Task 3: Sobel Operator
 
@@ -257,7 +259,7 @@ The Sobel operator is often used in image processing and computer vision.
 
 2. *(2 points)* {{ code }} <span class="code">Complete the function</span> `sobel_operator()` in `filters.py` with the kernels/filters given previously.
 
-3. *(2 points)* {{ report }} <span class="report">Plot the following and put them in your report:</span> $$I \ast S_x$$, $$I \ast S_y$$,  and the gradient magnitude. with the image `'grace_hopper.png'` as the input image $$I$$. (2 pts)
+3. *(2 points)* {{ report }} <span class="report">Plot the following and put them in your report:</span> $$I \ast S_x$$, $$I \ast S_y$$,  and the gradient magnitude. with the image `'grace_hopper.png'` as the input image $$I$$.
 
 ### Task 4: LoG Filter 
 
@@ -335,7 +337,7 @@ Your first task is to write a function that calculates this function for all pix
 
 3. *(3 points)* Early work by Moravec [1980] used this function to find corners by computing $$E(u,v)$$ for a range of offsets and then selecting the pixels where the corner score is high for all offsets.
 
-	{{ report }} <span class="report">Discuss in your report</span> why checking all the $$u$$s and $$v$$s might be impractical in a few sentences. (3 pts)
+	{{ report }} <span class="report">Discuss in your report</span> why checking all the $$u$$s and $$v$$s might be impractical in a few sentences.
 
 For every single pixel $$(i,j)$$, you now have a way of computing how much changing by $$(u,v)$$ changes the appearance of a window (i.e., $$E(u,v)$$ at $$(i,j)$$).  But in the end, we really want a single number of ``cornerness'' per pixel and don't want to handle checking all the $$(u,v)$$ values at every single pixel $$(i,j)$$. You'll implement the cornerness score invented by Harris and Stephens [1988]. 
 
@@ -377,7 +379,7 @@ which is far easier since the determinants and traces of a 2x2 matrix can be cal
 
 	You cannot call a library function that has already implemented the Harris Corner Detector to solve the task. You can, however, look at where Harris corners are to get a sense of whether your implementation is doing well.
 
-2. Generate a Harris Corner Detector score for every point in a grayscale version of `'grace_hopper.png'`, and {{ report }} <span class="report">plot and include in your report</span> these scores as a heatmap. (3 pts)
+2. *(3 points)* Generate a Harris Corner Detector score for every point in a grayscale version of `'grace_hopper.png'`, and {{ report }} <span class="report">plot and include in your report</span> these scores as a heatmap.
 
 **Walkthrough**
 
@@ -447,6 +449,7 @@ This section is meant to help you keep track of the many things that go in the r
 	- [ ] 2.5 - {{ report }} Derive derivative kernels
 	- [ ] 2.6 - {{ code }} `edge_detection()`
 	- [ ] 2.7 - {{ report}} Apply `edge_detection()`
+	- [ ] 2.8 - {{ code }} {{ report }} `bilateral_filter()` and results
 - [ ] **Sobel Operator**:
 	- [ ] 3.1 - {{ report }} Show $$I \ast k_x \approx I \ast S_x$$
 	- [ ] 3.2 - {{ code }} `sobel_operator()`
