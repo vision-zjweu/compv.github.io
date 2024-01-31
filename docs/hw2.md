@@ -203,6 +203,28 @@ where $$0$$ is the center of the filter (in both 1D and 2D) and $$\sigma$$ is a 
 
 7. *(3 points)* Use the original image and the Gaussian-filtered image as inputs respectively and use `edge_detection()` to get their gradient magnitudes. {{ report }} <span class="report">Plot both outputs and put them in your report. Discuss in your report</span> the difference between the two images in no more than three sentences.
 
+8. *(3 points)* Bilateral Filter. Gaussian filtering blurs the image while removing the noise. There are other denoising methods that preserve image edges. Bilateral filter is one of them. Bilateral filter is not linear (as opposed to Gaussian) and can be understood as a weighted Guassian filtering. (see: <a href="https://en.wikipedia.org/wiki/Bilateral_filter">Bilateral_filter</a>)
+
+The bilateral filter is defined as:
+    $$I^\text{filtered}{ ( x ) }=\frac1{W_p}\sum_{x_i\in\Omega}I(x_i)f_r(\|I(x_i)-I(x)\|)g_s(\|x_i-x\|)$$
+
+and normalization term, $$W_p$$, is defined as 
+    $$W_p=\sum_{x_i\in\Omega}f_r(\|I(x_i)-I(x)\|)g_s(\|x_i-x\|)$$
+
+where $$I^{filtered}$$ is the filtered image; $$I$$ is the original input image to be filtered; $$x$$ are the coordinates of the current pixel to be filtered; $$\Omega$$ is the window centered in $x$, so $$x_i \in \Omega$$ is another pixel. $f_r$ is the range kernel for smoothing differences in intensities (this function can be a Gaussian function); $$g_s$$ is the spatial (or domain) kernel for smoothing differences in coordinates (this function can be a Gaussian function).
+
+The weight $$W_p$$ is assigned using the spatial closeness (using the spatial kernel $$g_s$$ and the intensity difference (using the range kernel $$f_r$$). Consider a pixel located at $$(i, j)$$ that needs to be denoised in image using its neighbouring pixels and one of its neighbouring pixels is located at $$(k, l)$$. We assume the range and spatial kernels to be \textbf{Gaussian kernels}, the weight assigned for pixel to denoise the pixel $$(i, j)$$ is given by 
+    $$w(i,j,k,l)=\exp\left(-\frac{(i-k)^2+(j-l)^2}{2\sigma_d^2}-\frac{\|I(i,j)-I(k,l)\|^2}{2\sigma_r^2}\right)$$
+
+After calculating the weights, normalize them:
+    $$I_D(i,j)=\frac{\sum_{k,l}I(k,l)w(i,j,k,l)}{\sum_{k,l}w(i,j,k,l)}$$
+
+where $$I_D$$ is the denoised intensity of pixel $$(i, j)$$.
+
+Follow the detailed instructions in `filters.py` and <span class="code">complete the function</span> `biliateral\_filter()` in `filters.py`. Use a bilateral filter of window size 5x5 and $$\sigma_d=20$$ and $$\sigma_r=50$$. You can use `cv2.bilateralFilter()` to check your implementation. The results are not necessarily to be the same as long as they look similar.  <span class="report">Plot the filtered output and put it in your report</span>.
+
+
+
 ### Task 3: Sobel Operator
 
 The Sobel operator is often used in image processing and computer vision. 
