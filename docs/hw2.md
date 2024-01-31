@@ -4,7 +4,7 @@ permalink: /hw2
 latex: true
 
 title: Homework 2 – Convolution and Feature Detection
-due: 5 p.m. on Wednesday, February 8th, 2023
+due: 11:59 p.m. on Wednesday Feb 14th, 2024
 ---
 <link href="style.css" rel="stylesheet">
 <div style="display:none">
@@ -37,35 +37,33 @@ due: 5 p.m. on Wednesday, February 8th, 2023
 This homework is **due at {{ page.due }}**.
 
 The submission includes two parts:
-1. **To Canvas**: submit a `zip` file of all of your code.
 
-    {{ code }} - 
-    <span class="code">We have indicated questions where you have to do something in code in red</span>  
-    {{ autograde }} - 
-    <span class="autograde">We have indicated questions where we will definitely use an autograder in purple</span>
+1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code (subdirectories are fine).
 
-    Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name.
+   {{ code }} -
+   <span class="code">We have indicated questions where you have to do something in code in red. **If gradecope asks for it, also submit your code in the report with the formatting below.** </span>  
 
-    Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.  
-        
-    <div class="primer-spec-callout info" markdown="1">
-      **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
+   Starter code is given to you on Canvas under the "Homework 1" assignment. You can also download it [here](https://drive.google.com/file/d/1Bpqc8LLT67uLR4ZmbKYeMwvvYMrw_Gl-/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
 
-      If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
-    </div>
+   <div class="primer-spec-callout info" markdown="1">
+	 **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
+   </div>
 
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
-    {{ report }} - 
-    <span class="report">We have indicated questions where you have to do something in the report in green.</span>
+   {{ report }} -
+   <span class="report">We have indicated questions where you have to do something in the report in green. **Some coding questions also need to be included in the report.**</span>
 
-    You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/){:target="_blank"} for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$$$\LaTeX$$$$ is recommended but not mandatory.
+   The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+
+   For including code, **do not use screenshots**. Generate a PDF using a [tool like this](https://www.i2pdf.com/source-code-to-pdf){:target="_blank"} or using this [Overleaf LaTeX template](https://www.overleaf.com/read/wbpyympmgfkf#bac472){:target="_blank"}. If this PDF contains only code, be sure to append it to the end of your report and match the questions carefully on Gradescope.
 
 ### Python Environment
 
-The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
+Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
 
-To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+We recommend you install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.12. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+
 - [Numpy](https://numpy.org/doc/stable/user/quickstart.html){:target="_blank"}
 - [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html){:target="_blank"}
 - [OpenCV](https://opencv.org/){:target="_blank"}
@@ -287,7 +285,7 @@ In `filtermon/`, we've provided you with an image and its output for five differ
 
 This question looks long, but that is only because there is a fairly large amount of walk-through and formalizing topics. The resulting solution, if done properly, is certainly under 10 lines. If you use filtering, please use `scipy.ndimage.convolve()` to perform convolution whenever you want to use it. Please use **zero padding** for consistency purposes (Set `mode='constant'`).
 
-While edges can be useful, corners are often more informative features as they are less common. In this section, we implement a Harris Corner Detector (see: \url{https://en.wikipedia.org/wiki/Harris_Corner_Detector}) to detect corners. *Corners* are defined as locations $$(x,y)$$ in the image where a small change any direction results in a large change in intensity if one considers a small window centered on $$(x,y)$$ (or, intuitively, one can imagine looking at the image through a tiny hole that's centered at $$(x,y)$$). This can be contrasted with *edges* where a large intensity change occurs in only one direction, or *flat regions* where moving in any direction will result in small or no intensity changes. Hence, the Harris Corner Detector considers small windows (or patches) where a small change in location leads large variation in multiple directions (hence corner detector).
+While edges can be useful, corners are often more informative features as they are less common. In this section, we implement a Harris Corner Detector (see: [Harris Corner Detector](https://en.wikipedia.org/wiki/Harris_Corner_Detector){:target="_blank"}) to detect corners. *Corners* are defined as locations $$(x,y)$$ in the image where a small change any direction results in a large change in intensity if one considers a small window centered on $$(x,y)$$ (or, intuitively, one can imagine looking at the image through a tiny hole that's centered at $$(x,y)$$). This can be contrasted with *edges* where a large intensity change occurs in only one direction, or *flat regions* where moving in any direction will result in small or no intensity changes. Hence, the Harris Corner Detector considers small windows (or patches) where a small change in location leads large variation in multiple directions (hence corner detector).
 
 Let's consider a grayscale image where $$I(x,y)$$ is the intensity value at image location $$(x,y)$$. We can calculate the corner score for every pixel $$(i,j)$$ in the image by comparing a window $$W$$ centered on $$(i,j)$$ with that same window centered at $$(i+u,j+v)$$. To be specific: a window of size $$2d+1$$ centered on $$(i,j)$$ is a the set of pixels between $$i - d$$ to $$i + d$$ and $$j - d$$ to $$j + d$$. Specifically, we will compute the sum of square differences between the two,
 
