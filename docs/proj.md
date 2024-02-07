@@ -1,5 +1,5 @@
 ## Project Guidelines
-For the course project you will explore a topic in-depth of your choosing in a group of 3-4 students. The course project should amount to roughly one homework's worth of work per person.
+For the course project you will explore a topic in-depth of your choosing in a group of 3-5 students. The course project should amount to roughly one homework's worth of work per person.
 
 This can be an implementation (implement an existing algorithm); an application (apply a computer vision algorithm to a new problem); or research (trying to invent something new). All are totally fine.
 
