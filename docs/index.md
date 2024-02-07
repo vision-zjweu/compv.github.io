@@ -83,12 +83,12 @@ Concretely, we will assume that you are familiar with the following topics and w
 - **Programming** - Algorithms and Data Structures at the level of EECS 281.
 - **Python** - All course assignments will involve programming in Python.
 
-It would be helpful for you to have background in these topics. We will provide refreshers on these topics, but we will not go through a comprehensive treatment:
+It would be helpful for you to have a background in these topics. We will provide refreshers on these topics, but we will not go through a comprehensive treatment:
 - **Array Manipulation** - Homework assignments will extensively involve manipulating multidimensional arrays with [NumPy](https://numpy.org/){:target="_blank"} and [PyTorch](https://pytorch.org/){:target="_blank"}. Some prior exposure will be useful, but if you've never used them before, then the first homework assignment will help you get up to speed.
-- **Linear Algebra** - In addition to basic matrix and vector operations, you will need to know about the cross product, eigenvectors and the singular value decomposition.
+- **Linear Algebra** - In addition to basic matrix and vector operations, you will need to know about the cross product, eigenvectors, and singular value decomposition.
 - **Calculus** - You should be comfortable with the chain rule, and taking partial derivatives of vector-valued functions.
 
-Much of computer vision is applying linear algebra to real-world data. If you are unfamiliar with linear algebra or calculus, past experience suggests that you are are likely to struggle with the course. If you are rusty, we will provide math refreshers on the necessary topics, however, they are not meant as a first introduction.
+Much of computer vision is applying linear algebra to real-world data. If you are unfamiliar with linear algebra or calculus, past experience suggests that you are likely to struggle with the course. If you are rusty, we will provide math refreshers on the necessary topics, however, they are not meant as a first introduction.
 
 ## Textbooks
 
