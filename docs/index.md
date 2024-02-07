@@ -106,6 +106,9 @@ Your grade will be based on:
 - **Midterm (20%)**: There will be a midterm in-class.
 - **Final Project (20%)**: There will be a final project, in which you work in groups of 3-4 students to produce a substantial course project over the second half of the semester. This will consist of a proposal (worth 2%), and final report and video (worth 18%).
 
+## Project Guidelines
+See [here](proj.md) for details.
+
 ## Contact Hours
 
 - **Lectures**: There are two sections. The lectures will be recorded and available on zoom. In person lecture attendance is optional.
