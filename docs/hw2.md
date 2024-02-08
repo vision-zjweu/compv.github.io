@@ -480,13 +480,12 @@ In the `zip` file you submit to Canvas, the directory named after your uniqname 
 - [ ] `corners.py`
 - [ ] `blob_detection.py`
 - [ ] `common.py`
-- [ ] `image_patches`: directory with the detected images patches in it.
-- [ ] `gaussian_filter`: directory with filtered image and edge responses. 
-- [ ] `sobel_operator`: directory with sobel filtered outputs. 
-- [ ] `log_filter`: directory with LoG response outputs.
-- [ ] `feature_detection`: directory with Harris and Corner detections.
-- [ ] `polka_detections`: directory with polka detection outputs. 
-- [ ] `cell_detections`: directory with cell detection outputs. 
-
-The rest should be all included in your `pdf` report submitted to Gradescope.
+- [ ] `image_patches/`: directory with the detected images patches in it.
+- [ ] `gaussian_filter/`: directory with filtered image and edge responses. 
+- [ ] `sobel_operator/`: directory with sobel filtered outputs. 
+- [ ] `log_filter/`: directory with LoG response outputs.
+- [ ] `feature_detection/`: directory with Harris and Corner detections.
+- [ ] `polka_detections/`: directory with polka detection outputs. 
+- [ ] `cell_detections/`: directory with cell detection outputs. 
+- [ ] `bilateral/`: directory with bilateral filtering outputs.
 
