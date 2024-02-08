@@ -225,7 +225,7 @@ $$I_D(i,j)=\frac{\sum_{k,l}I(k,l)w(i,j,k,l)}{\sum_{k,l}w(i,j,k,l)}$$
 
 where $$I_D$$ is the denoised intensity of pixel $$(i, j)$$.
 
-Follow the detailed instructions in `filters.py` and <span class="code">complete the function</span> `bilateral_filter()` in `filters.py`. Use a bilateral filter of window size 5x5 and $$\sigma_d=3$$ and $$\sigma_r=75$$. Compare the results against the Gaussian filter with the same configuration(window size:5x5 and $$\sigma=3$$).You can use `cv2.bilateralFilter()` to check your implementation. The results are not necessarily to be the same as long as they look similar.  <span class="report">Plot the bilateral filter and Gaussian filter outputs and put them in your report</span>.
+Follow the detailed instructions in `filters.py` and <span class="code">complete the function</span> `bilateral_filter()` in `filters.py`. Use a bilateral filter of window size 5x5 and $$\sigma_d=3$$ and $$\sigma_r=75$$. Compare the results against the Gaussian filter with the same configuration(window size:5x5 and $$\sigma=3$$). **Your output should be smoothed while still preserving edges**. <span class="report">Plot the bilateral filter and Gaussian filter outputs and put them in your report</span>.
 
 ### Task 3: Sobel Operator
 
