@@ -201,7 +201,7 @@ where $$0$$ is the center of the filter (in both 1D and 2D) and $$\sigma$$ is a 
 
 6. *(3 points)* Follow the detailed instructions in `filters.py` and {{ code }} <span class="code">complete the function</span> `edge_detection()` in `filters.py`, whose output is the gradient magnitude.
 
-7. *(3 points)* Use the original image and the Gaussian-filtered image as inputs respectively and use `edge_detection()` to get their gradient magnitudes. {{ report }} <span class="report">Plot both outputs and put them in your report. Discuss in your report</span> the difference between the two images in no more than three sentences.
+7. *(3 points)* Use the original image and the Gaussian-filtered image as inputs respectively and use `edge_detection()` to get their gradient magnitudes. {{ report }} <span class="report">Plot both outputs and put them in your report. **Discuss in your report why smoothing an image before applying edge-detection is beneficial. How would the strength of the smoothing affect the final results?**</span> (2-3 sentences).
 
 8. *(3 points)* Bilateral Filter. Gaussian filtering blurs the image while removing the noise. There are other denoising methods that preserve image edges. Bilateral filter is one of them. Bilateral filter is not linear (as opposed to Gaussian) and can be understood as a weighted Guassian filtering. (see: [Bilateral filter](https://en.wikipedia.org/wiki/Bilateral_filter){:target="_blank"})
 
