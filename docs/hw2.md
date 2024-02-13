@@ -451,7 +451,7 @@ This section is meant to help you keep track of the many things that go in the r
 	- [ ] 2.7 - {{ report}} Apply `edge_detection()`
 	- [ ] 2.8 - {{ code }} {{ report }} `bilateral_filter()` and results
 - [ ] **Sobel Operator**:
-	- [ ] 3.1 - {{ report }} Show $$(I \ast G_x) \ast k_x \approx I \ast S_x$$
+	- [ ] 3.1 - {{ report }} Show $$(I \ast G_s) \ast k_x \approx I \ast S_x$$
 	- [ ] 3.2 - {{ code }} `sobel_operator()`
 	- [ ] 3.3 - {{ report }} Apply `sobel_operator()`
 - [ ] **LoG Filter**:
