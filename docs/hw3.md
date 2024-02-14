@@ -4,7 +4,7 @@ permalink: /hw3
 latex: true
 
 title: Homework 3 – Fitting Models and Image Warping
-due: 5 p.m. on Monday, March 6th, 2023
+due: 11:59 p.m. on Wednesday, Feb 28th, 2024
 ---
 <link href="style.css" rel="stylesheet">
 <div style="display:none">
@@ -116,7 +116,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
 **Files**: We give an actual set of points in `task3/points_case_1.npy` and `task3/points_case_2.npy`: each row of the matrix contains the data $$[x_i,y_i,x'_i,y'_i]$$ representing the correspondence. **You do not need to turn in your code but you may want to write some file** `task3.py` **that loads and plots data.**
 
-1. Fit a transformation of the form:
+1. *(3 points)* Fit a transformation of the form:
 
     $$
     [x',y']^T = \SB [x,y]^T + \tB, ~~~~~ \SB \in \mathbb{R}^{2 \times 2}, \tB \in \mathbb{R}^{2 \times 1}
@@ -137,7 +137,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
       There is no trick question -- use the setup from the foreword. Write a small amount of code that does this by loading a matrix, shuffling the data around, and then calling `np.linalg.lstsq`.
     </div>
 
-2. Make a scatterplot of the points $$[x_i,y_i]$$, $$[x'_i,y'_i]$$ and $$\SB[x_i,y_i]^T+\tB$$ in one figure with different colors. Do this for both `points_case_1.npy` and `point_case_2.npy`. In other words, there should be two plots, each of which contains three sets of $$N$$ points.
+2. *(3 points)* Make a scatterplot of the points $$[x_i,y_i]$$, $$[x'_i,y'_i]$$ and $$\SB[x_i,y_i]^T+\tB$$ in one figure with different colors. Do this for both `points_case_1.npy` and `point_case_2.npy`. In other words, there should be two plots, each of which contains three sets of $$N$$ points.
 
     {{ report }} 
     <span class="report">Save the figures and put them in your report</span>
@@ -174,7 +174,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
       Again, this is not meant to be a trick question -- use the setup from the foreword.
     </div> 
 
-    **Important**: This part will be autograded. Please follow the specifications precisely.
+    **Important**: <span class="report">Please include a screenshot of your implementation in your report </span> 
 
 2. *(3 points)* {{ report }} <span class="report">Report $$\HB$$</span> for cases `points_case_1.npy` and `points_case_4.npy`. You must normalize the last entry to $$1$$.
 
@@ -222,7 +222,7 @@ We asked David what he's reading, and so he sent us a few pictures. They're a bi
 
 2. *(3 points)* {{ report }} <span class="report">Put a copy of both book covers in your report.</span>
 
-3. One of these images doesn't have perfectly straight lines. {{ report }} <span class="report">Write in your report</span> why you think the lines might be slightly crooked despite the book cover being roughly a plane. You should write about 3 sentences.
+3. *(5 points)* One of these images doesn't have perfectly straight lines. {{ report }} <span class="report">Write in your report</span> why you think the lines might be slightly crooked despite the book cover being roughly a plane. You should write about 3 sentences.
 
 4. (Suggestion/optional) Before you proceed, see if you can make another function that does the operation in the reverse: it should map the corners of `synthetic` cover to `sceneImage` assuming the same relationship between the corners of synthetic and the listed corners in the scene. In other words, if you were to doodle on the cover of one of the books, and send it back into the scene, it should look as if it's viewed from an angle. Pixels that do not have a corresponding source should be set to $$0$$. What happens if synthetic contains only ones?
 
@@ -284,7 +284,7 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
       When sampling correspondences, draw **without** replacement; if you do it with replacement you may pick the same point repeatedly and then try to (effectively) fit a model to three points.
     </div>
 
-6. {{ code }} 
+6. *(18 points)*  {{ code }} 
 <span class="code">Fill in `make_warped`</span> in `task6.py`. This should take two images as an argument and do the whole pipeline described in the foreword. The resulting image should use `cv2.warpPerspective` to make a merged image where both images fit in. This merged image should have: (a) image 1's pixel data if only image 1 is present at that location; (b) image 2's pixel data if only image 2 is present at that location; (c) the average of image 1's data and image 2's data if both are present.
    
     *Walkthrough*:
@@ -307,7 +307,7 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
 
 8. *(3 points)* {{ autograde }} <span class="autograde">Put these merges as `mypanorama1.jpg` and `mypanorama2.jpg` in your zip submission.</span> 
 
-9. (Optional) If you would like to submit a panorama, {{ autograde }} <span class="autograde">please put your favorite as `myfavoritepanorama.jpg`</span>. We will have a vote. The winner gets 1 point of extra credit.
+<!-- 9. (Optional) If you would like to submit a panorama, {{ autograde }} <span class="autograde">please put your favorite as `myfavoritepanorama.jpg`</span>. We will have a vote. The winner gets 1 point of extra credit. -->
 
 ## Augmented Reality on a Budget
 
@@ -340,7 +340,7 @@ If you can warp images together, you can replace things in your reality. Imagine
 **Files**: We give a few examples of templates and scenes in `task7/scenes/`. Each folder contains:
  `template.png`: a viewed-from-head-on / distortion-free / fronto-parallel version of the texture; and `scene.jpg`: an image where the texture appears at some location and viewed at some angle. We provide a set of seals (e.g., the UM seal) that you may want to put on things in `task7/seals/`. You can substitute whatever you like.
 
- 1. {{ code }} <span class="code">Fill in the function `improve_image(scene,template,transfer)`</span> in `task7.py` that aligns `template` to `scene` using a homography, just as in task 6. Then, instead of warping `template` to the image, warp `transfer`. If you want to copy over your functions from task 6, you can either import them or just copy them.
+ 1. *(3 points)*  {{ code }} <span class="code">Fill in the function `improve_image(scene,template,transfer)`</span> in `task7.py` that aligns `template` to `scene` using a homography, just as in task 6. Then, instead of warping `template` to the image, warp `transfer`. If you want to copy over your functions from task 6, you can either import them or just copy them.
 
     <div class="primer-spec-callout info" markdown="1">
     - The matches that you get are definitely not one-to-one. You'll probably get better results if you match from the template to the scene (i.e., for each template keypoint, find the best match in scene). Be careful about ordering though if you transfer your code!
@@ -348,7 +348,7 @@ If you can warp images together, you can replace things in your reality. Imagine
     - For using the fucntion `warp_and_combine` from task 6, you may want to change it a little bit, since you should make sure you use warped `template` to cover areas in the `scene` completely as shown in Figure 3.
     </div>
     
-2. Do something fun with this. Submit a synthetically done warp of something interesting. We'll have a contest. If you do something particularly neat to get the system to work, please write this in the report.
+2. *(2 points)* Do something fun with this. Submit a synthetically done warp of something interesting. We'll have a contest. If you do something particularly neat to get the system to work, please write this in the report.
 
     {{ autograde }} 
     <span class="autograde">Submit in your zip file the following files:</span>
@@ -380,7 +380,7 @@ This section is meant to help you keep track of the many things that go in the r
     - [ ] 3.2 - {{ report }} Figures for `points_case_1.npy` and `points_case_2.npy`
     - [ ] 3.3 - {{ report }} Affinity
 - [ ] **Fitting Homographies**:
-    - [ ] 4.1 - {{ autograde }} `fit_homography`
+    - [ ] 4.1 - {{ report }} `fit_homography`
     - [ ] 4.2 - {{ report }} $$\HB$$ for `points_case_1.npy` and `points_case_2.npy`
     - [ ] 4.3 - {{ report }} Figures for `points_case_5.npy` and `points_case_9.npy
 - [ ] **Synthetic Views**:
