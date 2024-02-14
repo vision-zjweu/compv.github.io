@@ -44,7 +44,7 @@ The submission includes two parts:
 1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories.
 
     {{ code }} -
-   <span class="code">We have indicated questions where you have to do something in code in red. **If gradecope asks for it, also submit your code in the report with the formatting below.** </span> 
+   <span class="code">We have indicated questions where you have to do something in code in red. **If Gradescope asks for it, also submit your code in the report with the formatting below.** </span> 
 
     Starter code is given to you on Canvas under the "Homework 3" assignment. You can also download it [here](https://drive.google.com/file/d/1ojbdzRwm2rDSGAURSqikWKKGGp7_doIb/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
         
