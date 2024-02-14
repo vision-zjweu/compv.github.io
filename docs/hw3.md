@@ -4,7 +4,7 @@ permalink: /hw3
 latex: true
 
 title: Homework 3 – Fitting Models and Image Warping
-due: 11:59 p.m. on Wednesday, Feb 28th, 2024
+due: 11:59 p.m. on Wednesday, March 6th, 2024
 ---
 <link href="style.css" rel="stylesheet">
 <div style="display:none">
@@ -41,35 +41,31 @@ due: 11:59 p.m. on Wednesday, Feb 28th, 2024
 This homework is **due at {{ page.due }}**.
 
 The submission includes two parts:
-1. **To Canvas**: submit a `zip` file of all of your code.
+1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories.
 
-    {{ code }} - 
-    <span class="code">We have indicated questions where you have to do something in code in red</span>  
-    {{ autograde }} - 
-    <span class="autograde">We have indicated questions where we will definitely use an autograder in purple</span>
+    {{ code }} -
+   <span class="code">We have indicated questions where you have to do something in code in red. **If gradecope asks for it, also submit your code in the report with the formatting below.** </span> 
 
-    Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name.
-
-    Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.  
+    Starter code is given to you on Canvas under the "Homework 3" assignment. You can also download it [here](https://drive.google.com/file/d/1WsrZDEEscD7SZr8ATuqAbxrEHomrsmiV/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
         
     <div class="primer-spec-callout info" markdown="1">
       **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
 
-      If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
-    </div>
-
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
-    {{ report }} - 
-    <span class="report">We have indicated questions where you have to do something in the report in green.</span>
+    {{ report }} -
+   <span class="report">We have indicated questions where you have to do something in the report in green. **Some coding questions also need to be included in the report.**</span>
 
-    You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/){:target="_blank"} for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+    The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+
+   For including code, **do not use screenshots**. Generate a PDF using a [tool like this](https://www.i2pdf.com/source-code-to-pdf){:target="_blank"} or using this [Overleaf LaTeX template](https://www.overleaf.com/read/wbpyympmgfkf#bac472){:target="_blank"}. If this PDF contains only code, be sure to append it to the end of your report and match the questions carefully on Gradescope.
 
 ### Python Environment
 
-The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
+Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
 
-To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+We recommend you install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.12. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
+
 - [Numpy](https://numpy.org/doc/stable/user/quickstart.html){:target="_blank"}
 - [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html){:target="_blank"}
 - [OpenCV](https://opencv.org/){:target="_blank"}
@@ -156,7 +152,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
 **Files**: We have generated 9 cases of correspondences in `task4/`. These are named `points_case_k.npy` for $$1 \le k \le 9$$. All are the same format as the previous task and are matrices where each row contains $$[x_i,y_i,x'_i,y'_i]$$. Eight are transformed letters $$M$$. The last case (case 9) is copied from task 3. You can use these examples to verify your implementation of `fit_homography`.
 
-1. *(5 points)* {{ autograde }} <span class="autograde">Fill in `fit_homography`</span> in `homography.py`.
+1. *(5 points)* {{ code }} <span class="code">Fill in `fit_homography`</span> in `homography.py`.
 
     This should fit a homography mapping between the two given points. Remembering that $$\pB_i \equiv [x_i, y_i, 1]$$ and $$\pB'_i \equiv [x'_i, y'_i, 1]$$, your goal is to fit a homography $$\HB \in \mathbb{R}^{3}$$ that satisfies:
 
@@ -258,7 +254,7 @@ together. To enable you to run your code automatically on multiple panoramas wit
 
 Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also contain images (e.g., `p3.jpg`) which may or may not work. You should be able to match all the provided panoramas; you should be able to stitch all except for `florence3` and `florence3_alt`.
 
-1. *(3 points)* {{ autograde }} <span class="autograde">Fill in `compute_distance`</span> in `task6.py`. This should compute the pairwise **squared** L2 distance between two matrices of descriptors. You can and should use the $$\|\xB-\yB\|^2_2 = \|\xB\|^2_2 + \|\yB\|^2_2 - 2 \xB^T \yB$$ trick from HW0, numpy test 11.
+1. *(3 points)* {{ code }} <span class="code">Fill in `compute_distance`</span> in `task6.py`. This should compute the pairwise **squared** L2 distance between two matrices of descriptors. You can and should use the $$\|\xB-\yB\|^2_2 = \|\xB\|^2_2 + \|\yB\|^2_2 - 2 \xB^T \yB$$ trick from HW0, numpy test 11.
 
 2. *(5 points)* {{ code }} <span class="code">Fill in `find_matches`</span> in `task6.py`. This should use `compute_distance` plus the ratio test from the foreword to return the matches. You will have to pick a threshold for the ratio test. Something between $$0.7$$ and $$1$$ is reasonable, but you should experiment with it (look output of the `draw_matches` once you complete it). 
 
@@ -276,7 +272,7 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
 
 4. *(3 points)* {{ report }} <span class="report">Put a picture of the matches between two image pairs of your choice in your report.</span>
     
-5. *(10 points)* {{ autograde }} <span class="autograde">Fill in `RANSAC_fit_homography`</span> in `homography.py`. 
+5. *(10 points)* {{ code }} <span class="code">Fill in `RANSAC_fit_homography`</span> in `homography.py`. 
 
     This should RANSACify `fit_homography`. You should keep track of the best set of inliers you have seen in the RANSAC loop. Once the loop is done, please re-fit the model to these inliers. In other words, if you are told to run $$N$$ iterations of RANSAC, you should fit a homography $$N$$ times on the minimum number of points needed; this should be followed by a single fitting of a homography on many more points (the inliers for the best of the $$N$$ models). You will need to set epsilon's default value: $$0.1$$ pixels is too small; $$100$$ pixels is too big. You will need to play with this to get the later parts to work.
 
@@ -305,9 +301,9 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
 
 7. *(3 points)* {{ report }} <span class="report">Put merges from two of your favorite pairs in the report.</span> You can either choose an image we provide you or use a pair of images you take yourself.
 
-8. *(3 points)* {{ autograde }} <span class="autograde">Put these merges as `mypanorama1.jpg` and `mypanorama2.jpg` in your zip submission.</span> 
+8. *(3 points)* {{ code }} <span class="code">Put these merges as `mypanorama1.jpg` and `mypanorama2.jpg` in your zip submission.</span> 
 
-<!-- 9. (Optional) If you would like to submit a panorama, {{ autograde }} <span class="autograde">please put your favorite as `myfavoritepanorama.jpg`</span>. We will have a vote. The winner gets 1 point of extra credit. -->
+<!-- 9. (Optional) If you would like to submit a panorama, {{ code }} <span class="code">please put your favorite as `myfavoritepanorama.jpg`</span>. We will have a vote. The winner gets 1 point of extra credit. -->
 
 ## Augmented Reality on a Budget
 
@@ -350,8 +346,9 @@ If you can warp images together, you can replace things in your reality. Imagine
     
 2. *(2 points)* Do something fun with this. Submit a synthetically done warp of something interesting. We'll have a contest. If you do something particularly neat to get the system to work, please write this in the report.
 
-    {{ autograde }} 
-    <span class="autograde">Submit in your zip file the following files:</span>
+    {{ report }} {{ code }}
+    <span class="report">Include the images in your report.</span>
+    <span class="code">In addition, submit in your zip file the following files:</span>
     - `myscene.jpg` -- the scene
     - `mytemplate.png` OR `mytemplate.jpg` -- the template. Submit either png or jpg but not both. 
     - `mytransfer.jpg` -- the thing you transfer 
@@ -389,18 +386,18 @@ This section is meant to help you keep track of the many things that go in the r
     - [ ] 5.3 - {{ report }} Lines crooked?
     - [ ] 5.4 - (*optional*) Reverse
 - [ ] **Stitching Stuff Together**:
-    - [ ] 6.1 - {{ autograde }} `compute_distance`
+    - [ ] 6.1 - {{ code }} `compute_distance`
     - [ ] 6.2 - {{ code }} `find_matches`
     - [ ] 6.3 - {{ code }} `draw_matches`
     - [ ] 6.4 - {{ report }} Two image pairs
-    - [ ] 6.5 - {{ autograde }} `RANSAC_fit_homography`
+    - [ ] 6.5 - {{ code }} `RANSAC_fit_homography`
     - [ ] 6.6 - {{ code }} `make_warped`
     - [ ] 6.7 - {{ report }} Two merged pairs
-    - [ ] 6.8 - {{ autograde }} `mypanorama1.jpg` and `mypanorama1.jpg`
-    - [ ] 6.9 - (*optional*) {{ autograde }} `myfavoritepanorama.jpg`
+    - [ ] 6.8 - {{ code }} `mypanorama1.jpg` and `mypanorama1.jpg`
+    <!-- - [ ] 6.9 - (*optional*) {{ code }} `myfavoritepanorama.jpg` -->
 - [ ] **Augmented Reality**:
     - [ ] 7.1 - {{ code }} `improve_image`
-    - [ ] 7.2 - {{ autograde }} `myscene.jpg`, `mytemplate.png/jpg`, `mytransfer.jpg`, `myimproved.jpg`
+    - [ ] 7.2 - {{ report }} {{ code }} `myscene.jpg`, `mytemplate.png/jpg`, `mytransfer.jpg`, `myimproved.jpg`
 
 # Canvas Submission Checklist
 
