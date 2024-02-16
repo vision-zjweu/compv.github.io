@@ -170,7 +170,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
       Again, this is not meant to be a trick question -- use the setup from the foreword.
     </div> 
 
-    **Important**: <span class="report">Please include a screenshot of your implementation in your report </span> 
+    **Important**: <span class="report">Please include your implementation in your report using the tools mentioned at the beginning of this assignment</span> 
 
 2. *(3 points)* {{ report }} <span class="report">Report $$\HB$$</span> for cases `points_case_1.npy` and `points_case_4.npy`. You must normalize the last entry to $$1$$.
 
