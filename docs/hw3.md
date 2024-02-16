@@ -378,7 +378,7 @@ This section is meant to help you keep track of the many things that go in the r
     - [ ] 3.3 - {{ report }} Affinity
 - [ ] **Fitting Homographies**:
     - [ ] 4.1 - {{ report }} `fit_homography`
-    - [ ] 4.2 - {{ report }} $$\HB$$ for `points_case_1.npy` and `points_case_2.npy`
+    - [ ] 4.2 - {{ report }} $$\HB$$ for `points_case_1.npy` and `points_case_4.npy`
     - [ ] 4.3 - {{ report }} Figures for `points_case_5.npy` and `points_case_9.npy
 - [ ] **Synthetic Views**:
     - [ ] 5.1 - {{ code }} `make_synthetic_view`
