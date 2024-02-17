@@ -281,15 +281,17 @@ Each folder contains two images: (a) `p1.jpg`; and (b) `p2.jpg`. Some also conta
     </div>
 
 6. *(18 points)*  {{ code }} 
-<span class="code">Fill in `make_warped`</span> in `task6.py`. This should take two images as an argument and do the whole pipeline described in the foreword. The resulting image should use `cv2.warpPerspective` to make a merged image where both images fit in. This merged image should have: (a) image 1's pixel data if only image 1 is present at that location; (b) image 2's pixel data if only image 2 is present at that location; (c) the average of image 1's data and image 2's data if both are present.
+<span class="code">Fill in `make_warped` and `warp_and_combine` </span> in `task6.py`. This should take two images as an argument and do the whole pipeline described in the foreword. The resulting image should use `cv2.warpPerspective` to make a merged image where both images fit in. This merged image should have: (a) image 1's pixel data if only image 1 is present at that location; (b) image 2's pixel data if only image 2 is present at that location; (c) the average of image 1's data and image 2's data if both are present. You can do so by using a warped mask. 
    
-    *Walkthrough*:
+    *Walkthrough of `warp_and_combine` *:
 
     1. There is an information bottleneck in estimating $$\HB$$. If $$\HB$$ is correct, then you're set; if it's wrong, there's nothing you can do. First make sure your code estimates $$\HB$$ right.
 
-    2. Pick which image you're going to merge to; without loss of generality, pick image 1. Figure out how to make a merged image that's big enough to hold both image 1 and transformed image 2. Think of this as finding the smallest enclosing rectangle of *both* images. The upper left corner of this rectangle (i.e., pixel $$[0,0]$$) may not be at the same location as in image 1. You will almost certainly need to hand-make a homography that translates image 1 to its location in the merged image. For doing this calculations, use the fact that the image content will be bounded by the image corners. Looking at the `min`, `max` of these gives you what you need to create the panorama.
+    2. Pick which image you're going to merge to; without loss of generality, pick image 1. Figure out how to make a merged image that's big enough to hold both image 1 and transformed image 2. Think of this as finding the smallest enclosing rectangle of *both* images. The merged image should be bigger than all input image in size. The upper left corner of this rectangle (i.e., pixel $$[0,0]$$) may not be at the same location as in image 1. You will almost certainly need to hand-make a homography that translates image 1 to its location in the merged image. For doing this calculations, use the fact that the image content will be bounded by the image corners. Looking at the `min`, `max` of these gives you what you need to create the panorama.
     
     3. Warp both images to the merged image. You can figure out where the images go by warping images containing ones to the merged images instead of the image and filling the image with 0s where the image doesn't go. These masks also tell you how to create the average.
+
+    4. Be careful about your order of applying the homography. Think about are you warping image2 into image1's perspective or the other way around. If you want to reverse the homography effect, you can just inverse the homography matrix.
 
     <div class="primer-spec-callout info" markdown="1">
       *Debugging Hints*:
