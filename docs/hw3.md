@@ -346,7 +346,7 @@ If you can warp images together, you can replace things in your reality. Imagine
     - For using the fucntion `warp_and_combine` from task 6, you may want to change it a little bit, since you should make sure you use warped `template` to cover areas in the `scene` completely as shown in Figure 3.
     </div>
     
-2. *(2 points)* Do something fun with this. Submit a synthetically done warp of something interesting. We'll have a contest. If you do something particularly neat to get the system to work, please write this in the report.
+2. *(2 points)* Do something fun with this. Submit a synthetically done warp of something interesting. If you do something particularly neat to get the system to work, please write this in the report.
 
     {{ report }} {{ code }}
     <span class="report">Include the images in your report.</span>
