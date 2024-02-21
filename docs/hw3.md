@@ -201,7 +201,7 @@ Throughout, again suppose we have a set of 2D correspondences $$[x_i',y_i'] \lef
 
 ### Task 5: Synthetic Views -- Name that book!
 
-We asked David what he's reading, and so he sent us a few pictures. They're a bit distorted since he wants you to get used to `cv2.warpPerspective` *before* you use it in the next task. He says "it's all the same, right, homographies can map between planes and book covers are planes, no?".
+We asked the professor what he's reading, and so he sent us a few pictures. They're a bit distorted since he wants you to get used to `cv2.warpPerspective` *before* you use it in the next task. He says "it's all the same, right, homographies can map between planes and book covers are planes, no?".
 
 **Files**: We provide data in `task5/`, with one folder per book. Each folder has:
 1. `book.jpg` -- an image of the book taken from an angle;
