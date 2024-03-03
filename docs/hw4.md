@@ -4,7 +4,7 @@ permalink: /hw4
 latex: true
 
 title: Homework 4 – Machine Learning
-due: 5 p.m. on Friday March 31st, 2023
+due: 11:59 p.m. on Friday March 20th, 2024
 ---
 
 <link href="style.css" rel="stylesheet">
@@ -39,7 +39,8 @@ This homework is divided into two major sections based on how you're expected to
 - To do the homework on Colab, you just need to login to Colab with your Google/UMich account and upload corresponding notebook to the Colab (`File -> Upload notebook`), then you can get started.
 
 The submission includes two parts:
-1. **To Canvas**: submit a `zip` file of all of your code.
+1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories.
+
 
     {{ code }} - 
     <span class="code">We have indicated questions where you have to do something in code in red</span>  
@@ -47,28 +48,24 @@ The submission includes two parts:
     <span class="autograde">We have indicated questions where we will definitely use an autograder in purple</span>
 
     Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name.
-
-    Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.  
+<!-- 
+    Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.   -->
         
     <div class="primer-spec-callout info" markdown="1">
       **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
 
-      If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
+      <!-- If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two. -->
     </div>
 
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
     {{ report }} - 
-    <span class="report">We have indicated questions where you have to do something in the report in green.</span>
+    <span class="report">We have indicated questions where you have to do something in the report in green and all coding questions need to be included in the report.</span>
 
-    <div class="primer-spec-callout info" markdown="1">
-      **Changes in format requirements:** 
-      - Put your name and uniqname on the first page of your report.
-      - In addition to submitting your code files on Canvas, please also put *readable* screenshots of your code in your report, labeling the respective questions they belong to.  
-      <br>
-    </div>
 
     You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/){:target="_blank"} for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+
+    For including code, **do not use screenshots**. Generate a PDF using a [tool like this](https://www.i2pdf.com/source-code-to-pdf){:target="_blank"} or using this [Overleaf LaTeX template](https://www.overleaf.com/read/wbpyympmgfkf#bac472){:target="_blank"}. If this PDF contains only code, be sure to append it to the end of your report and match the questions carefully on Gradescope.
 
 ### Python Environment
 
@@ -79,7 +76,7 @@ To make your life easier, we recommend you to install the latest [Anaconda](http
 - [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html){:target="_blank"}
 - [OpenCV](https://opencv.org/){:target="_blank"}
 
-#### Local Development
+### Local Development
 
  If you're doing this homework on your local machine instead of Colab, then other than the packages you should have already installed in previous homework, you will also need: `tqdm`, `pytorch>=1.8.0`, `torchvision` and `torchsummary` of the corresponding version. You may install these packages using `anaconda` or `pip`. Notice that some of the packages may need to be downloaded from certain anaconda channel, you may need to search on the [Anaconda](https://anaconda.org/){:target="_blank"} official website for more instructions.
 
@@ -300,6 +297,26 @@ In the file `neuralnet/layers.py` you need to complete the implementation of the
     
     **Your softmax implementation should use this max-subtraction trick for numeric stability.** You can run the script `neuralnet/check_softmax_stability.py` to check the numeric stability of your softmax loss implementation.
 
+    We also provide a closed form expression for the gradient of softmax function w.r.t to the scores. Your implementation of `softmax_loss` should return the loss value and the gradients. 
+    
+    Let 
+
+    $$
+    L_i = -log \frac{\exp(x_{i,c} - M_i)}{\sum_{j=1}^C\exp(x_{i,j} - M_i)}
+    $$
+
+    Then, when $$j = y_i$$,
+
+    $$
+    \frac{\partial{L_i}}{\partial{x_{i, y_i}}} = \frac{\exp(x_{i,y_i} - M_i)}{\sum_{j=1}^C\exp(x_{i,j} - M_i)} - 1
+    $$
+
+    and when $$j \ne y_i$$
+
+    $$
+    \frac{\partial{L_i}}{\partial{x_{i, j}}} = \frac{\exp(x_{i,j} - M_i)}{\sum_{j=1}^C\exp(x_{i,j} - M_i)}
+    $$
+
 4. *(5 points)* {{ autograde }} <span class="autograde">L2 Regularization</span>: `l2_regularization` which implements the L2 regularization loss
     
     $$
@@ -357,7 +374,7 @@ they work:
 Now it's time to train your model! Run the script `neuralnet/train.py` to train a two-layer network on the CIFAR-10 dataset. The script will print out training losses and train and val set accuracies as it trains. After training concludes, the script will also mke a plot of the training losses as well as the training and validation-set accuracies of the model during training; by default this will be saved in a file `plot.pdf`, but this can be customized with the flag `--plot-file`. You should see a plot that looks like this:
 
 <figure class="figure-container">
-  <img src="{{site.url}}/assets/hw4/figures/loss-plot.jpeg" alt="Loss Plot" width="90%">
+  <img src="{{site.url}}/assets/hw4/figures/plot_default.png" alt="Loss Plot" width="90%">
 </figure>
 
 Unfortunately, it seems that your model is not training very effectively -- the training loss has not decreased much from its initial value of $$\approx2.3$$, and the training and validation accuracies are very close to $$10\%$$ which is what we would expect from a model that randomly guesses a category label for each input.
@@ -417,7 +434,7 @@ The dataset we use is the Fashion-MNIST dataset, which is available [here](https
 - Training parameters (batch size and number of epochs)
 
 
-You should train your network on training set and change those listed above based on evaluation on the validation set. You should run evalution on the test set **only once** at the end.
+You should train your network on training set and change those hyperparameters listed above based on evaluation on the validation set. You should run evalution on the test set **only once** at the end.
 
 **Complete the following:**
 
