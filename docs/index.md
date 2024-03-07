@@ -58,7 +58,7 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Wednesday<br>Feb 21   | **Neural Networks**<br>Backpropagation, Fully Connected Neural Networks                     | [Slides](https://drive.google.com/file/d/1yCVPywX8TdDhJ36as9cni1R7LV-2NMb_/view?usp=sharing)   |
 | Monday<br>Feb 26      | **No Class**<br> :sunny: :beach_umbrella: Spring Break                                      |          |
 | Wednesday<br>Feb 28   | **No Class**<br> :sunny: :beach_umbrella: Spring Break                                      |          |
-| Monday<br>Mar 4       | **Convolutional Networks 1**<br>Convolution, Pooling                                        | [Slides](https://drive.google.com/file/d/1NuiWs8IekrWrA0WSrGLOo47GXVFRkWwI/view?usp=sharing)   |
+| Monday<br>Mar 4       | **Convolutional Networks 1**<br>Convolution, Pooling                                        | [Slides](https://drive.google.com/file/d/1NuiWs8IekrWrA0WSrGLOo47GXVFRkWwI/view?usp=sharing)  <br> [Discussion Slides](https://drive.google.com/file/d/1M-s1ebOllK56nfPn5LHKxi-DHGz6yEhj/view?usp=sharing){:target="_blank"} |
 | Wednesday<br>Mar 6    | **Convolutional Networks 2**<br>CNN Architectures, Training Methods & Techniques <br> :warning: ***Homework 3 Due*** <br> :warning: ***Homework 4 Release*** | [Slides](https://drive.google.com/file/d/1cyf2MKjxIpV0O2oX248xsjMUklxK8FuA/view?usp=sharing) <br> |
 | Monday<br>Mar 11      | **Segmentation**<br>Semantic/Instance Segmentation                                          | Slides   |
 | Wednesday<br>Mar 13   | **Detection & Other Topics**                                                                | Slides   |
