@@ -39,7 +39,8 @@ This homework is divided into two major sections based on how you're expected to
 - To do the homework on Colab, you just need to login to Colab with your Google/UMich account and upload corresponding notebook to the Colab (`File -> Upload notebook`), then you can get started.
 
 The submission includes two parts:
-1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories.
+1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories. Starter code is given to you on Canvas under the “Homework 4” assignment. You can also download it [here](https://drive.google.com/file/d/1cZEn87Qsc1qlKTLWtWY02rrq6oJ0G3Nn/view?usp=drive_link). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
+
 
 
     {{ code }} - 
@@ -297,26 +298,8 @@ In the file `neuralnet/layers.py` you need to complete the implementation of the
     
     **Your softmax implementation should use this max-subtraction trick for numeric stability.** You can run the script `neuralnet/check_softmax_stability.py` to check the numeric stability of your softmax loss implementation.
 
-    We also provide a closed form expression for the gradient of softmax function w.r.t to the scores. Your implementation of `softmax_loss` should return the loss value and the gradients. 
+    Your implementation of `softmax_loss` should return the loss value and the gradients. For detailed information about gradients of softmax-loss function, refer these [notes](https://drive.google.com/file/d/1g4VUFuJMGKByfDvk4Vo9OxO5hXyqKGHe/view?usp=drive_link).
     
-    Let 
-
-    $$
-    L_i = -log \frac{\exp(x_{i,c} - M_i)}{\sum_{j=1}^C\exp(x_{i,j} - M_i)}
-    $$
-
-    Then, when $$j = y_i$$,
-
-    $$
-    \frac{\partial{L_i}}{\partial{x_{i, y_i}}} = \frac{\exp(x_{i,y_i} - M_i)}{\sum_{j=1}^C\exp(x_{i,j} - M_i)} - 1
-    $$
-
-    and when $$j \ne y_i$$
-
-    $$
-    \frac{\partial{L_i}}{\partial{x_{i, j}}} = \frac{\exp(x_{i,j} - M_i)}{\sum_{j=1}^C\exp(x_{i,j} - M_i)}
-    $$
-
 4. *(5 points)* {{ autograde }} <span class="autograde">L2 Regularization</span>: `l2_regularization` which implements the L2 regularization loss
     
     $$
