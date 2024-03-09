@@ -44,7 +44,7 @@ The submission includes two parts:
 
 
     {{ code }} - 
-    <span class="code">We have indicated questions where you have to do something in code in red</span>  
+    <span class="code">We have indicated questions where you have to do something in code in red. **If Gradescope asks for it, also submit your code in the report with the formatting below.**</span>  
     <!-- {{ autograde }} - 
     <span class="autograde">We have indicated questions where we will definitely use an autograder in purple</span> -->
 <!-- 
@@ -61,7 +61,7 @@ The submission includes two parts:
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
     {{ report }} - 
-    <span class="report">We have indicated questions where you have to do something in the report in green and all coding questions need to be included in the report.</span>
+    <span class="report">We have indicated questions where you have to do something in the report in green. **Coding questions also need to be included in the report.**</span>
 
 
     You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/){:target="_blank"} for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
