@@ -45,10 +45,10 @@ The submission includes two parts:
 
     {{ code }} - 
     <span class="code">We have indicated questions where you have to do something in code in red</span>  
-    {{ autograde }} - 
-    <span class="autograde">We have indicated questions where we will definitely use an autograder in purple</span>
-
-    Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name.
+    <!-- {{ autograde }} - 
+    <span class="autograde">We have indicated questions where we will definitely use an autograder in purple</span> -->
+<!-- 
+    Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name. -->
 <!-- 
     Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.   -->
         
@@ -70,7 +70,7 @@ The submission includes two parts:
 
 ### Python Environment
 
-The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties.
+<!-- The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties. -->
 
 To make your life easier, we recommend you to install the latest [Anaconda](https://www.anaconda.com/download/){:target="_blank"} for Python 3.7. This is a Python package manager that includes most of the modules you need for this course. We will make use of the following packages extensively in this course:
 - [Numpy](https://numpy.org/doc/stable/user/quickstart.html){:target="_blank"}
@@ -153,7 +153,7 @@ def f(a, b, c):
 
 Below we've drawn three computational graphs for you to practice implementing forward and backward passes. The functions `f1` and `f2` are optional, and the function `f3` is required. The file `backprop/functions.py` contains stubs for each of these computational graphs. You can use the driver program `backprop/backprop.py` to check your implementation.
 
-1. *(10 points)* {{ autograde }} <span class="autograde">Implement the forward and backward passes for the computational graph `f3` below.</span>
+1. *(10 points)* {{ code }} <span class="code">Implement the forward and backward passes for the computational graph `f3` below.</span>
 
 The file `backprop/backprop-data.pkl` contains sample inputs and outputs for the three computational graphs; the driver program loads inputs from this file for you when checking your forward passes.
 
@@ -262,11 +262,11 @@ def linear_regression_step(X, y, W, b):
 
 In the file `neuralnet/layers.py` you need to complete the implementation of the following:
 
-1. *(5 points)* {{ autograde }} <span class="autograde">Fully-connected layer</span>: `fc_forward` and `fc_backward`.
+1. *(5 points)* {{ code }} <span class="code">Fully-connected layer</span>: `fc_forward` and `fc_backward`.
 
-2. *(5 points)* {{ autograde }} <span class="autograde">ReLU nonlinearity</span>: `relu_forward` and `relu_backward` which applies the function $$ReLU(x_i) = \max(0, x)$$ elementwise to its input.
+2. *(5 points)* {{ code }} <span class="code">ReLU nonlinearity</span>: `relu_forward` and `relu_backward` which applies the function $$ReLU(x_i) = \max(0, x)$$ elementwise to its input.
 
-3. *(5 points)* {{ autograde }} <span class="autograde">Softmax Loss Function</span>:`softmax_loss`.
+3. *(5 points)* {{ code }} <span class="code">Softmax Loss Function</span>:`softmax_loss`.
 
     The softmax loss function receives a matrix $$x\in\RR^{N\times C}$$ giving a batch of classification scores for $$N$$ elements, where for each element we have a score for each of $$C$$ different categories. The softmax loss function first converts the scores into a set of $$N$$ probability distributions over the elements, defined as:     
     
@@ -300,7 +300,7 @@ In the file `neuralnet/layers.py` you need to complete the implementation of the
 
     Your implementation of `softmax_loss` should return the loss value and the gradients. For detailed information about gradients of softmax-loss function, refer these [notes](https://drive.google.com/file/d/1g4VUFuJMGKByfDvk4Vo9OxO5hXyqKGHe/view?usp=drive_link).
     
-4. *(5 points)* {{ autograde }} <span class="autograde">L2 Regularization</span>: `l2_regularization` which implements the L2 regularization loss
+4. *(5 points)* {{ code }} <span class="code">L2 Regularization</span>: `l2_regularization` which implements the L2 regularization loss
     
     $$
     L(W) = \frac{\lambda}{2}\|W\|^2 = \frac{\lambda}{2} \sum_i W_i^2
@@ -324,7 +324,7 @@ In the file `neuralnet/linear_classifier.py` we've implemented a `LinearClassifi
 
 Now it's your turn! In the file `neuralnet/two_layer_net.py` we've provided the start to  an implementation of a `TwoLayerNet` class that implements a two-layer neural network  (with ReLU nonlinearity).
 
-1. *(10 points)* {{ autograde }} <span class="autograde">Complete the implementation of the `TwoLayerNet` class.</span>  Your implementations for the `forward` and `backward` methods should use the modular  forward and backward functions that you implemented in the previous task.
+1. *(10 points)* {{ code }} <span class="code">Complete the implementation of the `TwoLayerNet` class.</span>  Your implementations for the `forward` and `backward` methods should use the modular  forward and backward functions that you implemented in the previous task.
 
 After completing your implementation, you can run the script `gradcheck_classifier.py` to  perform numeric gradient checking on both the linear classifier we've implemented for you as well  as the two-layer network you've just implemented. You should see errors less than $$10^{-10}$$ for  the gradients of all parameters.
 
@@ -347,7 +347,7 @@ they work:
     implement optimization algorithms, and implements a subclass `SGD` which implements
     basic stochastic gradient descent with a constant learning rate.
 
-1. {{ autograde }} <span class="autograde">Implement the `training_step` function in the file `neuralnet/train.py`</span>.
+1. {{ code }} <span class="code">Implement the `training_step` function in the file `neuralnet/train.py`</span>.
 
 	This function inputs the model, a minibatch of data, and the regularization strength; it computes a forward and backward pass through the model and returns both the loss and the gradient of the loss with respect to the model parameters. The loss should be the sum of two terms:
 
@@ -457,17 +457,17 @@ You can upload images in Colab by using the upload button on the top left. For m
 This section is meant to help you keep track of the many things that go in the report:
 
 - [ ] **Implementing Computational Graphs**:
-	- [ ] 1.1 - {{ autograde }} `f3` (*required*); `f1` and `f2` (*optional*)
+	- [ ] 1.1 - {{ code }} `f3` (*required*); `f1` and `f2` (*optional*)
 	- [ ] 1.2 - (*optional*) {{ report }} Draw a computational graph and {{ code }} implement forward/backward
 - [ ] **Modular Backprop API**:
-	- [ ] 2.1 - {{ autograde }} `fc_forward` and `fc_backward`
-	- [ ] 2.2 - {{ autograde }} `relu_forward` and `relu_backward`
-	- [ ] 2.3 - {{ autograde }} `softmax_loss`
-	- [ ] 2.4 - {{ autograde }} `l2_regularization`
+	- [ ] 2.1 - {{ code }} `fc_forward` and `fc_backward`
+	- [ ] 2.2 - {{ code }} `relu_forward` and `relu_backward`
+	- [ ] 2.3 - {{ code }} `softmax_loss`
+	- [ ] 2.4 - {{ code }} `l2_regularization`
 - [ ] **Implement Two-Layer Network**:
-	- [ ] 3.1 - {{ autograde }} `TwoLayerNet`
+	- [ ] 3.1 - {{ code }} `TwoLayerNet`
 - [ ] **Train Two-Layer Network**:
-	- [ ] 4.1 - {{ autograde }} `training_step`
+	- [ ] 4.1 - {{ code }} `training_step`
 	- [ ] 4.2 - {{ report }} Results of best model
 	- [ ] 4.3 - {{ report }} Results of overfit model
 - [ ] **Train Your Own Classification Model**:
