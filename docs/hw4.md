@@ -68,6 +68,34 @@ The submission includes two parts:
 
     For including code, **do not use screenshots**. Generate a PDF using a [tool like this](https://www.i2pdf.com/source-code-to-pdf){:target="_blank"} or using this [Overleaf LaTeX template](https://www.overleaf.com/read/wbpyympmgfkf#bac472){:target="_blank"}. If this PDF contains only code, be sure to append it to the end of your report and match the questions carefully on Gradescope.
 
+    For `.ipynb` notebooks in your local system you may refer to this [post](https://saturncloud.io/blog/how-to-convert-ipynb-to-pdf-in-jupyter-notebook/) to convert your notebook to a pdf using `nbconvert`. For Google-Colab users, you may use this code snippet as the final cell to download your notebooks as pdf's.
+
+    ```python
+    # generate pdf
+    # 1. Find the path to your notebook in your google drive.
+    # 2. Please provide the full path of the notebook file below.
+
+    # Important: make sure that your file name does not contain spaces!
+
+    # Syntax: 
+    # notebookpath = '/content/drive/MyDrive/HW4/notebook.ipynb' 
+    # 
+    import os
+    from google.colab import drive
+    from google.colab import files
+
+    drive_mount_point = '/content/drive/'
+    drive.mount(drive_mount_point)
+
+    notebookpath = '<notebook_path>' 
+    file_name = notebookpath.split('/')[-1]
+    get_ipython().system("apt update && apt install texlive-xetex texlive-fonts-recommended texlive-generic-recommended")
+    get_ipython().system("jupyter nbconvert --to PDF {}".format(notebookpath.replace(' ', '\\ ')))
+    files.download(notebookpath.split('.')[0]+'.pdf')
+    # PDF will be downloaded in the same directory as the notebook, with the same name.
+    ```
+
+
 ### Python Environment
 
 <!-- The autograder uses Python 3.7. Consider referring to the [Python standard library docs](https://docs.python.org/3.7/library/index.html){:target="_blank"} when you have questions about Python utilties. -->
