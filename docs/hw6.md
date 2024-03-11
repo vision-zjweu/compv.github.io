@@ -1,6 +1,6 @@
 ---
 layout: spec
-permalink: /hw5
+permalink: /hw6
 latex: true
 
 title: Homework 5 – Cameras
