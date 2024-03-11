@@ -3,7 +3,7 @@ layout: spec
 permalink: /hw6
 latex: true
 
-title: Homework 5 – Cameras
+title: Homework 6 – Cameras And NeRF
 due: 5 p.m. on Monday April 17th, 2023
 ---
 
@@ -30,7 +30,7 @@ due: 5 p.m. on Monday April 17th, 2023
 {% capture autograde %}<i class="fa fa-robot icon-large"></i>{% endcapture %}
 {% capture report %}<i class="fa fa-file icon-large"></i>{% endcapture %}
 
-# Homework 5 - Cameras
+# Homework 6 – Cameras And NeRF
 
 ## Instructions
 
