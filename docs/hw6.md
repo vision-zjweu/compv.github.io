@@ -37,29 +37,24 @@ due: 11:59 p.m. on Monday April 17th, 2024
 This homework is **due at {{ page.due }}**.
 
 The submission includes two parts:
-1. **To Canvas**: submit a `zip` file of all of your code.
+1. **To Canvas**: submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories.
 
-    {{ code }} - 
-    <span class="code">We have indicated questions where you have to do something in code in red</span>  
-    {{ autograde }} - 
-    <span class="autograde">We have indicated questions where we will definitely use an autograder in purple</span>
+    {{ code }} -
+   <span class="code">We have indicated questions where you have to do something in code in red. **If Gradescope asks for it, also submit your code in the report with the formatting below.** </span> 
 
-    Please be especially careful on the autograded assignments to follow the instructions. Don't swap the order of arguments and do not return extra values. If we're talking about autograding a filename, we will be pulling out these files with a script. Please be careful about the name.
-
-    Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.  
+    Starter code is given to you on Canvas under the "Homework 3" assignment. You can also download it [here](https://drive.google.com/file/d/1ojbdzRwm2rDSGAURSqikWKKGGp7_doIb/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
         
     <div class="primer-spec-callout info" markdown="1">
       **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
 
-      If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two.
-    </div>
-
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
-    {{ report }} - 
-    <span class="report">We have indicated questions where you have to do something in the report in green.</span>
+    {{ report }} -
+   <span class="report">We have indicated questions where you have to do something in the report in green. **Some coding questions also need to be included in the report.**</span>
 
-    You might like to combine several files to make a submission. Here is an example online [link](https://combinepdf.com/){:target="_blank"} for combining multiple PDF files. The write-up must be an electronic version. **No handwriting, including plotting questions.** $$$$\LaTeX$$$$ is recommended but not mandatory.
+    The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
+
+   For including code, **do not use screenshots**. Generate a PDF using a [tool like this](https://www.i2pdf.com/source-code-to-pdf){:target="_blank"} or using this [Overleaf LaTeX template](https://www.overleaf.com/read/wbpyympmgfkf#bac472){:target="_blank"}. If this PDF contains only code, be sure to append it to the end of your report and match the questions carefully on Gradescope.
 
 ### Python Environment
 
