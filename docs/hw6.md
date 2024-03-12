@@ -3,8 +3,8 @@ layout: spec
 permalink: /hw6
 latex: true
 
-title: Homework 6 – Cameras And NeRF
-due: 5 p.m. on Monday April 17th, 2023
+title: Homework 6 – 3D Deep Learning
+due: 11:59 p.m. on Monday April 17th, 2024
 ---
 
 <link href="style.css" rel="stylesheet">
@@ -30,7 +30,7 @@ due: 5 p.m. on Monday April 17th, 2023
 {% capture autograde %}<i class="fa fa-robot icon-large"></i>{% endcapture %}
 {% capture report %}<i class="fa fa-file icon-large"></i>{% endcapture %}
 
-# Homework 6 – Cameras And NeRF
+# Homework 6 – 3D Deep Learning
 
 ## Instructions
 
@@ -179,7 +179,43 @@ Triangulation solves for $$\XB$$ given $$\pB, \pB', \MB_1, \MB_2$$. We'll use Op
 
 3.  *(10 points)* {{ report }} <span class="report">Put a visualization of the point cloud for `reallyInwards` in your report.</span> You can use `visualize_pcd` in `utils.py` or implement your own.
 
- 
+### Task 4: Neural radiance fields 
+
+We will fit a neural radiance field (NeRF) to a collection of photos (with their camera pose), and use it to render a scene from different (previously unseen) viewpoints. To estimate the color of a pixel, we will estimate the 3D ray that exist the pixel. Then, we will walk in the direction of the ray and query the network at each point. Finally, we will use volume rendering to obtain the pixel’s RGB color, thereby accounting for occlusion.
+
+It is an MLP 
+$$F_\Theta$$ 
+such that
+
+$$
+F_\Theta(x, y, z, \theta, \phi) = (R, G, B, \sigma)
+$$
+
+where 
+$$(x, y, z)$$ 
+is a 3D point in the scene, and 
+$$(\theta, \phi)$$
+is a viewing direction. It returns a color 
+$$(R, G, B)$$ 
+and a (non-negative) density 
+$$( \sigma)$$ 
+that indicates whether this point in space is occupied.
+
+(a) (1 points) Implement the function positional_encoder(x, L_embed = 6) in 9.2.2 that
+encodes the input x as 
+$$\gamma(x) = (x, \sin(2\pi x), \cos(2\pi x), \ldots, \sin(2^{L_{embed}-1}x), \cos(2^{L_{embed}-1}x)).$$
+
+(b) (3 points) Implement the code that samples 3D points along a ray in 9.2.5. This will
+be used to march along the ray and query 
+$$F_\Theta$$
+
+(c) (2 points) After having walked along the ray and queried 
+$$F_\Theta$$ 
+at each point, we will estimate the pixel's color, represented as rgb_map (in 9.2.5). We will also compute, depth_map, which indicates the depth of the nearest surface at this pixel.
+
+We can now render the NeRF from different viewpoints. If everything implemented correctly,
+your rendered results from camera pose #40 will be similar to Fig. 3.
+
 # Tasks Checklist
 
 This section is meant to help you keep track of the many things that go in the report:
@@ -197,7 +233,10 @@ This section is meant to help you keep track of the many things that go in the r
 	- [ ] 3.1 - {{ report }} Compute $$E$$
 	- [ ] 3.2 - {{ code }} `find_triangulation`
 	- [ ] 3.3 - {{ report }} Point cloud for `reallyInwards`
-
+- [ ] **Neural radiance fields**
+    - [ ] 4.a - {{ code }} Implement `positional_encoder`
+    - [ ] 4.b - {{ code }} Sample 3D points along a ray
+    - [ ] 4.c - Estimate `rgb_map` and `depth_map`
 
 # Canvas Submission Checklist
 
