@@ -201,17 +201,17 @@ and a (non-negative) density
 $$( \sigma)$$ 
 that indicates whether this point in space is occupied.
 
-1.  *(10 points)* {{ code }} <span class="code"> Implement the function positional_encoder(x, L_embed = 6) in 9.2.2 that
+1.  *(10 points)* {{ code }} <span class="code"> Implement the function positional_encoder(x, L_embed = 6) </span> that
 encodes the input x as 
-$$\gamma(x) = (x, \sin(2\pi x), \cos(2\pi x), \ldots, \sin(2^{L_{embed}-1}x), \cos(2^{L_{embed}-1}x)).$$  </span> 
+$$\gamma(x) = (x, \sin(2\pi x), \cos(2\pi x), \ldots, \sin(2^{L_{embed}-1}x), \cos(2^{L_{embed}-1}x)).$$  
 
-2.  *(10 points)* {{ code }} <span class="code"> Implement the code that samples 3D points along a ray in `render`. This will
+2.  *(10 points)* {{ code }} <span class="code"> Implement the code that samples 3D points along a ray in `render`.</span>  This will
 be used to march along the ray and query 
-$$F_\Theta$$  </span> 
+$$F_\Theta$$  
 
 3.  *(10 points)* {{ code }} <span class="code"> After having walked along the ray and queried 
 $$F_\Theta$$ 
-at each point in `render`, we will estimate the pixel's color, represented as rgb_map. We will also compute, depth_map, which indicates the depth of the nearest surface at this pixel.  </span> 
+at each point in `render`, we will estimate the pixel's color, represented as rgb_map. </span>  We will also compute, depth_map, which indicates the depth of the nearest surface at this pixel. 
 
 4.  *(10 points)* {{ code }} <span class="code"> Please implement part of the `train(model, optimizer, n_iters)` function. </span> 
 In the training loop, the model is trained to fit one image randomly picked from the dataset at each iteration.
@@ -220,8 +220,7 @@ You need to tune the near and far point parameter in get rays to make maximize t
 5.   *(5 points)* {{ report }} <span class="report">Please include the best picture (after parameter tuning) of your RGB prediction, depth prediction, and groud truth figure for different view points. </span> 
 
 
-We can now render the NeRF from different viewpoints. If everything implemented correctly,
-your rendered results from camera pose #40 will be similar to Fig. 3.
+We can now render the NeRF from different viewpoints. The predicted image should be pretty similar to the ground truth but it may have less clarity.
 
 # Tasks Checklist
 
@@ -246,7 +245,7 @@ This section is meant to help you keep track of the many things that go in the r
     - [ ] 4.3 - {{ code }} Estimate `rgb_map` and `depth_map`
     - [ ] 4.2 - {{ code }} `train`
 	- [ ] 4.2 - {{ report }} Report your prediction and groud truth image
-	
+
 # Canvas Submission Checklist
 
 In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
