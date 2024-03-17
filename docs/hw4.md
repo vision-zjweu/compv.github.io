@@ -4,7 +4,7 @@ permalink: /hw4
 latex: true
 
 title: Homework 4 – Machine Learning
-due: 11:59 p.m. on Friday March 20th, 2024
+due: 11:59 p.m. on Wednesday March 20th, 2024
 ---
 
 <link href="style.css" rel="stylesheet">
