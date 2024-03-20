@@ -36,7 +36,7 @@ layout: spec
 - [Homework 3: Fitting Models and Image Warping](hw3.md)
 - [Homework 4: Machine Learning](hw4.md)
 - Homework 5: Generative Models
-- Homework 6: 3D Deep Learning
+- Homework 6: 3D Vision
 
 # Schedule
 Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.url }}/#textbooks) for textbook acronyms in readings.
@@ -63,7 +63,7 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Monday<br>Mar 11      | **Segmentation**<br>Semantic/Instance Segmentation                                          | [Slides](https://drive.google.com/file/d/1WLyMTrLYP9NWOix3TNrs782wULaMBCDf/view?usp=sharing) <br> [Discussion Slides](https://drive.google.com/file/d/1oUApPFzrnCqkMhOczp7Bdj7D7bYSuTZT/view?usp=sharing){:target="_blank"}   |
 | Wednesday<br>Mar 13   | **Detection & Other Topics**                                                                | [Slides](https://drive.google.com/file/d/1rprE23d8BLKxDhiWgyhc4ak7ZNC0dN0b/view?usp=sharing)   |
 | Monday<br>Mar 18      | **Image Generative Models 1** <br> Generative models, GANs, Self-supervised learning                                              | [Slides](https://drive.google.com/file/d/1AyGUz8Q4nJtER9FRN_XJJHClkpDYRLPj/view?usp=sharing) |
-| Wednesday<br>Mar 20   | **Image Generative Models 2** <br> Score-based Models, Diffusion Models, Flow-based Models <br> :warning: ***Homework 4 Due*** <br> :warning: ***Homework 5 Release*** | Slides |
+| Wednesday<br>Mar 20   | **Image Generative Models 2** <br> Score-based Models, Diffusion Models <br> :warning: ***Homework 4 Due*** <br> :warning: ***Homework 5 Release*** | [Slides](https://drive.google.com/file/d/1knipLfQXMBZjR8r5LRx5BvRO03mAq8N1/view?usp=sharing) |
 | Monday<br>Mar 25      | :exclamation: **Midterm**                                                                   |          |
 | Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration <br> ***Project Proposal Due***                                  | Slides  <br> Reading: S6.3 |
 | Monday<br>April 1     | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
