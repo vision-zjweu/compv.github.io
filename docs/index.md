@@ -35,7 +35,7 @@ layout: spec
 - [Homework 2: Convolution and Feature Detection](hw2.md)
 - [Homework 3: Fitting Models and Image Warping](hw3.md)
 - [Homework 4: Machine Learning](hw4.md)
-- Homework 5: Generative Models
+- [Homework 5: Generative Models](hw5.md)
 - Homework 6: 3D Vision
 
 # Schedule
