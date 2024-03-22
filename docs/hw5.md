@@ -298,7 +298,7 @@ You may expect the output to be similar to one of these inpainted figures in Fig
 
 <figure class="figure-container">
   <img src="{{site.url}}/assets/hw5/figures/repaint.gif" alt="repaint" width="75%">
-  <figcaption>Figure 4: Diffusion Posterior Sampling algorithm </figcaption>
+  <figcaption>Figure 4: Repaint Inpainting Results </figcaption>
 </figure>
 
 
