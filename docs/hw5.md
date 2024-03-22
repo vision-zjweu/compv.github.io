@@ -294,14 +294,21 @@ Task 6.1: *(15 points)* {{ code }} <span class="code"> Fill the TODO sections of
 
 Task 6.2: *(5 points)* {{ report }} <span class="report">In your report, include the inpainted using Repaint.</span>
 
+You may expect the output to be similar to one of these inpainted figures in Figure 5.
+
+<figure class="figure-container">
+  <img src="{{site.url}}/assets/hw5/figures/repaint.gif" alt="repaint" width="75%">
+  <figcaption>Figure 4: Diffusion Posterior Sampling algorithm </figcaption>
+</figure>
+
 
 ## Image Inpainting using Diffusion Posterior Sampling
 
-Diffusion Posterior Sampling (DPS) is another method for solving general inverse problem (inpaiting being an inverse problem itself). Refer to the algorithm in the Figure 4.
+Diffusion Posterior Sampling (DPS) is another method for solving general inverse problem (inpaiting being an inverse problem itself). Refer to the algorithm in the Figure 5.
 
 <figure class="figure-container">
   <img src="{{site.url}}/assets/hw5/figures/dps.png" alt="DPS" width="50%">
-  <figcaption>Figure 4: Diffusion Posterior Sampling algorithm </figcaption>
+  <figcaption>Figure 5: Diffusion Posterior Sampling algorithm </figcaption>
 </figure>
 
 Follow the instructions in the notebook and the python files to implement the algorithm for diffusion posterior sampling.
