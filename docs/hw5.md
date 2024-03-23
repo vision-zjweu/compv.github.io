@@ -108,7 +108,7 @@ The submission includes two parts:
 
 # Section 1: Pix2Pix
 
-In this section, you will implement an image-to-image translation program based on [pix2pix](https://phillipi.github.io/pix2pix/). You will train the pix2pix model on the *edges2shoes* dataset to translate images containing only the edges of a shoe, to a full image of a shoe. The edges are automatically extracted from the real shoe images.
+In this section, you will implement an image-to-image translation program based on [pix2pix](https://phillipi.github.io/pix2pix/). You will train the pix2pix model on the *edges2shoes* dataset to translate images containing only the edges of a shoe, to a full image of a shoe. The edges are automatically extracted from the real shoe images. This section uses the notebook `hw5_gan.ipynb`.
 
 Some example edge/image pairs are shown in Figure 1
 
@@ -181,7 +181,7 @@ Task 2.3: *(5 points)* {{ code }} {{ report }} <span class="report">In your repo
 
 # Section 2: Diffusion Models
 
-In this section, you will be exploring various diffusion-based sampling algorithms using a pre-trained diffusion model. We will be focusing on two kinds of problems in this section.
+In this section, you will be exploring various diffusion-based sampling algorithms using a pre-trained diffusion model. We will be focusing on two kinds of problems in this section. This section uses the notebook `hw5_diffusion.ipynb` and the python files `guided_diffusion/simple_diffusion.py` and `guided_diffusion/condition_methods.py`.
 
 Download the model weights file [ffhq_10M.pt](https://drive.google.com/drive/folders/1jElnRoFv7b31fG0v6pTSQkelbSX3xGZh?usp=sharing) and upload this file to the `models/` directory.
 
