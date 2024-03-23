@@ -147,7 +147,7 @@ Given a generator $$G$$ and a discriminiator $$D$$, the loss function / objectiv
 
 $$
 \mathcal{L}_{cGAN}(G, D) = \frac{1}{N} \left(\: \sum_{i=1}^{N} log D(x_i, y_i)
-+ \sum_{i=1}^{N} log (1 - D\:(\:G\:(x_i),\: y_i) \:)
++ \sum_{i=1}^{N} log (1 - D\:(\:G\:(x_i),\: x_i) \:)
 \right)
 $$
 
