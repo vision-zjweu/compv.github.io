@@ -20,7 +20,7 @@ layout: spec
 	- Monday 12:30-1:30PM, 2166 DOW - Alex
 	- Monday 3:30-4:30PM, 1005 DOW - Anurekha
 	- Wendesday 3:30-4:30PM, 3150 DOW - Farzad
-	- Wednesday 4:30-5:30PM, 3150 DOW - Yuhang
+	- Wednesday 4:30-5:30PM, 3150 DOW - Yuhang [link](https://umich.zoom.us/j/3645727237){:target="_blank"}
 	- Wednesday 5:30-6:30PM, 107 GFL - Jinfan
 	- Thursday 3:30-4:30PM, 3150 DOW - Shrikant
 - [**Piazza Signup**](https://piazza.com/umich/winter2024/c9b2){:target="_blank"}
