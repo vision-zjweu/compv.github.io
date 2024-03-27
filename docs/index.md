@@ -65,7 +65,7 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Monday<br>Mar 18      | **Image Generative Models 1** <br> Generative models, GANs, Self-supervised learning                                              | [Slides](https://drive.google.com/file/d/1AyGUz8Q4nJtER9FRN_XJJHClkpDYRLPj/view?usp=sharing) |
 | Wednesday<br>Mar 20   | **Image Generative Models 2** <br> Score-based Models, Diffusion Models <br> :warning: ***Homework 4 Due*** <br> :warning: ***Homework 5 Release*** | [Slides](https://drive.google.com/file/d/1knipLfQXMBZjR8r5LRx5BvRO03mAq8N1/view?usp=sharing) |
 | Monday<br>Mar 25      | :exclamation: **Midterm**                                                                   |          |
-| Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration <br> ***Project Proposal Due***                                  | Slides  <br> Reading: S6.3 |
+| Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration <br> ***Project Proposal Due***                                  | [Slides](https://drive.google.com/file/d/14PCcRXUSY3ESZB_rB9QYoAlAyClU0UIx/view?usp=sharing)  <br> Reading: S6.3 |
 | Monday<br>April 1     | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
 | Wednesday<br>April 3  | **Stereo**<br>Two-view Stereo, Multiview Stereo <br> :warning: ***Homework 5 Due*** <br> :warning: ***Homework 6 Release*** | Slides  <br> Reading: S11 |
 | Monday<br>April 8     | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides  <br> Reading: S7 |
