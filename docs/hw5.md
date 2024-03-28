@@ -53,7 +53,7 @@ This homework is divided into two major sections based on how you're expected to
 
 ## Submission
 The submission includes two parts:
-1. **To Canvas**: Submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories. Starter code is given to you on Canvas under the “Homework 5” assignment. You can also download it [here](https://drive.google.com/file/d/1v_7NIozOLKVua5u6tYBMvToSM3s3_rsP/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
+1. **To Canvas**: Submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories. Starter code is given to you on Canvas under the “Homework 5” assignment. You can also download it [here](https://drive.google.com/file/d/1JN5GX1WGtjoVNf4osrhvskDuFTCxPms7/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
 
     {{ code }} - 
     <span class="code">We have indicated questions where you have to do something in code in red. **If Gradescope asks for it, also submit your code in the report with the formatting below.**</span>  
@@ -340,11 +340,11 @@ This section is meant to help you keep track of the many things that go in the r
 	- [ ] 5.1 - {{ code }} `p_sample` of class `DDIMDiffusion`
 	- [ ] 5.2 - {{ report }} Sampled Image
 - [ ] **Image Inpainting using RePaint**:
-	- [ ] 5.1 - {{ code }} `p_sample` of class `Repaint`
-	- [ ] 5.2 - {{ report }} Inpainted Image
+	- [ ] 6.1 - {{ code }} `p_sample` of class `Repaint`
+	- [ ] 6.2 - {{ report }} Inpainted Image
 - [ ] **Image Inpainting using DPS**:
-	- [ ] 5.1 - {{ code }} `PosteriorSampling`
-	- [ ] 5.2 - {{ report }} Inpainted Image
+	- [ ] 7.1 - {{ code }} `PosteriorSampling`
+	- [ ] 7.2 - {{ report }} Inpainted Image
 
 # Canvas Submission Checklist
 
