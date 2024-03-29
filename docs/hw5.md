@@ -53,7 +53,7 @@ This homework is divided into two major sections based on how you're expected to
 
 ## Submission
 The submission includes two parts:
-1. **To Canvas**: Submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories. Starter code is given to you on Canvas under the “Homework 5” assignment. You can also download it [here](https://drive.google.com/file/d/1tfMIZ1XaR6KPF4ChNAAYRXdVq0x19tNe/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
+1. **To Canvas**: Submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories. Starter code is given to you on Canvas under the “Homework 5” assignment. You can also download it [here](https://drive.google.com/file/d/1XGWr0hJe1GhGeSjAbQsz8CBEyWV4CN3H/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
 
     {{ code }} - 
     <span class="code">We have indicated questions where you have to do something in code in red. **If Gradescope asks for it, also submit your code in the report with the formatting below.**</span>  
