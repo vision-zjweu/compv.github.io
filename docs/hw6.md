@@ -40,7 +40,7 @@ The submission includes two parts:
     {{ code }} -
    <span class="code">We have indicated questions where you have to do something in code in red. **If Gradescope asks for it, also submit your code in the report with the formatting below. Please include the code in your gradescope submission.** </span> 
 
-    Starter code is given to you on Canvas under the "Homework 6" assignment. You can also download it [here](). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
+    Starter code is given to you on Canvas under the "Homework 6" assignment. You can also download it [here](https://drive.google.com/file/d/1SC8xlJWKkDsOHF4WzsXrixwVpV5AOGpO/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
         
     <div class="primer-spec-callout info" markdown="1">
       **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
@@ -64,14 +64,11 @@ The submission includes two parts:
     1. Download and extract the zip file. 
     2. Upload the folder containing the entire code (with the notebook) to your Google Drive. 
     3. Ensure that you are using the GPU session by using the `Runtime -> Change Runtime Type` and selecting `Python3` and `T4 GPU`. Start the session by clicking `Connect` at the top right. The default T4 GPU should suffice for you to complete this assignment.
-    4. Mount your Google Drive to the Colab by using the below code in the first cell of the notebook.
-    5. The first few cells make sure that you can run the notebook along with the code in your drive folder. Fill the variable `GOOGLE_DRIVE_PATH_AFTER_MYDRIVE` with the path to your folder after `drive/MyDrive` to include the repository to your system path.
-    6. You are good to start Section 2 of the assignment. Please use your GPU resources prudently. If you wish, you may create multiple google accounts and share the your drive folder to those accounts to use the GPUs from these accounts.
 
-    **Local System**: Steps to Setup the Codebase (This is applicable for Section 1 as well)
-
+    **Local System**: Steps to Setup the Codebase 
     1. Download and extract the zip file to your local directory.
-    2. You are good to start Section 2 of the assignment.
+	2. Get rid of the command lines that is specfic for google colabs.
+    3. You are good to start Section 2 of the assignment.
 
 
 ### Python Environment
@@ -266,3 +263,4 @@ This section is meant to help you keep track of the many things that go in the r
 In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
 - [ ] `task1.py`
 - [ ] `task23.py`
+- [ ] `HW6_Neural_Radiance_Fields.ipynb`
