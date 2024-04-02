@@ -109,7 +109,7 @@ $$
 \pB \equiv \MB \XB
 $$ 
 
-and (see foreword) by deriving an optimization problem. The script `task1.py` shows you how to load the data. The data we want you to use is in `task1/`, but we show you how to use data from Task 2 and 3 as well. **Credit:** The data from task 1 and an early version of the problem comes from James Hays's Georgia Tech CS 6476. 
+and by deriving an optimization problem. The script `task1.py` shows you how to load the data. The data we want you to use is in `task1/`, but we show you how to use data from Task 2 and 3 as well. **Credit:** The data from task 1 and an early version of the problem comes from James Hays's Georgia Tech CS 6476. 
 
 1.  *(15 points)* {{ code }} <span class="code">Fill in `find_projection` in `task1.py`.</span>
 
@@ -128,16 +128,12 @@ and (see foreword) by deriving an optimization problem. The script `task1.py` sh
 	
 	Note: You should feel good about the distance if it is **less than 0.01** for the given sample data. If you plug in different data, this threshold will of course vary.
 
-4.  *(5 points)* {{ report }} <span class="report">Describe what relationship, if any, there is between the equation above and Equation 6 in the HW5 Notes.</span>
-	
-	Note that the points we've given you are well-described by a linear projection -- there's no noise in the measurements -- but in practice, there will be an error that has to minimize. Both equations represent objectives that could be used. If they are the same, show it; if they are not the same, report which one makes more sense to minimize. Things to consider include whether the equations directly represent anything meaningful.
-
 
 ## Estimation of the Fundamental Matrix and Reconstruction
 
 **Data:** we give you a series of datasets that are nicely bundled in the folder `task23/`. Each dataset contains two images `img1.png` and `img2.png` and a numpy file `data.npz` containing a whole bunch of variables. The script `task23.py` shows how to load the data.
 
-**Credit:** `temple` comes from Middlebury's Multiview Stereo dataset. The images shown in the synthetic images are described in HW1's credits. 
+**Credit:** `temple` comes from Middlebury's Multiview Stereo dataset.
 
 
 ### Task 2: Estimating $$\FB$$
@@ -241,7 +237,6 @@ This section is meant to help you keep track of the many things that go in the r
 	- [ ] 1.1 - {{ code }} `find_projections`
 	- [ ] 1.2 - {{ report}} Report $$M$$ for `task1/`
 	- [ ] 1.3 - {{ code }} `compute_distance`
-	- [ ] 1.4 - {{ report }} Relationship between equation 2 and 6
 - [ ] **Estimating $$F$$**
 	- [ ] 2.1 - {{ code }} `find_fundamental_matrix`
 	- [ ] 2.2 - {{ code }} `compute_epipoles`
