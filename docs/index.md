@@ -67,7 +67,7 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Monday<br>Mar 25      | :exclamation: **Midterm**                                                                   |  [Discussion Slides](https://drive.google.com/file/d/1TWnO10qeycd9Xw7vl12yPKSO-P07htMi/view?usp=sharing)    |
 | Wednesday<br>Mar 27   | **Camera Calibration**<br>Intro to 3D, Camera Calibration <br> ***Project Proposal Due***                                  | [Slides](https://drive.google.com/file/d/14PCcRXUSY3ESZB_rB9QYoAlAyClU0UIx/view?usp=sharing)  <br> Reading: S6.3 |
 | Monday<br>April 1     | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | Slides  <br> Reading: S11 |
-| Wednesday<br>April 3  | **Stereo**<br>Two-view Stereo, Multiview Stereo <br> :warning: ***Homework 5 Due*** <br> :warning: ***Homework 6 Release*** | Slides  <br> Reading: S11 |
+| Wednesday<br>April 3  | **Stereo**<br>Two-view Stereo <br> :warning: ***Homework 5 Due*** <br> :warning: ***Homework 6 Release*** | [Slides](https://drive.google.com/file/d/1hLkIzC7kN9nea6CblUphKv6EEL27YLmC/view?usp=sharing)  <br> Reading: S11 |
 | Monday<br>April 8     | **Structure from Motion**<br>Incremental/batch Structure from Motion                        | Slides  <br> Reading: S7 |
 | Wednesday<br>April 10 | **3D Deep Learning**<br> 3D Representations, 3D Architectures                                                                        | Slides   |
 | Monday<br>April 15    | **Neural Fields**                                                                           | Slides   |
