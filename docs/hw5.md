@@ -4,7 +4,7 @@ permalink: /hw5
 latex: true
 
 title: Homework 5 – Image Generative Models
-due: 11:59 p.m. on Wednesday April 5th, 2024
+due: 11:59 p.m. on Friday April 5th, 2024
 ---
 
 <link href="style.css" rel="stylesheet">
