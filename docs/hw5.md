@@ -53,7 +53,7 @@ This homework is divided into two major sections based on how you're expected to
 
 ## Submission
 The submission includes two parts:
-1. **To Canvas**: Submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories. Starter code is given to you on Canvas under the “Homework 5” assignment. You can also download it [here](https://drive.google.com/file/d/1PVcbsi9PiW5Eqx7gmCWbr4vNFCL6LMF2/view?usp=drive_link). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
+1. **To Canvas**: Submit a `zip` file containing a **single** directory with your **uniqname** as the name that contains all your code and anything else asked for on the [Canvas Submission Checklist](#canvas-submission-checklist). Don't add unnecessary files or directories. Starter code is given to you on Canvas under the “Homework 5” assignment. You can also download it [here](https://drive.google.com/file/d/1v_7NIozOLKVua5u6tYBMvToSM3s3_rsP/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes.
 
     {{ code }} - 
     <span class="code">We have indicated questions where you have to do something in code in red. **If Gradescope asks for it, also submit your code in the report with the formatting below.**</span>  
@@ -65,7 +65,7 @@ The submission includes two parts:
     Your zip file should contain a single directory which has the same name as your uniqname. If I (David, uniqname `fouhey`) were submitting my code, the zip file should contain a single folder `fouhey/` containing all required files.   -->
         
     <div class="primer-spec-callout info" markdown="1">
-      **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework.
+      **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
 
       <!-- If we don't ask you for it, you don't need to submit it; while you should clean up the directory, don't panic about having an extra file or two. -->
     </div>
@@ -147,7 +147,7 @@ Given a generator $$G$$ and a discriminiator $$D$$, the loss function / objectiv
 
 $$
 \mathcal{L}_{cGAN}(G, D) = \frac{1}{N} \left(\: \sum_{i=1}^{N} log D(x_i, y_i)
-+ \sum_{i=1}^{N} log (1 - D\:(\:G\:(x_i),\: x_i) \:)
++ \sum_{i=1}^{N} log (1 - D\:(x_i, \:G\:(x_i)) \:)
 \right)
 $$
 
