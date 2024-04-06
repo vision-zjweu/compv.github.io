@@ -211,7 +211,7 @@ that indicates whether this point in space is occupied.
 
 1.  *(10 points)* {{ code }} <span class="code"> Implement the function positional_encoder(x, L_embed = 6) </span> that
 encodes the input x as 
-$$\gamma(x) = (x, \sin(2x), \cos(2x), \ldots, \sin(2^{L_{embed}-1}x), \cos(2^{L_{embed}-1}x)).$$  
+$$\gamma(x) = (x, \sin(2^{0}x), \cos(2^{0}x), \ldots, \sin(2^{L_{embed}-1}x), \cos(2^{L_{embed}-1}x)).$$  
 
 2.  *(10 points)* {{ code }} <span class="code"> Implement the code that samples 3D points along a ray in `render`.</span>  This will
 be used to march along the ray and query 
