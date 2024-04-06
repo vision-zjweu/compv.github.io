@@ -36,7 +36,7 @@ layout: spec
 - [Homework 3: Fitting Models and Image Warping](hw3.md)
 - [Homework 4: Machine Learning](hw4.md)
 - [Homework 5: Generative Models](hw5.md)
-- Homework 6: 3D Vision
+- [Homework 6: 3D Vision](hw6.md)
 
 # Schedule
 Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.url }}/#textbooks) for textbook acronyms in readings.

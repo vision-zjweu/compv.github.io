@@ -4,7 +4,7 @@ permalink: /hw6
 latex: true
 
 title: Homework 6 – 3D Deep Learning
-due: 11:59 p.m. on Friday April 19th, 2024
+due: 11:59 p.m. on Wednesday April 17th, 2024
 ---
 
 <link href="style.css" rel="stylesheet">
@@ -40,7 +40,7 @@ The submission includes two parts:
     {{ code }} -
    <span class="code">We have indicated questions where you have to do something in code in red. **If Gradescope asks for it, also submit your code in the report with the formatting below. Please include the code in your gradescope submission.** </span> 
 
-    Starter code is given to you on Canvas under the "Homework 6" assignment. You can also download it [here](https://drive.google.com/file/d/1SC8xlJWKkDsOHF4WzsXrixwVpV5AOGpO/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
+    Starter code is given to you on Canvas under the "Homework 6" assignment. You can also download it [here](https://drive.google.com/file/d/1HemnmcUNKyRA9E5txPSS--PCkRSauQCH/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
         
     <div class="primer-spec-callout info" markdown="1">
       **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
@@ -48,7 +48,7 @@ The submission includes two parts:
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
     {{ report }} -
-   <span class="report">We have indicated questions where you have to do something in the report in green. **Some coding questions also need to be included in the report.**</span>
+   <span class="report">We have indicated questions where you have to do something in the report in green. **For coding questions please include in the code in the report.**</span>
 
     The write-up must be an electronic version. **No handwriting, including plotting questions.** $$\LaTeX$$ is recommended but not mandatory.
 
@@ -80,7 +80,7 @@ To make your life easier, we recommend you to install the latest [Anaconda](http
 - [Matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html){:target="_blank"}
 - [OpenCV](https://opencv.org/){:target="_blank"}
 
-## Camera Calibration
+<!-- ## Camera Calibration -->
 
 <figure class="figure-container">
     <div class="flex-container">
@@ -100,7 +100,7 @@ To make your life easier, we recommend you to install the latest [Anaconda](http
     <figcaption>Figure 1: Epipolar lines for some of the datasets</figcaption>
 </figure>
 
-
+<!-- 
 ### Task 1: Estimating $$\MB$$
 
 We will give you a set of 3D points $$\{\XB_i\}_i$$ and corresponding 2D points $$\{\pB_i\}_i$$. In part 1, you're given corresponding point locations in `pts2d-norm-pic.txt` and `pts3d-norm.txt`, which corresponds to a camera projection matrix. **Solve** the projection matrix $$P$$ and **include** it in your report. The goal is to compute the projection matrix $$\MB$$ that maps from world 3D coordinates to 2D image coordinates. Recall that 
@@ -126,19 +126,19 @@ and by deriving an optimization problem. The script `task1.py` shows you how to 
 	where $$\textrm{proj}([x,y,w]) = [x/w, y/w]$$.
 	The distance quantifies how well the projection maps the points $$\XB_i$$ to $$\pB_i$$. You should use `find_projection` from earlier.
 	
-	Note: You should feel good about the distance if it is **less than 0.01** for the given sample data. If you plug in different data, this threshold will of course vary.
+	Note: You should feel good about the distance if it is **less than 0.01** for the given sample data. If you plug in different data, this threshold will of course vary. -->
 
 
-## Estimation of the Fundamental Matrix and Reconstruction
+## Estimation of the Fundamental Matrix and Epipoles
 
-**Data:** we give you a series of datasets that are nicely bundled in the folder `task23/`. Each dataset contains two images `img1.png` and `img2.png` and a numpy file `data.npz` containing a whole bunch of variables. The script `task23.py` shows how to load the data.
+**Data:** we give you a series of datasets that are nicely bundled in the folder `task1/`. Each dataset contains two images `img1.png` and `img2.png` and a numpy file `data.npz` containing a whole bunch of variables. The script `task1.py` shows how to load the data.
 
 **Credit:** `temple` comes from Middlebury's Multiview Stereo dataset.
 
 
-### Task 2: Estimating $$\FB$$
+### Task 1: Estimating $$\FB$$ and Epipoles
 
-1.  *(15 points)* {{ code }} <span class="code">Fill in `find_fundamental_matrix`</span> in `task23.py`. You should implement the eight-point algorithm. Remember to normalize the data  and to reduce the rank of $$\FB$$. For normalization,
+1.  *(15 points)* {{ code }} <span class="code">Fill in `find_fundamental_matrix`</span> in `task1.py`. You should implement the eight-point algorithm. Remember to normalize the data  and to reduce the rank of $$\FB$$. For normalization,
 you can scale the image size and center the data at 0.
 
 2.  *(10 points)* {{ code }} <span class="code">Fill in `compute_epipoles`.</span> This should return the homogeneous coordinates of the epipoles -- remember they can be infinitely far away!
@@ -147,7 +147,7 @@ you can scale the image size and center the data at 0.
 
 4.  *(5 points)* {{ report }} <span class="report">Report the epipoles for `reallyInwards` and `xtrans`</span>.
 
-
+<!-- 
 ### Task 3: Triangulating $$\XB$$
 
 <figure class="figure-container">
@@ -183,11 +183,11 @@ Triangulation solves for $$\XB$$ given $$\pB, \pB', \MB_1, \MB_2$$. We'll use Op
 
 	Finally, triangulate the 2D points using `cv2.triangulatePoints`.
 
-3.  *(10 points)* {{ report }} <span class="report">Put a visualization of the point cloud for `reallyInwards` in your report.</span> You can use `visualize_pcd` in `utils.py` or implement your own.
+3.  *(10 points)* {{ report }} <span class="report">Put a visualization of the point cloud for `reallyInwards` in your report.</span> You can use `visualize_pcd` in `utils.py` or implement your own. -->
 
 ## 3D Generation
 
-### Task 4: Neural radiance fields 
+### Task 2: Neural radiance fields 
 
 We will fit a neural radiance field (NeRF) to a collection of photos (with their camera pose), and use it to render a scene from different (previously unseen) viewpoints. To estimate the color of a pixel, we will estimate the 3D ray that exist the pixel. Then, we will walk in the direction of the ray and query the network at each point. Finally, we will use volume rendering to obtain the pixel’s RGB color, thereby accounting for occlusion.
 
@@ -233,29 +233,22 @@ We can now render the NeRF from different viewpoints. The predicted image should
 # Tasks Checklist
 
 This section is meant to help you keep track of the many things that go in the report:
-- [ ] **Estimating $$M$$**
-	- [ ] 1.1 - {{ code }} `find_projections`
-	- [ ] 1.2 - {{ report}} Report $$M$$ for `task1/`
-	- [ ] 1.3 - {{ code }} `compute_distance`
-- [ ] **Estimating $$F$$**
-	- [ ] 2.1 - {{ code }} `find_fundamental_matrix`
-	- [ ] 2.2 - {{ code }} `compute_epipoles`
-	- [ ] 2.3 - {{ report }} Epipolar lines for `temple`, `reallyInwards`, and your choice
-	- [ ] 2.4 - {{ report }} Epipoles for `reallyInwards` and `xtrans`
-- [ ] **Triangulating $$X$$**
-	- [ ] 3.1 - {{ report }} Compute $$E$$
-	- [ ] 3.2 - {{ code }} `find_triangulation`
-	- [ ] 3.3 - {{ report }} Point cloud for `reallyInwards`
+
+- [ ] **Estimating $$F$$ and Epipoles**
+	- [ ] 1.1 - {{ code }} `find_fundamental_matrix`
+	- [ ] 1.2 - {{ code }} `compute_epipoles`
+	- [ ] 1.3 - {{ report }} Epipolar lines for `temple`, `reallyInwards`, and your choice
+	- [ ] 1.4 - {{ report }} Epipoles for `reallyInwards` and `xtrans`
+
 - [ ] **Neural radiance fields**
-    - [ ] 4.1 - {{ code }} Implement `positional_encoder`
-    - [ ] 4.2 - {{ code }} Sample 3D points along a ray
-    - [ ] 4.3 - {{ code }} Estimate `rgb_map` and `depth_map`
-    - [ ] 4.2 - {{ code }} `train`
-	- [ ] 4.2 - {{ report }} Report your prediction and groud truth image
+    - [ ] 2.1 - {{ code }} Implement `positional_encoder`
+    - [ ] 2.2 - {{ code }} Sample 3D points along a ray
+    - [ ] 2.3 - {{ code }} Estimate `rgb_map` and `depth_map`
+    - [ ] 2.4 - {{ code }} `train`
+	- [ ] 2.5 - {{ report }} Report your prediction and groud truth image
 
 # Canvas Submission Checklist
 
 In the `zip` file you submit to Canvas, the directory named after your uniqname should include the following files:
 - [ ] `task1.py`
-- [ ] `task23.py`
 - [ ] `HW6_Neural_Radiance_Fields.ipynb`
