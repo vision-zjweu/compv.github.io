@@ -43,7 +43,7 @@ The submission includes two parts:
     Starter code is given to you on Canvas under the "Homework 6" assignment. You can also download it [here](https://drive.google.com/file/d/1HemnmcUNKyRA9E5txPSS--PCkRSauQCH/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
         
     <div class="primer-spec-callout info" markdown="1">
-      **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. We also provide a script that validates the submission format [here](https://raw.githubusercontent.com/eecs442/utils/master/check_submission.py){:target="_blank"}.
+      **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. 
 
 2. **To Gradescope**: submit a `pdf` file as your write-up, including your answers to all the questions and key choices you made.
 
