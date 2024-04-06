@@ -40,7 +40,7 @@ The submission includes two parts:
     {{ code }} -
    <span class="code">We have indicated questions where you have to do something in code in red. **If Gradescope asks for it, also submit your code in the report with the formatting below. Please include the code in your gradescope submission.** </span> 
 
-    Starter code is given to you on Canvas under the "Homework 6" assignment. You can also download it [here](https://drive.google.com/file/d/1HemnmcUNKyRA9E5txPSS--PCkRSauQCH/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
+    Starter code is given to you on Canvas under the "Homework 6" assignment. You can also download it [here](https://drive.google.com/file/d/1z2UEf4goLwt5dTjVToXOmjSehIcQrRNB/view?usp=sharing). Clean up your submission to include only the necessary files. Pay close attention to filenames for autograding purposes. 
         
     <div class="primer-spec-callout info" markdown="1">
       **Submission Tip:** Use the [Tasks Checklist](#tasks-checklist) and [Canvas Submission Checklist](#canvas-submission-checklist) at the end of this homework. 
