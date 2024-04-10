@@ -69,9 +69,9 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Monday<br>April 1     | **Epipolar Geometry**<br>Epipolar Geometry, The Fundamental & Essential Matrices            | [Slides](https://drive.google.com/file/d/1QMw75DV2tsDEXhi1cNWwT87jAx5ZIWz4/view?usp=sharing)  <br> Reading: S11 |
 | Wednesday<br>April 3  | **Stereo**<br>Two-view Stereo <br> :warning: ***Homework 5 Due*** <br> :warning: ***Homework 6 Release*** | [Slides](https://drive.google.com/file/d/1hLkIzC7kN9nea6CblUphKv6EEL27YLmC/view?usp=sharing)  <br> Reading: S11 |
 | Monday<br>April 8     | **Structure from Motion**<br>                        | [Slides](https://drive.google.com/file/d/19AJW_54JGIekWB4ptmGJY0NiPQiBA_Na/view?usp=drive_link)  <br> Reading: S7 |
-| Wednesday<br>April 10 | **3D Deep Learning**<br> 3D Representations, 3D Architectures                                                                        | Slides   |
-| Monday<br>April 15    | **Neural Fields**                                                                           | Slides   |
-| Wednesday<br>April 17 | **Ethics & Fairness** <br> :warning: ***Homework 6 Due***                                   | Slides   |
+| Wednesday<br>April 10 | **Neural Fields 1**<br> 3D Representations, Neural 3D reconstruction                                                                        | Slides   |
+| Monday<br>April 15    | **Neural Fields 2**                                                                           | Slides   |
+| Wednesday<br>April 17 | **Special Topics (Guest Lecture)** <br> :warning: ***Homework 6 Due***                                   | Slides   |
 | Monday<br>April 22    | **Special Topics**                                                                          | Slides   |
 | Saturday<br>April 27  | **Project Report Due**                                                                      | Slides   |
 
