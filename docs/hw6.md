@@ -138,8 +138,8 @@ and by deriving an optimization problem. The script `task1.py` shows you how to 
 
 ### Task 1: Estimating $$\FB$$ and Epipoles
 
-1.  *(15 points)* {{ code }} <span class="code">Fill in `find_fundamental_matrix`</span> in `task1.py`. You should implement the eight-point algorithm. Remember to normalize the data  and to reduce the rank of $$\FB$$. For normalization,
-you can scale the image size and center the data at 0.
+1.  *(15 points)* {{ code }} <span class="code">Fill in `find_fundamental_matrix`</span> in `task1.py`. You should implement the eight-point algorithm mentioned in the lecture. Remember to normalize the data  and to reduce the rank of $$\FB$$. For normalization,
+you can scale the image size and center the data at 0. We want you to "estimate" the fundamental matrix here so it's ok for your result to be slighly off from the opencv implementation. 
 
 2.  *(10 points)* {{ code }} <span class="code">Fill in `compute_epipoles`.</span> This should return the homogeneous coordinates of the epipoles -- remember they can be infinitely far away!
 
