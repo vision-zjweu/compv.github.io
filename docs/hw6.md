@@ -141,7 +141,7 @@ and by deriving an optimization problem. The script `task1.py` shows you how to 
 1.  *(15 points)* {{ code }} <span class="code">Fill in `find_fundamental_matrix`</span> in `task1.py`. You should implement the eight-point algorithm mentioned in the lecture. Remember to normalize the data  and to reduce the rank of $$\FB$$. For normalization,
 you can scale the image size and center the data at 0. We want you to "estimate" the fundamental matrix here so it's ok for your result to be slighly off from the opencv implementation. 
 
-2.  *(10 points)* {{ code }} <span class="code">Fill in `compute_epipoles`.</span> This should return the homogeneous coordinates of the epipoles -- remember they can be infinitely far away!
+2.  *(10 points)* {{ code }} <span class="code">Fill in `compute_epipoles`.</span> This should return the homogeneous coordinates of the epipoles -- remember they can be infinitely far away! For computing the nullspace of F, using SVD would be helpful!
 
 3.  *(5 points)* {{ report }} <span class="report">Show epipolar lines for `temple`, `reallyInwards`, and another dataset of your choice.</span>
 
