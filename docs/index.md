@@ -70,7 +70,7 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Wednesday<br>April 3  | **Stereo**<br>Two-view Stereo <br> :warning: ***Homework 5 Due*** <br> :warning: ***Homework 6 Release*** | [Slides](https://drive.google.com/file/d/1hLkIzC7kN9nea6CblUphKv6EEL27YLmC/view?usp=sharing)  <br> [Discussion Slides](https://drive.google.com/file/d/1vBY3YCdSDtK2nv7qIWxIo8pHljaeWj-P/view?usp=sharing){:target="_blank"}  |
 | Monday<br>April 8     | **Structure from Motion**<br>                        | [Slides](https://drive.google.com/file/d/19AJW_54JGIekWB4ptmGJY0NiPQiBA_Na/view?usp=drive_link)  <br> Reading: S7 |
 | Wednesday<br>April 10 | **Neural Fields 1**<br> 3D Representations, Neural 3D reconstruction                                                                        | [Slides](https://drive.google.com/file/d/1F6WPtUAimcS2jz4AfBntY8SK7LEapEyq/view?usp=sharing)   |
-| Monday<br>April 15    | **Neural Fields 2**                                                                           | Slides   |
+| Monday<br>April 15    | **Neural Fields 2**                                                                           | [Slides](https://drive.google.com/file/d/1KyNh0PVR0aznO05CFv6NFBYL9bspFRpl/view?usp=sharing)   |
 | Wednesday<br>April 17 | **Special Topics (Guest Lecture)** <br> :warning: ***Homework 6 Due***                                   | Slides   |
 | Monday<br>April 22    | **Special Topics**                                                                          | Slides   |
 | Saturday<br>April 27  | **Project Report Due**                                                                      | Slides   |
