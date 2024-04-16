@@ -89,8 +89,8 @@ To make your life easier, we recommend you to install the latest [Anaconda](http
             <figcaption>Temple</figcaption>
         </figure>
         <figure>
-            <img src="{{site.url}}/assets/hw5/figures/zrtrans_us.png" alt="ztrans" width="300">
-            <figcaption>ztrans</figcaption>
+            <img src="{{site.url}}/assets/hw5/figures/zrtrans_us.png" alt="zrtrans" width="300">
+            <figcaption>zrtrans</figcaption>
         </figure>
         <figure>
             <img src="{{site.url}}/assets/hw5/figures/reallyInwards_us.png" alt="reallyInwards" width="300">
