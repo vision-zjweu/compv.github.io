@@ -73,7 +73,7 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Monday<br>April 15    | **Neural Fields 2**                                                                           | [Slides](https://drive.google.com/file/d/1KyNh0PVR0aznO05CFv6NFBYL9bspFRpl/view?usp=sharing)   |
 | Wednesday<br>April 17 | **Special Topics (Guest Lecture)** <br> :warning: ***Homework 6 Due***                                   | Slides   |
 | Monday<br>April 22    | **Special Topics**                                                                          | Slides   |
-| Saturday<br>April 27  | **Project Report Due**                                                                      | Slides   |
+| Saturday<br>April 29  | **Project Report Due**                                                                      | Slides   |
 
 # Syllabus
 
