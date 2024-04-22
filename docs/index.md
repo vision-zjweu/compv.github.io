@@ -72,7 +72,7 @@ Tentative Schedule, details are subject to change. Refer to [Textbooks]({{ site.
 | Wednesday<br>April 10 | **Neural Fields 1**<br> 3D Representations, Neural 3D reconstruction                                                                        | [Slides](https://drive.google.com/file/d/1F6WPtUAimcS2jz4AfBntY8SK7LEapEyq/view?usp=sharing)   |
 | Monday<br>April 15    | **Neural Fields 2**                                                                           | [Slides](https://drive.google.com/file/d/1KyNh0PVR0aznO05CFv6NFBYL9bspFRpl/view?usp=sharing)   |
 | Wednesday<br>April 17 | **Special Topics (Guest Lecture)** <br> :warning: ***Homework 6 Due***                                   | Slides   |
-| Monday<br>April 22    | **Special Topics**                                                                          | Slides   |
+| Monday<br>April 22    | **Special Topics**<br> Transformers, Ethics                                                                          | [Slides](https://drive.google.com/file/d/1Pf8plwtdCsZBNBo-ZXoWtl50VSI1Q-fX/view?usp=sharing)   |
 | Saturday<br>April 29  | **Project Report Due**                                                                      | Slides   |
 
 # Syllabus
